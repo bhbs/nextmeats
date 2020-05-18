@@ -8,6 +8,8 @@ type Props = {
   languageCode: LanguageCode;
 };
 
+type News = [date: string, category: string, title: string, url: string];
+
 const News = ({ languageCode }: Props): React.ReactElement => {
   const text = getText(languageCode);
   const [newsList, setNews] = useState({
@@ -57,16 +59,16 @@ const News = ({ languageCode }: Props): React.ReactElement => {
     });
   };
 
-  const newsFilter = (originalList, option) => {
-    let filteredList = originalList;
+  const newsFilter = (originalList: News[], option): News[] => {
+    let filteredList: News[] = originalList;
 
     if (option.text) {
-      filteredList = filteredList.filter((news) =>
+      filteredList = filteredList.filter((news: News) =>
         news[2].includes(option.text)
       );
     }
     if (option.category && option.category !== defaultCategory) {
-      filteredList = filteredList.filter((news) =>
+      filteredList = filteredList.filter((news: News) =>
         news[1].includes(option.category)
       );
     }
@@ -110,7 +112,7 @@ const News = ({ languageCode }: Props): React.ReactElement => {
         )}
         <div className="newsList">
           {newsList.original ? (
-            newsList.filtered.map((x) => (
+            newsList.filtered.map((x: News) => (
               <div key={x[2]}>
                 <a href={x[3]}>
                   <span className="date">
@@ -130,7 +132,7 @@ const News = ({ languageCode }: Props): React.ReactElement => {
   );
 };
 
-function getText(locale) {
+function getText(locale: LanguageCode) {
   return {
     title: {
       jp: "Next Meats Co., Ltd.",
