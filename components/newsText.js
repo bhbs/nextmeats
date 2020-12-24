@@ -1,5 +1,11 @@
 export default [
   {
+    href: "https://shop.nextmeats.jp/pages/newyear20-21",
+    date: '12月24日',
+    category: 'お知らせ',
+    title: '年末年始のご案内',
+  },
+  {
     href: "https://shop.nextmeats.jp/products/burger",
     date: '12月23日',
     category: 'お知らせ',
