@@ -1,6 +1,30 @@
 export default [
   {
     href: "https://shop.nextmeats.jp/products/burger",
+    date: '12月23日',
+    category: 'お知らせ',
+    title: '"ギルトフリー"なプラントベースバーガー「ネクストバーガー2.0」販売開始',
+  },
+  {
+    href: "",
+    date: '12月17日',
+    category: 'メディア情報',
+    title: 'テレビ東京「よじごじdays」で焼肉ライクとのコラボが紹介されました',
+  },
+  {
+    href: "https://japanese.engadget.com/fakemeet-023039651.html",
+    date: '12月17日',
+    category: 'メディア情報',
+    title: '[Engadget日本版]より肉感が増した代替肉の「ネクストバーガー2.0」予約販売開始',
+  },
+  {
+    href: "https://fooddiversity.today/article_76106.html",
+    date: '12月17日',
+    category: 'メディア情報',
+    title: '[food diversity]話題の国内ベンチャー、プラントベースハンバーガー「ネクストバーガー2.0」発売開始',
+  },
+  {
+    href: "https://shop.nextmeats.jp/products/burger",
     date: '12月17日',
     category: 'お知らせ',
     title: 'おいしくて体にも環境にも優しい、“ギルトフリー” なプラントベースバーガー「ネクストバーガー2.0」予約販売スタート',
