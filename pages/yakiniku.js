@@ -13,6 +13,7 @@ export default function Yakiniku({ locale }) {
         <h1>{text.title}</h1>
         <img src="/img/yakiniku/yakiniku.jpg" alt={text.title} />
         <p><a href="https://shop.nextmeats.jp" target="_blank">{text.subject}</a></p>
+        <img src="/img/yakiniku/yahoo_no1.jpg" alt="YAHOO No.1" />
         <p>{text.statement}</p>
         <ShopLink text={text} />
         <p><b>{text.pr01}</b></p>
