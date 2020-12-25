@@ -1,5 +1,17 @@
 export default [
   {
+    href: "https://prtimes.jp/main/html/rd/p/000000010.000062184.html",
+    date: '12月25日',
+    category: 'お知らせ',
+    title: '代替肉のネクストミーツ、ベトナム工場の生産ラインが稼働開始。グローバル展開に向け第一歩',
+  },
+  {
+    href: "https://www.j-wave.co.jp/original/tokyounited/archives/feature-focus/2020/12/25-083003.html",
+    date: '12月25日',
+    category: 'メディア情報',
+    title: 'ラジオ番組 J-WAVE「JK RADIO TOKYO UNITED」に弊社代表の佐々木が出演しました',
+  },
+  {
     href: "https://shop.nextmeats.jp/pages/newyear20-21",
     date: '12月24日',
     category: 'お知らせ',
