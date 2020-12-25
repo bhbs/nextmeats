@@ -26,7 +26,7 @@ export default function Index({ locale }) {
           <h2><span>PRODUCTS</span></h2>
 
           <p style={{ marginTop: '60px' }}><b>{text.pr03}</b></p>
-          <p><a href="burger.html">
+          <p><a href={locale == 'ja' ? 'https://shop.nextmeats.jp/products/burger' : 'burger.html'}>
             <img src="/img/index/burger20.jpg" alt={text.pr03} />
           </a></p>
 

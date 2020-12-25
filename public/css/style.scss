@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap);
 
 @mixin sp {
 	@media (max-width: 800px) {
@@ -95,37 +95,28 @@ section {
 		white-space: nowrap;
 		overflow: hidden;
 		color: #444;
-		display: block;
+		display: grid;
+		grid-template-columns: 100px 120px 1fr;
 		padding: 12px;
 		border-bottom: solid 1px #666;
 		@include sp {
-			white-space: normal;
+			grid-template-columns: 100px 1fr;
 		}
 
 		&:hover {
 			background: #f7f7f7;
 			text-decoration: none;
 		}
-
-		* {
-			white-space: nowrap;
-		}
 	}
 
 	span {
-		margin-left: 20px;
-		@include sp {
-			margin-left: 4px;
-		}
+		align-self: baseline;
 
 		&.title {
-			display: block;
 			white-space: normal;
-
 			@include sp {
-				display: inline;
-				padding-top: 8px;
-				float: left;
+				grid-column-start: 1;
+				grid-column-end: 3;
 			}
 		}
 	}
