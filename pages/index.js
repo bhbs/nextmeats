@@ -48,7 +48,7 @@ export default function Index({ locale }) {
             overflow: 'hidden',
             margin: '120px auto 50px',
           }}>
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PLumUcr0KxJ-Mc4sW0CF2TxPBhnSspbNrS" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style={{
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLumUcr0KxJ-Mc4sW0CF2TxPBhnSspbNrS" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen style={{
               width: '100%',
               height: '100%',
               position: 'absolute',

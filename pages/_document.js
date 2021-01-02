@@ -25,7 +25,7 @@ class MyDocument extends Document {
                 <li className="luxbar-header">
                   <a href="/" className="luxbar-brand">NEXT MEATS</a>
                   <label className="luxbar-hamburger luxbar-hamburger-doublespin" 
-                  id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
+                  id="luxbar-hamburger" htmlFor="luxbar-checkbox"> <span></span> </label>
                 </li>
                 { process.env.locale === 'ja' && <li className="luxbar-item"><a href="/news.html">NEWS</a></li> }
                 <li className="luxbar-item"><a href="/message.html">MESSAGE</a></li>
