@@ -6,9 +6,9 @@ const Header = ({ locale }) => (
     <div className="luxbar-menu luxbar-menu-right luxbar-menu-dark">
       <ul className="luxbar-navigation">
         <li className="luxbar-header">
-          <a href="/" className="luxbar-brand">
-            NEXT MEATS
-          </a>
+          <Link href="/">
+            <a className="luxbar-brand">NEXT MEATS</a>
+          </Link>
           <label
             className="luxbar-hamburger luxbar-hamburger-doublespin"
             id="luxbar-hamburger"
