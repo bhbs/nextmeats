@@ -4,6 +4,10 @@ module.exports = {
     defaultLocale: 'ja',
     domains: [
       {
+        domain: 'nextmeats.co.jp',
+        defaultLocale: 'ja',
+      },
+      {
         domain: 'nextmeats.us',
         defaultLocale: 'en-US',
       },
