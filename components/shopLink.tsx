@@ -1,11 +1,10 @@
-export default function ShopLink({ text }) {
+const ShopLink = ({ text }) => {
   return (
     <div className="shoplink">
-      <p><b>{text.shoplink}</b></p>
-      <a
-        href="https://shop.nextmeats.jp"
-        target="_blank"
-      >
+      <p>
+        <b>{text.shoplink}</b>
+      </p>
+      <a href="https://shop.nextmeats.jp" target="_blank">
         <img src="/img/shoplink/ec_n_240.png" alt="shop.nextmeats" />
       </a>
       <a
@@ -21,5 +20,7 @@ export default function ShopLink({ text }) {
         <img src="/img/shoplink/ec_y_240.png" alt="yahoo" />
       </a>
     </div>
-  )
-}
+  );
+};
+
+export default ShopLink;
