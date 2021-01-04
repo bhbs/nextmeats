@@ -130,7 +130,7 @@ function getText(locale) {
 export async function getStaticProps({locale}) {
   switch (locale) {
     case 'ja':
-      locale = 'tw'
+      locale = 'ja'
       break
     case 'en-US':
       locale = 'en'
