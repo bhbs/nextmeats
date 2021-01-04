@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 import Layout from '../components/layout'
 
 export default function News({ locale }) {
@@ -87,16 +87,16 @@ export default function News({ locale }) {
           </select>
         </div>
         <div className="newsList">
-          { newsList.original
+          {newsList.original
             ? newsList.filtered.map(x => (
-                <div key={x[2]}>
-                  <a href={x[3]}>
-                    <span className="date">{new Date(x[0]).toLocaleDateString()}</span>
-                    <span className="category">{x[1]}</span>
-                    <span className="title">{x[2]}</span>
-                  </a>
-                </div>
-              ))
+              <div key={x[2]}>
+                <a href={x[3]}>
+                  <span className="date">{new Date(x[0]).toLocaleDateString()}</span>
+                  <span className="category">{x[1]}</span>
+                  <span className="title">{x[2]}</span>
+                </a>
+              </div>
+            ))
             : <p style={{ textAlign: 'center' }}>now loading...</p>
           }
         </div>
@@ -116,7 +116,7 @@ function getText(locale) {
   }
 }
 
-export async function getStaticProps({locale}) {
+export async function getStaticProps({ locale }) {
   switch (locale) {
     case 'ja':
       locale = 'ja'

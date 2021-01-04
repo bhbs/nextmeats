@@ -77,7 +77,7 @@ function getText(locale) {
   }
 }
 
-export async function getStaticProps({locale}) {
+export async function getStaticProps({ locale }) {
   switch (locale) {
     case 'ja':
       locale = 'ja'

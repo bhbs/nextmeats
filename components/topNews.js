@@ -14,16 +14,16 @@ export default function TopNews() {
     <section>
       <h2><span>NEWS</span></h2>
       <div className="newsList">
-        { newsList
+        {newsList
           ? newsList.map(x => (
-              <div key={x[2]}>
-                <a href={x[3]}>
-                  <span className="date">{new Date(x[0]).toLocaleDateString()}</span>
-                  <span className="category">{x[1]}</span>
-                  <span className="title">{x[2]}</span>
-                </a>
-              </div>
-            ))
+            <div key={x[2]}>
+              <a href={x[3]}>
+                <span className="date">{new Date(x[0]).toLocaleDateString()}</span>
+                <span className="category">{x[1]}</span>
+                <span className="title">{x[2]}</span>
+              </a>
+            </div>
+          ))
           : <p>now loading...</p>
         }
 

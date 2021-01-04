@@ -9,7 +9,7 @@ export default function ShopLink({ text }) {
         <img src="/img/shoplink/ec_n_240.png" alt="shop.nextmeats" />
       </a>
       <a
-        href="https://www.amazon.co.jp/s?k=NEXTMEATS&ref=bl_dp_s_web_0" 
+        href="https://www.amazon.co.jp/s?k=NEXTMEATS&ref=bl_dp_s_web_0"
         target="_blank"
       >
         <img src="/img/shoplink/ec_a_240.png" alt="amazon" />

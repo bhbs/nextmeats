@@ -9,15 +9,15 @@ const Layout = ({ children, locale }) => {
         <script src="/js/ga.js"></script>
       </Head>
       <header id="luxbar" className="luxbar-fixed">
-        <input type="checkbox" className="luxbar-checkbox" id="luxbar-checkbox"/>
+        <input type="checkbox" className="luxbar-checkbox" id="luxbar-checkbox" />
         <div className="luxbar-menu luxbar-menu-right luxbar-menu-dark">
           <ul className="luxbar-navigation">
             <li className="luxbar-header">
               <a href="/" className="luxbar-brand">NEXT MEATS</a>
-              <label className="luxbar-hamburger luxbar-hamburger-doublespin" 
-              id="luxbar-hamburger" htmlFor="luxbar-checkbox"> <span></span> </label>
+              <label className="luxbar-hamburger luxbar-hamburger-doublespin"
+                id="luxbar-hamburger" htmlFor="luxbar-checkbox"> <span></span> </label>
             </li>
-            { locale === 'ja' && <li className="luxbar-item"><a href="/news.html">NEWS</a></li> }
+            {locale === 'ja' && <li className="luxbar-item"><a href="/news.html">NEWS</a></li>}
             <li className="luxbar-item"><a href="/message.html">MESSAGE</a></li>
             <li className="luxbar-item dropdown"><a>STORE</a>
               <ul>

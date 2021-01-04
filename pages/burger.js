@@ -15,12 +15,12 @@ export default function Burger({ locale }) {
         <h3>{text.subject}</h3>
         <p>{text.statement}</p>
         <img src="/img/burger/makuake-pr.jpg" alt={text.title} />
-        <p><b>{ text.pr01 }</b></p>
-        <p>{ text.pr02 }</p>
+        <p><b>{text.pr01}</b></p>
+        <p>{text.pr02}</p>
         <img src="/img/burger/makuake-logo.jpg" alt="makuake" />
-        <p>{ text.pr03 }</p>
-        <p><a href="https://www.makuake.com/project/nextmeats/" target="_blank">{ text.shoplink }</a></p>
-        <p>{ text.pr04 }</p>
+        <p>{text.pr03}</p>
+        <p><a href="https://www.makuake.com/project/nextmeats/" target="_blank">{text.shoplink}</a></p>
+        <p>{text.pr04}</p>
       </div>
     </Layout>
   )
@@ -76,7 +76,7 @@ function getText(locale) {
   }
 }
 
-export async function getStaticProps({locale}) {
+export async function getStaticProps({ locale }) {
   switch (locale) {
     case 'ja':
       locale = 'ja'

@@ -32,21 +32,21 @@ export default function Yakiniku({ locale }) {
         <p><b>{text.pr11}</b></p>
         <p>{text.pr12}</p>
         <div style={{
-            position: 'relative',
+          position: 'relative',
+          width: '100%',
+          height: 0,
+          paddingBottom: '56.25%',
+          overflow: 'hidden',
+          margin: '120px auto 50px',
+        }}>
+          <iframe src="https://www.youtube.com/embed/BGGfm3I9obc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style={{
             width: '100%',
-            height: 0,
-            paddingBottom: '56.25%',
-            overflow: 'hidden',
-            margin: '120px auto 50px',
-          }}>
-            <iframe src="https://www.youtube.com/embed/BGGfm3I9obc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style={{
-              width: '100%',
-              height: '100%',
-              position: 'absolute',
-              top: 0,
-              left: 0,
-            }}></iframe>
-          </div>
+            height: '100%',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+          }}></iframe>
+        </div>
         <ShopLink text={text} />
         <p><b>{text.pr13}</b></p>
         <a href="https://shop.nextmeats.jp/pages/recipe-002">{text.pr14}</a>
@@ -57,7 +57,7 @@ export default function Yakiniku({ locale }) {
 }
 
 function getText(locale) {
-return {
+  return {
     title: {
       ja: 'NEXT YAKINIKU\nネクスト焼肉',
       en: 'NEXT YAKINIKU',
@@ -161,7 +161,7 @@ return {
   }
 }
 
-export async function getStaticProps({locale}) {
+export async function getStaticProps({ locale }) {
   switch (locale) {
     case 'ja':
       locale = 'ja'
