@@ -2,6 +2,7 @@ module.exports = {
   i18n: {
     locales: ['ja', 'en-US', 'zh'],
     defaultLocale: 'ja',
+    localeDetection: false,
     domains: [
       {
         domain: 'nextmeats.co.jp',
