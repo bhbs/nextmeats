@@ -1,9 +1,10 @@
 import Head from 'next/head'
+import Layout from '../components/layout'
 
 export default function Burger({ locale }) {
   const text = getText(locale)
   return (
-    <div>
+    <Layout locale={locale}>
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
@@ -21,7 +22,7 @@ export default function Burger({ locale }) {
         <p><a href="https://www.makuake.com/project/nextmeats/" target="_blank">{ text.shoplink }</a></p>
         <p>{ text.pr04 }</p>
       </div>
-    </div>
+    </Layout>
   )
 }
 

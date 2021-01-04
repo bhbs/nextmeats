@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import {useEffect, useState} from 'react'
+import Layout from '../components/layout'
 
 export default function News({ locale }) {
   const text = getText(locale)
@@ -60,7 +61,7 @@ export default function News({ locale }) {
   }
 
   return (
-    <div>
+    <Layout locale={locale}>
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
@@ -100,7 +101,7 @@ export default function News({ locale }) {
           }
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 

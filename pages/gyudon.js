@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import ShopLink from '../components/shopLink'
+import Layout from '../components/layout'
 
 export default function Gyudon({ locale }) {
   const text = getText(locale)
   return (
-    <div>
+    <Layout locale={locale}>
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
@@ -23,7 +24,7 @@ export default function Gyudon({ locale }) {
         <p>{text.pr08}</p>
         <ShopLink text={text} />
       </div>
-    </div>
+    </Layout>
   )
 }
 

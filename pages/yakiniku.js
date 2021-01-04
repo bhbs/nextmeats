@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import ShopLink from '../components/shopLink'
+import Layout from '../components/layout'
 
 export default function Yakiniku({ locale }) {
   const text = getText(locale)
   return (
-    <div>
+    <Layout locale={locale}>
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
@@ -51,7 +52,7 @@ export default function Yakiniku({ locale }) {
         <a href="https://shop.nextmeats.jp/pages/recipe-002">{text.pr14}</a>
         <img src="/img/yakiniku/recipe.jpg" alt="recipe" />
       </div>
-    </div>
+    </Layout>
   )
 }
 

@@ -1,9 +1,10 @@
 import Head from 'next/head'
+import Layout from '../components/layout'
 
 export default function Message({ locale }) {
   const text = getText(locale)
   return (
-    <div>
+    <Layout locale={locale}>
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
@@ -22,7 +23,7 @@ export default function Message({ locale }) {
         <br />
         <p><img src="/img/message/kou.jpg" /></p>
       </div>
-    </div>
+    </Layout>
   )
 }
 

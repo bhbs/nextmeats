@@ -1,86 +1,89 @@
 import Link from 'next/link'
 import TopNews from '../components/topNews'
 import Company from '../components/company'
+import Layout from '../components/layout'
 
 export default function Index({ locale }) {
   const text = getText(locale)
   return (
-    <div className="page">
-      <section>
-        <img
-          src="/img/index/nextmeats.jpg"
-          alt={text.title}
-          style={{ width: '100%' }} />
-      </section>
+    <Layout locale={locale}>
+      <div className="page">
+        <section>
+          <img
+            src="/img/index/nextmeats.jpg"
+            alt={text.title}
+            style={{ width: '100%' }} />
+        </section>
 
-      {locale === 'ja' && <TopNews />}
+        {locale === 'ja' && <TopNews />}
 
-      <section>
-        <div style={{
-          textAlign: 'center',
-          lineHeight: 3
-        }} dangerouslySetInnerHTML={{ __html: text.message }}></div>
-      </section>
-
-      <section>
-        <div style={{ textAlign: 'center' }}>
-          <h2><span>PRODUCTS</span></h2>
-
-          <p style={{ marginTop: '60px' }}><b>{text.pr03}</b></p>
-          <p>
-            <Link href={locale == 'ja' ? 'https://shop.nextmeats.jp/products/burger' : '/burger'}>
-              <img src="/img/index/burger20.jpg" alt={text.pr03} />
-            </Link>
-          </p>
-
-          <p style={{ marginTop: '60px' }}><b>{text.pr01}</b></p>
-          <p>
-            <Link href="https://shop.nextmeats.jp/products/gyudon">
-              <img src="/img/index/gyudon.jpg" alt={text.pr01} />
-            </Link>
-          </p>
-
-          <p style={{ marginTop: '60px' }}><b>{text.pr02}</b></p>
-          <p>
-            <Link href="/yakiniku">
-              <img src="/img/index/yakiniku.jpg" alt={text.pr02} />
-            </Link>
-          </p>
-
+        <section>
           <div style={{
-            position: 'relative',
-            width: '100%',
-            height: 0,
-            paddingBottom: '56.25%',
-            overflow: 'hidden',
-            margin: '120px auto 50px',
-          }}>
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PLumUcr0KxJ-Mc4sW0CF2TxPBhnSspbNrS" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen style={{
+            textAlign: 'center',
+            lineHeight: 3
+          }} dangerouslySetInnerHTML={{ __html: text.message }}></div>
+        </section>
+
+        <section>
+          <div style={{ textAlign: 'center' }}>
+            <h2><span>PRODUCTS</span></h2>
+
+            <p style={{ marginTop: '60px' }}><b>{text.pr03}</b></p>
+            <p>
+              <Link href={locale == 'ja' ? 'https://shop.nextmeats.jp/products/burger' : '/burger'}>
+                <img src="/img/index/burger20.jpg" alt={text.pr03} />
+              </Link>
+            </p>
+
+            <p style={{ marginTop: '60px' }}><b>{text.pr01}</b></p>
+            <p>
+              <Link href="https://shop.nextmeats.jp/products/gyudon">
+                <img src="/img/index/gyudon.jpg" alt={text.pr01} />
+              </Link>
+            </p>
+
+            <p style={{ marginTop: '60px' }}><b>{text.pr02}</b></p>
+            <p>
+              <Link href="/yakiniku">
+                <img src="/img/index/yakiniku.jpg" alt={text.pr02} />
+              </Link>
+            </p>
+
+            <div style={{
+              position: 'relative',
               width: '100%',
-              height: '100%',
-              position: 'absolute',
-              top: 0,
-              left: 0,
-            }}></iframe>
+              height: 0,
+              paddingBottom: '56.25%',
+              overflow: 'hidden',
+              margin: '120px auto 50px',
+            }}>
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLumUcr0KxJ-Mc4sW0CF2TxPBhnSspbNrS" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen style={{
+                width: '100%',
+                height: '100%',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+              }}></iframe>
+            </div>
+
+            <p style={{ marginTop: '60px' }}><b>{text.pr04}</b></p>
+            <p style={{
+              display: 'inline-block',
+              textAlign: 'left',
+              maxWidth: '640px',
+            }} dangerouslySetInnerHTML={{ __html: text.pr05 }}></p>
+
+            <p style={{ marginTop: '60px' }} dangerouslySetInnerHTML={{ __html: text.pr06 }}></p>
+            <p><img src="/img/index/sdgs.png" alt="sdgs" style={{
+              maxWidth: '480px',
+              width: '100%',
+            }} /></p>
           </div>
+        </section>
 
-          <p style={{ marginTop: '60px' }}><b>{text.pr04}</b></p>
-          <p style={{
-            display: 'inline-block',
-            textAlign: 'left',
-            maxWidth: '640px',
-          }} dangerouslySetInnerHTML={{ __html: text.pr05 }}></p>
-
-          <p style={{ marginTop: '60px' }} dangerouslySetInnerHTML={{ __html: text.pr06 }}></p>
-          <p><img src="/img/index/sdgs.png" alt="sdgs" style={{
-            maxWidth: '480px',
-            width: '100%',
-          }} /></p>
-        </div>
-      </section>
-
-      <Company locale={locale} />
-    </div >
+        <Company locale={locale} />
+      </div >
+    </Layout>
   )
 }
 
