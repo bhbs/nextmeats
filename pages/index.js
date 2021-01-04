@@ -31,21 +31,27 @@ export default function Index({ locale }) {
             <p style={{ marginTop: '60px' }}><b>{text.pr03}</b></p>
             <p>
               <Link href={locale == 'ja' ? 'https://shop.nextmeats.jp/products/burger' : '/burger'}>
-                <img src="/img/index/burger20.jpg" alt={text.pr03} />
+                <a>
+                  <img src="/img/index/burger20.jpg" alt={text.pr03} />
+                </a>
               </Link>
             </p>
 
             <p style={{ marginTop: '60px' }}><b>{text.pr01}</b></p>
             <p>
               <Link href="https://shop.nextmeats.jp/products/gyudon">
-                <img src="/img/index/gyudon.jpg" alt={text.pr01} />
+                <a>
+                  <img src="/img/index/gyudon.jpg" alt={text.pr01} />
+                </a>
               </Link>
             </p>
 
             <p style={{ marginTop: '60px' }}><b>{text.pr02}</b></p>
             <p>
               <Link href="/yakiniku">
-                <img src="/img/index/yakiniku.jpg" alt={text.pr02} />
+                <a>
+                  <img src="/img/index/yakiniku.jpg" alt={text.pr02} />
+                </a>
               </Link>
             </p>
 
