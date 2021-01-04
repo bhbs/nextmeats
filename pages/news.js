@@ -115,8 +115,17 @@ function getText(locale) {
   }
 }
 
-export async function getStaticProps() {
-  const locale = process.env.locale
-
+export async function getStaticProps({locale}) {
+  switch (locale) {
+    case 'ja':
+      locale = 'tw'
+      break
+    case 'en-US':
+      locale = 'en'
+      break
+    case 'zh':
+      locale = 'tw'
+      break
+  }
   return { props: { locale } }
 }

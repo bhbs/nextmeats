@@ -5,13 +5,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang={
-        {
-          ja: 'ja',
-          en: 'en-US',
-          tw: 'zh',
-        }[process.env.locale]
-      }>
+      <Html>
         <Head>
           <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css" />
           <script src="https://www.googletagmanager.com/gtag/js?id=UA-170779191-1"></script>
