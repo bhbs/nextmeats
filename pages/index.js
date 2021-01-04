@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import TopNews from '../components/topNews'
 import Company from '../components/company'
 
@@ -26,19 +27,25 @@ export default function Index({ locale }) {
           <h2><span>PRODUCTS</span></h2>
 
           <p style={{ marginTop: '60px' }}><b>{text.pr03}</b></p>
-          <p><a href={locale == 'ja' ? 'https://shop.nextmeats.jp/products/burger' : 'burger.html'}>
-            <img src="/img/index/burger20.jpg" alt={text.pr03} />
-          </a></p>
+          <p>
+            <Link href={locale == 'ja' ? 'https://shop.nextmeats.jp/products/burger' : '/burger'}>
+              <img src="/img/index/burger20.jpg" alt={text.pr03} />
+            </Link>
+          </p>
 
           <p style={{ marginTop: '60px' }}><b>{text.pr01}</b></p>
-          <p><a href="https://shop.nextmeats.jp/products/gyudon">
-            <img src="/img/index/gyudon.jpg" alt={text.pr01} />
-          </a></p>
+          <p>
+            <Link href="https://shop.nextmeats.jp/products/gyudon">
+              <img src="/img/index/gyudon.jpg" alt={text.pr01} />
+            </Link>
+          </p>
 
           <p style={{ marginTop: '60px' }}><b>{text.pr02}</b></p>
-          <p><a href="yakiniku.html">
-            <img src="/img/index/yakiniku.jpg" alt={text.pr02} />
-          </a></p>
+          <p>
+            <Link href="/yakiniku">
+              <img src="/img/index/yakiniku.jpg" alt={text.pr02} />
+            </Link>
+          </p>
 
           <div style={{
             position: 'relative',
@@ -90,9 +97,9 @@ function getText(locale) {
       tw: '',
     }[locale],
     message: {
-      ja: '<h2><span>Message</span></h2><h3>代替肉で地球の未来をつくる</h3><p>地球環境の悪化と人口爆発による<br class="responsive" />食糧危機への対策として<br />我々ができることは、<br class="responsive" />食肉を減らすということ。<br />ネクストミーツ株式会社は、<br class="responsive" />地球の未来をより良くするため<br />「代替肉・植物肉・人工肉」に着目し、<br class="responsive" />その研究開発を行なっています。</p><p><a href="message.html"> ネクストミーツの理念について</a></p>',
-      en: '<h2><span>Message</span></h2><h3>Shaping the future of our earth <br class="responsive">with meat alternatives</h3><p>One thing we can all do <br class="responsive">in response to the food crisis<br>caused by the deterioration <br class="responsive">in our global environment<br>and population growth is <br class="responsive">to reduce our meat consumption.<br>NEXT MEATS Co., Ltd. seeks <br class="responsive">to create a better future<br>for our earth by focusing on <br class="responsive">the R&D of meat alternatives.</p><p><a href="message.html">The Philosophy of NEXT MEATS</a></p>',
-      tw: '<h2><span>Message</span></h2><h3>以替代肉開創地球的未來</h3><p>對於地球環境惡化與人口增加導致的糧食危機，我們能做的解決方法，就是減少吃肉。NEXT MEATS株式會社致力於「替代肉」的研發，希望帶給地球更美好的未來。</p><p><a href="message.html">> NEXT MEATS的理念</a></p>',
+      ja: '<h2><span>Message</span></h2><h3>代替肉で地球の未来をつくる</h3><p>地球環境の悪化と人口爆発による<br class="responsive" />食糧危機への対策として<br />我々ができることは、<br class="responsive" />食肉を減らすということ。<br />ネクストミーツ株式会社は、<br class="responsive" />地球の未来をより良くするため<br />「代替肉・植物肉・人工肉」に着目し、<br class="responsive" />その研究開発を行なっています。</p><p><a href="message"> ネクストミーツの理念について</a></p>',
+      en: '<h2><span>Message</span></h2><h3>Shaping the future of our earth <br class="responsive">with meat alternatives</h3><p>One thing we can all do <br class="responsive">in response to the food crisis<br>caused by the deterioration <br class="responsive">in our global environment<br>and population growth is <br class="responsive">to reduce our meat consumption.<br>NEXT MEATS Co., Ltd. seeks <br class="responsive">to create a better future<br>for our earth by focusing on <br class="responsive">the R&D of meat alternatives.</p><p><a href="message">The Philosophy of NEXT MEATS</a></p>',
+      tw: '<h2><span>Message</span></h2><h3>以替代肉開創地球的未來</h3><p>對於地球環境惡化與人口增加導致的糧食危機，我們能做的解決方法，就是減少吃肉。NEXT MEATS株式會社致力於「替代肉」的研發，希望帶給地球更美好的未來。</p><p><a href="message">> NEXT MEATS的理念</a></p>',
     }[locale],
     pr01: {
       ja: 'ビックリする旨さ！\n『ネクスト牛丼1.2』',

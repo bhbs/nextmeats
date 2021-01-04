@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 export default function TopNews() {
@@ -26,7 +27,7 @@ export default function TopNews() {
           : <p>now loading...</p>
         }
 
-        <p className="readMore"><a href="/news.html">一覧を見る...</a></p>
+        <p className="readMore"><Link href="/news"><a>一覧を見る...</a></Link></p>
 
         <div style={{
           margin: 'auto',
