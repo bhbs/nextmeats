@@ -17,7 +17,7 @@ const Layout = ({ children, locale }) => {
       </Head>
       <Header locale={locale} />
       {children}
-      <footer>© 2021 Next Meats Co.,Ltd</footer>
+      <footer>© 2021 Next Meats Co.,Ltd.</footer>
     </>
   );
 };
