@@ -7,7 +7,15 @@ const Header = ({ locale }) => (
       <ul className="luxbar-navigation">
         <li className="luxbar-header">
           <Link href="/">
-            <a className="luxbar-brand">NEXT MEATS</a>
+            <a className="luxbar-brand">
+              <img
+                src="/img/header/logo.png"
+                alt="next meats logo"
+                style={{
+                  width: "180px",
+                }}
+              />
+            </a>
           </Link>
           <label
             className="luxbar-hamburger luxbar-hamburger-doublespin"

@@ -5,6 +5,9 @@ const Layout = ({ children, locale }) => {
   return (
     <>
       <Head>
+        <link rel="shortcut icon" href="/img/favicon-32x32.png" />
+        <link rel="apple-touch-icon" href="/img/favicon-64x64.png" />
+        <link rel="icon" type="image/png" href="/img/favicon-64x64.png" />
         <link
           rel="stylesheet"
           href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css"
@@ -14,7 +17,7 @@ const Layout = ({ children, locale }) => {
       </Head>
       <Header locale={locale} />
       {children}
-      <footer>© 2020 NEXT MEATS</footer>
+      <footer>© 2021 Next Meats Co.Ltd</footer>
     </>
   );
 };
