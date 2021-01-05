@@ -48,7 +48,7 @@ function getText(locale) {
     subject: {
       ja: "〜 地球を終わらせない 〜",
       en: "〜 Ensuring a sustainable future for the earth 〜",
-      tw: "〜 讓地球生生不息 〜",
+      tw: "〜 顛覆美味 地球永續優植選擇 〜",
     }[locale],
     state01: {
       ja: "子供達の未来のために我々ができることは？",
