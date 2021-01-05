@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import TopNews from "../components/topNews";
 import Company from "../components/company";
 import Layout from "../components/layout";
@@ -23,15 +24,23 @@ const Index = ({ locale }) => {
         <meta name="twitter:site" content="@MeatsNext" />
         <meta name="twitter:creator" content="@MeatsNext" />
       </Head>
-      <div className="page">
-        <section>
-          <img
-            src="/img/index/nextmeats.jpg"
-            alt={text.title}
-            style={{ width: "100%" }}
-          />
-        </section>
-
+      <div
+        style={{
+          marginTop: "58px",
+        }}
+      >
+        <Image
+          src="/img/index/top-1024x504-gyudon-a.jpg"
+          alt={text.title}
+          unsized
+        />
+      </div>
+      <div
+        className="page"
+        style={{
+          marginTop: "0",
+        }}
+      >
         {locale === "ja" && <TopNews />}
 
         <section>
@@ -62,7 +71,12 @@ const Index = ({ locale }) => {
                 }
               >
                 <a>
-                  <img src="/img/index/burger20.jpg" alt={text.pr03} />
+                  <Image
+                    src="/img/index/1920x1080-burger.jpg"
+                    alt={text.pr03}
+                    width={800}
+                    height={450}
+                  />
                 </a>
               </Link>
             </p>
@@ -73,7 +87,12 @@ const Index = ({ locale }) => {
             <p>
               <Link href="https://shop.nextmeats.jp/products/gyudon">
                 <a>
-                  <img src="/img/index/gyudon.jpg" alt={text.pr01} />
+                  <Image
+                    src="/img/index/1920x1080-gyudon.jpg"
+                    alt={text.pr01}
+                    width={800}
+                    height={450}
+                  />
                 </a>
               </Link>
             </p>
@@ -84,7 +103,12 @@ const Index = ({ locale }) => {
             <p>
               <Link href="/yakiniku">
                 <a>
-                  <img src="/img/index/yakiniku.jpg" alt={text.pr02} />
+                  <Image
+                    src="/img/index/yakiniku.jpg"
+                    alt={text.pr02}
+                    width={800}
+                    height={321}
+                  />
                 </a>
               </Link>
             </p>
@@ -131,13 +155,11 @@ const Index = ({ locale }) => {
               dangerouslySetInnerHTML={{ __html: text.pr06 }}
             ></p>
             <p>
-              <img
+              <Image
                 src="/img/index/sdgs.png"
                 alt="sdgs"
-                style={{
-                  maxWidth: "480px",
-                  width: "100%",
-                }}
+                width={887}
+                height={283}
               />
             </p>
           </div>
