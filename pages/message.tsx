@@ -73,7 +73,7 @@ function getText(locale) {
       ja:
         "地球環境の今後を真剣に考え、ネクストミーツ株式会社はフードテックベンチャーとして立ち上がりました。<br>動物性の肉に替わる「おいしい植物性の肉」を作って普及させ、新しいライフスタイルを提供しながら、地球環境を良い方向に変えていきたいと考えています。",
       en:
-        "NEXT MEATS Co., Ltd. is a food tech venture company founded by individuals who take the future of our global environment seriously.<br>Our company hopes to create delicious plant-based meat products as a substitute for animal-based meat and share them with consumers. In so doing, we hope to offer everyone the possibility of a new lifestyle while making a positive impact on our global environment.",
+        "Next Meats Co., Ltd. is a food tech venture company founded by individuals who take the future of our global environment seriously.<br>Our company hopes to create delicious plant-based meat products as a substitute for animal-based meat and share them with consumers. In so doing, we hope to offer everyone the possibility of a new lifestyle while making a positive impact on our global environment.",
       tw:
         "我們認真思考地球環境的未來，以食品科技新創企業之姿成立了NEXT MEATS株式會社。我們希望生產替代動物性肉品的「美味植物性肉品」並使其普及化，以提供人們嶄新的生活型態，同時也讓地球環境持續往好的方向轉變。",
     }[locale],

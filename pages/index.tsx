@@ -176,8 +176,8 @@ function getText(locale) {
     title: {
       ja:
         "NEXT MEATS | 代替肉開発スタートアップ【ネクストミーツ株式会社】人工肉・代替肉・植物肉",
-      en: "NEXT MEATS CO.,LTD  WEBSITE",
-      tw: "NEXT MEATS CO.,LTD  WEBSITE",
+      en: "Next Meats Co., Ltd. WEBSITE",
+      tw: "Next Meats Co., Ltd. WEBSITE",
     }[locale],
     description: {
       ja:
@@ -189,7 +189,7 @@ function getText(locale) {
       ja:
         '<h2><span>Message</span></h2><h3>代替肉で地球の未来をつくる</h3><p>地球環境の悪化と人口爆発による<br class="responsive" />食糧危機への対策として<br />我々ができることは、<br class="responsive" />食肉を減らすということ。<br />ネクストミーツ株式会社は、<br class="responsive" />地球の未来をより良くするため<br />「代替肉・植物肉・人工肉」に着目し、<br class="responsive" />その研究開発を行なっています。</p><p><a href="message"> ネクストミーツの理念について</a></p>',
       en:
-        '<h2><span>Message</span></h2><h3>Shaping the future of our earth <br class="responsive">with meat alternatives</h3><p>One thing we can all do <br class="responsive">in response to the food crisis<br>caused by the deterioration <br class="responsive">in our global environment<br>and population growth is <br class="responsive">to reduce our meat consumption.<br>NEXT MEATS Co., Ltd. seeks <br class="responsive">to create a better future<br>for our earth by focusing on <br class="responsive">the R&D of meat alternatives.</p><p><a href="message">The Philosophy of NEXT MEATS</a></p>',
+        '<h2><span>Message</span></h2><h3>Shaping the future of our earth <br class="responsive">with meat alternatives</h3><p>One thing we can all do <br class="responsive">in response to the food crisis<br>caused by the deterioration <br class="responsive">in our global environment<br>and population growth is <br class="responsive">to reduce our meat consumption.<br>Next Meats Co., Ltd. seeks <br class="responsive">to create a better future<br>for our earth by focusing on <br class="responsive">the R&D of meat alternatives.</p><p><a href="message">The Philosophy of NEXT MEATS</a></p>',
       tw:
         '<h2><span>Message</span></h2><h3>以替代肉開創地球的未來</h3><p>對於地球環境惡化與人口增加導致的<br class="responsive" />糧食危機，我們能做的解決方法，<br class="responsive" />就是減少吃肉。<br />NEXT MEATS株式會社<br class="responsive" />致力於「替代肉」的研發，<br class="responsive" />希望帶給地球更美好的未來。</p><p><a href="message">> NEXT MEATS的理念</a></p>',
     }[locale],

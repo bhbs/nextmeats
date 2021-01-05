@@ -65,8 +65,8 @@ function getText(locale) {
     }[locale],
     name: {
       ja: "ネクストミーツ株式会社",
-      en: "NEXT MEATS CO.,LTD",
-      tw: "NEXT MEATS CO.,LTD",
+      en: "Next Meats Co., Ltd.",
+      tw: "Next Meats Co., Ltd.",
     }[locale],
     establishment_h: {
       ja: "設立",
