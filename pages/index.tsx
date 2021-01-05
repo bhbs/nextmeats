@@ -153,7 +153,7 @@ function getText(locale) {
       en:
         '<h2><span>Message</span></h2><h3>Shaping the future of our earth <br class="responsive">with meat alternatives</h3><p>One thing we can all do <br class="responsive">in response to the food crisis<br>caused by the deterioration <br class="responsive">in our global environment<br>and population growth is <br class="responsive">to reduce our meat consumption.<br>NEXT MEATS Co., Ltd. seeks <br class="responsive">to create a better future<br>for our earth by focusing on <br class="responsive">the R&D of meat alternatives.</p><p><a href="message">The Philosophy of NEXT MEATS</a></p>',
       tw:
-        '<h2><span>Message</span></h2><h3>以替代肉開創地球的未來</h3><p>對於地球環境惡化與人口增加導致的糧食危機，我們能做的解決方法，就是減少吃肉。NEXT MEATS株式會社致力於「替代肉」的研發，希望帶給地球更美好的未來。</p><p><a href="message">> NEXT MEATS的理念</a></p>',
+        '<h2><span>Message</span></h2><h3>以替代肉開創地球的未來</h3><p>對於地球環境惡化與人口增加導致的<br class="responsive" />糧食危機，我們能做的解決方法，<br class="responsive" />就是減少吃肉。<br />NEXT MEATS株式會社<br class="responsive" />致力於「替代肉」的研發，<br class="responsive" />希望帶給地球更美好的未來。</p><p><a href="message">> NEXT MEATS的理念</a></p>',
     }[locale],
     pr01: {
       ja: "ビックリする旨さ！\n『ネクスト牛丼1.2』",
