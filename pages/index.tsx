@@ -196,8 +196,8 @@ function getText(locale) {
     description: {
       jp:
         "フェイクミートで次世代の未来をつくる代替肉開発スタートアップ【ネクストミーツ株式会社】 人工肉・代替肉・植物肉",
-      en: "",
-      tw: "",
+      en: "Next Meats Co., Ltd. WEBSITE",
+      tw: "Next Meats Co., Ltd. WEBSITE",
     }[locale],
     message: {
       jp:
@@ -219,9 +219,9 @@ function getText(locale) {
       tw: "全球首創的燒肉替代肉 NEXT燒肉\n「牛五花1.0」＆「牛橫隔膜1.0」",
     }[locale],
     pr03: {
-      jp: "本気で美味しい代替肉\n『ネクストバーガー1.2』",
-      en: 'An absolutely delicious meat substitute\n "NEXT Burger 1.2"',
-      tw: "精心打造的美味替代肉「NEXT漢堡1.2」",
+      jp: "本気で美味しい代替肉\n『ネクストバーガー2.0』",
+      en: 'An absolutely delicious meat substitute\n "NEXT Burger 2.0"',
+      tw: "精心打造的美味替代肉「NEXT漢堡2.0」",
     }[locale],
     pr04: {
       jp: "代替肉専門メディア、コンソーシアムを運営",
