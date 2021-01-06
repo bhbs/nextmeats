@@ -53,20 +53,24 @@ const Index = ({ locale }) => {
       <div
         style={{
           marginTop: "58px",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
         {deviceType === "pc" && (
           <Image
             src={`/img/index/${locale}_web-top-pc-1920x945.jpg`}
             alt={text.title}
-            unsized
+            width={1920}
+            height={945}
           />
         )}
         {deviceType === "mobile" && (
           <Image
             src={`/img/index/${locale}_web-top-mobile-720x580-gyudon.jpg`}
             alt={text.title}
-            unsized
+            width={720}
+            height={580}
           />
         )}
       </div>
