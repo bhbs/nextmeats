@@ -121,10 +121,10 @@ const News = ({ locale }) => {
 function getText(locale) {
   return {
     title: {
-      ja: "",
+      jp: "",
     }[locale],
     description: {
-      ja: "",
+      jp: "",
     }[locale],
   };
 }
@@ -132,7 +132,7 @@ function getText(locale) {
 export async function getStaticProps({ locale }) {
   switch (locale) {
     case "ja":
-      locale = "ja";
+      locale = "jp";
       break;
     case "en-US":
       locale = "en";

@@ -26,7 +26,7 @@ const Header = ({ locale }) => (
             <span></span>{" "}
           </label>
         </li>
-        {locale === "ja" && (
+        {locale === "jp" && (
           <li className="luxbar-item">
             <Link href="/news">
               <a>NEWS</a>
@@ -78,7 +78,7 @@ const Header = ({ locale }) => (
         <li className="luxbar-item dropdown">
           <a>LANGUAGE</a>
           <ul>
-            {locale !== "ja" && (
+            {locale !== "jp" && (
               <li className="luxbar-item">
                 <a href="//nextmeats.co.jp" target="_blank">
                   日本語
