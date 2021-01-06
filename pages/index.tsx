@@ -46,7 +46,7 @@ const Index = ({ locale }) => {
           />
         )}
 
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@MeatsNext" />
         <meta name="twitter:creator" content="@MeatsNext" />
       </Head>
