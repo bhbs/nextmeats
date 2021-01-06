@@ -22,33 +22,9 @@ const Index = ({ locale }) => {
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
 
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nextmeats.co.jp" />
-        <meta property="og:site_name" content={text.title} />
         <meta property="og:title" content={text.title} />
+        <meta property="og:site_name" content={text.title} />
         <meta property="og:description" content={text.description} />
-        {locale === "jp" && (
-          <meta
-            property="og:image"
-            content="https://nextmeats.co.jp/img/index/jp_web-ogp-1200x630-gyudon.jpg"
-          />
-        )}
-        {locale === "en" && (
-          <meta
-            property="og:image"
-            content="https://nextmeats.tw/img/index/en_web-ogp-1200x630-gyudon.jpg"
-          />
-        )}
-        {locale === "tw" && (
-          <meta
-            property="og:image"
-            content="https://nextmeats.tw/img/index/tw_web-ogp-1200x630-gyudon.jpg"
-          />
-        )}
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@MeatsNext" />
-        <meta name="twitter:creator" content="@MeatsNext" />
       </Head>
       <div
         style={{

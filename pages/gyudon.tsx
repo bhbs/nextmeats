@@ -9,6 +9,10 @@ const Gyudon = ({ locale }) => {
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
+
+        <meta property="og:title" content={text.title} />
+        <meta property="og:site_name" content={text.title} />
+        <meta property="og:description" content={text.description} />
       </Head>
       <div className="page">
         <h1>{text.title}</h1>
@@ -45,8 +49,9 @@ function getText(locale) {
     description: {
       jp:
         "ネクスト焼肉【ネクストミーツ株式会社】 人工肉・代替肉・植物肉・フェイクミート",
-      en: "",
-      tw: "",
+      en:
+        'The world’s very first pre-packaged meat substitute-based gyudon "NEXT Gyudon 1.2"',
+      tw: "全球首創的替代肉牛肉蓋飯調理包「NEXT牛肉蓋飯1.2」",
     }[locale],
     statement: {
       jp:

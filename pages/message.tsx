@@ -8,6 +8,10 @@ const Message = ({ locale }) => {
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
+
+        <meta property="og:title" content={text.title} />
+        <meta property="og:site_name" content={text.title} />
+        <meta property="og:description" content={text.description} />
       </Head>
       <div className="page">
         <h1>
@@ -41,9 +45,9 @@ function getText(locale) {
       tw: "NEXT MEATS的理念",
     }[locale],
     description: {
-      jp: "",
-      en: "",
-      tw: "",
+      jp: "地球を終わらせない",
+      en: "Ensuring a sustainable future for the earth",
+      tw: "顛覆美味 地球永續優植選擇",
     }[locale],
     subject: {
       jp: "〜 地球を終わらせない 〜",

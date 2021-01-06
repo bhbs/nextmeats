@@ -73,6 +73,10 @@ const News = ({ locale }) => {
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
+
+        <meta property="og:title" content={text.title} />
+        <meta property="og:site_name" content={text.title} />
+        <meta property="og:description" content={text.description} />
       </Head>
       <div className="page">
         <h2 style={{ textAlign: "center" }}>NEWS</h2>
@@ -121,10 +125,10 @@ const News = ({ locale }) => {
 function getText(locale) {
   return {
     title: {
-      jp: "",
+      jp: "Next Meats Co., Ltd.",
     }[locale],
     description: {
-      jp: "",
+      jp: "NEWS",
     }[locale],
   };
 }

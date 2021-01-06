@@ -8,6 +8,10 @@ const Burger = ({ locale }) => {
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
+
+        <meta property="og:title" content={text.title} />
+        <meta property="og:site_name" content={text.title} />
+        <meta property="og:description" content={text.description} />
       </Head>
       <div className="page">
         <h1>{text.title}</h1>
@@ -42,8 +46,8 @@ function getText(locale) {
     description: {
       jp:
         "ネクストバーガー【ネクストミーツ株式会社】 人工肉・代替肉・植物肉・フェイクミート",
-      en: "",
-      tw: "",
+      en: "NEXT BURGER",
+      tw: "NEXT BURGER",
     }[locale],
     subject: {
       jp: "地球温暖化と向き合う代替肉ハンバーガー\n「ネクストバーガー 1.2」",
