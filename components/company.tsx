@@ -7,42 +7,44 @@ const Company = ({ locale }) => {
         <span>COMPANY</span>
       </h2>
       <table>
-        <tr>
-          <td>{text.name_h}</td>
-          <td>{text.name}</td>
-        </tr>
-        <tr>
-          <td>{text.establishment_h}</td>
-          <td>{text.establishment}</td>
-        </tr>
-        <tr>
-          <td>{text.ceo_h}</td>
-          <td>{text.ceo}</td>
-        </tr>
-        <tr>
-          <td>{text.director_h}</td>
-          <td>{text.director}</td>
-        </tr>
-        <tr>
-          <td>{text.location_h}</td>
-          <td>{text.location}</td>
-        </tr>
-        {text.time_h && (
+        <tbody>
           <tr>
-            <td>{text.time_h}</td>
-            <td>{text.time}</td>
+            <td>{text.name_h}</td>
+            <td>{text.name}</td>
           </tr>
-        )}
-        <tr>
-          <td>{text.contact_h}</td>
-          <td>{text.contact}</td>
-        </tr>
-        {text.business_h && (
           <tr>
-            <td>{text.business_h}</td>
-            <td style={{ lineHeight: 3 }}>{text.business}</td>
+            <td>{text.establishment_h}</td>
+            <td>{text.establishment}</td>
           </tr>
-        )}
+          <tr>
+            <td>{text.ceo_h}</td>
+            <td>{text.ceo}</td>
+          </tr>
+          <tr>
+            <td>{text.director_h}</td>
+            <td>{text.director}</td>
+          </tr>
+          <tr>
+            <td>{text.location_h}</td>
+            <td>{text.location}</td>
+          </tr>
+          {text.time_h && (
+            <tr>
+              <td>{text.time_h}</td>
+              <td>{text.time}</td>
+            </tr>
+          )}
+          <tr>
+            <td>{text.contact_h}</td>
+            <td>{text.contact}</td>
+          </tr>
+          {text.business_h && (
+            <tr>
+              <td>{text.business_h}</td>
+              <td style={{ lineHeight: 3 }}>{text.business}</td>
+            </tr>
+          )}
+        </tbody>
       </table>
       <p id="sns">
         <a
