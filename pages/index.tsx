@@ -226,18 +226,18 @@ function getText(locale) {
     }[locale],
     pr01: {
       jp: "ビックリする旨さ！\n『ネクスト牛丼1.2』",
-      en: "A flavor that will surprise you!『NEXT Gyudon 1.2』",
+      en: 'A flavor that will surprise you!\n"NEXT Gyudon 1.2"',
       tw: "令人驚嘆的美味！「NEXT牛肉蓋飯1.2」",
     }[locale],
     pr02: {
       jp: "世界初となる焼肉用フェイクミート\n『カルビ1.0』＆『ハラミ1.0』",
       en:
-        "The world’s very first meat substitute developed for yakiniku NEXT Yakiniku『Short Rib 1.0』＆『Skirt 1.0』",
-      tw: "全球首創的燒肉替代肉 NEXT燒肉「牛五花1.0」＆「牛橫隔膜1.0」",
+        'The world’s very first meat substitute developed for yakiniku NEXT Yakiniku\n"Short Rib 1.0" & "Skirt 1.0"',
+      tw: "全球首創的燒肉替代肉 NEXT燒肉\n「牛五花1.0」＆「牛橫隔膜1.0」",
     }[locale],
     pr03: {
       jp: "本気で美味しい代替肉\n『ネクストバーガー1.2』",
-      en: "An absolutely delicious meat substitute『NEXT Burger 1.2』",
+      en: 'An absolutely delicious meat substitute\n "NEXT Burger 1.2"',
       tw: "精心打造的美味替代肉「NEXT漢堡1.2」",
     }[locale],
     pr04: {
