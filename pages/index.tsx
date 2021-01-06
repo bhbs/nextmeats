@@ -62,56 +62,50 @@ const Index = ({ locale }) => {
             <p style={{ marginTop: "60px" }}>
               <b>{text.pr03}</b>
             </p>
-            <p>
-              <Link
-                href={
-                  locale == "ja"
-                    ? "https://shop.nextmeats.jp/products/burger"
-                    : "/burger"
-                }
-              >
-                <a>
-                  <Image
-                    src="/img/index/1920x1080-burger.jpg"
-                    alt={text.pr03}
-                    width={800}
-                    height={450}
-                  />
-                </a>
-              </Link>
-            </p>
+            <Link
+              href={
+                locale == "ja"
+                  ? "https://shop.nextmeats.jp/products/burger"
+                  : "/burger"
+              }
+            >
+              <a>
+                <Image
+                  src="/img/index/1920x1080-burger.jpg"
+                  alt={text.pr03}
+                  width={800}
+                  height={450}
+                />
+              </a>
+            </Link>
 
             <p style={{ marginTop: "60px" }}>
               <b>{text.pr01}</b>
             </p>
-            <p>
-              <Link href="https://shop.nextmeats.jp/products/gyudon">
-                <a>
-                  <Image
-                    src="/img/index/1920x1080-gyudon.jpg"
-                    alt={text.pr01}
-                    width={800}
-                    height={450}
-                  />
-                </a>
-              </Link>
-            </p>
+            <Link href="https://shop.nextmeats.jp/products/gyudon">
+              <a>
+                <Image
+                  src="/img/index/1920x1080-gyudon.jpg"
+                  alt={text.pr01}
+                  width={800}
+                  height={450}
+                />
+              </a>
+            </Link>
 
             <p style={{ marginTop: "60px" }}>
               <b>{text.pr02}</b>
             </p>
-            <p>
-              <Link href="/yakiniku">
-                <a>
-                  <Image
-                    src="/img/index/yakiniku.jpg"
-                    alt={text.pr02}
-                    width={800}
-                    height={321}
-                  />
-                </a>
-              </Link>
-            </p>
+            <Link href="/yakiniku">
+              <a>
+                <Image
+                  src="/img/index/yakiniku.jpg"
+                  alt={text.pr02}
+                  width={800}
+                  height={321}
+                />
+              </a>
+            </Link>
 
             <div
               style={{
@@ -154,14 +148,12 @@ const Index = ({ locale }) => {
               style={{ marginTop: "60px" }}
               dangerouslySetInnerHTML={{ __html: text.pr06 }}
             ></p>
-            <p>
-              <Image
-                src="/img/index/sdgs.png"
-                alt="sdgs"
-                width={887}
-                height={283}
-              />
-            </p>
+            <Image
+              src="/img/index/sdgs.png"
+              alt="sdgs"
+              width={887}
+              height={283}
+            />
           </div>
         </section>
 
@@ -223,7 +215,7 @@ function getText(locale) {
     pr06: {
       ja: "",
       en:
-        'EXT MEATS is committed to <br class="responsive">global sustainability efforts <br class="responsive">by playing our part in achieving the SDGs.',
+        'Next Meats Co., Ltd is committed to <br class="responsive">global sustainability efforts <br class="responsive">by playing our part in achieving the SDGs.',
       tw: "NEXT MEATS依據SDGs的理念，為地球永續的可能性盡一份心力。",
     }[locale],
   };
