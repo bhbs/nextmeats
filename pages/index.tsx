@@ -53,8 +53,9 @@ const Index = ({ locale }) => {
       <div
         style={{
           marginTop: "58px",
-          display: "flex",
-          justifyContent: "center",
+          width: "100%",
+          maxWidth: "1920px",
+          margin: "auto",
         }}
       >
         {deviceType === "pc" && (
@@ -63,6 +64,7 @@ const Index = ({ locale }) => {
             alt={text.title}
             width={1920}
             height={945}
+            layout="responsive"
           />
         )}
         {deviceType === "mobile" && (
@@ -71,6 +73,7 @@ const Index = ({ locale }) => {
             alt={text.title}
             width={720}
             height={580}
+            layout="responsive"
           />
         )}
       </div>
@@ -114,6 +117,7 @@ const Index = ({ locale }) => {
                   alt={text.pr03}
                   width={800}
                   height={450}
+                  layout="responsive"
                 />
               </a>
             </Link>
@@ -128,6 +132,7 @@ const Index = ({ locale }) => {
                   alt={text.pr01}
                   width={800}
                   height={450}
+                  layout="responsive"
                 />
               </a>
             </Link>
@@ -142,6 +147,7 @@ const Index = ({ locale }) => {
                   alt={text.pr02}
                   width={800}
                   height={321}
+                  layout="responsive"
                 />
               </a>
             </Link>
@@ -192,6 +198,7 @@ const Index = ({ locale }) => {
               alt="sdgs"
               width={887}
               height={283}
+              layout="responsive"
             />
           </div>
         </section>
