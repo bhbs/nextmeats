@@ -4,9 +4,18 @@ import Image from "next/image";
 import TopNews from "../components/topNews";
 import Company from "../components/company";
 import Layout from "../components/layout";
+import { useEffect, useState } from "react";
 
 const Index = ({ locale }) => {
+  const [deviceType, setDevice] = useState("");
+
   const text = getText(locale);
+
+  useEffect(() => {
+    const mobiles = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    mobiles.test(navigator.userAgent) ? setDevice("mobile") : setDevice("pc");
+  }, []);
+
   return (
     <Layout locale={locale}>
       <Head>
@@ -18,7 +27,24 @@ const Index = ({ locale }) => {
         <meta property="og:site_name" content={text.title} />
         <meta property="og:title" content={text.title} />
         <meta property="og:description" content={text.description} />
-        <meta property="og:image" content="/img/ogp-1200x630.jpg" />
+        {locale === "jp" && (
+          <meta
+            property="og:image"
+            content="https://nextmeats.co.jp/img/index/jp_web-ogp-1200x630-gyudon.jpg"
+          />
+        )}
+        {locale === "en" && (
+          <meta
+            property="og:image"
+            content="https://nextmeats.tw/img/index/en_web-ogp-1200x630-gyudon.jpg"
+          />
+        )}
+        {locale === "tw" && (
+          <meta
+            property="og:image"
+            content="https://nextmeats.tw/img/index/tw_web-ogp-1200x630-gyudon.jpg"
+          />
+        )}
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@MeatsNext" />
@@ -29,11 +55,20 @@ const Index = ({ locale }) => {
           marginTop: "58px",
         }}
       >
-        <Image
-          src="/img/index/top-1024x504-gyudon-a.jpg"
-          alt={text.title}
-          unsized
-        />
+        {deviceType === "pc" && (
+          <Image
+            src={`/img/index/${locale}_web-top-pc-1920x945.jpg`}
+            alt={text.title}
+            unsized
+          />
+        )}
+        {deviceType === "mobile" && (
+          <Image
+            src={`/img/index/${locale}_web-top-mobile-720x580-gyudon.jpg`}
+            alt={text.title}
+            unsized
+          />
+        )}
       </div>
       <div
         className="page"
@@ -71,7 +106,7 @@ const Index = ({ locale }) => {
             >
               <a>
                 <Image
-                  src="/img/index/1920x1080-burger.jpg"
+                  src={`/img/index/${locale}_1920x1080-burger.jpg`}
                   alt={text.pr03}
                   width={800}
                   height={450}
@@ -85,7 +120,7 @@ const Index = ({ locale }) => {
             <Link href="https://shop.nextmeats.jp/products/gyudon">
               <a>
                 <Image
-                  src="/img/index/1920x1080-gyudon.jpg"
+                  src={`/img/index/${locale}_1920x1080-gyudon.jpg`}
                   alt={text.pr01}
                   width={800}
                   height={450}
