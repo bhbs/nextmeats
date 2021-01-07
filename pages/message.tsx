@@ -14,7 +14,7 @@ const Message = ({ locale }) => {
         <meta property="og:description" content={text.description} />
       </Head>
       <div className="page">
-        <h1>
+        <h1 className="messageHeading">
           {text.title}
           <br />
           {text.subject}
@@ -40,9 +40,9 @@ const Message = ({ locale }) => {
 function getText(locale) {
   return {
     title: {
-      jp: "ネクストミーツの理念",
-      en: "The Philosophy of NEXT MEATS",
-      tw: "NEXT MEATS的理念",
+      jp: "ネクストミーツの理念 ー",
+      en: "The Philosophy of NEXT MEATS -",
+      tw: "NEXT MEATS的理念 ー",
     }[locale],
     description: {
       jp: "地球を終わらせない",
@@ -50,14 +50,14 @@ function getText(locale) {
       tw: "顛覆美味 地球永續優植選擇",
     }[locale],
     subject: {
-      jp: "〜 地球を終わらせない 〜",
-      en: "〜 Ensuring a sustainable future for the earth 〜",
-      tw: "〜 顛覆美味 地球永續優植選擇 〜",
+      jp: "地球を終わらせない",
+      en: "Ensuring a sustainable future for the earth",
+      tw: "顛覆美味 地球永續優植選擇",
     }[locale],
     state01: {
       jp: "子供達の未来のために我々ができることは？",
       en: "What can we do for the future of our children?",
-      tw: "為了孩子們的未來，我們能做的是什麼？ ",
+      tw: "為了孩子們的未來，我們能做什麼？",
     }[locale],
     state02: {
       jp:
@@ -65,13 +65,13 @@ function getText(locale) {
       en:
         'The damage caused by disasters such as floods, droughts, typhoons, and heat waves has become increasingly severe around the world.<br>Our meat production activities account for around 15% of the total volume of greenhouse gases emitted by humans (<a href="http://www.fao.org/news/story/en/item/197623/icode/">according to the UN</a>).<br>We can drastically reduce the volume of greenhouse gases emitted by cutting back on our consumption of animal products.<br>It is critical for us to reduce the volume of greenhouse gases emitted as well as the massive amount of water resources used for breeding livestock.',
       tw:
-        '全球各地洪水、乾旱、颱風、熱浪等災情不斷增加。在人類活動所排放的溫室氣體中，生產肉品的排放量約占總排放量的15%（<a href="http://www.fao.org/news/story/en/item/197623/icode/">聯合國</a>）。藉由減少消費動物性食品可非常顯著地改善溫室氣體的排放。因此有必要在畜產養殖上減少水資源的大量使用，並降低因動物排泄物造成的溫室氣體排放量。',
+        '溫室效應導致全球暖化，衝擊生態環境，各地洪水、乾旱、颶風、熱浪等災情不斷。人類經濟活動排放的溫室氣體中，畜養肉品約占了總排放量的15%（<a href="http://www.fao.org/news/story/en/item/197623/icode/">聯合國</a>）。減少消費動物性食品來降低溫室氣體的排放量，是挽救世界飢餓、能源危機和氣候變遷至關重要的一環。',
     }[locale],
     state03: {
       jp: "社会問題解決型フードテックベンチャー NEXT MEATS",
       en:
         "NEXT MEATS: A food tech venture company committed to addressing social problems",
-      tw: "專為解決社會問題的食品科技新創公司 NEXT MEATS",
+      tw: "NEXT MEATSー致力解決社會問題的食品科技新創公司",
     }[locale],
     state04: {
       jp:
@@ -79,7 +79,7 @@ function getText(locale) {
       en:
         "Next Meats Co., Ltd. is a food tech venture company founded by individuals who take the future of our global environment seriously.<br>Our company hopes to create delicious plant-based meat products as a substitute for animal-based meat and share them with consumers. In so doing, we hope to offer everyone the possibility of a new lifestyle while making a positive impact on our global environment.",
       tw:
-        "我們認真思考地球環境的未來，以食品科技新創企業之姿成立了NEXT MEATS株式會社。我們希望生產替代動物性肉品的「美味植物性肉品」並使其普及化，以提供人們嶄新的生活型態，同時也讓地球環境持續往好的方向轉變。",
+        "我們認真思考地球環境的未來，成立了NEXT MEATS株式會社。身為食品科技新創企業，我們顛覆刻板印象，研發創新美味的優質植物肉品，提供人們嶄新的生活型態和消費選擇，讓地球永續美麗。",
     }[locale],
     state05: {
       jp: "未来に希望の光を",
@@ -92,7 +92,7 @@ function getText(locale) {
       en:
         "NEXT MEATS is a company that is optimistic about the future of mankind.<br>Although the human race has always encountered major challenges throughout our history, we have never failed to confront these challenges head-on and overcome them.<br>In order to get through this period of crisis that we are currently in, it is paramount for us to take immediate action.<br>We hope to continue developing delicious meat substitutes that we can bring to everyone so as to keep our children smiling as they head into the future.",
       tw:
-        "我們NEXT MEATS對未來抱持著樂觀的態度。人類不論在任何時代，總面臨著巨大的課題，每次都是拚了命地面對問題，然後解決問題。為了戰勝目前我們所處的「危機時代」，必須立刻採取行動因應。我們會持續開發與普及美味的替代肉品，讓邁向未來的孩子們永保燦爛笑容。",
+        "不論在任何時代人類總有面臨巨大的課題，NEXT MEATS對未來永遠抱持樂觀的態度，真摯面對挑戰，付諸行動來戰勝目前我們所處的「危機時代」。我們用最新的科技持續研發對地球友善的創新替代肉品，承諾孩子們未來永保燦爛笑容。",
     }[locale],
   };
 }

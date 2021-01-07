@@ -26,13 +26,6 @@ body {
     font-size: 0.9em;
   }
 }
-h1 {
-  @include sp {
-    font-size: 22px;
-    text-align: center;
-    margin: 36px auto 0;
-  }
-}
 
 a {
   text-decoration: none;
@@ -215,5 +208,12 @@ section {
       margin-right: 16px;
       width: 20%;
     }
+  }
+}
+
+.messageHeading {
+  @include sp {
+    font-size: 22px;
+    margin: 36px auto 0;
   }
 }
