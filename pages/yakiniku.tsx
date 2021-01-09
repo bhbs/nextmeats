@@ -99,7 +99,7 @@ function getText(locale) {
     }[locale],
     subject: {
       jp:
-        "世界初となる焼肉用フェイクミート『カルビ1.0』＆『ハラミ1.0』を同時リリース！！",
+        "世界初となる焼肉用フェイクミート『カルビ1.1』＆『ハラミ1.1』を同時リリース！！",
       en: "",
       tw: "",
     }[locale],
@@ -123,11 +123,11 @@ function getText(locale) {
     }[locale],
     pr02: {
       jp:
-        "カルビ風に仕上げた香ばしい味の『カルビ 1.0』と、柔らかめの食感でジュワッと美味しい『ハラミ 1.0』を用意。無添加で安心。お約束の「オン・ザ・ライス」も絶品です。",
+        "カルビ風に仕上げた香ばしい味の『カルビ 1.1』と、柔らかめの食感でジュワッと美味しい『ハラミ 1.1』を用意。無添加で安心。お約束の「オン・ザ・ライス」も絶品です。",
       en:
-        "We offer the aromatic “Short Rib 1.0” which is inspired by short ribs as well as the delicious “Skirt 1.0” which has a softer texture. Both products are additive-free and can be enjoyed with a peace of mind.",
+        "We offer the aromatic “Short Rib 1.1” which is inspired by short ribs as well as the delicious “Skirt 1.1” which has a softer texture. Both products are additive-free and can be enjoyed with a peace of mind.",
       tw:
-        "我們提供香味誘人的牛五花風味的「牛五花 1.0」，以及口感柔嫩、多汁美味的「牛橫隔膜 1.0」。\n二者均不含添加物，可安心食用",
+        "我們提供香味誘人的牛五花風味的「牛五花 1.1」，以及口感柔嫩、多汁美味的「牛橫隔膜 1.1」。\n二者均不含添加物，可安心食用",
     }[locale],
     pr03: {
       jp: "＜ 魅力的な栄養価 ＞",
@@ -169,9 +169,9 @@ function getText(locale) {
       tw: "※未使用動物性原料。未使用棕櫚油以及牛骨炭漂白的白砂糖。",
     }[locale],
     pr09: {
-      jp: "＜ハラミ1.0の原材料と栄養成分＞",
-      en: "< Ingredients and nutrition facts of Short Rib 1.0 >",
-      tw: "< 牛五花1.0的原料和營養成分 >",
+      jp: "＜ハラミ1.1の原材料と栄養成分＞",
+      en: "< Ingredients and nutrition facts of Short Rib 1.1 >",
+      tw: "< 牛五花1.1的原料和營養成分 >",
     }[locale],
     pr10: {
       jp:
@@ -182,9 +182,9 @@ function getText(locale) {
         "原料：大豆加工品（日本國內製造）、調味醬（醬油、砂糖、米發酵調味料、酵母萃取物、蘋果、釀造醋、大蒜、食鹽、芝麻油、豆瓣醬、胡椒）、食用菜籽油、（部分含小麥、大豆、蘋果、芝麻）\n營養成分標示（每100g）：熱量　266kcal 蛋白質　33.0g 脂肪　2.9g 碳水化合物　32.6g",
     }[locale],
     pr11: {
-      jp: "＜カルビ1.0の原材料と栄養成分＞",
-      en: "< Ingredients and nutrition facts of Skirt 1.0 >",
-      tw: "< 牛橫隔膜1.0的原料和營養成分 >",
+      jp: "＜カルビ1.1の原材料と栄養成分＞",
+      en: "< Ingredients and nutrition facts of Skirt 1.1 >",
+      tw: "< 牛橫隔膜1.1的原料和營養成分 >",
     }[locale],
     pr12: {
       jp:
