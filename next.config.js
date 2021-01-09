@@ -1,4 +1,9 @@
 module.exports = {
+  env: {
+    GOOGLE_ANALYTICS_ID_JP_FOR_BROWSER: process.env.GOOGLE_ANALYTICS_ID_JP,
+    GOOGLE_ANALYTICS_ID_US_FOR_BROWSER: process.env.GOOGLE_ANALYTICS_ID_US,
+    GOOGLE_ANALYTICS_ID_TW_FOR_BROWSER: process.env.GOOGLE_ANALYTICS_ID_TW,
+  },
   i18n: {
     locales: ['ja', 'en-US', 'zh'],
     defaultLocale: 'ja',

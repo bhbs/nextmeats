@@ -1,7 +1,11 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Header from "./header";
+import * as gtag from "../lib/gtag";
 
 const Layout = ({ children, locale }) => {
+  const router = useRouter();
+  const gaId = gtag.getGaId(router.locale);
   return (
     <>
       <Head>
@@ -39,6 +43,28 @@ const Layout = ({ children, locale }) => {
         />
         <script src="https://www.googletagmanager.com/gtag/js?id=UA-170779191-1"></script>
         <script src="/js/ga.js"></script>
+
+        {/* Google Analytics */}
+        {gaId && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gaId}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
       </Head>
       <Header locale={locale} />
       {children}
