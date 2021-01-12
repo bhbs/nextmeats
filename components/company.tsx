@@ -106,9 +106,12 @@ function getText(locale) {
       tw: "Head Office Address",
     }[locale],
     location: {
-      jp: "〒150-0022 渋谷区恵比寿南 1-16-13 3F\n※ 2020/10 本社を移転しました",
-      en: "3RD FLOOR, 1-16-13 EBISU-MINAMI, SHIBUYA-KU,TOKYO 150-0022, JAPAN",
-      tw: "3RD FLOOR, 1-16-13 EBISU-MINAMI, SHIBUYA-KU,TOKYO 150-0022, JAPAN",
+      jp:
+        "〒160-0022 新宿区 新宿一丁目 34-16\n清水ビル2F ※2021/01 本社を移転しました",
+      en:
+        "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
+      tw:
+        "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
     }[locale],
     time_h: {
       jp: "営業時間",
