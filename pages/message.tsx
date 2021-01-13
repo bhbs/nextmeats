@@ -63,7 +63,7 @@ function getText(locale) {
       jp:
         '世界中で洪水、干ばつ、台風、熱波などの災害による被害が増加しています。<br>人間由来の温室効果ガス排出量のうち、肉の生産による排出量は全体の約15%を占めています。（<a href="http://www.fao.org/news/story/en/item/197623/icode/">国連</a> ）<br>温室効果ガスの排出は、動物性食品の消費を減らすことで劇的に改善できます。<br>畜産のために使われる膨大な量の水資源、排泄される温室効果ガスを減らす必要があります。',
       en:
-        'The damage caused by disasters such as floods, droughts, typhoons, and heat waves has become increasingly severe around the world.<br>Our meat production activities account for around 15% of the total volume of greenhouse gases emitted by humans (<a href="http://www.fao.org/news/story/en/item/197623/icode/">according to the UN</a>).<br>We can drastically reduce the volume of greenhouse gases emitted by cutting back on our consumption of animal products.<br>It is critical for us to reduce the volume of greenhouse gases emitted as well as the massive amount of water resources used for breeding livestock.',
+        'The damage caused by disasters such as floods, droughts, typhoons, and heat waves has become increasingly severe around the world.<br>Out of all human activities, the total volume of greenhouse gas emissions deriving from meat production activities is calculated to be around 15%. (<a href="http://www.fao.org/news/story/en/item/197623/icode/">UN</a>)<br>We can drastically reduce this number by cutting back on our consumption of animal products.<br>With the world’s population expected to reach over 10 billion and other natural resources like fresh water rapidly depleting, it is critical that we do what we can now to help lower these carbon emissions.',
       tw:
         '溫室效應導致全球暖化，衝擊生態環境，各地洪水、乾旱、颶風、熱浪等災情不斷。人類經濟活動排放的溫室氣體中，畜養肉品約占了總排放量的15%（<a href="http://www.fao.org/news/story/en/item/197623/icode/">聯合國</a>）。減少消費動物性食品來降低溫室氣體的排放量，是挽救世界飢餓、能源危機和氣候變遷至關重要的一環。',
     }[locale],
@@ -77,7 +77,7 @@ function getText(locale) {
       jp:
         "地球環境の今後を真剣に考え、ネクストミーツ株式会社はフードテックベンチャーとして立ち上がりました。<br>動物性の肉に替わる「おいしい植物性の肉」を作って普及させ、新しいライフスタイルを提供しながら、地球環境を良い方向に変えていきたいと考えています。",
       en:
-        "Next Meats Co., Ltd. is a food tech venture company founded by individuals who take the future of our global environment seriously.<br>Our company hopes to create delicious plant-based meat products as a substitute for animal-based meat and share them with consumers. In so doing, we hope to offer everyone the possibility of a new lifestyle while making a positive impact on our global environment.",
+        "Next Meats Co., Ltd. is a food tech venture company founded by individuals who take the future of our global environment seriously.<br>Our company strives to create delicious, innovative alternative meat products rooted in Japanese cuisine as a substitute for animal-based meat. In so doing, we hope to offer consumers a new lifestyle where sustainability is not compromised even when choosing a satisfactory meal.",
       tw:
         "我們認真思考地球環境的未來，成立了NEXT MEATS株式會社。身為食品科技新創企業，我們顛覆刻板印象，研發創新美味的優質植物肉品，提供人們嶄新的生活型態和消費選擇，讓地球永續美麗。",
     }[locale],
