@@ -67,8 +67,9 @@ const Index = ({ locale }) => {
               textAlign: "center",
               lineHeight: 3,
             }}
-            dangerouslySetInnerHTML={{ __html: text.message }}
-          ></div>
+          >
+            {text.message}
+          </div>
         </section>
 
         <section>
@@ -162,13 +163,10 @@ const Index = ({ locale }) => {
                 textAlign: "left",
                 maxWidth: "640px",
               }}
-              dangerouslySetInnerHTML={{ __html: text.pr05 }}
-            ></p>
-
-            <p
-              style={{ marginTop: "60px" }}
-              dangerouslySetInnerHTML={{ __html: text.pr06 }}
-            ></p>
+            >
+              {text.pr05}
+            </p>
+            <p style={{ marginTop: "60px" }}>{text.pr06}</p>
             <Image
               src="/img/index/sdgs.png"
               alt="sdgs"
@@ -200,12 +198,88 @@ function getText(locale) {
       tw: "Next Meats Co., Ltd. WEBSITE",
     }[locale],
     message: {
-      jp:
-        '<h2><span>Message</span></h2><h3>代替肉で地球の未来をつくる</h3><p>地球環境の悪化と人口爆発による<br class="responsive" />食糧危機への対策として<br />我々ができることは、<br class="responsive" />食肉を減らすということ。<br />ネクストミーツ株式会社は、<br class="responsive" />地球の未来をより良くするため<br />「代替肉・植物肉・人工肉」に着目し、<br class="responsive" />その研究開発を行なっています。</p><p><a href="message"> ネクストミーツの理念について</a></p>',
-      en:
-        '<h2><span>Message</span></h2><h3>Shaping the future of our earth <br class="responsive">with meat alternatives</h3><p>One thing we can all do <br class="responsive">in response to the food crisis<br>caused by the deterioration <br class="responsive">in our global environment<br>and population growth is <br class="responsive">to reduce our meat consumption.<br>Next Meats Co., Ltd. seeks <br class="responsive">to create a better future<br>for our earth by focusing on <br class="responsive">the R&D of meat alternatives.</p><p><a href="message">The Philosophy of NEXT MEATS</a></p>',
-      tw:
-        '<h2><span>Message</span></h2><h3>以替代肉開創地球的未來</h3><p>對於地球環境惡化與人口增加導致的<br class="responsive" />糧食危機，我們能做的解決方法，<br class="responsive" />就是減少吃肉。<br />NEXT MEATS株式會社<br class="responsive" />致力於「替代肉」的研發，<br class="responsive" />希望帶給地球更美好的未來。</p><p><a href="message">> NEXT MEATS的理念</a></p>',
+      jp: (
+        <>
+          <h2>
+            <span>Message</span>
+          </h2>
+          <h3>代替肉で地球の未来をつくる</h3>
+          <p>
+            地球環境の悪化と人口爆発による
+            <br className="responsive" />
+            食糧危機への対策として
+            <br />
+            我々ができることは、
+            <br className="responsive" />
+            食肉を減らすということ。
+            <br />
+            ネクストミーツ株式会社は、
+            <br className="responsive" />
+            地球の未来をより良くするため
+            <br />
+            「代替肉・植物肉・人工肉」に着目し、
+            <br className="responsive" />
+            その研究開発を行なっています。
+          </p>
+          <p>
+            <a href="message">ネクストミーツの理念について</a>
+          </p>
+        </>
+      ),
+      en: (
+        <>
+          <h2>
+            <span>Message</span>
+          </h2>
+          <h3>
+            Shaping the future of our earth <br className="responsive" />
+            with meat alternatives
+          </h3>
+          <p>
+            One thing we can all do <br className="responsive" />
+            in response to the food crisis
+            <br />
+            caused by the deterioration <br className="responsive" />
+            in our global environment
+            <br />
+            and population growth is <br className="responsive" />
+            to reduce our meat consumption.
+            <br />
+            Next Meats Co., Ltd. seeks <br className="responsive" />
+            to create a better future
+            <br />
+            for our earth by focusing on <br className="responsive" />
+            the R&D of meat alternatives.
+          </p>
+          <p>
+            <a href="message">The Philosophy of NEXT MEATS</a>
+          </p>
+        </>
+      ),
+      tw: (
+        <>
+          <h2>
+            <span>Message</span>
+          </h2>
+          <h3>以替代肉開創地球的未來</h3>
+          <p>
+            對於地球環境惡化與人口增加導致的
+            <br className="responsive" />
+            糧食危機，我們能做的解決方法，
+            <br className="responsive" />
+            就是減少吃肉。
+            <br />
+            NEXT MEATS株式會社
+            <br className="responsive" />
+            致力於「替代肉」的研發，
+            <br className="responsive" />
+            希望帶給地球更美好的未來。
+          </p>
+          <p>
+            <a href="message">NEXT MEATS的理念</a>
+          </p>
+        </>
+      ),
     }[locale],
     pr01: {
       jp: "ビックリする旨さ！\n『ネクスト牛丼1.2』",
@@ -229,15 +303,36 @@ function getText(locale) {
       tw: "",
     }[locale],
     pr05: {
-      jp:
-        'ネクストミーツ株式会社では、出来るだけ多くの方に現状を知ってもらうため、代替肉専門メディア<a href="https://nextmeats.jp/" target="_blank">「NEXT MEATS」</a>を運営しています。<br>　また、代替肉におけるオープンイノベーションをテーマにした<a href="https://www.facebook.com/groups/671252940085262" target="_blank">「フェイクミートコンソーシアム」</a>を運営し、有識者（生命科学・食品工学・遺伝子工学）のネットワークから生まれるアイデア、テクノロジーを駆使して次世代の肉を日々進化させていきます。',
+      jp: (
+        <>
+          ネクストミーツ株式会社では、出来るだけ多くの方に現状を知ってもらうため、代替肉専門メディア
+          <a href="https://nextmeats.jp/" target="_blank">
+            「NEXT MEATS」
+          </a>
+          を運営しています。
+          <br />
+          　また、代替肉におけるオープンイノベーションをテーマにした
+          <a
+            href="https://www.facebook.com/groups/671252940085262"
+            target="_blank"
+          >
+            「フェイクミートコンソーシアム」
+          </a>
+          を運営し、有識者（生命科学・食品工学・遺伝子工学）のネットワークから生まれるアイデア、テクノロジーを駆使して次世代の肉を日々進化させていきます。
+        </>
+      ),
       en: "",
       tw: "",
     }[locale],
     pr06: {
       jp: "",
-      en:
-        'Next Meats Co., Ltd is committed to <br class="responsive">global sustainability efforts <br class="responsive">by playing our part in achieving the SDGs.',
+      en: (
+        <>
+          Next Meats Co., Ltd is committed to <br className="responsive" />
+          global sustainability efforts <br className="responsive" />
+          by playing our part in achieving the SDGs.
+        </>
+      ),
       tw: "NEXT MEATS依據SDGs的理念，為地球永續的可能性盡一份心力。",
     }[locale],
   };
