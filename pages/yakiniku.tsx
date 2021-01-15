@@ -175,7 +175,7 @@ function getText(locale) {
     }[locale],
     pr10: {
       jp:
-        "原材料：大豆加工品（大豆（国産））、調味液（醤油、砂糖、米発酵調味料、酵母エキス、りんご、醸造酢、にんにく、食塩、ごま油、豆板醤、コショウ）、食用なたね油、（一部に小麦、大豆、りんご、ごまを含む）\n栄養成分表示（100g当たり）：エネルギー　348kcal タンパク質　33.7g 脂質　11.2g 炭水化物　28.2g",
+        "原材料：大豆加工品（国産・遺伝子組み換えでない）、調味液（醤油、砂糖、米発酵調味料、酵母エキス、りんご、醸造酢、にんにく、食塩、ごま油、豆板醤、コショウ）、食用なたね油、（一部に小麦、大豆、りんご、ごまを含む）\n栄養成分表示（100g当たり）：エネルギー　348kcal タンパク質　33.7g 脂質　11.2g 炭水化物　28.2g",
       en:
         "Ingredients: Processed soybeans (produced in Japan), seasonings (soy sauce, sugar, fermented rice seasonings, yeast extract, apple, brewed vinegar, garlic, salt, sesame oil, bean paste, pepper), canola oil. (This product contains wheat, soybean, apple, and sesame ingredients.)\nNutrition facts (per 100g): Calories: 266kcal. Protein: 33.0g. Total fat: 2.9g. \nTotal carbohydrate: 32.6g.",
       tw:
@@ -188,7 +188,7 @@ function getText(locale) {
     }[locale],
     pr12: {
       jp:
-        "原材料：大豆加工品（国内製造）、調味液（醤油、砂糖、米発酵調味料、酵母エキス、りんご、醸造酢、にんにく、食塩、ごま油、豆板醤、コショウ）、食用なたね油、（一部に小麦、大豆、りんご、ごまを含む）\n栄養成分表示（100g当たり）：エネルギー　266kcal タンパク質　33.0g 脂質　2.9g 炭水化物　32.6g",
+        "原材料：大豆加工品（国産・遺伝子組み換えでない）、調味液（醤油、砂糖、米発酵調味料、酵母エキス、りんご、醸造酢、にんにく、食塩、ごま油、豆板醤、コショウ）、食用なたね油、（一部に小麦、大豆、りんご、ごまを含む）\n栄養成分表示（100g当たり）：エネルギー　266kcal タンパク質　33.0g 脂質　2.9g 炭水化物　32.6g",
       en:
         "Ingredients: Processed soybeans (soybeans produced in Japan), seasonings (soy sauce, sugar, fermented rice seasonings, yeast extract, apple, brewed vinegar, garlic, salt, sesame oil, bean paste, pepper), canola oil. (This product contains wheat, soybean, apple, and sesame ingredients.)\nNutrition facts (per 100g): Calories: 348kcal. Protein: 33.7g. Total fat: 11.2g. \nTotal carbohydrate: 28.2g.",
       tw:

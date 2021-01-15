@@ -86,7 +86,7 @@ function getText(locale) {
     }[locale],
     pr04: {
       jp:
-        "原材料：大豆加工品（脱脂大豆、食塩）（国内製造）、調味液（しょうゆ、砂糖、米発酵調味料、酵母エキス、昆布エキス、食塩、醸造酢、椎茸エキス、ジンジャーパウダー）、たまねぎ、食用なたね油 / 着色料（カラメル色素）、（一部に大豆・小麦を含む）",
+        "原材料：大豆加工品（脱脂大豆、食塩）（国内製造・遺伝子組み換えでない）、調味液（しょうゆ、砂糖、米発酵調味料、酵母エキス、昆布エキス、食塩、醸造酢、椎茸エキス、ジンジャーパウダー）、たまねぎ、食用なたね油 / 着色料（カラメル色素）、（一部に大豆・小麦を含む）",
       en:
         "Ingredients: Processed soybeans (defatted soybeans produced in Japan, salt), seasonings (soy sauce, sugar, fermented rice seasonings, yeast extract, kombu extract, salt, brewed vinegar, shiitake mushroom extract, ginger powder), onion, canola oil, coloring (caramel color). (This product contains soybean and wheat ingredients.)",
       tw:
