@@ -1,4 +1,10 @@
-const Company = ({ locale }) => {
+import React from "react";
+
+type Props = {
+  locale: string;
+};
+
+const Company = ({ locale }: Props): React.ReactElement => {
   const text = getText(locale);
 
   return (
@@ -50,6 +56,7 @@ const Company = ({ locale }) => {
         <a
           href="https://nextmeats.jp/%e6%b1%82%e4%ba%ba%e5%8b%9f%e9%9b%86/"
           target="_blank"
+          rel="noreferrer"
         >
           {text.recruit}
         </a>

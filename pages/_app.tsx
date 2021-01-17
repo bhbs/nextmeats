@@ -1,9 +1,11 @@
+import React from "react";
+import { AppProps } from "next/dist/next-server/lib/router/router";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 import "../public/css/style.scss";
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps): React.ReactElement => {
   const router = useRouter();
   const gaId = gtag.getGaId(router.locale);
 

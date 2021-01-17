@@ -1,8 +1,14 @@
+import React from "react";
 import Head from "next/head";
 import ShopLink from "../components/shopLink";
 import Layout from "../components/layout";
+import { GetStaticProps, GetStaticPropsResult } from "next";
 
-const Yakiniku = ({ locale }) => {
+type Props = {
+  locale: string;
+};
+
+const Yakiniku = ({ locale }: Props): React.ReactElement => {
   const text = getText(locale);
   return (
     <Layout locale={locale}>
@@ -18,7 +24,7 @@ const Yakiniku = ({ locale }) => {
         <h1>{text.title}</h1>
         <img src="/img/yakiniku/yakiniku.jpg" alt={text.title} />
         <p>
-          <a href="https://shop.nextmeats.jp" target="_blank">
+          <a href="https://shop.nextmeats.jp" target="_blank" rel="noreferrer">
             {text.subject}
           </a>
         </p>
@@ -212,7 +218,13 @@ function getText(locale) {
   };
 }
 
-export async function getStaticProps({ locale }) {
+type Locale = {
+  locale: string;
+};
+
+export const getStaticProps: GetStaticProps = async ({
+  locale,
+}: Locale): Promise<GetStaticPropsResult<Locale>> => {
   switch (locale) {
     case "ja":
       locale = "jp";
@@ -225,6 +237,6 @@ export async function getStaticProps({ locale }) {
       break;
   }
   return { props: { locale } };
-}
+};
 
 export default Yakiniku;

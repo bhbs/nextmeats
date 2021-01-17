@@ -1,12 +1,18 @@
+import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import { GetStaticProps, GetStaticPropsResult } from "next";
 import TopNews from "../components/topNews";
 import Company from "../components/company";
 import Layout from "../components/layout";
 import { useEffect, useState } from "react";
 
-const Index = ({ locale }) => {
+type Props = {
+  locale: string;
+};
+
+const Index = ({ locale }: Props): React.ReactElement => {
   const [deviceType, setDevice] = useState("");
 
   const text = getText(locale);
@@ -306,15 +312,16 @@ function getText(locale) {
       jp: (
         <>
           ネクストミーツ株式会社では、出来るだけ多くの方に現状を知ってもらうため、代替肉専門メディア
-          <a href="https://nextmeats.jp/" target="_blank">
+          <a href="https://nextmeats.jp/" target="_blank" rel="noreferrer">
             「NEXT MEATS」
           </a>
           を運営しています。
           <br />
-          　また、代替肉におけるオープンイノベーションをテーマにした
+          また、代替肉におけるオープンイノベーションをテーマにした
           <a
             href="https://www.facebook.com/groups/671252940085262"
             target="_blank"
+            rel="noreferrer"
           >
             「フェイクミートコンソーシアム」
           </a>
@@ -338,7 +345,13 @@ function getText(locale) {
   };
 }
 
-export async function getStaticProps({ locale }) {
+type Locale = {
+  locale: string;
+};
+
+export const getStaticProps: GetStaticProps = async ({
+  locale,
+}: Locale): Promise<GetStaticPropsResult<Locale>> => {
   switch (locale) {
     case "ja":
       locale = "jp";
@@ -351,6 +364,6 @@ export async function getStaticProps({ locale }) {
       break;
   }
   return { props: { locale } };
-}
+};
 
 export default Index;

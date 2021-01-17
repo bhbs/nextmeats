@@ -1,8 +1,14 @@
+import React from "react";
 import Head from "next/head";
+import { GetStaticProps, GetStaticPropsResult } from "next";
 import ShopLink from "../components/shopLink";
 import Layout from "../components/layout";
 
-const Gyudon = ({ locale }) => {
+type Props = {
+  locale: string;
+};
+
+const Gyudon = ({ locale }: Props): React.ReactElement => {
   const text = getText(locale);
   return (
     <Layout locale={locale}>
@@ -122,7 +128,13 @@ function getText(locale) {
   };
 }
 
-export async function getStaticProps({ locale }) {
+type Locale = {
+  locale: string;
+};
+
+export const getStaticProps: GetStaticProps = async ({
+  locale,
+}: Locale): Promise<GetStaticPropsResult<Locale>> => {
   switch (locale) {
     case "ja":
       locale = "jp";
@@ -135,6 +147,5 @@ export async function getStaticProps({ locale }) {
       break;
   }
   return { props: { locale } };
-}
-
+};
 export default Gyudon;

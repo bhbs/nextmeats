@@ -1,6 +1,11 @@
 import Link from "next/link";
+import React from "react";
 
-const Header = ({ locale }) => (
+type Props = {
+  locale: string;
+};
+
+const Header = ({ locale }: Props): React.ReactElement => (
   <header id="luxbar" className="luxbar-fixed">
     <input type="checkbox" className="luxbar-checkbox" id="luxbar-checkbox" />
     <div className="luxbar-menu luxbar-menu-right luxbar-menu-dark">
@@ -42,7 +47,11 @@ const Header = ({ locale }) => (
           <a>STORE</a>
           <ul>
             <li className="luxbar-item">
-              <a href="https://shop.nextmeats.jp" target="_blank">
+              <a
+                href="https://shop.nextmeats.jp"
+                target="_blank"
+                rel="noreferrer"
+              >
                 OFFICIAL SHOP
               </a>
             </li>
@@ -50,6 +59,7 @@ const Header = ({ locale }) => (
               <a
                 href="https://www.amazon.co.jp/s?me=ALHPY7JG61WY1"
                 target="_blank"
+                rel="noreferrer"
               >
                 AMAZON
               </a>
@@ -58,6 +68,7 @@ const Header = ({ locale }) => (
               <a
                 href="https://store.shopping.yahoo.co.jp/whitehole/a5d7a5e9a5.html"
                 target="_blank"
+                rel="noreferrer"
               >
                 YAHOO
               </a>
@@ -80,21 +91,21 @@ const Header = ({ locale }) => (
           <ul>
             {locale !== "jp" && (
               <li className="luxbar-item">
-                <a href="//nextmeats.co.jp" target="_blank">
+                <a href="//nextmeats.co.jp" target="_blank" rel="noreferrer">
                   日本語
                 </a>
               </li>
             )}
             {locale !== "en" && (
               <li className="luxbar-item">
-                <a href="//nextmeats.us" target="_blank">
+                <a href="//nextmeats.us" target="_blank" rel="noreferrer">
                   ENGLISH
                 </a>
               </li>
             )}
             {locale !== "tw" && (
               <li className="luxbar-item">
-                <a href="//nextmeats.tw" target="_blank">
+                <a href="//nextmeats.tw" target="_blank" rel="noreferrer">
                   中文
                 </a>
               </li>

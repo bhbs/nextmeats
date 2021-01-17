@@ -1,9 +1,15 @@
+import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Header from "./header";
 import * as gtag from "../lib/gtag";
 
-const Layout = ({ children, locale }) => {
+type Props = {
+  children: React.ReactNode;
+  locale: string;
+};
+
+const Layout = ({ children, locale }: Props): React.ReactElement => {
   const router = useRouter();
   const gaId = gtag.getGaId(router.locale);
   return (

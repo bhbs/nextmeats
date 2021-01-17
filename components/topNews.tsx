@@ -1,7 +1,8 @@
+import React from "react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const TopNews = () => {
+const TopNews = (): React.ReactElement => {
   const [newsList, setNews] = useState([]);
 
   useEffect(() => {
@@ -47,15 +48,27 @@ const TopNews = () => {
             textAlign: "center",
           }}
         >
-          <p>＼　FOLLLOW US　／</p>
+          <p>{"＼　FOLLLOW US　／"}</p>
           <p>
-            <a href="https://www.facebook.com/NextMeats" target="_blank">
+            <a
+              href="https://www.facebook.com/NextMeats"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/img/topNews/facebook.png" alt="facebook" />
             </a>
-            <a href="https://twitter.com/MeatsNext" target="_blank">
+            <a
+              href="https://twitter.com/MeatsNext"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/img/topNews/twitter.png" alt="twitter" />
             </a>
-            <a href="https://www.instagram.com/nextmeats/" target="_blank">
+            <a
+              href="https://www.instagram.com/nextmeats/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/img/topNews/instagram.png" alt="instagram" />
             </a>
           </p>

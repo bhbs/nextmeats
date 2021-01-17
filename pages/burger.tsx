@@ -1,7 +1,13 @@
+import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout";
+import { GetStaticProps, GetStaticPropsResult } from "next";
 
-const Burger = ({ locale }) => {
+type Props = {
+  locale: string;
+};
+
+const Burger = ({ locale }: Props): React.ReactElement => {
   const text = getText(locale);
   return (
     <Layout locale={locale}>
@@ -26,7 +32,11 @@ const Burger = ({ locale }) => {
         <img src="/img/burger/makuake-logo.jpg" alt="makuake" />
         <p>{text.pr03}</p>
         <p>
-          <a href="https://www.makuake.com/project/nextmeats/" target="_blank">
+          <a
+            href="https://www.makuake.com/project/nextmeats/"
+            target="_blank"
+            rel="noreferrer"
+          >
             {text.shoplink}
           </a>
         </p>
@@ -36,7 +46,7 @@ const Burger = ({ locale }) => {
   );
 };
 
-function getText(locale) {
+function getText(locale: string) {
   return {
     title: {
       jp: "NEXT BURGER\nネクストバーガー 1.2",
@@ -95,7 +105,13 @@ function getText(locale) {
   };
 }
 
-export async function getStaticProps({ locale }) {
+type Locale = {
+  locale: string;
+};
+
+export const getStaticProps: GetStaticProps = async ({
+  locale,
+}: Locale): Promise<GetStaticPropsResult<Locale>> => {
   switch (locale) {
     case "ja":
       locale = "jp";
@@ -108,6 +124,6 @@ export async function getStaticProps({ locale }) {
       break;
   }
   return { props: { locale } };
-}
+};
 
 export default Burger;

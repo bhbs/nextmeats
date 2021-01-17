@@ -1,4 +1,4 @@
-export const getGaId = (locale: string) => {
+export const getGaId = (locale: string): string => {
   return {
     ja: process.env.GOOGLE_ANALYTICS_ID_JP_FOR_BROWSER,
     "en-US": process.env.GOOGLE_ANALYTICS_ID_US_FOR_BROWSER,
@@ -6,7 +6,7 @@ export const getGaId = (locale: string) => {
   }[locale];
 };
 
-export const pageview = (gaId: string, path: string) => {
+export const pageview = (gaId: string, path: string): void => {
   window.gtag("config", gaId, {
     page_path: path,
   });

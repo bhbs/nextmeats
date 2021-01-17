@@ -1,8 +1,14 @@
+import React from "react";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import Layout from "../components/layout";
+import { GetStaticProps, GetStaticPropsResult } from "next";
 
-const News = ({ locale }) => {
+type Props = {
+  locale: string;
+};
+
+const News = ({ locale }: Props): React.ReactElement => {
   const text = getText(locale);
   const [newsList, setNews] = useState({
     original: null,
@@ -133,7 +139,13 @@ function getText(locale) {
   };
 }
 
-export async function getStaticProps({ locale }) {
+type Locale = {
+  locale: string;
+};
+
+export const getStaticProps: GetStaticProps = async ({
+  locale,
+}: Locale): Promise<GetStaticPropsResult<Locale>> => {
   switch (locale) {
     case "ja":
       locale = "jp";
@@ -146,6 +158,6 @@ export async function getStaticProps({ locale }) {
       break;
   }
   return { props: { locale } };
-}
+};
 
 export default News;
