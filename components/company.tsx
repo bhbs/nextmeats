@@ -30,6 +30,12 @@ const Company = ({ locale }: Props): React.ReactElement => {
             <td>{text.director_h}</td>
             <td>{text.director}</td>
           </tr>
+          {locale === "jp" && (
+            <tr>
+              <td>{text.lawyer_h}</td>
+              <td>{text.lawyer}</td>
+            </tr>
+          )}
           <tr>
             <td>{text.location_h}</td>
             <td>{text.location}</td>
@@ -106,6 +112,12 @@ function getText(locale) {
       jp: "石塚 孝一",
       en: "Koichi Ishizuka",
       tw: "Koichi Ishizuka",
+    }[locale],
+    lawyer_h: {
+      jp: "顧問弁護士",
+    }[locale],
+    lawyer: {
+      jp: "恩田 俊明",
     }[locale],
     location_h: {
       jp: "本社所在地",
