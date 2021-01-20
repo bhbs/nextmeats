@@ -205,11 +205,11 @@ function getText(locale) {
       },
     ],
     contact: {
-      jp: "お問い合わせ窓口\n担当：田尻\ninfo@nextmeats.co.jp",
+      jp: "お問い合わせ窓口\n担当：田尻\ninfo(at)nextmeats.co.jp",
       en:
-        "For all inquiries, please contact\nSaaya Matsukubo\nmatsukubo@nextmeats.co.jp",
+        "For all inquiries, please contact\nSaaya Matsukubo\nmatsukubo(at)nextmeats.co.jp",
       tw:
-        "For all inquiries, please contact\nSaaya Matsukubo\nmatsukubo@nextmeats.co.jp",
+        "For all inquiries, please contact\nSaaya Matsukubo\nmatsukubo(at)nextmeats.co.jp",
     }[locale],
   };
 }
