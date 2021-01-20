@@ -145,9 +145,9 @@ function getText(locale) {
       tw: "E-MAIL",
     }[locale],
     contact: {
-      jp: "info@nextmeats.co.jp",
-      en: "info@nextmeats.co.jp",
-      tw: "info@nextmeats.co.jp",
+      jp: "info(at)nextmeats.co.jp",
+      en: "info(at)nextmeats.co.jp",
+      tw: "info(at)nextmeats.co.jp",
     }[locale],
     business_h: {
       jp: "事業内容",
