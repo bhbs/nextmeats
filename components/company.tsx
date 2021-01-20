@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 type Props = {
   locale: string;
@@ -59,13 +60,9 @@ const Company = ({ locale }: Props): React.ReactElement => {
         </tbody>
       </table>
       <p id="sns">
-        <a
-          href="https://nextmeats.jp/%e6%b1%82%e4%ba%ba%e5%8b%9f%e9%9b%86/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {text.recruit}
-        </a>
+        <Link href="/recruit">
+          <a>{text.recruit}</a>
+        </Link>
       </p>
     </section>
   );
@@ -148,9 +145,9 @@ function getText(locale) {
       tw: "E-MAIL",
     }[locale],
     contact: {
-      jp: "info*nextmeats.co.jp",
-      en: "info*nextmeats.co.jp",
-      tw: "info*nextmeats.co.jp",
+      jp: "info@nextmeats.co.jp",
+      en: "info@nextmeats.co.jp",
+      tw: "info@nextmeats.co.jp",
     }[locale],
     business_h: {
       jp: "事業内容",
@@ -165,8 +162,8 @@ function getText(locale) {
     }[locale],
     recruit: {
       jp: "求人情報",
-      en: "",
-      tw: "",
+      en: "RECRUITMENT INFORMATION",
+      tw: "RECRUITMENT INFORMATION",
     }[locale],
   };
 }
