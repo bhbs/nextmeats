@@ -76,14 +76,8 @@ const Header = ({ locale }: Props): React.ReactElement => (
           </ul>
         </li>
         <li className="luxbar-item">
-          <Link href="/#company">
-            <a
-              onClick={() =>
-                document.getElementById("luxbar-hamburger").click()
-              }
-            >
-              COMPANY
-            </a>
+          <Link href="/company">
+            <a>COMPANY</a>
           </Link>
         </li>
         <li className="luxbar-item dropdown">

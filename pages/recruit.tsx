@@ -42,9 +42,9 @@ const Recruit = ({ locale }: Props): React.ReactElement => {
                 );
               })}
             <p>{text.contact}</p>
+            <Company locale={locale} />
           </div>
         </section>
-        <Company locale={locale} />
       </div>
     </Layout>
   );

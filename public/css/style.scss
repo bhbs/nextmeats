@@ -162,15 +162,11 @@ section {
 
 #company {
   table {
+    margin: auto;
     width: 100%;
     max-width: 640px;
-    margin: auto;
     line-height: 3.6;
     border-collapse: collapse;
-
-    @include sp {
-      font-size: 8px;
-    }
 
     tr {
       border-bottom: solid 1px #ccc;
@@ -182,10 +178,16 @@ section {
       @include sp {
         width: auto;
         padding: 0 12px;
+        display: block;
       }
 
       &:first-child {
         width: 40%;
+        @include sp {
+          font-size: 0.9em;
+          font-weight: bold;
+          padding-top: 16px;
+        }
       }
     }
   }
