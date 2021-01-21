@@ -8,7 +8,7 @@ type Props = {
   locale: string;
 };
 
-const Recruit = ({ locale }: Props): React.ReactElement => {
+const CompanyPage = ({ locale }: Props): React.ReactElement => {
   const text = getText(locale);
 
   return (
@@ -71,4 +71,4 @@ export const getStaticProps: GetStaticProps = async ({
   return { props: { locale } };
 };
 
-export default Recruit;
+export default CompanyPage;
