@@ -34,10 +34,9 @@ const Index = ({ locale }: Props): React.ReactElement => {
       </Head>
       <div
         style={{
-          marginTop: "58px",
           width: "100%",
           maxWidth: "1920px",
-          margin: "auto",
+          margin: "58px auto 0",
         }}
       >
         {deviceType === "pc" && (locale === "us" || locale === "tw") && (
