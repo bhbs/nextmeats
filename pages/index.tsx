@@ -109,6 +109,8 @@ const Index = ({ locale }: Props): React.ReactElement => {
               <span>PRODUCTS</span>
             </h2>
 
+            <div style={{ height: "16px" }}></div>
+
             <Link href={"https://www.makuake.com/member/index/1104641/"}>
               <a>
                 <Image
@@ -121,7 +123,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
               </a>
             </Link>
 
-            <div style={{ height: "64px" }}></div>
+            <div style={{ height: "16px" }}></div>
 
             <Link
               href={
@@ -141,7 +143,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
               </a>
             </Link>
 
-            <div style={{ height: "64px" }}></div>
+            <div style={{ height: "16px" }}></div>
 
             <Link href="https://shop.nextmeats.jp/products/gyudon">
               <a>
@@ -155,7 +157,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
               </a>
             </Link>
 
-            <div style={{ height: "64px" }}></div>
+            <div style={{ height: "16px" }}></div>
 
             <Link href="/yakiniku">
               <a>
