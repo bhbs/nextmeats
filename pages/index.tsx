@@ -49,7 +49,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
           />
         )}
         {deviceType === "pc" && locale === "jp" && (
-          <Link href={"https://www.makuake.com/member/index/1104641/"}>
+          <Link href={"https://www.makuake.com/project/nextmeats2/"}>
             <a>
               <Image
                 src={`/img/index/hamburger-steak_web-top-pc-1920x945.jpg`}
@@ -71,7 +71,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
           />
         )}
         {deviceType === "mobile" && locale === "jp" && (
-          <Link href={"https://www.makuake.com/member/index/1104641/"}>
+          <Link href={"https://www.makuake.com/project/nextmeats2/"}>
             <a>
               <Image
                 src={`/img/index/hamburger-steak_web-top-mobile-720x580.jpg`}
@@ -111,7 +111,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
 
             <div style={{ height: "16px" }}></div>
 
-            <Link href={"https://www.makuake.com/member/index/1104641/"}>
+            <Link href={"https://www.makuake.com/project/nextmeats2/"}>
               <a>
                 <Image
                   src={`/img/index/hamburger-steak_1920x1080-${locale}.jpg`}
