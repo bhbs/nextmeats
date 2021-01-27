@@ -39,7 +39,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
           margin: "58px auto 0",
         }}
       >
-        {deviceType === "pc" && (locale === "us" || locale === "tw") && (
+        {deviceType === "pc" && (locale === "en" || locale === "tw") && (
           <Image
             src={`/img/index/${locale}_web-top-pc-1920x945.jpg`}
             alt={text.title}
@@ -61,7 +61,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
             </a>
           </Link>
         )}
-        {deviceType === "mobile" && (locale === "us" || locale === "tw") && (
+        {deviceType === "mobile" && (locale === "en" || locale === "tw") && (
           <Image
             src={`/img/index/${locale}_web-top-mobile-720x580-gyudon.jpg`}
             alt={text.title}
