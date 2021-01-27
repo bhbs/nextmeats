@@ -34,13 +34,12 @@ const Index = ({ locale }: Props): React.ReactElement => {
       </Head>
       <div
         style={{
-          marginTop: "58px",
           width: "100%",
           maxWidth: "1920px",
-          margin: "auto",
+          margin: "58px auto 0",
         }}
       >
-        {deviceType === "pc" && (
+        {deviceType === "pc" && (locale === "us" || locale === "tw") && (
           <Image
             src={`/img/index/${locale}_web-top-pc-1920x945.jpg`}
             alt={text.title}
@@ -49,7 +48,20 @@ const Index = ({ locale }: Props): React.ReactElement => {
             layout="responsive"
           />
         )}
-        {deviceType === "mobile" && (
+        {deviceType === "pc" && locale === "jp" && (
+          <Link href={"https://www.makuake.com/project/nextmeats2/"}>
+            <a>
+              <Image
+                src={`/img/index/hamburger-steak_web-top-pc-1920x945.jpg`}
+                alt={text.title}
+                width={1920}
+                height={945}
+                layout="responsive"
+              />
+            </a>
+          </Link>
+        )}
+        {deviceType === "mobile" && (locale === "us" || locale === "tw") && (
           <Image
             src={`/img/index/${locale}_web-top-mobile-720x580-gyudon.jpg`}
             alt={text.title}
@@ -57,6 +69,19 @@ const Index = ({ locale }: Props): React.ReactElement => {
             height={580}
             layout="responsive"
           />
+        )}
+        {deviceType === "mobile" && locale === "jp" && (
+          <Link href={"https://www.makuake.com/project/nextmeats2/"}>
+            <a>
+              <Image
+                src={`/img/index/hamburger-steak_web-top-mobile-720x580.jpg`}
+                alt={text.title}
+                width={720}
+                height={580}
+                layout="responsive"
+              />
+            </a>
+          </Link>
         )}
       </div>
       <div
@@ -84,9 +109,22 @@ const Index = ({ locale }: Props): React.ReactElement => {
               <span>PRODUCTS</span>
             </h2>
 
-            <p style={{ marginTop: "60px" }}>
-              <b>{text.pr03}</b>
-            </p>
+            <div style={{ height: "16px" }}></div>
+
+            <Link href={"https://www.makuake.com/project/nextmeats2/"}>
+              <a>
+                <Image
+                  src={`/img/index/hamburger-steak_1920x1080-${locale}.jpg`}
+                  alt={text.pr07}
+                  width={800}
+                  height={450}
+                  layout="responsive"
+                />
+              </a>
+            </Link>
+
+            <div style={{ height: "16px" }}></div>
+
             <Link
               href={
                 locale == "jp"
@@ -105,9 +143,8 @@ const Index = ({ locale }: Props): React.ReactElement => {
               </a>
             </Link>
 
-            <p style={{ marginTop: "60px" }}>
-              <b>{text.pr01}</b>
-            </p>
+            <div style={{ height: "16px" }}></div>
+
             <Link href="https://shop.nextmeats.jp/products/gyudon">
               <a>
                 <Image
@@ -120,9 +157,8 @@ const Index = ({ locale }: Props): React.ReactElement => {
               </a>
             </Link>
 
-            <p style={{ marginTop: "60px" }}>
-              <b>{text.pr02}</b>
-            </p>
+            <div style={{ height: "16px" }}></div>
+
             <Link href="/yakiniku">
               <a>
                 <Image
@@ -142,7 +178,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
                 height: 0,
                 paddingBottom: "56.25%",
                 overflow: "hidden",
-                margin: "120px auto 50px",
+                margin: "64px auto 50px",
               }}
             >
               <iframe
@@ -176,9 +212,8 @@ const Index = ({ locale }: Props): React.ReactElement => {
             <Image
               src="/img/index/sdgs.png"
               alt="sdgs"
-              width={887}
-              height={283}
-              layout="responsive"
+              width={441}
+              height={141}
             />
           </div>
         </section>
@@ -341,6 +376,11 @@ function getText(locale) {
         </>
       ),
       tw: "NEXT MEATS依據SDGs的理念，為地球永續的可能性盡一份心力。",
+    }[locale],
+    pr07: {
+      jp: "NEXT ハンバーグ 1.0",
+      en: "NEXT HAMBURGER STEAK 1.0",
+      tw: "NEXT 日式漢堡排 1.0",
     }[locale],
   };
 }

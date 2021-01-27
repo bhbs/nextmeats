@@ -17,25 +17,10 @@ const Layout = ({ children, locale }: Props): React.ReactElement => {
       <Head>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nextmeats.co.jp" />
-        {locale === "jp" && (
-          <meta
-            property="og:image"
-            content="https://nextmeats.co.jp/img/index/jp_web-ogp-1200x630-gyudon.jpg"
-          />
-        )}
-        {locale === "en" && (
-          <meta
-            property="og:image"
-            content="https://nextmeats.tw/img/index/en_web-ogp-1200x630-gyudon.jpg"
-          />
-        )}
-        {locale === "tw" && (
-          <meta
-            property="og:image"
-            content="https://nextmeats.tw/img/index/tw_web-ogp-1200x630-gyudon.jpg"
-          />
-        )}
-
+        <meta
+          property="og:image"
+          content="https://nextmeats.co.jp/img/index/hamburger-steak_web-ogp-1200x630.jpg"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@MeatsNext" />
         <meta name="twitter:creator" content="@MeatsNext" />
