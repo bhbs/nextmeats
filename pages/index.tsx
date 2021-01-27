@@ -109,7 +109,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
               <span>PRODUCTS</span>
             </h2>
 
-            <div style={{ height: "16px" }}></div>
+            <div style={{ height: "48px" }}></div>
 
             <Link href={"https://www.makuake.com/project/nextmeats2/"}>
               <a>
@@ -123,7 +123,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
               </a>
             </Link>
 
-            <div style={{ height: "16px" }}></div>
+            <div style={{ height: "48px" }}></div>
 
             <Link
               href={
@@ -143,7 +143,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
               </a>
             </Link>
 
-            <div style={{ height: "16px" }}></div>
+            <div style={{ height: "48px" }}></div>
 
             <Link href="https://shop.nextmeats.jp/products/gyudon">
               <a>
@@ -157,7 +157,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
               </a>
             </Link>
 
-            <div style={{ height: "16px" }}></div>
+            <div style={{ height: "48px" }}></div>
 
             <Link href="/yakiniku">
               <a>
@@ -269,32 +269,23 @@ function getText(locale) {
       ),
       en: (
         <>
-          <h2>
-            <span>Message</span>
-          </h2>
-          <h3>
-            Shaping the future of our earth <br className="responsive" />
-            with meat alternatives
-          </h3>
-          <p>
-            One thing we can all do <br className="responsive" />
-            in response to the food crisis
-            <br />
-            caused by the deterioration <br className="responsive" />
-            in our global environment
-            <br />
-            and population growth is <br className="responsive" />
-            to reduce our meat consumption.
-            <br />
-            Next Meats Co., Ltd. seeks <br className="responsive" />
-            to create a better future
-            <br />
-            for our earth by focusing on <br className="responsive" />
-            the R&D of meat alternatives.
-          </p>
-          <p>
-            <a href="message">The Philosophy of NEXT MEATS</a>
-          </p>
+          <div style={{ lineHeight: "1.4" }}>
+            <h2 style={{ lineHeight: "1" }}>
+              KONNICHIWA
+              <br />
+              <span style={{ fontSize: ".6em" }}>こんにちは</span>
+            </h2>
+            <h3>We’re reshaping the future with meat-free alternatives</h3>
+            <p style={{ maxWidth: "620px", margin: "auto" }}>
+              Worried about the planet? Us too. That’s why, at Next Meats, we’re
+              dedicated to creating delicious alternatives to meat products that
+              come with a huge carbon footprint. Saving the planet never tasted
+              so good.
+            </p>
+            <p>
+              <a href="message">The Philosophy of NEXT MEATS</a>
+            </p>
+          </div>
         </>
       ),
       tw: (

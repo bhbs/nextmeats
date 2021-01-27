@@ -52,17 +52,17 @@ function getText(locale) {
     }[locale],
     description: {
       jp: "地球を終わらせない",
-      en: "Ensuring a sustainable future for the earth",
+      en: "The Next Move from Meat",
       tw: "顛覆美味 地球永續優植選擇",
     }[locale],
     subject: {
       jp: "地球を終わらせない",
-      en: "Ensuring a sustainable future for the earth",
+      en: "The Next Move from Meat",
       tw: "顛覆美味 地球永續優植選擇",
     }[locale],
     state01: {
       jp: "子供達の未来のために我々ができることは？",
-      en: "What can we do for the future of our children?",
+      en: "Can we talk about this crazy weather we’re having?",
       tw: "為了孩子們的未來，我們能做什麼？",
     }[locale],
     state02: {
@@ -82,21 +82,16 @@ function getText(locale) {
       ),
       en: (
         <>
-          The damage caused by disasters such as floods, droughts, typhoons, and
-          heat waves has become increasingly severe around the world.
+          According to the
+          <a href="http://www.fao.org/news/story/en/item/197623/icode/"> UN</a>,
+          meat production accounts for roughly 15% of greenhouse gases emitted
+          by us humans every year. As a result, weather events like typhoons and
+          heat waves are getting more extreme, causing long-term damage to our
+          planet (not to mention us).
           <br />
-          Out of all human activities, the total volume of greenhouse gas
-          emissions deriving from meat production activities is calculated to be
-          around 15%. (
-          <a href="http://www.fao.org/news/story/en/item/197623/icode/">UN</a>)
-          <br />
-          We can drastically reduce this number by cutting back on our
-          consumption of animal products.
-          <br />
-          With the world’s population expected to reach over 10 billion and
-          other natural resources like fresh water rapidly depleting, it is
-          critical that we do what we can now to help lower these carbon
-          emissions.
+          The good news is that we can still make a difference and that’s by
+          cutting down on our consumption of animal products. So, who are we
+          exactly?
         </>
       ),
       tw: (
@@ -111,8 +106,7 @@ function getText(locale) {
     }[locale],
     state03: {
       jp: "社会問題解決型フードテックベンチャー NEXT MEATS",
-      en:
-        "NEXT MEATS: A food tech venture company committed to addressing social problems",
+      en: "Bloom Where You Are Planted",
       tw: "NEXT MEATSー致力解決社會問題的食品科技新創公司",
     }[locale],
     state04: {
@@ -125,14 +119,14 @@ function getText(locale) {
       ),
       en: (
         <>
-          Next Meats Co., Ltd. is a food tech venture company founded by
-          individuals who take the future of our global environment seriously.
+          Next Meats is a food-tech venture founded in Tokyo, by people
+          passionate about delivering a better future for our children. We
+          strive to create tasty alternatives to your favourite dishes, without
+          the same environmental impact of using meat.
           <br />
-          Our company strives to create delicious, innovative alternative meat
-          products rooted in Japanese cuisine as a substitute for animal-based
-          meat. In so doing, we hope to offer consumers a new lifestyle where
-          sustainability is not compromised even when choosing a satisfactory
-          meal.
+          We believe in a more ecologically sustainable future for every person.
+          Look out for Mother Nature and make a positive impact on your
+          wellbeing, without compromising on taste or quality.
         </>
       ),
       tw: (
@@ -144,7 +138,7 @@ function getText(locale) {
     }[locale],
     state05: {
       jp: "未来に希望の光を",
-      en: "A beacon of hope for the future",
+      en: "Looking To The Future…",
       tw: "為未來點燃希望之光",
     }[locale],
     state06: {
@@ -161,19 +155,13 @@ function getText(locale) {
       ),
       en: (
         <>
-          NEXT MEATS is a company that is optimistic about the future of
-          mankind.
+          Humans are a resilient bunch, but we all have to work together. Here
+          at Next Meats, we’re optimistic about the future of our planet. By
+          making small changes – like cutting down on factory-farmed meat – we
+          can create a greener outlook for everyone.
           <br />
-          Although the human race has always encountered major challenges
-          throughout our history, we have never failed to confront these
-          challenges head-on and overcome them.
-          <br />
-          In order to get through this period of crisis that we are currently
-          in, it is paramount for us to take immediate action.
-          <br />
-          We hope to continue developing delicious meat substitutes that we can
-          bring to everyone so as to keep our children smiling as they head into
-          the future.
+          We hope to continue developing mouth-watering alternatives that make
+          plant-based the next move from meat.
         </>
       ),
       tw: (
