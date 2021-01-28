@@ -122,7 +122,7 @@ function getText(locale) {
       tw: "Head Office Address",
     }[locale],
     location: {
-      jp: "〒160-0022 新宿区 新宿一丁目 34-16 清水ビル2F",
+      jp: "〒160-0022 新宿区 新宿一丁目 34-16 \n清水ビル2F",
       en:
         "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
       tw:
