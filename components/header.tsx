@@ -43,37 +43,10 @@ const Header = ({ locale }: Props): React.ReactElement => (
             <a>MESSAGE</a>
           </Link>
         </li>
-        <li className="luxbar-item dropdown">
-          <a>STORE</a>
-          <ul>
-            <li className="luxbar-item">
-              <a
-                href="https://shop.nextmeats.jp"
-                target="_blank"
-                rel="noreferrer"
-              >
-                OFFICIAL SHOP
-              </a>
-            </li>
-            <li className="luxbar-item">
-              <a
-                href="https://www.amazon.co.jp/s?me=ALHPY7JG61WY1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                AMAZON
-              </a>
-            </li>
-            <li className="luxbar-item">
-              <a
-                href="https://store.shopping.yahoo.co.jp/whitehole/a5d7a5e9a5.html"
-                target="_blank"
-                rel="noreferrer"
-              >
-                YAHOO
-              </a>
-            </li>
-          </ul>
+        <li className="luxbar-item">
+          <Link href="https://shop.nextmeats.jp">
+            <a target="_blank">STORE</a>
+          </Link>
         </li>
         <li className="luxbar-item">
           <Link href="/company">
