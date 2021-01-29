@@ -1,18 +1,19 @@
-import React from "react";
-import Head from "next/head";
 import { GetStaticProps, GetStaticPropsResult } from "next";
+import Head from "next/head";
+import React from "react";
 import Company from "../components/company";
 import Layout from "../components/layout";
+import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 
 type Props = {
-  locale: string;
+  languageCode: LanguageCode;
 };
 
-const CompanyPage = ({ locale }: Props): React.ReactElement => {
-  const text = getText(locale);
+const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
+  const text = getText(languageCode);
 
   return (
-    <Layout locale={locale}>
+    <Layout languageCode={languageCode}>
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
@@ -22,53 +23,41 @@ const CompanyPage = ({ locale }: Props): React.ReactElement => {
         <meta property="og:description" content={text.description} />
       </Head>
       <div className="page" style={{ marginTop: "60px" }}>
-        <Company locale={locale} />
+        <Company languageCode={languageCode} />
       </div>
     </Layout>
   );
 };
 
-function getText(locale) {
+const getText = (languageCode: LanguageCode): { [key: string]: string } => {
   return {
     title: {
       jp:
         "会社概要 NEXT MEATS | 代替肉開発スタートアップ【ネクストミーツ株式会社】人工肉・代替肉・植物肉",
       en: "COMPANY | Next Meats Co., Ltd. WEBSITE",
       tw: "COMPANY | Next Meats Co., Ltd. WEBSITE",
-    }[locale],
+    }[languageCode],
     description: {
       jp:
         "会社概要 フェイクミートで次世代の未来をつくる代替肉開発スタートアップ【ネクストミーツ株式会社】 人工肉・代替肉・植物肉",
       en: "COMPANY | Next Meats Co., Ltd. WEBSITE",
       tw: "COMPANY | Next Meats Co., Ltd. WEBSITE",
-    }[locale],
+    }[languageCode],
     header: {
       jp: "会社概要",
       en: "COMPANY INFORMATION",
       tw: "COMPANY INFORMATION",
-    }[locale],
+    }[languageCode],
   };
-}
-
-type Locale = {
-  locale: string;
 };
 
 export const getStaticProps: GetStaticProps = async ({
   locale,
-}: Locale): Promise<GetStaticPropsResult<Locale>> => {
-  switch (locale) {
-    case "ja":
-      locale = "jp";
-      break;
-    case "en-US":
-      locale = "en";
-      break;
-    case "zh":
-      locale = "tw";
-      break;
-  }
-  return { props: { locale } };
+}: {
+  locale: Locale;
+}): Promise<GetStaticPropsResult<{ languageCode: LanguageCode }>> => {
+  const languageCode: LanguageCode = getLanguageCode(locale);
+  return { props: { languageCode } };
 };
 
 export default CompanyPage;

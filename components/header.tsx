@@ -1,11 +1,12 @@
 import Link from "next/link";
 import React from "react";
+import { LanguageCode } from "../lib/language";
 
 type Props = {
-  locale: string;
+  languageCode: LanguageCode;
 };
 
-const Header = ({ locale }: Props): React.ReactElement => (
+const Header = ({ languageCode }: Props): React.ReactElement => (
   <header id="luxbar" className="luxbar-fixed">
     <input type="checkbox" className="luxbar-checkbox" id="luxbar-checkbox" />
     <div className="luxbar-menu luxbar-menu-right luxbar-menu-dark">
@@ -31,7 +32,7 @@ const Header = ({ locale }: Props): React.ReactElement => (
             <span></span>{" "}
           </label>
         </li>
-        {locale === "jp" && (
+        {languageCode === "jp" && (
           <li className="luxbar-item">
             <Link href="/news">
               <a>NEWS</a>
@@ -56,21 +57,21 @@ const Header = ({ locale }: Props): React.ReactElement => (
         <li className="luxbar-item dropdown">
           <a>LANGUAGE</a>
           <ul>
-            {locale !== "jp" && (
+            {languageCode !== "jp" && (
               <li className="luxbar-item">
                 <a href="//nextmeats.co.jp" target="_blank" rel="noreferrer">
                   日本語
                 </a>
               </li>
             )}
-            {locale !== "en" && (
+            {languageCode !== "en" && (
               <li className="luxbar-item">
                 <a href="//nextmeats.us" target="_blank" rel="noreferrer">
                   ENGLISH
                 </a>
               </li>
             )}
-            {locale !== "tw" && (
+            {languageCode !== "tw" && (
               <li className="luxbar-item">
                 <a href="//nextmeats.tw" target="_blank" rel="noreferrer">
                   中文

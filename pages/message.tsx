@@ -1,16 +1,17 @@
-import React from "react";
-import Head from "next/head";
-import Layout from "../components/layout";
 import { GetStaticProps, GetStaticPropsResult } from "next";
+import Head from "next/head";
+import React from "react";
+import Layout from "../components/layout";
+import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 
 type Props = {
-  locale: string;
+  languageCode: LanguageCode;
 };
 
-const Message = ({ locale }: Props): React.ReactElement => {
-  const text = getText(locale);
+const Message = ({ languageCode }: Props): React.ReactElement => {
+  const text = getText(languageCode);
   return (
-    <Layout locale={locale}>
+    <Layout languageCode={languageCode}>
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
@@ -43,28 +44,28 @@ const Message = ({ locale }: Props): React.ReactElement => {
   );
 };
 
-function getText(locale) {
+const getText = (languageCode: LanguageCode) => {
   return {
     title: {
       jp: "ネクストミーツの理念 ー",
       en: "The Philosophy of NEXT MEATS -",
       tw: "NEXT MEATS的理念 ー",
-    }[locale],
+    }[languageCode],
     description: {
       jp: "地球を終わらせない",
       en: "The Next Move from Meat",
       tw: "顛覆美味 地球永續優植選擇",
-    }[locale],
+    }[languageCode],
     subject: {
       jp: "地球を終わらせない",
       en: "The Next Move from Meat",
       tw: "顛覆美味 地球永續優植選擇",
-    }[locale],
+    }[languageCode],
     state01: {
       jp: "子供達の未来のために我々ができることは？",
       en: "Can we talk about this crazy weather we’re having?",
       tw: "為了孩子們的未來，我們能做什麼？",
-    }[locale],
+    }[languageCode],
     state02: {
       jp: (
         <>
@@ -103,12 +104,12 @@ function getText(locale) {
           ）。減少消費動物性食品來降低溫室氣體的排放量，是挽救世界飢餓、能源危機和氣候變遷至關重要的一環。
         </>
       ),
-    }[locale],
+    }[languageCode],
     state03: {
       jp: "社会問題解決型フードテックベンチャー NEXT MEATS",
       en: "Bloom Where You Are Planted",
       tw: "NEXT MEATSー致力解決社會問題的食品科技新創公司",
-    }[locale],
+    }[languageCode],
     state04: {
       jp: (
         <>
@@ -135,12 +136,12 @@ function getText(locale) {
           MEATS株式會社。身為食品科技新創企業，我們顛覆刻板印象，研發創新美味的優質植物肉品，提供人們嶄新的生活型態和消費選擇，讓地球永續美麗。
         </>
       ),
-    }[locale],
+    }[languageCode],
     state05: {
       jp: "未来に希望の光を",
       en: "Looking To The Future…",
       tw: "為未來點燃希望之光",
-    }[locale],
+    }[languageCode],
     state06: {
       jp: (
         <>
@@ -170,29 +171,17 @@ function getText(locale) {
           MEATS對未來永遠抱持樂觀的態度，真摯面對挑戰，付諸行動來戰勝目前我們所處的「危機時代」。我們用最新的科技持續研發對地球友善的創新替代肉品，承諾孩子們未來永保燦爛笑容。
         </>
       ),
-    }[locale],
+    }[languageCode],
   };
-}
-
-type Locale = {
-  locale: string;
 };
 
 export const getStaticProps: GetStaticProps = async ({
   locale,
-}: Locale): Promise<GetStaticPropsResult<Locale>> => {
-  switch (locale) {
-    case "ja":
-      locale = "jp";
-      break;
-    case "en-US":
-      locale = "en";
-      break;
-    case "zh":
-      locale = "tw";
-      break;
-  }
-  return { props: { locale } };
+}: {
+  locale: Locale;
+}): Promise<GetStaticPropsResult<{ languageCode: LanguageCode }>> => {
+  const languageCode: LanguageCode = getLanguageCode(locale);
+  return { props: { languageCode } };
 };
 
 export default Message;

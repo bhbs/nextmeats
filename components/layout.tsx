@@ -1,15 +1,16 @@
-import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Header from "./header";
+import React from "react";
 import * as gtag from "../lib/gtag";
+import { LanguageCode } from "../lib/language";
+import Header from "./header";
 
 type Props = {
   children: React.ReactNode;
-  locale: string;
+  languageCode: LanguageCode;
 };
 
-const Layout = ({ children, locale }: Props): React.ReactElement => {
+const Layout = ({ children, languageCode }: Props): React.ReactElement => {
   const router = useRouter();
   const gaId = gtag.getGaId(router.locale);
   return (
@@ -17,19 +18,19 @@ const Layout = ({ children, locale }: Props): React.ReactElement => {
       <Head>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nextmeats.co.jp" />
-        {locale === "jp" && (
+        {languageCode === "jp" && (
           <meta
             property="og:image"
             content="https://nextmeats.co.jp/img/index/hamburger-steak_web-ogp-1200x630.jpg"
           />
         )}
-        {locale === "en" && (
+        {languageCode === "en" && (
           <meta
             property="og:image"
             content="https://nextmeats.co.jp/img/index/en_web-ogp-1200x630-gyudon.jpg"
           />
         )}
-        {locale === "tw" && (
+        {languageCode === "tw" && (
           <meta
             property="og:image"
             content="https://nextmeats.co.jp/img/index/tw_web-ogp-1200x630-gyudon.jpg"
@@ -71,7 +72,7 @@ const Layout = ({ children, locale }: Props): React.ReactElement => {
           </>
         )}
       </Head>
-      <Header locale={locale} />
+      <Header languageCode={languageCode} />
       {children}
       <footer>© 2021 Next Meats Co., Ltd.</footer>
     </>

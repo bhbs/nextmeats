@@ -1,15 +1,15 @@
-import React from "react";
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import Layout from "../components/layout";
 import { GetStaticProps, GetStaticPropsResult } from "next";
+import Head from "next/head";
+import React, { useEffect, useState } from "react";
+import Layout from "../components/layout";
+import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 
 type Props = {
-  locale: string;
+  languageCode: LanguageCode;
 };
 
-const News = ({ locale }: Props): React.ReactElement => {
-  const text = getText(locale);
+const News = ({ languageCode }: Props): React.ReactElement => {
+  const text = getText(languageCode);
   const [newsList, setNews] = useState({
     original: null,
     filtered: null,
@@ -75,7 +75,7 @@ const News = ({ locale }: Props): React.ReactElement => {
   };
 
   return (
-    <Layout locale={locale}>
+    <Layout languageCode={languageCode}>
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
@@ -139,25 +139,13 @@ function getText(locale) {
   };
 }
 
-type Locale = {
-  locale: string;
-};
-
 export const getStaticProps: GetStaticProps = async ({
   locale,
-}: Locale): Promise<GetStaticPropsResult<Locale>> => {
-  switch (locale) {
-    case "ja":
-      locale = "jp";
-      break;
-    case "en-US":
-      locale = "en";
-      break;
-    case "zh":
-      locale = "tw";
-      break;
-  }
-  return { props: { locale } };
+}: {
+  locale: Locale;
+}): Promise<GetStaticPropsResult<{ languageCode: LanguageCode }>> => {
+  const languageCode: LanguageCode = getLanguageCode(locale);
+  return { props: { languageCode } };
 };
 
 export default News;
