@@ -1,12 +1,13 @@
 import Link from "next/link";
 import React from "react";
+import { LanguageCode } from "../lib/language";
 
 type Props = {
-  locale: string;
+  languageCode: LanguageCode;
   path: string;
 };
 
-const Header = ({ locale, path }: Props): React.ReactElement => (
+const Header = ({ languageCode, path }: Props): React.ReactElement => (
   <header id="luxbar" className="luxbar-fixed">
     <input type="checkbox" className="luxbar-checkbox" id="luxbar-checkbox" />
     <div className="luxbar-menu luxbar-menu-right luxbar-menu-dark">
@@ -32,7 +33,7 @@ const Header = ({ locale, path }: Props): React.ReactElement => (
             <span></span>{" "}
           </label>
         </li>
-        {locale === "jp" && (
+        {languageCode === "jp" && (
           <li className="luxbar-item">
             <Link href="/news">
               <a>NEWS</a>
@@ -57,21 +58,21 @@ const Header = ({ locale, path }: Props): React.ReactElement => (
         <li className="luxbar-item dropdown">
           <a>LANGUAGE</a>
           <ul>
-            {locale !== "jp" && (
+            {languageCode !== "jp" && (
               <li className="luxbar-item">
                 <Link href={path} locale="ja">
                   <a>日本語</a>
                 </Link>
               </li>
             )}
-            {locale !== "en" && (
+            {languageCode !== "en" && (
               <li className="luxbar-item">
                 <Link href={path} locale="en-US">
                   <a>English</a>
                 </Link>
               </li>
             )}
-            {locale !== "tw" && (
+            {languageCode !== "tw" && (
               <li className="luxbar-item">
                 <Link href={path} locale="zh">
                   <a>中文</a>

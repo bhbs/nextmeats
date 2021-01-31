@@ -1,21 +1,21 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import { GetStaticProps, GetStaticPropsResult } from "next";
-import TopNews from "../components/topNews";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import Company from "../components/company";
 import Layout from "../components/layout";
-import { useEffect, useState } from "react";
+import TopNews from "../components/topNews";
+import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 
 type Props = {
-  locale: string;
+  languageCode: LanguageCode;
 };
 
-const Index = ({ locale }: Props): React.ReactElement => {
+const Index = ({ languageCode }: Props): React.ReactElement => {
   const [deviceType, setDevice] = useState("");
 
-  const text = getText(locale);
+  const text = getText(languageCode);
 
   useEffect(() => {
     const mobiles = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
@@ -23,7 +23,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
   }, []);
 
   return (
-    <Layout locale={locale}>
+    <Layout languageCode={languageCode}>
       <Head>
         <title>{text.title}</title>
         <meta name="description" content={text.description} />
@@ -39,16 +39,17 @@ const Index = ({ locale }: Props): React.ReactElement => {
           margin: "58px auto 0",
         }}
       >
-        {deviceType === "pc" && (locale === "en" || locale === "tw") && (
-          <Image
-            src={`/img/index/${locale}_web-top-pc-1920x945.jpg`}
-            alt={text.title}
-            width={1920}
-            height={945}
-            layout="responsive"
-          />
-        )}
-        {deviceType === "pc" && locale === "jp" && (
+        {deviceType === "pc" &&
+          (languageCode === "en" || languageCode === "tw") && (
+            <Image
+              src={`/img/index/${languageCode}_web-top-pc-1920x945.jpg`}
+              alt={text.title}
+              width={1920}
+              height={945}
+              layout="responsive"
+            />
+          )}
+        {deviceType === "pc" && languageCode === "jp" && (
           <Link href={"https://www.makuake.com/project/nextmeats2/"}>
             <a>
               <Image
@@ -61,16 +62,17 @@ const Index = ({ locale }: Props): React.ReactElement => {
             </a>
           </Link>
         )}
-        {deviceType === "mobile" && (locale === "en" || locale === "tw") && (
-          <Image
-            src={`/img/index/${locale}_web-top-mobile-720x580-gyudon.jpg`}
-            alt={text.title}
-            width={720}
-            height={580}
-            layout="responsive"
-          />
-        )}
-        {deviceType === "mobile" && locale === "jp" && (
+        {deviceType === "mobile" &&
+          (languageCode === "en" || languageCode === "tw") && (
+            <Image
+              src={`/img/index/${languageCode}_web-top-mobile-720x580-gyudon.jpg`}
+              alt={text.title}
+              width={720}
+              height={580}
+              layout="responsive"
+            />
+          )}
+        {deviceType === "mobile" && languageCode === "jp" && (
           <Link href={"https://www.makuake.com/project/nextmeats2/"}>
             <a>
               <Image
@@ -90,7 +92,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
           marginTop: "0",
         }}
       >
-        {locale === "jp" && <TopNews />}
+        {languageCode === "jp" && <TopNews />}
 
         <section>
           <div
@@ -114,7 +116,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
             <Link href={"https://www.makuake.com/project/nextmeats2/"}>
               <a>
                 <Image
-                  src={`/img/index/hamburger-steak_1920x1080-${locale}.jpg`}
+                  src={`/img/index/hamburger-steak_1920x1080-${languageCode}.jpg`}
                   alt={text.pr07}
                   width={800}
                   height={450}
@@ -127,14 +129,14 @@ const Index = ({ locale }: Props): React.ReactElement => {
 
             <Link
               href={
-                locale == "jp"
+                languageCode == "jp"
                   ? "https://shop.nextmeats.jp/products/burger"
                   : "/burger"
               }
             >
               <a>
                 <Image
-                  src={`/img/index/${locale}_1920x1080-burger.jpg`}
+                  src={`/img/index/${languageCode}_1920x1080-burger.jpg`}
                   alt={text.pr03}
                   width={800}
                   height={450}
@@ -148,7 +150,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
             <Link href="https://shop.nextmeats.jp/products/gyudon">
               <a>
                 <Image
-                  src={`/img/index/${locale}_1920x1080-gyudon.jpg`}
+                  src={`/img/index/${languageCode}_1920x1080-gyudon.jpg`}
                   alt={text.pr01}
                   width={800}
                   height={450}
@@ -218,7 +220,7 @@ const Index = ({ locale }: Props): React.ReactElement => {
           </div>
         </section>
 
-        <Company locale={locale} />
+        <Company languageCode={languageCode} />
       </div>
     </Layout>
   );
@@ -376,25 +378,13 @@ function getText(locale) {
   };
 }
 
-type Locale = {
-  locale: string;
-};
-
 export const getStaticProps: GetStaticProps = async ({
   locale,
-}: Locale): Promise<GetStaticPropsResult<Locale>> => {
-  switch (locale) {
-    case "ja":
-      locale = "jp";
-      break;
-    case "en-US":
-      locale = "en";
-      break;
-    case "zh":
-      locale = "tw";
-      break;
-  }
-  return { props: { locale } };
+}: {
+  locale: Locale;
+}): Promise<GetStaticPropsResult<{ languageCode: LanguageCode }>> => {
+  const languageCode: LanguageCode = getLanguageCode(locale);
+  return { props: { languageCode } };
 };
 
 export default Index;
