@@ -4,9 +4,10 @@ import { LanguageCode } from "../lib/language";
 
 type Props = {
   languageCode: LanguageCode;
+  path: string;
 };
 
-const Header = ({ languageCode }: Props): React.ReactElement => (
+const Header = ({ languageCode, path }: Props): React.ReactElement => (
   <header id="luxbar" className="luxbar-fixed">
     <input type="checkbox" className="luxbar-checkbox" id="luxbar-checkbox" />
     <div className="luxbar-menu luxbar-menu-right luxbar-menu-dark">
@@ -59,23 +60,23 @@ const Header = ({ languageCode }: Props): React.ReactElement => (
           <ul>
             {languageCode !== "jp" && (
               <li className="luxbar-item">
-                <a href="//nextmeats.co.jp" target="_blank" rel="noreferrer">
-                  日本語
-                </a>
+                <Link href={path} locale="ja">
+                  <a>日本語</a>
+                </Link>
               </li>
             )}
             {languageCode !== "en" && (
               <li className="luxbar-item">
-                <a href="//nextmeats.us" target="_blank" rel="noreferrer">
-                  ENGLISH
-                </a>
+                <Link href={path} locale="en-US">
+                  <a>English</a>
+                </Link>
               </li>
             )}
             {languageCode !== "tw" && (
               <li className="luxbar-item">
-                <a href="//nextmeats.tw" target="_blank" rel="noreferrer">
-                  中文
-                </a>
+                <Link href={path} locale="zh">
+                  <a>中文</a>
+                </Link>
               </li>
             )}
           </ul>
