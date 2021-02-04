@@ -136,21 +136,21 @@ const Accerlarator = (): React.ReactElement => {
             <h2>メリット</h2>
             <div>
               <div>
-                <img src="/img/accelarator/dummy.png" alt="" />
+                <img src="/img/accelarator/merit01.png" alt="" />
                 <h3>ブランド力</h3>
                 <p>
                   焼肉ライクではNEXT焼肉シリーズを展開し、2021年1月に開始したNEXTハンバーグのクラウドファンディングでは公開1日で目標額の242%を達成しました。植物性代替肉市場におけるブランド力を使えます。
                 </p>
               </div>
               <div>
-                <img src="/img/accelarator/dummy.png" alt="" />
+                <img src="/img/accelarator/merit02.jpg" alt="" />
                 <h3>ノウハウ・技術</h3>
                 <p>
                   焼肉、牛丼、ハンバーグといった多様な代替肉製品を開発する中培われたノウハウ、技術を使って商品開発を行えます。
                 </p>
               </div>
               <div>
-                <img src="/img/accelarator/dummy.png" alt="" />
+                <img src="/img/accelarator/merit03.jpg" alt="" />
                 <h3>スピード</h3>
                 <p>
                   迅速に意思決定・テストを行い、商品化まで進められます。ネクストミーツのスピード感を体感することで、自社の新規事業などにも活かせます。
@@ -159,21 +159,21 @@ const Accerlarator = (): React.ReactElement => {
             </div>
             <div>
               <div>
-                <img src="/img/accelarator/dummy.png" alt="" />
+                <img src="/img/accelarator/merit04.jpg" alt="" />
                 <h3>環境への取り組み</h3>
                 <p>
                   ネクストミーツは「地球を終わらせない」を理念に代替肉の開発を行っています。企業のCSR活動としても取り組めます。
                 </p>
               </div>
               <div>
-                <img src="/img/accelarator/dummy.png" alt="" />
+                <img src="/img/accelarator/merit05.jpg" alt="" />
                 <h3>ネットワーク</h3>
                 <p>
                   アメリカ、台湾、ベトナムとグローバルに事業を展開しています。また、2021年1月にはOTCBB（アメリカ）へ上場しました。
                 </p>
               </div>
               <div>
-                <img src="/img/accelarator/dummy.png" alt="" />
+                <img src="/img/accelarator/merit06.jpg" alt="" />
                 <h3>資金</h3>
                 <p>
                   研究費や事業資金をネクストミーツがサポートすることもできます。
