@@ -105,11 +105,17 @@
       img {
         border-radius: 50%;
         width: 84%;
+        @include sp {
+          width: 50%;
+        }
       }
 
       p {
         text-align: left;
         font-size: 0.9em;
+        @include sp {
+          padding: 0 32px;
+        }
       }
     }
   }
