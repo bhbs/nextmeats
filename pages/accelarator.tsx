@@ -10,10 +10,8 @@ const Accerlarator = (): React.ReactElement => {
         <title></title>
       </Head>
       <div className={styles.back}>
+        <img src="/img/accelarator/header.jpg" alt="" />
         <div className={styles.sheet}>
-          <section className={styles.title}>
-            <h1>NEXT MEATS ACCELARATOR</h1>
-          </section>
           <section className={styles.about}>
             <h2>
               ネクストミーツ
