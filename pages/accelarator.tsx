@@ -7,7 +7,10 @@ const Accerlarator = (): React.ReactElement => {
   return (
     <Layout languageCode={"jp"}>
       <Head>
-        <title></title>
+        <meta
+          property="og:image"
+          content="https://nextmeats.co.jp/img/accelarator/header.jpg"
+        />
       </Head>
       <div className={styles.back}>
         <img src="/img/accelarator/header.jpg" alt="" />
