@@ -173,6 +173,20 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
               </a>
             </Link>
 
+            <div style={{ height: "48px" }}></div>
+
+            <Link href="https://shop.nextmeats.jp/products/euglenayakiniku">
+              <a>
+                <Image
+                  src="/img/index/euglena.jpg"
+                  alt={text.pr02}
+                  width={800}
+                  height={442}
+                  layout="responsive"
+                />
+              </a>
+            </Link>
+
             <div
               style={{
                 position: "relative",
