@@ -50,25 +50,25 @@ const Burger = ({ languageCode }: Props): React.ReactElement => {
 function getText(languageCode: string) {
   return {
     title: {
-      jp: "NEXT BURGER\nネクストバーガー 1.2",
+      jp: "NEXT BURGER\nNEXTバーガー 1.2",
       en: "NEXT BURGER",
       tw: "NEXT BURGER",
     }[languageCode],
     description: {
       jp:
-        "ネクストバーガー【ネクストミーツ株式会社】 人工肉・代替肉・植物肉・フェイクミート",
+        "NEXTバーガー【ネクストミーツ株式会社】 人工肉・代替肉・植物肉・フェイクミート",
       en: "NEXT BURGER",
       tw: "NEXT BURGER",
     }[languageCode],
     subject: {
-      jp: "地球温暖化と向き合う代替肉ハンバーガー\n「ネクストバーガー 1.2」",
+      jp: "地球温暖化と向き合う代替肉ハンバーガー\n「NEXTバーガー 1.2」",
       en:
         'A meat substitute-based hamburger that mitigates global warming "NEXT Burger 1.2"',
       tw: '因應地球暖化的替代肉漢堡\n"NEXT漢堡 1.2"',
     }[languageCode],
     statement: {
       jp:
-        "ネクストミーツ社が技術を結集させ完成させた日本発のプラントベースハンバーガー。\n天然成分のサラシアを配合で美味しくヘルシーに出来上がりました。\nハードウェアスタートアップのように、このハンバーガーは随時アップデートをしていきます。\n原点となるネクストバーガー1.2は今しか食ベることができません。これをベンチマークに更なる進化を遂げていきます。",
+        "ネクストミーツ社が技術を結集させ完成させた日本発のプラントベースハンバーガー。\n天然成分のサラシアを配合で美味しくヘルシーに出来上がりました。\nハードウェアスタートアップのように、このハンバーガーは随時アップデートをしていきます。\n原点となるNEXTバーガー1.2は今しか食ベることができません。これをベンチマークに更なる進化を遂げていきます。",
       en:
         "NEXT MEATS has harnessed our food technology to develop this plant-based hamburger in Japan.\nThis burger contains the natural ingredient “Salacia” which makes it delicious and healthy.\nLike a hardware startup company, we will continue to improve this hamburger and make it even better moving forward.",
       tw:
@@ -94,7 +94,7 @@ function getText(languageCode: string) {
     }[languageCode],
     pr03: {
       jp:
-        "おかげさまで『ネクストバーガー 1.2』は、Makuakeで 425% 達成いたしました！\n多くの方からご支援をいただき、ありがとうございました！",
+        "おかげさまで『NEXTバーガー 1.2』は、Makuakeで 425% 達成いたしました！\n多くの方からご支援をいただき、ありがとうございました！",
       en: "",
       tw: "",
     }[languageCode],

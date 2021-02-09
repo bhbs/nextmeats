@@ -94,13 +94,13 @@ const Yakiniku = ({ languageCode }: Props): React.ReactElement => {
 const getText = (languageCode: LanguageCode): { [key: string]: string } => {
   return {
     title: {
-      jp: "NEXT YAKINIKU\nネクスト焼肉",
+      jp: "NEXT YAKINIKU\nNEXT焼肉",
       en: "NEXT YAKINIKU",
       tw: "NEXT YAKINIKU",
     }[languageCode],
     description: {
       jp:
-        "ネクスト焼肉【ネクストミーツ株式会社】 人工肉・代替肉・植物肉・フェイクミート",
+        "NEXT焼肉【ネクストミーツ株式会社】 人工肉・代替肉・植物肉・フェイクミート",
       en: "NEXT YAKINIKU",
       tw: "NEXT YAKINIKU",
     }[languageCode],
@@ -119,7 +119,7 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
         "讓人期待已久的燒肉系列終於完成了。\n今後，植物肉品將升級進化，出現在一般燒肉店菜單的時代就要來了。\nNEXT MEATS株式會社成功開發出全球首創的燒肉替代肉，並已推出商品販售。",
     }[languageCode],
     shoplink: {
-      jp: "お試しはこちらから【ネクスト焼肉の通信販売】",
+      jp: "お試しはこちらから【NEXT焼肉の通信販売】",
       en: "",
       tw: "",
     }[languageCode],
@@ -143,7 +143,7 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
     }[languageCode],
     pr04: {
       jp:
-        "ネクスト焼肉シリーズは、一般的な焼肉と比べると脂質が半分以下で、タンパク質は約2倍。栄養価も申し分なく、健康的な食生活を意識している方や、プロテインを必要とするアスリートの方などにも受け入れてもらえる商品となります。",
+        "NEXT焼肉シリーズは、一般的な焼肉と比べると脂質が半分以下で、タンパク質は約2倍。栄養価も申し分なく、健康的な食生活を意識している方や、プロテインを必要とするアスリートの方などにも受け入れてもらえる商品となります。",
       en:
         "The products in our NEXT Yakiniku series have less than half the fat content and twice the protein of regular yakiniku products. Boasting superior nutritional value, they are the perfect choice for health-conscious individuals and athletes who need more protein.",
       tw:
@@ -202,7 +202,7 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
         "原料：大豆加工品（日本國產大豆）、調味醬（醬油、砂糖、米發酵調味料、酵母萃取物、蘋果、釀造醋、大蒜、食鹽、芝麻油、豆瓣醬、胡椒）、食用菜籽油、（部分含小麥、大豆、蘋果、芝麻）\n營養成分標示（每100g）：熱量　348kcal 蛋白質　33.7g 脂肪　11.2g 碳水化合物　28.2g",
     }[languageCode],
     pr13: {
-      jp: "焼いて食べるだけじゃない！ネクスト焼肉を使ったレシピも公開中!",
+      jp: "焼いて食べるだけじゃない！NEXT焼肉を使ったレシピも公開中!",
       en: "",
       tw: "",
     }[languageCode],

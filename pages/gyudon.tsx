@@ -48,28 +48,28 @@ const Gyudon = ({ languageCode }: Props): React.ReactElement => {
 const getText = (languageCode: LanguageCode): { [key: string]: string } => {
   return {
     title: {
-      jp: "世界初となる代替肉のレトルト牛丼\n「ネクスト牛丼1.2」",
+      jp: "世界初となる代替肉のレトルト牛丼\n「NEXT牛丼1.2」",
       en:
         'The world’s very first pre-packaged meat substitute-based gyudon "NEXT Gyudon 1.2"',
       tw: "全球首創的替代肉牛肉蓋飯調理包「NEXT牛肉蓋飯1.2」",
     }[languageCode],
     description: {
       jp:
-        "ネクスト焼肉【ネクストミーツ株式会社】 人工肉・代替肉・植物肉・フェイクミート",
+        "NEXT焼肉【ネクストミーツ株式会社】 人工肉・代替肉・植物肉・フェイクミート",
       en:
         'The world’s very first pre-packaged meat substitute-based gyudon "NEXT Gyudon 1.2"',
       tw: "全球首創的替代肉牛肉蓋飯調理包「NEXT牛肉蓋飯1.2」",
     }[languageCode],
     statement: {
       jp:
-        "今後、代替肉は進化を遂げ、牛丼店にも通常メニューとして置かれる時代がやってきます。\nネクストミーツ株式会社では、世界で初めてとなる牛丼用フェイクミート（代替肉）の開発および商品化に成功しました。\n代替肉のレトルト牛丼「ネクスト牛丼1.2」は通販限定での販売ですので、ぜひこの機会にお求めください。",
+        "今後、代替肉は進化を遂げ、牛丼店にも通常メニューとして置かれる時代がやってきます。\nネクストミーツ株式会社では、世界で初めてとなる牛丼用フェイクミート（代替肉）の開発および商品化に成功しました。\n代替肉のレトルト牛丼「NEXT牛丼1.2」は通販限定での販売ですので、ぜひこの機会にお求めください。",
       en:
         "Plant-based meat will continue to evolve and there will be a day when it finally takes its place in the regular menus of gyudon restaurants.\nNEXT MEATS Co., Ltd. has successfully developed and launched the world’s very first meat substitute for gyudon.",
       tw:
         "今後，替代肉品將升級進化，出現在一般牛肉蓋飯店菜單的時代就要來了。\nNEXT MEATS株式會社成功開發出全球首創的牛肉蓋飯替代肉，並已推出商品販售。",
     }[languageCode],
     shoplink: {
-      jp: "お試しはこちらから【ネクスト焼肉の通信販売】",
+      jp: "お試しはこちらから【NEXT焼肉の通信販売】",
       en: "",
       tw: "",
     }[languageCode],
