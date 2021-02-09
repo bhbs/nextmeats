@@ -181,7 +181,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
                   src="/img/index/euglena.jpg"
                   alt={text.pr02}
                   width={800}
-                  height={442}
+                  height={450}
                   layout="responsive"
                 />
               </a>
