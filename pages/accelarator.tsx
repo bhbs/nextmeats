@@ -14,7 +14,9 @@ const Accerlarator = (): React.ReactElement => {
         />
       </Head>
       <div className={styles.back}>
-        <img src="/img/accelarator/header.jpg" alt="" />
+        <div className={styles.fv}>
+          <img src="/img/accelarator/header.jpg" alt="" />
+        </div>
         <div className={styles.sheet}>
           <section className={styles.about}>
             <h2>

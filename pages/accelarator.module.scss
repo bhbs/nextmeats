@@ -7,8 +7,6 @@ $nxm-color: rgb(0, 160, 195);
 }
 
 .back {
-  // background-image: url("/img/accelarator/back.jpg");
-  // background-size: contain;
   padding: 58px 0 100px;
   margin-bottom: -100px;
   @include sp {
@@ -17,11 +15,28 @@ $nxm-color: rgb(0, 160, 195);
   background: black;
 }
 
+.fv {
+  margin: auto;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -120px 80px -30px rgba(0, 0, 0, 1) inset;
+  }
+}
+
 .sheet {
   margin: 60px auto;
   padding: 0 100px;
   max-width: 900px;
   background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
   overflow: hidden;
   @include sp {
     padding: 100px 16px;
