@@ -23,6 +23,7 @@ $nxm-color: rgb(0, 160, 195);
   &::before {
     content: "";
     position: absolute;
+    z-index: 1;
     top: 0;
     right: 0;
     bottom: 0;
@@ -39,7 +40,7 @@ $nxm-color: rgb(0, 160, 195);
   border-radius: 12px;
   overflow: hidden;
   @include sp {
-    padding: 100px 16px;
+    padding: 60px 16px;
   }
 }
 
@@ -171,10 +172,6 @@ $nxm-color: rgb(0, 160, 195);
 
       img {
         border-radius: 50%;
-        width: 84%;
-        @include sp {
-          width: 50%;
-        }
       }
 
       p {

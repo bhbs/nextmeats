@@ -1,10 +1,17 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import styles from "./accelarator.module.scss";
 import Image from "next/image";
 
 const Accerlarator = (): React.ReactElement => {
+  const [deviceType, setDevice] = useState("");
+
+  useEffect(() => {
+    const mobiles = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    mobiles.test(navigator.userAgent) ? setDevice("mobile") : setDevice("pc");
+  }, []);
+
   return (
     <Layout languageCode={"jp"}>
       <Head>
@@ -15,7 +22,22 @@ const Accerlarator = (): React.ReactElement => {
       </Head>
       <div className={styles.back}>
         <div className={styles.fv}>
-          <img src="/img/accelarator/header.jpg" alt="" />
+          {deviceType == "pc" && (
+            <Image
+              src="/img/accelarator/header-pc.jpg"
+              alt=""
+              width={1920}
+              height={960}
+            />
+          )}
+          {deviceType == "mobile" && (
+            <Image
+              src="/img/accelarator/header-mobile.jpg"
+              alt=""
+              width={900}
+              height={1200}
+            />
+          )}
         </div>
         <div className={styles.sheet}>
           <section className={styles.about}>
@@ -51,21 +73,36 @@ const Accerlarator = (): React.ReactElement => {
             <h2>目的</h2>
             <div>
               <div>
-                <img src="/img/accelarator/169_hands.jpg" alt="" />
+                <Image
+                  src="/img/accelarator/169_hands.jpg"
+                  alt=""
+                  width={640}
+                  height={360}
+                />
                 <h3>代替肉のイノベーション</h3>
                 <p>
                   参加者それぞれが持っている知見や技術を持ち合わせることで代替肉事業にイノベーションを起こします。
                 </p>
               </div>
               <div>
-                <img src="/img/accelarator/169_light.jpg" alt="" />
+                <Image
+                  src="/img/accelarator/169_light.jpg"
+                  alt=""
+                  width={640}
+                  height={360}
+                />
                 <h3>地球をよくするための共創</h3>
                 <p>
                   競争ではなく共創することを目指し、地球をよくしていくために手を取り合っていきます。
                 </p>
               </div>
               <div>
-                <img src="/img/accelarator/169_earth.jpg" alt="" />
+                <Image
+                  src="/img/accelarator/169_earth.jpg"
+                  alt=""
+                  width={640}
+                  height={360}
+                />
                 <h3>世界市場獲得</h3>
                 <p>企業同士がタッグを組み、世界市場を取りにいきます。</p>
               </div>
@@ -257,21 +294,36 @@ const Accerlarator = (): React.ReactElement => {
             <h2>メリット</h2>
             <div>
               <div>
-                <img src="/img/accelarator/merit01.png" alt="" />
+                <Image
+                  src="/img/accelarator/merit01.png"
+                  alt=""
+                  width={220}
+                  height={220}
+                />
                 <h3>ブランド力</h3>
                 <p>
                   代替肉の焼肉「NEXT焼肉シリーズ」を全国チェーンで展開、テレビ番組にも多数取り上げられ、日本をはじめ海外でも代替肉ブランドとして定着しました。植物性代替肉市場におけるネクストミーツのブランド力を使えます。
                 </p>
               </div>
               <div>
-                <img src="/img/accelarator/merit02.jpg" alt="" />
+                <Image
+                  src="/img/accelarator/merit02.jpg"
+                  alt=""
+                  width={220}
+                  height={220}
+                />
                 <h3>ノウハウ・技術</h3>
                 <p>
                   焼肉、牛丼、ハンバーグといった多様な代替肉製品を開発する中培われたノウハウ、技術を使って商品開発を行えます。
                 </p>
               </div>
               <div>
-                <img src="/img/accelarator/merit03.jpg" alt="" />
+                <Image
+                  src="/img/accelarator/merit03.jpg"
+                  alt=""
+                  width={220}
+                  height={220}
+                />
                 <h3>スピード</h3>
                 <p>
                   迅速に意思決定・テストを行い、商品化まで進められます。ネクストミーツのスピード感を体感することで、自社の新規事業などにも活かせます。
@@ -280,21 +332,36 @@ const Accerlarator = (): React.ReactElement => {
             </div>
             <div>
               <div>
-                <img src="/img/accelarator/merit04.jpg" alt="" />
+                <Image
+                  src="/img/accelarator/merit04.jpg"
+                  alt=""
+                  width={220}
+                  height={220}
+                />
                 <h3>環境への取り組み</h3>
                 <p>
                   ネクストミーツは「地球を終わらせない」を理念に代替肉の開発を行っています。企業のCSR活動としても取り組めます。
                 </p>
               </div>
               <div>
-                <img src="/img/accelarator/merit05.jpg" alt="" />
+                <Image
+                  src="/img/accelarator/merit05.jpg"
+                  alt=""
+                  width={220}
+                  height={220}
+                />
                 <h3>ネットワーク</h3>
                 <p>
                   アメリカ、台湾、ベトナムとグローバルに事業を展開しています。また、2021年1月にはOTCBB（アメリカ）へ上場しました。
                 </p>
               </div>
               <div>
-                <img src="/img/accelarator/merit06.jpg" alt="" />
+                <Image
+                  src="/img/accelarator/merit06.jpg"
+                  alt=""
+                  width={220}
+                  height={220}
+                />
                 <h3>資金</h3>
                 <p>
                   事業化に向けてのPoC（実証実験）にかかる各種費用や研究費をネクストミーツがサポートすることもできます。必要に応じて出資も検討いたします。
