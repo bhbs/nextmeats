@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Layout from "../components/layout";
 import styles from "./accelarator.module.scss";
+import Image from "next/image";
 
 const Accerlarator = (): React.ReactElement => {
   return (
@@ -134,9 +135,121 @@ const Accerlarator = (): React.ReactElement => {
               上記以外でも、代替肉を作っていく上でのイノベーションになればどんな企業、個人、研究者の方でもご参加いただけます。
             </p>
           </section>
-          <section>
+          <section className={styles.schedule}>
             <h2>スケジュール</h2>
-            <img src="/img/accelarator/schedule.png" alt="" />
+            <div className={styles.grid}>
+              <div className={styles.item}>
+                <Image
+                  src="/img/accelarator/icon/slacklogo.png"
+                  width={72}
+                  height={72}
+                />
+              </div>
+              <div className={styles.item}>
+                <p>応募期間</p>
+              </div>
+              <div className={`${styles.item} ${styles.flow}`}>
+                <div className={styles.arrow}>
+                  <p>1ヶ月</p>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+
+              <div className={styles.item}>
+                <Image
+                  src="/img/accelarator/icon/gform.png"
+                  width={36}
+                  height={48}
+                />
+              </div>
+              <div className={styles.item}>
+                <p>
+                  一次審査
+                  <br />
+                  【書類審査】
+                </p>
+              </div>
+              <div className={`${styles.item} ${styles.flow}`}>
+                <div></div>
+                <div className={styles.arrow}>
+                  <p>2〜4週間</p>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+
+              <div className={styles.item}>
+                <Image
+                  src="/img/accelarator/icon/zoomlogo.png"
+                  width={40}
+                  height={40}
+                />
+              </div>
+              <div className={styles.item}>
+                <p>
+                  二次審査
+                  <br />
+                  【オンラインピッチ】
+                </p>
+              </div>
+              <div className={`${styles.item} ${styles.flow}`}>
+                <div></div>
+                <div></div>
+                <div className={styles.arrow}>
+                  <p>2〜4週間</p>
+                </div>
+                <div></div>
+                <div></div>
+              </div>
+
+              <div className={styles.item}>
+                <Image
+                  src="/img/accelarator/icon/poc.png"
+                  width={72}
+                  height={72}
+                />
+              </div>
+              <div className={styles.item}>
+                <p>
+                  実験開始
+                  <br />
+                  POC
+                </p>
+              </div>
+              <div className={`${styles.item} ${styles.flow}`}>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div className={styles.arrow}>
+                  <p>3〜6ヶ月</p>
+                </div>
+                <div></div>
+              </div>
+
+              <div className={styles.item}>
+                <Image
+                  src="/img/accelarator/icon/marketing.png"
+                  width={72}
+                  height={72}
+                />
+              </div>
+              <div className={styles.item}>
+                <p>テストマーケティング</p>
+              </div>
+              <div className={`${styles.item} ${styles.flow}`}>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div className={styles.arrow}>
+                  <p>3ヶ月</p>
+                </div>
+              </div>
+            </div>
           </section>
           <section className={styles.merit}>
             <h2>メリット</h2>
