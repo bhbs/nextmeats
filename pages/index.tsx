@@ -173,6 +173,20 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
               </a>
             </Link>
 
+            <div style={{ height: "48px" }}></div>
+
+            <Link href="https://shop.nextmeats.jp/products/euglenayakiniku">
+              <a>
+                <Image
+                  src="/img/index/euglena.jpg"
+                  alt={text.pr02}
+                  width={800}
+                  height={450}
+                  layout="responsive"
+                />
+              </a>
+            </Link>
+
             <div
               style={{
                 position: "relative",
@@ -316,7 +330,7 @@ function getText(locale) {
       ),
     }[locale],
     pr01: {
-      jp: "ビックリする旨さ！\n『ネクスト牛丼1.2』",
+      jp: "ビックリする旨さ！\n『NEXT牛丼1.2』",
       en: 'A flavor that will surprise you!\n"NEXT Gyudon 1.2"',
       tw: "令人驚嘆的美味！「NEXT牛肉蓋飯1.2」",
     }[locale],
@@ -327,7 +341,7 @@ function getText(locale) {
       tw: "全球首創的燒肉替代肉 NEXT燒肉\n「牛五花1.1」＆「牛橫隔膜1.1」",
     }[locale],
     pr03: {
-      jp: "本気で美味しい代替肉\n『ネクストバーガー2.0』",
+      jp: "本気で美味しい代替肉\n『NEXTバーガー2.0』",
       en: 'An absolutely delicious meat substitute\n "NEXT Burger 2.0"',
       tw: "精心打造的美味替代肉「NEXT漢堡2.0」",
     }[locale],
