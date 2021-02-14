@@ -274,9 +274,7 @@ function getText(locale) {
             <br className="responsive" />
             地球の未来をより良くするため
             <br />
-            「代替肉・植物肉・人工肉」に着目し、
-            <br className="responsive" />
-            その研究開発を行なっています。
+            「代替肉」の研究開発を行なっています。
           </p>
           <p>
             <a href="message">ネクストミーツの理念について</a>
