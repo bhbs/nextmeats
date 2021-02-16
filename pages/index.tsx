@@ -93,6 +93,26 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
         }}
       >
         {languageCode === "jp" && <TopNews />}
+        {languageCode === "en" && (
+          <section>
+            <h2>
+              <span>NEWS</span>
+            </h2>
+            <div className="newsList">
+              <div>
+                <a href="https://www.prnewswire.com/news-releases/alternative-meat-startup-next-meats-co-ltd-and-microalgae-biotech-company-euglena-co-launch-next-euglena-yakiniku-ex-containing-microalgae-301226930.html">
+                  <span className="date">2/12/2021</span>
+                  <span className="category">PRESS</span>
+                  <span className="title">
+                    [prnewswire.com]Alternative meat startup Next Meats Co., Ltd
+                    and microalgae biotech company euglena Co., launch
+                    &quot;NEXT Euglena Yakiniku EX&quot; containing microalgae
+                  </span>
+                </a>
+              </div>
+            </div>
+          </section>
+        )}
 
         <section>
           <div
