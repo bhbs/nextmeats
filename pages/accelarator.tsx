@@ -194,8 +194,21 @@ const getText = (locale: LanguageCode) => {
           </span>
         </>
       ),
-      en: "",
-      tw: "",
+      en: (
+        <>
+          The Next Meats Accelerator Program
+          <br />
+          <span>
+            Creating a worldwide, cross-border open innovation program
+          </span>
+        </>
+      ),
+      tw: (
+        <>
+          NEXT MEATS加速器计划是什么？ <br />
+          <span>在世界范围内同步展开，引领跨境式开放创新。</span>
+        </>
+      ),
     }[locale],
     statement: {
       jp: (
@@ -218,13 +231,74 @@ const getText = (locale: LanguageCode) => {
           <p>※ 本プログラムは3ヶ国語での世界同時開催となります。</p>
         </>
       ),
-      en: "",
-      tw: "",
+      en: (
+        <>
+          <p>
+            Next Meats has strenuously researched, developed, and distributed
+            plant-based alternative meats to fulfill our mission of &quot;Not
+            letting Earth end&quot;. We believe reducing the consumption of
+            commercial animal products and the strain put on the environment
+            from animal agriculture is a critical factor in addressing climate
+            change, and expect alternative meats to become even more of a vital
+            aliment when considering the future of the Earth, and the survival
+            of all life forms.
+          </p>
+          <p>
+            We believe all companies which truly intend to realize any of the
+            Sustainable Development Goals should participate in open innovation
+            to combine their technologies and networks, rather than compete for
+            market share and only focus on profitability.
+          </p>
+          <p>
+            Because without exaggeration, our planet is on the brink of a
+            climate catastrophe. But we are ambitious about changing the
+            narrative.
+          </p>
+          <p>
+            Hence, to resolve the issue in an effective way, we will be
+            launching the 「Next Meats Accelerator Program」.
+          </p>
+          <p>
+            This program, held worldwide in three languages simultaneously
+            (Japanese, English, and Chinese), aims to speedily cultivate
+            worldwide business collaboration opportunities focused on
+            sustainability. By combining the resources of Next Meats (funds,
+            technology, customers, products, business development capabilities)
+            with the technologies and assets of participating companies, we aim
+            to realize mutually beneficial partnerships and develop world-class
+            businesses that raise consumers awareness of environmental issues.
+          </p>
+        </>
+      ),
+      tw: (
+        <>
+          <p>
+            “不做地球的终结者”！基于此理念，我们一直以来致力于人造肉产品的研发和普及。
+            人造肉作为健康食品活跃至今，其更重要的使命是保护地球环境，成为人类未来的必需食品。
+          </p>
+          <p>全球气候变化问题亟待解决</p>
+          <p>
+            今后，追求SDGs可持续发展的企业，将不再局限于以争夺市场份额为盈利目的。整合技术和资源的开放式创新模式将成为必然。
+          </p>
+          <p>
+            我们的加速器计划旨在打破行业壁垒，改善地球的未来。在世界范围内搭建一种通用的“创造力”模式，共创共赢。
+          </p>
+          <p>
+            我们相信通过将Next
+            Meats的资源（资金、技术、客户、产品，了、业务开发能力）与参与公司的技术和资产相结合，可以实现全球范围内的大规模业务扩张。
+          </p>
+          <p>
+            通过该计划不仅可以达成双赢，同时影响消费者环保意识，将环保观念构建融入到企业发展中。
+          </p>
+          <p>以上是Next Meats的加速器计划。</p>
+          <p>*该计划将同时以三种语言在全球范围内发布。</p>
+        </>
+      ),
     }[locale],
     purpose_h: {
       jp: "目的",
-      en: "",
-      tw: "",
+      en: "PURPOSE",
+      tw: "PURPOSE",
     }[locale],
     purpose_1_h: {
       jp: "代替肉のイノベーション",
@@ -301,8 +375,8 @@ const getText = (locale: LanguageCode) => {
     }[locale],
     schedule_h: {
       jp: "スケジュール",
-      en: "",
-      tw: "",
+      en: "SCHEDULE",
+      tw: "SCHEDULE",
     }[locale],
     schedule_1: {
       jp: "応募期間",
@@ -374,74 +448,86 @@ const getText = (locale: LanguageCode) => {
     }[locale],
     merit_h: {
       jp: "メリット",
-      en: "",
-      tw: "",
+      en: "MERIT",
+      tw: "MERIT",
     }[locale],
     merit_1_h: {
       jp: "ブランド力",
-      en: "",
-      tw: "",
+      en: "The Next Meats Branding",
+      tw: "品牌力量",
     }[locale],
     merit_1: {
       jp:
         "代替肉の焼肉「NEXT焼肉シリーズ」を全国チェーンで展開、テレビ番組にも多数取り上げられ、日本をはじめ海外でも代替肉ブランドとして定着しました。植物性代替肉市場におけるネクストミーツのブランド力を使えます。",
-      en: "",
-      tw: "",
+      en:
+        'Next Meats has become established as an alternative meat brand in Japan and overseas for developing the "NEXT Yakiniku Series", the world\'s first alternative meat designed for Yakiniku and served nationwide Barbeque chain in Japan. Next Meats has also received great media coverage and market advantage by swiftly establishing overseas collaborations and facilities, compared to competitors. By collaborating, you can use the brand power of Next Meats in establishing new businesses.',
+      tw:
+        "人造肉的日式烤肉“ NEXT 烧肉系列”在日本连锁店推出后，受到多家电视节目的邀约报道，Next Meats作为日本人造肉品牌，也迅速在海外打开知名度。在植物替代肉的消费领域，可以利用Next Meats的品牌影响力进军国际市场。",
     }[locale],
     merit_2_h: {
       jp: "ノウハウ・技術",
-      en: "",
-      tw: "",
+      en: "Know-how / technology",
+      tw: "专有技术",
     }[locale],
     merit_2: {
       jp:
         "焼肉、牛丼、ハンバーグといった多様な代替肉製品を開発する中培われたノウハウ、技術を使って商品開発を行えます。",
-      en: "",
-      tw: "",
+      en:
+        "We can develop products and offer our extensive know-how and technology cultivated through researching and developing our various alternative meat products such as yakiniku, beef bowl, and hamburger steak.",
+      tw:
+        "我们在开发各类人造肉产品（例如烤肉、牛肉盖饭和汉堡肉）的过程中积累的经验和技术，可以为您开发产品提供专业而有力的支持。",
     }[locale],
     merit_3_h: {
       jp: "スピード",
-      en: "",
-      tw: "",
+      en: "Speed of Business",
+      tw: "高效进程",
     }[locale],
     merit_3: {
       jp:
         "迅速に意思決定・テストを行い、商品化まで進められます。ネクストミーツのスピード感を体感することで、自社の新規事業などにも活かせます。",
-      en: "",
-      tw: "",
+      en:
+        "We value and pride ourselves in our speed of development. By experiencing the speediness and business style of Next Meats, it will surely be of use in your company's future endeavors.",
+      tw:
+        "帮助您高效做出产品决策和试验，推动商业化进程。在Next Meats加速器服务的体验过程中获得的经验和思考，亦可活用于公司新业务领域。",
     }[locale],
     merit_4_h: {
       jp: "環境への取り組み",
-      en: "",
-      tw: "",
+      en: "CSR Contribution",
+      tw: "环保倡议",
     }[locale],
     merit_4: {
       jp:
         "ネクストミーツは「地球を終わらせない」を理念に代替肉の開発を行っています。企業のCSR活動としても取り組めます。",
-      en: "",
-      tw: "",
+      en:
+        'Next Meats operates with the mission of "Not letting the Earth end." By collaborating with us, our partners can confidently state their CSR Contributions.',
+      tw:
+        "Next Meats“不做地球的终结者”的初心和理念，可以应用于企业CSR项目的传播。",
     }[locale],
     merit_5_h: {
       jp: "ネットワーク",
-      en: "",
-      tw: "",
+      en: "Network",
+      tw: "区域关系",
     }[locale],
     merit_5: {
       jp:
         "アメリカ、台湾、ベトナムとグローバルに事業を展開しています。また、2021年1月にはOTCBB（アメリカ）へ上場しました。",
-      en: "",
-      tw: "",
+      en:
+        "We have expanded our business to Taiwan and Vietnam, and are currently working full speed to establish facilities in America, Italy, Singapore, and several other countries. We have gotten listed on the American OTC Market in January of 2021.",
+      tw:
+        "Next Meats已面向美国、中国台湾、越南和世界各区推出业务。 于2021年1月，在OTCBB（美国）上市。",
     }[locale],
     merit_6_h: {
       jp: "資金",
-      en: "",
-      tw: "",
+      en: "Funding",
+      tw: "资金计划",
     }[locale],
     merit_6: {
       jp:
         "事業化に向けてのPoC（実証実験）にかかる各種費用や研究費をネクストミーツがサポートすることもできます。必要に応じて出資も検討いたします。",
-      en: "",
-      tw: "",
+      en:
+        "Next Meats can also support various costs and research costs for PoC (proof of concept) for commercialization. We will consider investing if necessary.",
+      tw:
+        "Next Meets可以为商业化进程中，PoC（概念验证）产生的各种费用和研究成本提供资金援助。必要时也考虑对参与公司的项目投资入股。",
     }[locale],
     contact: {
       jp: (
