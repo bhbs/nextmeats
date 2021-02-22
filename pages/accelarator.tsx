@@ -303,34 +303,34 @@ const getText = (locale: LanguageCode) => {
     purpose_1_h: {
       jp: "代替肉のイノベーション",
       en: "",
-      tw: "",
+      tw: "人造肉的创新",
     }[locale],
     purpose_1: {
       jp:
         "参加者それぞれが持っている知見や技術を持ち合わせることで代替肉事業にイノベーションを起こします。",
       en: "",
-      tw: "",
+      tw: "通过整合每个参与者持有的知识和技术，在植物替代肉领域掀起创新潮流。",
     }[locale],
     purpose_2_h: {
       jp: "地球をよくするための共創",
       en: "",
-      tw: "",
+      tw: "用共创改善地球",
     }[locale],
     purpose_2: {
       jp:
         "競争ではなく共創することを目指し、地球をよくしていくために手を取り合っていきます。",
       en: "",
-      tw: "",
+      tw: "以共同创造而非竞争为目标指向，携手并肩改善地球的生存状态。",
     }[locale],
     purpose_3_h: {
       jp: "世界市場獲得",
       en: "",
-      tw: "",
+      tw: "斩获国际市场",
     }[locale],
     purpose_3: {
       jp: "企業同士がタッグを組み、世界市場を取りにいきます。",
       en: "",
-      tw: "",
+      tw: "企业的全体参与者紧密结合，进军全球市场。",
     }[locale],
     target_h: {
       jp: (
@@ -341,37 +341,45 @@ const getText = (locale: LanguageCode) => {
         </>
       ),
       en: "",
-      tw: "",
+      tw: (
+        <>
+          “为地球的未来诚心思考”
+          <br />
+          募集企业、个人和研究人员等志同道合的伙伴。
+        </>
+      ),
     }[locale],
     target_1: {
       jp:
         "原料・加工・調味・栄養学的なアプローチなどの技術を活用し、今までにない代替肉開発に貢献する。",
       en: "",
-      tw: "",
+      tw:
+        "利用原材料、加工、调味和营养学方法等技术，打开前所未有的人造肉研发道路。",
     }[locale],
     target_2: {
       jp:
         "微細藻類・遺伝子・培養技術などを活用し、新たな代替肉開発に貢献する。",
       en: "",
-      tw: "",
+      tw: "通过利用微藻、基因和培养技术，为人造肉的新研发做出贡献。",
     }[locale],
     target_3: {
       jp:
         "IoTやブロックチェーンなどの農業技術を活用し、新たな代替肉の原材料の分野で貢献する。",
       en: "",
-      tw: "",
+      tw: "利用物联网和区块链等农业技术，为人造肉的原料创新领域做出贡献。",
     }[locale],
     target_4: {
       jp:
         "機会設備、包装技術などの強みを活かし、代替肉の生産過程の分野で貢献する。",
       en: "",
-      tw: "",
+      tw: "利用机械设备和包装技术等优势，为人造肉的生产领域做出贡献。",
     }[locale],
     target_explanation: {
       jp:
         "上記以外でも、代替肉を作っていく上でのイノベーションになればどんな企業、個人、研究者の方でもご参加いただけます。",
       en: "",
-      tw: "",
+      tw:
+        "除上述条件外，在人造肉领域有望做出任何创新的企业、个人或研究人员都欢迎加入我们的计划。",
     }[locale],
     schedule_h: {
       jp: "スケジュール",
@@ -381,12 +389,12 @@ const getText = (locale: LanguageCode) => {
     schedule_1: {
       jp: "応募期間",
       en: "",
-      tw: "",
+      tw: "申请期间",
     }[locale],
     schedule_1_period: {
       jp: "1ヶ月",
       en: "",
-      tw: "",
+      tw: "1个月",
     }[locale],
     schedule_2: {
       jp: (
@@ -397,12 +405,18 @@ const getText = (locale: LanguageCode) => {
         </>
       ),
       en: "",
-      tw: "",
+      tw: (
+        <>
+          初次筛选
+          <br />
+          [书面审核]
+        </>
+      ),
     }[locale],
     schedule_2_period: {
       jp: "2〜4週間",
       en: "",
-      tw: "",
+      tw: "2-4周内",
     }[locale],
     schedule_3: {
       jp: (
@@ -413,12 +427,18 @@ const getText = (locale: LanguageCode) => {
         </>
       ),
       en: "",
-      tw: "",
+      tw: (
+        <>
+          二次筛选
+          <br />
+          [在线路演]
+        </>
+      ),
     }[locale],
     schedule_3_period: {
       jp: "2〜4週間",
       en: "",
-      tw: "",
+      tw: "2-4周内",
     }[locale],
     schedule_4: {
       jp: (
@@ -429,22 +449,28 @@ const getText = (locale: LanguageCode) => {
         </>
       ),
       en: "",
-      tw: "",
+      tw: (
+        <>
+          实验开始
+          <br />
+          POC
+        </>
+      ),
     }[locale],
     schedule_4_period: {
       jp: "3〜6ヶ月",
       en: "",
-      tw: "",
+      tw: "3-6个月",
     }[locale],
     schedule_5: {
       jp: "テストマーケティング",
       en: "",
-      tw: "",
+      tw: "运营测试",
     }[locale],
     schedule_5_period: {
       jp: "3ヶ月",
       en: "",
-      tw: "",
+      tw: "3个月",
     }[locale],
     merit_h: {
       jp: "メリット",
@@ -538,13 +564,14 @@ const getText = (locale: LanguageCode) => {
         </>
       ),
       en: "",
-      tw: "",
+      tw: <>进入Slack申请参加速器计划</>,
     }[locale],
     contact_explanation: {
       jp:
         "※ 不具合・お問い合わせ等ございましたら xxxxxx@nextmeats.co.jp までご連絡ください。",
       en: "",
-      tw: "",
+      tw:
+        "*如果您有任何疑问或疑问，请通过 xxxxxx@nextmeats.co.jp 与我们取得联系",
     }[locale],
   };
 };
