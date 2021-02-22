@@ -39,51 +39,23 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
           margin: "58px auto 0",
         }}
       >
-        {deviceType === "pc" &&
-          (languageCode === "en" || languageCode === "tw") && (
-            <Image
-              src={`/img/index/${languageCode}_web-top-pc-1920x945.jpg`}
-              alt={text.title}
-              width={1920}
-              height={945}
-              layout="responsive"
-            />
-          )}
-        {deviceType === "pc" && languageCode === "jp" && (
-          <Link href={"https://www.makuake.com/project/nextmeats2/"}>
-            <a>
-              <Image
-                src={`/img/index/hamburger-steak_web-top-pc-1920x945.jpg`}
-                alt={text.title}
-                width={1920}
-                height={945}
-                layout="responsive"
-              />
-            </a>
-          </Link>
+        {deviceType === "pc" && (
+          <Image
+            src={`/img/index/${languageCode}_web-top-pc-1920x945.jpg`}
+            alt={text.title}
+            width={1920}
+            height={945}
+            layout="responsive"
+          />
         )}
-        {deviceType === "mobile" &&
-          (languageCode === "en" || languageCode === "tw") && (
-            <Image
-              src={`/img/index/${languageCode}_web-top-mobile-720x580-gyudon.jpg`}
-              alt={text.title}
-              width={720}
-              height={580}
-              layout="responsive"
-            />
-          )}
-        {deviceType === "mobile" && languageCode === "jp" && (
-          <Link href={"https://www.makuake.com/project/nextmeats2/"}>
-            <a>
-              <Image
-                src={`/img/index/hamburger-steak_web-top-mobile-720x580.jpg`}
-                alt={text.title}
-                width={720}
-                height={580}
-                layout="responsive"
-              />
-            </a>
-          </Link>
+        {deviceType === "mobile" && (
+          <Image
+            src={`/img/index/${languageCode}_web-top-mobile-720x580-gyudon.jpg`}
+            alt={text.title}
+            width={720}
+            height={580}
+            layout="responsive"
+          />
         )}
       </div>
       <div

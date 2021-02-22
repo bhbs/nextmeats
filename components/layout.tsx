@@ -21,7 +21,7 @@ const Layout = ({ children, languageCode }: Props): React.ReactElement => {
         {languageCode === "jp" && (
           <meta
             property="og:image"
-            content="https://nextmeats.co.jp/img/index/hamburger-steak_web-ogp-1200x630.jpg"
+            content="https://nextmeats.co.jp/img/index/jp_web-ogp-1200x630-gyudon.jpg"
           />
         )}
         {languageCode === "en" && (
