@@ -163,7 +163,7 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
     recruit: {
       jp: "求人情報",
       en: "RECRUITMENT INFORMATION",
-      tw: "RECRUITMENT INFORMATION",
+      tw: "徵才資訊",
     }[languageCode],
   };
 };

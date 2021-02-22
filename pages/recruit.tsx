@@ -68,14 +68,13 @@ const getText = (languageCode: LanguageCode) => {
     header: {
       jp: "求人募集",
       en: "RECRUITMENT INFORMATION",
-      tw: "RECRUITMENT INFORMATION",
+      tw: "徵才資訊",
     }[languageCode],
     subHeader: {
       jp: "常識は不要！\n気候変動の問題に立ち向かう同志を募集！",
       en:
         "We are actively recruiting passionate individuals who would like to join our team and better the world with us!",
-      tw:
-        "We are actively recruiting passionate individuals who would like to join our team and better the world with us!",
+      tw: "歡迎有志與我們一起改善世界的你/妳加入我們的團隊！",
     }[languageCode],
     explain: {
       jp:
@@ -83,14 +82,14 @@ const getText = (languageCode: LanguageCode) => {
       en:
         "As we are expanding globally, we have a wide variety of positions open and are flexible with all kinds of working styles. From scientists and seasoned experts of all fields to volunteers and interns, we are happy to coordinate a working schedule that works best for everyone.\nWe are currently expanding full-pitch in the USA, Spain, Italy, France, Vietnam, Taiwan, Hong Kong and Singapore and are actively recruiting in those countries.\nIf you are interested or have any questions, don't hesitate to shoot us an email!",
       tw:
-        "As we are expanding globally, we have a wide variety of positions open and are flexible with all kinds of working styles. From scientists and seasoned experts of all fields to volunteers and interns, we are happy to coordinate a working schedule that works best for everyone.\nWe are currently expanding full-pitch in the USA, Spain, Italy, France, Vietnam, Taiwan, Hong Kong and Singapore and are actively recruiting in those countries.\nIf you are interested or have any questions, don't hesitate to shoot us an email!",
+        "隨著本公司的擴張並於全球各地成立據點，我們提供各式各樣的職缺，並且能容納多樣化的工作風格。不管你/妳是經驗豐富的專家和科學家，或是熱血的志工和實習生，我們都很高興為你/妳制訂專屬的工作時間表。\n\n目前，本公司在美國、西班牙、意大利、法國、越南、台灣、香港和新加坡各有據點，並正在積極招聘全職夥伴！\n\n如有興趣或有任何疑問，歡迎來信詢問！",
     }[languageCode],
     jobs: [
       {
         job: {
           jp: "研究部門",
           en: "Researcher Positions",
-          tw: "Researcher Positions",
+          tw: "研究專員",
         }[languageCode],
         description: {
           jp:
@@ -98,12 +97,12 @@ const getText = (languageCode: LanguageCode) => {
           en:
             "We are looking for skilled, dedicated, and experienced individuals with a strong track record of researching capabilities and background in either Food Science, Biochemistry, Bioengineering, Agriculture, Animal Science, or other relevant fields who can contribute to the R&D of our alternative meat products.",
           tw:
-            "We are looking for skilled, dedicated, and experienced individuals with a strong track record of researching capabilities and background in either Food Science, Biochemistry, Bioengineering, Agriculture, Animal Science, or other relevant fields who can contribute to the R&D of our alternative meat products.",
+            "我們需要在食品科學、生物化學、生物工程、農業科學、動物科學或其他相關領域，具備良好研究能力與技術，專心和經驗豐富的研究專員，以協助我們在研發”未來肉“（肉類替代品）的路上穩健邁進！",
         }[languageCode],
       },
       {
         job: {
-          jp: "ブランディング・マーケティング部門",
+          jp: "行銷專員",
           en: "Marketing Positions",
           tw: "Marketing Positions",
         }[languageCode],
@@ -113,14 +112,14 @@ const getText = (languageCode: LanguageCode) => {
           en:
             "We are looking for creative, goal-oriented individuals with proven experience of Social Media Managing who we can rely on to grow our presence on all social platforms.",
           tw:
-            "We are looking for creative, goal-oriented individuals with proven experience of Social Media Managing who we can rely on to grow our presence on all social platforms.",
+            "我們需要具有管理社交媒體經驗，且富有創意和目標導向的行銷專員，以擴大我們在各個社交平台上的影響力。",
         }[languageCode],
       },
       {
         job: {
           jp: "デザイナー",
           en: "Brand Strategist / Designer",
-          tw: "Brand Strategist / Designer",
+          tw: "品牌策略師/設計師",
         }[languageCode],
         description: {
           jp:
@@ -128,14 +127,14 @@ const getText = (languageCode: LanguageCode) => {
           en:
             "We are looking for creative and focused branding managers, who are capable of working with the larger group to develop effective, localized, and well-designed communication strategies to communicate with the world.",
           tw:
-            "We are looking for creative and focused branding managers, who are capable of working with the larger group to develop effective, localized, and well-designed communication strategies to communicate with the world.",
+            "我們需要富有創造力和致力發揮品牌優勢的設計師/策略師，與龐大的團隊合作，以制定本土化且有效的溝通策略，來聯繫全世界。",
         }[languageCode],
       },
       {
         job: {
           jp: "法人営業部門",
           en: "Corporate Sales Positions",
-          tw: "Corporate Sales Positions",
+          tw: "企業銷售專員",
         }[languageCode],
         description: {
           jp:
@@ -143,7 +142,7 @@ const getText = (languageCode: LanguageCode) => {
           en:
             "We are looking for energetic and focused individuals with excellent communication skills, who are experienced and reliable in conducting BtoB sales and establishing new business opportunities, as well as maintaining strong customer relationships.",
           tw:
-            "We are looking for energetic and focused individuals with excellent communication skills, who are experienced and reliable in conducting BtoB sales and establishing new business opportunities, as well as maintaining strong customer relationships.",
+            "我們需要具備良好溝通能力、精力充沛且專注的銷售專員，以進行B2B銷售和建立新的商機，並且維持牢固的企業客戶關係。",
         }[languageCode],
       },
       {
@@ -163,7 +162,7 @@ const getText = (languageCode: LanguageCode) => {
         job: {
           jp: "工場管理・品質管理",
           en: "Facility Manager / Manufacturing Quality Manager",
-          tw: "Facility Manager / Manufacturing Quality Manager",
+          tw: "設施/產線品質管理經理",
         }[languageCode],
         description: {
           jp:
@@ -171,14 +170,14 @@ const getText = (languageCode: LanguageCode) => {
           en:
             "We are looking for experienced individuals who can oversee our production lines and ensure our products consistently meet our high standards of quality.",
           tw:
-            "We are looking for experienced individuals who can oversee our production lines and ensure our products consistently meet our high standards of quality.",
+            "我們需要具備品管經驗的設施/產線品質管理經理，協助監督我們的生產線，以確保產品符合本公司的高品質標準。",
         }[languageCode],
       },
       {
         job: {
           jp: "経理・総務",
           en: "Accountant / Office Administrator",
-          tw: "Accountant / Office Administrator",
+          tw: "會計師/行政管理專員",
         }[languageCode],
         description: {
           jp:
@@ -186,14 +185,14 @@ const getText = (languageCode: LanguageCode) => {
           en:
             "We are looking for organized and experienced accountants and office administrators who can join the team!",
           tw:
-            "We are looking for organized and experienced accountants and office administrators who can join the team!",
+            "我們需要善於規劃和經驗豐富的會計師/行政管理專員，以助團隊運作順利！",
         }[languageCode],
       },
       {
         job: {
           jp: "その他（インターン・顧問・ボランティアなど）",
           en: "Other positions (Interns, Volunteers, Advisors)",
-          tw: "Other positions (Interns, Volunteers, Advisors)",
+          tw: "其他（實習生，志工，顧問）",
         }[languageCode],
         description: {
           jp:
@@ -201,7 +200,7 @@ const getText = (languageCode: LanguageCode) => {
           en:
             "We are also open to onboard passionate and enthusiastic Interns and Volunteers, who are interested in fighting the good fight with us to save our planet from total environmental disaster! ",
           tw:
-            "We are also open to onboard passionate and enthusiastic Interns and Volunteers, who are interested in fighting the good fight with us to save our planet from total environmental disaster! ",
+            "我們也歡迎充滿熱情的實習生和志工加入我們，與我們一起奮鬥，努力讓地球免遭徹底的環境災難！",
         }[languageCode],
       },
     ],
@@ -210,7 +209,7 @@ const getText = (languageCode: LanguageCode) => {
       en:
         "For all inquiries, please contact\nSaaya Matsukubo\nmatsukubo(at)nextmeats.co.jp",
       tw:
-        "For all inquiries, please contact\nSaaya Matsukubo\nmatsukubo(at)nextmeats.co.jp",
+        "如有興趣或有任何疑問，歡迎來信詢問！\n松久保紗采\nmatsukubo(at)nextmeats.co.jp",
     }[languageCode],
   };
 };
