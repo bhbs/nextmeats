@@ -21,7 +21,7 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
   }, []);
 
   return (
-    <Layout languageCode={"jp"}>
+    <Layout languageCode={languageCode}>
       <Head>
         <meta
           property="og:image"
@@ -32,7 +32,7 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
         <div className={styles.fv}>
           {deviceType == "pc" && (
             <Image
-              src="/img/accelarator/header-pc.jpg"
+              src={`/img/accelarator/header_${languageCode}_pc.jpg`}
               alt=""
               width={1920}
               height={960}
@@ -40,7 +40,7 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
           )}
           {deviceType == "mobile" && (
             <Image
-              src="/img/accelarator/header-mobile.jpg"
+              src={`/img/accelarator/header_${languageCode}_mobile.jpg`}
               alt=""
               width={900}
               height={1200}
