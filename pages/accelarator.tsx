@@ -87,7 +87,7 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
                   <span>{data[1]}</span>
                 </h3>
                 <p>
-                  <span>{text[`target_${i}`]}</span>
+                  <span>{text[`target_${i + 1}`]}</span>
                 </p>
               </div>
             ))}
