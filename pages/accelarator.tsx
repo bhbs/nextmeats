@@ -126,7 +126,7 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             </div>
           </section>
           <section className={styles.merit}>
-            <h2></h2>
+            <h2>{text.merit_h}</h2>
             <div>
               {[
                 "/img/accelarator/merit01.png",
@@ -150,6 +150,34 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
                   <Image src={imgUrl} alt="" width={220} height={220} />
                   <h3>{text[`merit_${i + 4}_h`]}</h3>
                   <p>{text[`merit_${i + 4}`]}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+          <section className={styles.judge}>
+            <h2>{text.judge_h}</h2>
+            <div>
+              {[
+                "/img/accelarator/judge1.jpg",
+                "/img/accelarator/judge2.jpg",
+              ].map((imgUrl, i) => (
+                <div key={`judge_1_${i}`}>
+                  <Image src={imgUrl} alt="" width={220} height={220} />
+                  <h3>{text[`judge_${i + 1}_h`]}</h3>
+                  <p>{text[`judge_${i + 1}`]}</p>
+                </div>
+              ))}
+            </div>
+            <div>
+              {[
+                "/img/accelarator/judge5.jpg",
+                "/img/accelarator/judge3.jpg",
+                "/img/accelarator/judge4.jpg",
+              ].map((imgUrl, i) => (
+                <div key={`judge_${i}`}>
+                  <Image src={imgUrl} alt="" width={220} height={220} />
+                  <h3>{text[`judge_${i + 3}_h`]}</h3>
+                  <p>{text[`judge_${i + 3}`]}</p>
                 </div>
               ))}
             </div>
@@ -587,6 +615,100 @@ const getText = (locale: LanguageCode) => {
         "Next Meats can also support various costs and research costs for PoC (proof of concept) for commercialization. We will consider investing if necessary.",
       tw:
         "Next Meets可以为商业化进程中，PoC（概念验证）产生的各种费用和研究成本提供资金援助。必要时也考虑对参与公司的项目投资入股。",
+    }[locale],
+    judge_h: {
+      jp: "審査員",
+      en: "JUDGE",
+      tw: "JUDGE",
+    }[locale],
+    judge_1_h: {
+      jp: (
+        <>
+          佐々木英之
+          <br />
+          <span>ネクストミーツ株式会社 CEO</span>
+          <br />
+          <span>Next Meats Holdings Inc. COO</span>
+        </>
+      ),
+      en: "",
+      tw: "",
+    }[locale],
+    judge_1: {
+      jp:
+        "早くから起業した経験を活かし、海外に目を向け、中国深センにて 12 年間様々な事業に携わる。 大企業向けのアクセラレータプログラムや、メディア運営で培った経験を生かし、2020年6月にネクストミーツを設立。現職に至る。国内外のメディアで話題となり日本を代表する代替肉ベンチャーとなる。フェイクミート研究家。中国語ビジネスレベル。\n2020年6月にネクストミーツ株式会社設立\n代替肉ベンチャーとして開発製造販売、メディア運営を行う。\nメディアでの注目もあり、日本を代表する代替肉ベンチャーとなり、海外展開も目指す。",
+      en: "",
+      tw: "",
+    }[locale],
+    judge_2_h: {
+      jp: (
+        <>
+          白井良
+          <br />
+          <span>ネクストミーツ株式会社 Founder</span>
+          <br />
+          <span>Next Meats Holdings Inc. CEO</span>
+        </>
+      ),
+      en: "",
+      tw: "",
+    }[locale],
+    judge_2: {
+      jp:
+        "シリアルアントレプレナー。\n大和証券出身。\n2006年から起業し、３度のバイアウト経験を持つ。株式会社ホワイトホールを東証一部上場のベクトルに売却し、その後MBOで株式を買い戻す。\n2017年より代替肉の研究を行い、2020年に代表の佐々木と共に株式会社化。2021年1月アメリカOTC上場。",
+      en: "",
+      tw: "",
+    }[locale],
+    judge_3_h: {
+      jp: (
+        <>
+          中村 亜由子
+          <br />
+          <span>eiicon company 代表/founder</span>
+        </>
+      ),
+      en: "",
+      tw: "",
+    }[locale],
+    judge_3: {
+      jp:
+        "2008年株式会社インテリジェンス（現パーソルキャリア株式会社）入社。 以来、doda編集部、人材紹介事業部法人営業など、HR転職領域に従事。2015年「eiicon」事業を起案・推進。現在は全国各地の18,000社を超える様々な法人が登録し、日本最大級の企業検索・マッチングプラットフォームとなった「eiicon」を運営するeiicon company の代表を務める。年間60本以上のイベントにおいて講演・モデレートなども務め、多くのアクセラレータープログラムのメンター・審査員等幅広く活動している。 副業マッチングサービス「lotsful」 共同創業者。特許庁でのオープンイノベーション促進契約ガイドライン策定委員に2年連続で就任。（2019/9～）情報経営イノベーション専門職大学 情報経営イノベーション学部 客員教員就任。（2020/4～）",
+      en: "",
+      tw: "",
+    }[locale],
+    judge_4_h: {
+      jp: (
+        <>
+          富田 直
+          <br />
+          <span>eiicon company CDO/COO</span>
+        </>
+      ),
+      en: "",
+      tw: "",
+    }[locale],
+    judge_4: {
+      jp:
+        "大手不動産会社にて社内SEとしてスマホサイトの構築〜タブレットアプリの開発に従事。また、業界初無人店舗端末の構築・運営まで幅広く経験。2014年株式会社インテリジェンスに入社後、アルバイト求人サイト　anのリニューアルプロジェクトを担当。リニューアルによる月次応募の底上げに成功。社内表彰歴多数。その後、eiicon立ち上げ時から参画。サービス全体のマーケティング、プロモーションからWebサイト開発・デザイン～ディレクション、など幅広く、モノづくり全般を担う。",
+      en: "",
+      tw: "",
+    }[locale],
+    judge_5_h: {
+      jp: (
+        <>
+          朝倉雅文
+          <br />
+          <span>株式会社Final Aim Co-Founder&CEO</span>
+        </>
+      ),
+      en: "",
+      tw: "",
+    }[locale],
+    judge_5: {
+      jp:
+        "都市銀行で東京にて法人融資を担当、人材紹介会社にてIT支援部、経営企画部、グローバル企画部にて事業開発担当。シンガポール移住後、シンガポール現地にて代表取締役社長を2社務める。東京帰国後、機械学習×3DプリンターのスタートアップでCOO、プロダクト統括責任者、経営企画部執行役員、事業執行役員、海外事業開発部執行役員を歴任、2017年東証一部上場企業にExit。2019年12月、株式会社FinalAim創業。",
+      en: "",
+      tw: "",
     }[locale],
     contact: {
       jp: (
