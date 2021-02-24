@@ -302,34 +302,37 @@ const getText = (locale: LanguageCode) => {
     }[locale],
     purpose_1_h: {
       jp: "代替肉のイノベーション",
-      en: "",
+      en: "Sparking Innovation",
       tw: "人造肉的创新",
     }[locale],
     purpose_1: {
       jp:
         "参加者それぞれが持っている知見や技術を持ち合わせることで代替肉事業にイノベーションを起こします。",
-      en: "",
+      en:
+        "By combining the knowledge and technologies of all participants, we can spark innovation on an unprecedented scale in the alternative meat industry.",
       tw: "通过整合每个参与者持有的知识和技术，在植物替代肉领域掀起创新潮流。",
     }[locale],
     purpose_2_h: {
       jp: "地球をよくするための共創",
-      en: "",
+      en: "Uniting for the Earth",
       tw: "用共创改善地球",
     }[locale],
     purpose_2: {
       jp:
         "競争ではなく共創することを目指し、地球をよくしていくために手を取り合っていきます。",
-      en: "",
+      en:
+        "Rather than competing amongst one another, if capable and passionate entities worked together we can improve the global environment much more efficiently.",
       tw: "以共同创造而非竞争为目标指向，携手并肩改善地球的生存状态。",
     }[locale],
     purpose_3_h: {
       jp: "世界市場獲得",
-      en: "",
+      en: "World market acquisition",
       tw: "斩获国际市场",
     }[locale],
     purpose_3: {
       jp: "企業同士がタッグを組み、世界市場を取りにいきます。",
-      en: "",
+      en:
+        "By combining the power of all participating companies, we can and will expand and shape the global alternative meat market.",
       tw: "企业的全体参与者紧密结合，进军全球市场。",
     }[locale],
     target_h: {
@@ -340,7 +343,14 @@ const getText = (locale: LanguageCode) => {
           企業、個人、研究者の方を募集いたします。
         </>
       ),
-      en: "",
+      en: (
+        <>
+          We are calling on all companies, researchers, and experienced
+          individuals who take climate action seriously and want to step up to
+          the challenge of developing cutting-edge, never before seen
+          alternative meat products with us.
+        </>
+      ),
       tw: (
         <>
           “为地球的未来诚心思考”
@@ -352,32 +362,37 @@ const getText = (locale: LanguageCode) => {
     target_1: {
       jp:
         "原料・加工・調味・栄養学的なアプローチなどの技術を活用し、今までにない代替肉開発に貢献する。",
-      en: "",
+      en:
+        "Let us know about your innovative approaches in food processing methods, flavoring, the supply and selection of raw materials, and nutritional insights.",
       tw:
         "利用原材料、加工、调味和营养学方法等技术，打开前所未有的人造肉研发道路。",
     }[locale],
     target_2: {
       jp:
         "微細藻類・遺伝子・培養技術などを活用し、新たな代替肉開発に貢献する。",
-      en: "",
+      en:
+        "Microalgae, cell culturing and genetic modification technology all hold unbound possibility in the development of new alternative meat products. Talk to us about your product development ambitions!",
       tw: "通过利用微藻、基因和培养技术，为人造肉的新研发做出贡献。",
     }[locale],
     target_3: {
       jp:
         "IoTやブロックチェーンなどの農業技術を活用し、新たな代替肉の原材料の分野で貢献する。",
-      en: "",
+      en:
+        "Collaborate with your specialty in IoT, blockchain and agricultural technology to discern new raw material prospects and other potentials to be unlocked",
       tw: "利用物联网和区块链等农业技术，为人造肉的原料创新领域做出贡献。",
     }[locale],
     target_4: {
       jp:
         "機会設備、包装技術などの強みを活かし、代替肉の生産過程の分野で貢献する。",
-      en: "",
+      en:
+        "Utilize your knowledge on machinery and the packing-processing steps to improve the alternative meat production process!",
       tw: "利用机械设备和包装技术等优势，为人造肉的生产领域做出贡献。",
     }[locale],
     target_explanation: {
       jp:
         "上記以外でも、代替肉を作っていく上でのイノベーションになればどんな企業、個人、研究者の方でもご参加いただけます。",
-      en: "",
+      en:
+        "We are open to collaborate with innovative companies, researchers, and individuals even if you do not specialize in alternative meats, if it is in your strong interests to contribute to the research and development of products which will come out of this program.",
       tw:
         "除上述条件外，在人造肉领域有望做出任何创新的企业、个人或研究人员都欢迎加入我们的计划。",
     }[locale],
@@ -388,12 +403,12 @@ const getText = (locale: LanguageCode) => {
     }[locale],
     schedule_1: {
       jp: "応募期間",
-      en: "",
+      en: "Application period",
       tw: "申请期间",
     }[locale],
     schedule_1_period: {
       jp: "1ヶ月",
-      en: "",
+      en: "1 Month",
       tw: "1个月",
     }[locale],
     schedule_2: {
@@ -404,7 +419,13 @@ const getText = (locale: LanguageCode) => {
           【書類審査】
         </>
       ),
-      en: "",
+      en: (
+        <>
+          First process
+          <br />
+          Application review
+        </>
+      ),
       tw: (
         <>
           初次筛选
@@ -415,7 +436,7 @@ const getText = (locale: LanguageCode) => {
     }[locale],
     schedule_2_period: {
       jp: "2〜4週間",
-      en: "",
+      en: "2 to 4 weeks",
       tw: "2-4周内",
     }[locale],
     schedule_3: {
@@ -426,7 +447,13 @@ const getText = (locale: LanguageCode) => {
           【オンラインピッチ】
         </>
       ),
-      en: "",
+      en: (
+        <>
+          Second Process
+          <br />
+          Online Pitch
+        </>
+      ),
       tw: (
         <>
           二次筛选
@@ -437,7 +464,7 @@ const getText = (locale: LanguageCode) => {
     }[locale],
     schedule_3_period: {
       jp: "2〜4週間",
-      en: "",
+      en: "2 to 4 weeks",
       tw: "2-4周内",
     }[locale],
     schedule_4: {
@@ -448,7 +475,13 @@ const getText = (locale: LanguageCode) => {
           POC
         </>
       ),
-      en: "",
+      en: (
+        <>
+          Starting first trials
+          <br />
+          reviewing POC
+        </>
+      ),
       tw: (
         <>
           实验开始
@@ -459,17 +492,17 @@ const getText = (locale: LanguageCode) => {
     }[locale],
     schedule_4_period: {
       jp: "3〜6ヶ月",
-      en: "",
+      en: "3 to 6 months",
       tw: "3-6个月",
     }[locale],
     schedule_5: {
       jp: "テストマーケティング",
-      en: "",
+      en: "Test Marketing",
       tw: "运营测试",
     }[locale],
     schedule_5_period: {
       jp: "3ヶ月",
-      en: "",
+      en: "3 Months",
       tw: "3个月",
     }[locale],
     merit_h: {
@@ -563,13 +596,19 @@ const getText = (locale: LanguageCode) => {
           アクセラレータープログラムに応募する
         </>
       ),
-      en: "",
+      en: (
+        <>
+          Join Slack and apply for <br />
+          the Next Meats Accelerator Program
+        </>
+      ),
       tw: <>进入Slack申请参加速器计划</>,
     }[locale],
     contact_explanation: {
       jp:
         "※ 不具合・お問い合わせ等ございましたら xxxxxx@nextmeats.co.jp までご連絡ください。",
-      en: "",
+      en:
+        "If you have any questions or concerns please contact xxxxxx@nextmeats.co.jp",
       tw:
         "*如果您有任何疑问或疑问，请通过 xxxxxx@nextmeats.co.jp 与我们取得联系",
     }[locale],
