@@ -155,7 +155,7 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             </div>
           </section>
           <section className={styles.judge}>
-            <h2>{text.judge_h}</h2>
+            <h2>{text.judge_h_1}</h2>
             <div>
               {[
                 "/img/accelarator/judge1.jpg",
@@ -168,6 +168,9 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
                 </div>
               ))}
             </div>
+          </section>
+          <section className={styles.judge}>
+            <h2>{text.judge_h_2}</h2>
             <div>
               {[
                 "/img/accelarator/judge5.jpg",
@@ -616,10 +619,15 @@ const getText = (locale: LanguageCode) => {
       tw:
         "Next Meets可以为商业化进程中，PoC（概念验证）产生的各种费用和研究成本提供资金援助。必要时也考虑对参与公司的项目投资入股。",
     }[locale],
-    judge_h: {
-      jp: "審査員",
-      en: "JUDGE",
-      tw: "JUDGE",
+    judge_h_1: {
+      jp: "ネクストミーツ",
+      en: "NEXT MEATS",
+      tw: "NEXT MEATS",
+    }[locale],
+    judge_h_2: {
+      jp: "イノベーションアドバイザー",
+      en: "INNOVATION ADVISOR",
+      tw: "INNOVATION ADVISOR",
     }[locale],
     judge_1_h: {
       jp: (
