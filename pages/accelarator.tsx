@@ -187,7 +187,9 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
           </section>
           <section className={styles.contact}>
             <div>
-              <a href="">{text.contact}</a>
+              <a href="https://join.slack.com/t/next-meats-workspace/shared_invite/zt-mynrep9g-_LCErwL7mB4KEspjhwmI_Q">
+                {text.contact}
+              </a>
             </div>
             <p style={{ fontSize: "0.8em" }}>{text.contact_explanation}</p>
           </section>
