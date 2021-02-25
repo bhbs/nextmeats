@@ -736,11 +736,11 @@ const getText = (locale: LanguageCode) => {
     }[locale],
     contact_explanation: {
       jp:
-        "※ 不具合・お問い合わせ等ございましたら xxxxxx@nextmeats.co.jp までご連絡ください。",
+        "※ 不具合・お問い合わせ等ございましたら ac2021[at]nextmeats.co.jp までご連絡ください。",
       en:
-        "If you have any questions or concerns please contact xxxxxx@nextmeats.co.jp",
+        "If you have any questions or concerns please contact ac2021[at]nextmeats.co.jp",
       tw:
-        "*如果您有任何疑问或疑问，请通过 xxxxxx@nextmeats.co.jp 与我们取得联系",
+        "*如果您有任何疑问或疑问，请通过 ac2021[at]nextmeats.co.jp 与我们取得联系",
     }[locale],
   };
 };
