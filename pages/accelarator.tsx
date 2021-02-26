@@ -24,6 +24,7 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
     <Layout languageCode={languageCode}>
       <Head>
         <meta
+          key="og:image"
           property="og:image"
           content={`https://nextmeats.co.jp/img/accelarator/header_${languageCode}_pc.jpg`}
         />

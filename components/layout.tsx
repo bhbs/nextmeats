@@ -16,22 +16,29 @@ const Layout = ({ children, languageCode }: Props): React.ReactElement => {
   return (
     <>
       <Head>
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nextmeats.co.jp" />
+        <meta key="og:type" property="og:type" content="website" />
+        <meta
+          key="og:url"
+          property="og:url"
+          content="https://nextmeats.co.jp"
+        />
         {languageCode === "jp" && (
           <meta
+            key="og:image"
             property="og:image"
             content="https://nextmeats.co.jp/img/index/hamburger-steak_web-ogp-1200x630.jpg"
           />
         )}
         {languageCode === "en" && (
           <meta
+            key="og:image"
             property="og:image"
             content="https://nextmeats.co.jp/img/index/en_web-ogp-1200x630-gyudon.jpg"
           />
         )}
         {languageCode === "tw" && (
           <meta
+            key="og:image"
             property="og:image"
             content="https://nextmeats.co.jp/img/index/tw_web-ogp-1200x630-gyudon.jpg"
           />
