@@ -652,8 +652,24 @@ const getText = (locale: LanguageCode) => {
           <span>Next Meats Holdings Inc. COO</span>
         </>
       ),
-      en: "",
-      tw: "",
+      en: (
+        <>
+          Hideyuki Sasaki
+          <br />
+          <span>Next Meats Co., Ltd. CEO</span>
+          <br />
+          <span>Next Meats Holdings Inc. COO</span>
+        </>
+      ),
+      tw: (
+        <>
+          Hideyuki Sasaki
+          <br />
+          <span>Next Meats Co., Ltd. CEO</span>
+          <br />
+          <span>Next Meats Holdings Inc. COO</span>
+        </>
+      ),
     }[locale],
     judge_1: {
       jp:
@@ -671,8 +687,24 @@ const getText = (locale: LanguageCode) => {
           <span>Next Meats Holdings Inc. CEO</span>
         </>
       ),
-      en: "",
-      tw: "",
+      en: (
+        <>
+          Ryo Shirai
+          <br />
+          <span>Next Meats Co., Ltd. Founder</span>
+          <br />
+          <span>Next Meats Holdings Inc. CEO</span>
+        </>
+      ),
+      tw: (
+        <>
+          Ryo Shirai
+          <br />
+          <span>Next Meats Co., Ltd. Founder</span>
+          <br />
+          <span>Next Meats Holdings Inc. CEO</span>
+        </>
+      ),
     }[locale],
     judge_2: {
       jp:
@@ -688,8 +720,20 @@ const getText = (locale: LanguageCode) => {
           <span>eiicon company 代表/founder</span>
         </>
       ),
-      en: "",
-      tw: "",
+      en: (
+        <>
+          Ayuko Nakamura
+          <br />
+          <span>eiicon company CEO/founder</span>
+        </>
+      ),
+      tw: (
+        <>
+          Ayuko Nakamura
+          <br />
+          <span>eiicon company CEO/founder</span>
+        </>
+      ),
     }[locale],
     judge_3: {
       jp:
@@ -705,8 +749,20 @@ const getText = (locale: LanguageCode) => {
           <span>eiicon company CDO/COO</span>
         </>
       ),
-      en: "",
-      tw: "",
+      en: (
+        <>
+          Tomita Ataru
+          <br />
+          <span>eiicon company CDO/COO</span>
+        </>
+      ),
+      tw: (
+        <>
+          Tomita Ataru
+          <br />
+          <span>eiicon company CDO/COO</span>
+        </>
+      ),
     }[locale],
     judge_4: {
       jp:
@@ -722,14 +778,28 @@ const getText = (locale: LanguageCode) => {
           <span>株式会社Final Aim Co-Founder&CEO</span>
         </>
       ),
-      en: "",
-      tw: "",
+      en: (
+        <>
+          Masafumi Asakura
+          <br />
+          <span>Co-Founder & CEO of Final Aim, Inc.</span>
+        </>
+      ),
+      tw: (
+        <>
+          Masafumi Asakura
+          <br />
+          <span>Co-Founder & CEO of Final Aim, Inc.</span>
+        </>
+      ),
     }[locale],
     judge_5: {
       jp:
         "都市銀行で東京にて法人融資を担当、人材紹介会社にてIT支援部、経営企画部、グローバル企画部にて事業開発担当。シンガポール移住後、シンガポール現地にて代表取締役社長を2社務める。東京帰国後、機械学習×3DプリンターのスタートアップでCOO、プロダクト統括責任者、経営企画部執行役員、事業執行役員、海外事業開発部執行役員を歴任、2017年東証一部上場企業にExit。2019年12月、株式会社FinalAim創業。",
-      en: "",
-      tw: "",
+      en:
+        "He was the COO at an AI and 3D printing startup in Tokyo, Japan which succeeded in being acquired by a company listed on the Tokyo Stock Exchange in September 2017. He was in charge of not only as a COO but also as an Executive Director of Global Business Development. From the experience of the M&A, he has been advising not only Japanese but also international startups. Previously, Masafumi lived in Singapore for about 3 years and experienced two companies. One was in charge as a Managing Director, and the other was in charge as a CEO. He succeeded in several M&As and alliances in ASEAN. He began his career in Singapore at Reeracoen Singapore Pte, Ltd. He gathered fellows from all over the world and built a multinational team, including Ireland, Spain, China, Malaysia, the Philippines, India, and Singapore.",
+      tw:
+        "He was the COO at an AI and 3D printing startup in Tokyo, Japan which succeeded in being acquired by a company listed on the Tokyo Stock Exchange in September 2017. He was in charge of not only as a COO but also as an Executive Director of Global Business Development. From the experience of the M&A, he has been advising not only Japanese but also international startups. Previously, Masafumi lived in Singapore for about 3 years and experienced two companies. One was in charge as a Managing Director, and the other was in charge as a CEO. He succeeded in several M&As and alliances in ASEAN. He began his career in Singapore at Reeracoen Singapore Pte, Ltd. He gathered fellows from all over the world and built a multinational team, including Ireland, Spain, China, Malaysia, the Philippines, India, and Singapore.",
     }[locale],
     judge_6_h: {
       jp: (
@@ -739,14 +809,34 @@ const getText = (locale: LanguageCode) => {
           <span>Deloitte Tohmatsu Venture Support 取締役 COO</span>
         </>
       ),
-      en: "",
-      tw: "",
+      en: (
+        <>
+          Masayuki Kimura
+          <br />
+          <span>
+            Deloitte Tohmatsu Venture Support, Board Director and COO [Chief
+            Operating Officer].
+          </span>
+        </>
+      ),
+      tw: (
+        <>
+          Masayuki Kimura
+          <br />
+          <span>
+            Deloitte Tohmatsu Venture Support, Board Director and COO [Chief
+            Operating Officer].
+          </span>
+        </>
+      ),
     }[locale],
     judge_6: {
       jp:
         "2007年有限責任監査法人トーマツ入社。IPO,M&A、KPI改善等の各種業務に従事。2010年より、デロイト トーマツ ベンチャーサポートの第2創業に参画し、200社超の成長戦略、資本政策立案をサポート、数多くの企業の資金調達、IPO実現に貢献。イノベーションコンサルティング事業を事業化し、2015年よりシリコンバレー拠点の立ち上げを行い海外の事業化を成功させ、4ヵ国160名体制への拡大を牽引。取締役COOとして全社の執行責任者を務める。シリコンバレーと日本に拠点を置き、日本発で世界を席巻する事業を生み出すことに貢献することをミッションとして活動。",
-      en: "",
-      tw: "",
+      en:
+        "Started his career as CPA and provided IPO consulting, M&A and Audit. Launched innovation focused subsidiary in Deloitte Japan in 2010 as a co-founder and expanded to over 160 members with 4 presences in the world. Promoted whole company businesses as a COO. Business leader with 13 years of experience in business planning, cross-border alliance and innovation strategy consulting. Moved to US in 2015 and created a lot of Japanese MNCs new businesses with local startups. Presented as the main and special speaker in large scale global tech conferences such as Automotive World 2019, Wearable Expo 2017-2019 and AI Conference 2017.",
+      tw:
+        "Started his career as CPA and provided IPO consulting, M&A and Audit. Launched innovation focused subsidiary in Deloitte Japan in 2010 as a co-founder and expanded to over 160 members with 4 presences in the world. Promoted whole company businesses as a COO. Business leader with 13 years of experience in business planning, cross-border alliance and innovation strategy consulting. Moved to US in 2015 and created a lot of Japanese MNCs new businesses with local startups. Presented as the main and special speaker in large scale global tech conferences such as Automotive World 2019, Wearable Expo 2017-2019 and AI Conference 2017.",
     }[locale],
     contact: {
       jp: (
