@@ -53,6 +53,13 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             <h2>{text.statement_h}</h2>
             <div>{text.statement}</div>
           </section>
+          <section className={styles.contact}>
+            <div>
+              <a href="https://join.slack.com/t/next-meats-workspace/shared_invite/zt-mynrep9g-_LCErwL7mB4KEspjhwmI_Q">
+                {text.contact}
+              </a>
+            </div>
+          </section>
           <section className={styles.purpose}>
             <h2>{text.purpose_h}</h2>
             <div>
