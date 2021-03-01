@@ -87,6 +87,29 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
         )}
 
         <section>
+          <h2>
+            <span>
+              {
+                {
+                  jp: "応募受付中！ 3月末まで",
+                  en: "Open for entries! ~ March 31st",
+                  tw: "Open for entries! ~ March 31st",
+                }[languageCode]
+              }
+            </span>
+          </h2>
+          <Link href="/accelarator">
+            <a>
+              <Image
+                src={`/img/accelarator/header_${languageCode}_pc.jpg`}
+                width={1920}
+                height={960}
+              />
+            </a>
+          </Link>
+        </section>
+
+        <section>
           <div
             style={{
               textAlign: "center",
