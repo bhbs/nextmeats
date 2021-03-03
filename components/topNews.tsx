@@ -65,7 +65,7 @@ const TopNews = (): React.ReactElement => {
               <img src="/img/topNews/twitter.png" alt="twitter" />
             </a>
             <a
-              href="https://www.instagram.com/nextmeats/"
+              href="https://www.instagram.com/nextmeatsjapan/"
               target="_blank"
               rel="noreferrer"
             >
