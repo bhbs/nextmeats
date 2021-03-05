@@ -35,7 +35,7 @@ const Counter = (): React.ReactElement => {
   useEffect(() => {
     setTimeout(() => {
       setCount(count > 90 ? Math.floor(Math.random() * 90) : count + 7);
-    }, count * 10);
+    }, Math.floor(Math.random() * 777));
   });
   return (
     <>
