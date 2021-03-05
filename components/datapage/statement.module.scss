@@ -9,8 +9,17 @@ $nxm-color: rgb(0, 155, 191);
 .box {
   text-align: center;
   position: relative;
-  margin: 40px;
-  padding: 32px 24px;
+  margin: 38px;
+  padding: 32px 38px;
+
+  h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
 .bd {
   background: white;

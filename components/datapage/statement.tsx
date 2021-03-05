@@ -5,13 +5,13 @@ const Component = (): React.ReactElement => {
   return (
     <section>
       <div className={styles.box}>
-        <h2 style={{ lineHeight: "1.4" }}>
+        <h3 style={{ lineHeight: "1.4" }}>
           データが裏付ける、
           <br />
           ネクストミーツの
           <br />
           インパクト。
-        </h2>
+        </h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eius
           facilis earum laudantium repudiandae explicabo neque reprehenderit
