@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import styles from "./carousel.module.scss";
 
 const Component = (): React.ReactElement => {
   const items = [
@@ -21,8 +22,9 @@ const Component = (): React.ReactElement => {
     <section>
       <h2>LINE UP</h2>
       <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
+        spaceBetween={24}
+        slidesPerView={1.4}
+        centeredSlides={true}
         loop={true}
         onSwiper={(swiper) =>
           swiper.on("slideChange", function () {
@@ -35,14 +37,13 @@ const Component = (): React.ReactElement => {
         }
       >
         {items.map((item, i) => (
-          <SwiperSlide key={i}>
+          <SwiperSlide key={i} className={styles.slide}>
             <h3>{item.name}</h3>
             <img src={item.img} alt="" />
             <a>データを見る</a>
           </SwiperSlide>
         ))}
       </Swiper>
-      <p>↓</p>
     </section>
   );
 };

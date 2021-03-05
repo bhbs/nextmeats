@@ -1,0 +1,28 @@
+$nxm-color: rgb(0, 155, 191);
+
+@mixin sp {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+.slide {
+  text-align: center;
+
+  h3 {
+    border: solid 1px white;
+    display: inline-block;
+    padding: 8px 40px;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+
+  a {
+    display: block;
+    background: $nxm-color;
+    padding: 8px 40px;
+    margin: 40px;
+  }
+}
