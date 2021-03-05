@@ -1,8 +1,8 @@
-import React, { useState, Dispatch, SetStateAction } from "react";
-import styles from "./data.module.scss";
+import React, { useState } from "react";
+import SwiperCore, { A11y, Navigation, Pagination, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import styles from "./data.module.scss";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 

@@ -31,15 +31,15 @@ const Component = (): React.ReactElement => {
 };
 
 const Counter = (): React.ReactElement => {
-  const [count, setCount] = useState(Math.floor(Math.random() * 100));
+  const [count, setCount] = useState(Math.floor(Math.random() * 99));
   useEffect(() => {
     setTimeout(() => {
-      setCount(count > 90 ? Math.floor(Math.random() * 90) : count + 7);
+      setCount(count > 98 ? Math.floor(Math.random() * 99) : count + 1);
     }, Math.floor(Math.random() * 777));
   });
   return (
     <>
-      <div className={styles.counter}>{count}%</div>
+      <div className={styles.counter}>{("00" + count).slice(-2)}%</div>
     </>
   );
 };
