@@ -23,7 +23,7 @@ const Component = (): React.ReactElement => {
         <div className={styles.bd}></div>
         <div className={styles.bd}></div>
       </div>
-      <div>↓</div>
+      <div className={styles.arrow}>(↓)</div>
     </section>
   );
 };
