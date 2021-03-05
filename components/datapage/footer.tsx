@@ -1,26 +1,35 @@
 import React from "react";
+import styles from "./footer.module.scss";
 
 const Component = (): React.ReactElement => {
   return (
     <section>
-      <div>
+      <div className={styles.card}>
         <h3>references</h3>
-        <a>h2o</a>
-        <a>cho</a>
-        <a>cal</a>
+        <p>
+          <a>h2o</a>
+        </p>
+        <p>
+          <a>cho</a>
+        </p>
+        <p>
+          <a>cal</a>
+        </p>
       </div>
-      <div>NEXTカルビを見る</div>
-      <div>NEXTハラミを見る</div>
-      <div>
+      <div className={styles.card}>NEXTカルビを見る</div>
+      <div className={styles.card}>NEXTハラミを見る</div>
+      <div className={styles.sns}>
         <a>T</a>
         <a>F</a>
         <a>I</a>
       </div>
-      <p>
-        今日の一食が、
-        <br />
-        未来につながる。
-      </p>
+      <div style={{ textAlign: "center" }}>
+        <p className={styles.catch}>
+          今日の一食が、
+          <br />
+          未来につながる。
+        </p>
+      </div>
     </section>
   );
 };
