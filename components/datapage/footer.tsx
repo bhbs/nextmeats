@@ -1,7 +1,26 @@
 import React from "react";
+import { Link } from "react-scroll";
+import { Product } from "../../pages/data";
 import styles from "./footer.module.scss";
 
-const Component = (): React.ReactElement => {
+type Props = {
+  items: {
+    id: Product;
+    name: string;
+    img: string;
+  }[];
+  product: Product;
+  setProduct: (value: React.SetStateAction<Product>) => void;
+};
+
+const Component = ({
+  items,
+  product,
+  setProduct,
+}: Props): React.ReactElement => {
+  const nextItem = getNextItem(items, product);
+  const prevItem = getPrevItem(items, product);
+
   return (
     <section>
       <div className={styles.cardWrapper}>
@@ -48,12 +67,16 @@ const Component = (): React.ReactElement => {
           </div>
         </div>
       </div>
-      <div className={styles.prev}>
-        <div>NEXTカルビを見る</div>
-      </div>
-      <div className={styles.next}>
-        <div>NEXTハラミを見る</div>
-      </div>
+      <Link to="carousel" onClick={() => setProduct(prevItem.id)}>
+        <div className={styles.prev}>
+          <div>{prevItem.name}を見る</div>
+        </div>
+      </Link>
+      <Link to="carousel" onClick={() => setProduct(nextItem.id)}>
+        <div className={styles.next}>
+          <div>{nextItem.name}を見る</div>
+        </div>
+      </Link>
       <div className={styles.sns}>
         <a>T</a>
         <a>F</a>
@@ -68,6 +91,27 @@ const Component = (): React.ReactElement => {
       </div>
     </section>
   );
+};
+
+const getNextItem = (items, product) => {
+  const index = items.findIndex((item) => {
+    return item.id === product;
+  });
+
+  const nextIndex = index + 1;
+  const availableNextIndex = nextIndex % items.length;
+
+  return items[availableNextIndex];
+};
+const getPrevItem = (items, product) => {
+  const index = items.findIndex((item) => {
+    return item.id === product;
+  });
+
+  const prevIndex = index - 1;
+  const availablePrevIndex = (prevIndex + items.length) % items.length;
+
+  return items[availablePrevIndex];
 };
 
 export default Component;
