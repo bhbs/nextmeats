@@ -7,7 +7,6 @@ import Fv from "../components/datapage/fv";
 import Stars from "../components/datapage/stars";
 import Statement from "../components/datapage/statement";
 import Layout from "../components/layout";
-import styles from "./data.module.scss";
 
 export type Product = "karubi" | "harami" | "chicken";
 
@@ -16,7 +15,7 @@ const Index = (): React.ReactElement => {
   return (
     <div
       style={{
-        background: "linear-gradient(rgb(0, 24, 56), black)",
+        background: "linear-gradient(rgb(0, 16, 48), black)",
         color: "white",
         paddingTop: "58px",
       }}

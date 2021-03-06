@@ -9,7 +9,7 @@ type Props = {
 };
 
 type Data = {
-  id: "karubi" | "harami" | "chicken";
+  id: Product;
   name: string;
   img: string;
 }[];
@@ -55,7 +55,6 @@ const Component = ({ setProduct }: Props): React.ReactElement => {
           <SwiperSlide key={i} className={styles.slide}>
             <h3>{item.name}</h3>
             <img src={item.img} alt="" />
-            <a>データを見る</a>
           </SwiperSlide>
         ))}
       </Swiper>
