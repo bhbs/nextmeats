@@ -9,6 +9,32 @@ import Statement from "../components/datapage/statement";
 import Layout from "../components/layout";
 
 export type Product = "karubi" | "harami" | "chicken";
+export type ProductData = {
+  name: string;
+  img: string;
+  category: string;
+};
+export type Products = {
+  [key in Product]: ProductData;
+};
+
+const products: Products = {
+  chicken: {
+    name: "NEXTチキン",
+    img: "/img/accelarator/merit02.jpg",
+    category: "チキン",
+  },
+  karubi: {
+    name: "NEXTカルビ",
+    img: "/img/accelarator/merit02.jpg",
+    category: "牛肉",
+  },
+  harami: {
+    name: "NEXTハラミ",
+    img: "/img/accelarator/merit02.jpg",
+    category: "牛肉",
+  },
+};
 
 const Index = (): React.ReactElement => {
   const [product, setProduct] = useState<Product>("chicken");
@@ -28,7 +54,7 @@ const Index = (): React.ReactElement => {
         <Fv />
         <Statement />
         <Carousel setProduct={setProduct} />
-        <Data product={product} />
+        <Data productData={products[product]} />
         <Footer />
       </Layout>
     </div>

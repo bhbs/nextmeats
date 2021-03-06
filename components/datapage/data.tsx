@@ -3,12 +3,12 @@ import SwiperCore, { A11y, Navigation, Pagination, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import styles from "./data.module.scss";
-import { Product } from "../../pages/data";
+import { ProductData } from "../../pages/data";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 type Props = {
-  product: Product;
+  productData: ProductData;
 };
 
 const items = [
@@ -50,11 +50,17 @@ const items = [
   },
 ];
 
-const Component = ({ product }: Props): React.ReactElement => {
+const Component = ({ productData }: Props): React.ReactElement => {
   const [modal, setModal] = useState<null | number>();
   return (
     <section>
-      <h2>{product}</h2>
+      <h2>
+        {productData.name}vs.従来{productData.category}
+      </h2>
+      <p style={{ display: "block", padding: "0 46px" }}>
+        大豆を1kg生産した際にかかる環境負荷と、
+        {productData.category}1kgを生産した際にかかる環境負荷を比べました。
+      </p>
       <div>
         {items.map((item, i) => (
           <div key={i} className={styles.box} onClick={() => setModal(i)}>
@@ -67,20 +73,20 @@ const Component = ({ product }: Props): React.ReactElement => {
           </div>
         ))}
       </div>
-      <Modal itemIndex={modal} product={product} setModal={setModal} />
+      <Modal itemIndex={modal} productData={productData} setModal={setModal} />
     </section>
   );
 };
 
 type ModalProps = {
   itemIndex: null | number;
-  product: Product;
+  productData: ProductData;
   setModal: (value: React.SetStateAction<null | number>) => void;
 };
 
 const Modal = ({
   itemIndex,
-  product,
+  productData,
   setModal,
 }: ModalProps): React.ReactElement => {
   return typeof itemIndex == "number" ? (
@@ -113,11 +119,11 @@ const Modal = ({
                 </p>
               </div>
               <div>
-                <p>NEXT{product}</p>
+                <p>{productData.name}</p>
                 <p>{item.after}</p>
               </div>
               <div>
-                <p>従来{product}</p>
+                <p>従来{productData.category}</p>
                 <p>{item.before}</p>
               </div>
             </SwiperSlide>
