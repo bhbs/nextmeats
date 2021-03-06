@@ -1,5 +1,37 @@
 @import "../../pages/data.module.scss";
 
+@keyframes shine {
+  100% {
+    opacity: 1;
+    top: 100%;
+    left: 100%;
+  }
+}
+
+.renderAnimation {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    animation: shine 1s ease-in-out;
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: rotate(45deg);
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 80%,
+      rgba(255, 255, 255, 0.5) 90%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
 .box {
   position: relative;
   background: linear-gradient(

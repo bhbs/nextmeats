@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SwiperCore, { A11y, Navigation, Pagination, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import styles from "./data.module.scss";
 import { ProductData } from "../../pages/data";
+import style from "./data.module.scss";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -52,8 +53,15 @@ const items = [
 
 const Component = ({ productData }: Props): React.ReactElement => {
   const [modal, setModal] = useState<null | number>();
+  const [animation, activateAnimation] = useState(false);
+
+  useEffect(() => {
+    activateAnimation(true);
+    setTimeout(() => activateAnimation(false), 1000);
+  }, [productData.name]);
+
   return (
-    <section>
+    <section className={animation && style.renderAnimation}>
       <h2>
         {productData.name}vs.従来{productData.category}
       </h2>

@@ -3,10 +3,60 @@
 .slide {
   text-align: center;
 
+  .slideTitle {
+    background: linear-gradient(
+      225deg,
+      transparent 10px,
+      white 10px,
+      white 11px,
+      transparent 11px
+    );
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+    }
+    &::before {
+      width: calc(100% - 14px);
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-top: solid 1px white;
+      border-left: solid 1px white;
+    }
+    &::after {
+      width: 100%;
+      height: calc(100% - 14px);
+      bottom: 0;
+      left: 0;
+      border-right: solid 1px white;
+      border-bottom: solid 1px white;
+    }
+  }
+
   h3 {
-    border: solid 1px white;
-    display: inline-block;
-    padding: 8px 40px;
+    display: inlineblock;
+    padding: 4px 40px;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+
+    &::after {
+      content: "";
+      color: $nxm-color;
+      line-height: 16px;
+      text-align: right;
+      position: absolute;
+      padding: 0 8px;
+      bottom: 100%;
+      left: 0;
+      width: 45%;
+      height: 10px;
+      @include stripe(225deg);
+    }
   }
 
   img {
@@ -19,4 +69,13 @@
     padding: 8px 40px;
     margin: 40px;
   }
+}
+
+.slide {
+  margin-top: 36px;
+  transition: 0.8s;
+}
+
+.active {
+  margin-top: 0px;
 }
