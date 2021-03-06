@@ -81,7 +81,7 @@ const Layout = ({ children, languageCode }: Props): React.ReactElement => {
       </Head>
       <Header languageCode={languageCode} path={router.route} />
       {children}
-      <footer>© 2021 Next Meats Co., Ltd.</footer>
+      {/* <footer>© 2021 Next Meats Co., Ltd.</footer> */}
     </>
   );
 };
