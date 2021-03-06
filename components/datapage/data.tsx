@@ -5,6 +5,8 @@ import "swiper/swiper-bundle.css";
 import styles from "./data.module.scss";
 import { ProductData } from "../../pages/data";
 import style from "./data.module.scss";
+import co2Animation from "./lottie/icon_co2.json";
+import Lottie from "lottie-react-web";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -73,7 +75,12 @@ const Component = ({ productData }: Props): React.ReactElement => {
         {items.map((item, i) => (
           <div key={i} className={styles.box} onClick={() => setModal(i)}>
             <div className={styles.boxInner}>
-              <img src={item.img} />
+              <Lottie
+                options={{
+                  animationData: co2Animation,
+                }}
+                width={80}
+              />
               <h3>{item.subject}</h3>
               <p className={styles.rubi}>{item.rubi}</p>
               <p className={styles.text}>{item.text}</p>
