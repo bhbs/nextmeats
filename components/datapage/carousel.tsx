@@ -53,8 +53,14 @@ const Component = ({ setProduct }: Props): React.ReactElement => {
       >
         {items.map((item, i) => (
           <SwiperSlide key={i} className={styles.slide}>
-            <h3>{item.name}</h3>
-            <img src={item.img} alt="" />
+            {({ isActive }) => (
+              <div className={`${isActive && styles.active} ${styles.slide}`}>
+                <div className={styles.slideTitle}>
+                  <h3>{item.name}</h3>
+                </div>
+                <img src={item.img} alt="" />
+              </div>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>
