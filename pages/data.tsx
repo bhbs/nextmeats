@@ -36,6 +36,12 @@ const products: Products = {
   },
 };
 
+type Data = {
+  id: Product;
+  name: string;
+  img: string;
+}[];
+
 const items: Data = [
   {
     id: "chicken",
