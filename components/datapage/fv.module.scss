@@ -1,10 +1,4 @@
-$nxm-color: rgb(0, 155, 191);
-
-@mixin sp {
-  @media (max-width: 800px) {
-    @content;
-  }
-}
+@import "../../pages/data.module.scss";
 
 .fv {
   padding: 120px 0 0;

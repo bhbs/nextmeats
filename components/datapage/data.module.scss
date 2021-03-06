@@ -1,46 +1,4 @@
-$nxm-color: rgb(0, 155, 191);
-
-@mixin sp {
-  @media (max-width: 800px) {
-    @content;
-  }
-}
-
-@mixin stripe($deg, $color: white) {
-  background: linear-gradient(
-    $deg,
-    transparent 14px,
-    $color 14px,
-    $color 17px,
-    transparent 17px,
-    transparent 20px,
-    $color 20px,
-    $color 23px,
-    transparent 23px,
-    transparent 26px,
-    $color 26px,
-    $color 29px,
-    transparent 29px,
-    transparent 32px,
-    $color 32px,
-    $color 35px,
-    transparent 35px,
-    transparent 38px,
-    $color 38px,
-    $color 41px,
-    transparent 41px,
-    transparent 44px,
-    $color 44px,
-    $color 47px,
-    transparent 47px,
-    transparent 50px,
-    $color 50px,
-    $color 53px,
-    transparent 53px,
-    transparent 56px,
-    $color 56px
-  );
-}
+@import "../../pages/data.module.scss";
 
 .box {
   position: relative;
