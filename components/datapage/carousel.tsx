@@ -1,55 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Product } from "../../pages/data";
 import styles from "./carousel.module.scss";
 
 type Props = {
+  items: {
+    id: Product;
+    name: string;
+    img: string;
+  }[];
+  product: Product;
   setProduct: (value: React.SetStateAction<Product>) => void;
 };
 
-type Data = {
-  id: Product;
-  name: string;
-  img: string;
-}[];
+const Component = ({
+  items,
+  product,
+  setProduct,
+}: Props): React.ReactElement => {
+  const [swiper, setSwiper] = useState(null);
 
-const Component = ({ setProduct }: Props): React.ReactElement => {
-  const items: Data = [
-    {
-      id: "chicken",
-      name: "NEXTチキン",
-      img: "/img/accelarator/merit02.jpg",
-    },
-    {
-      id: "karubi",
-      name: "NEXTカルビ",
-      img: "/img/accelarator/merit02.jpg",
-    },
-    {
-      id: "harami",
-      name: "NEXTハラミ",
-      img: "/img/accelarator/merit02.jpg",
-    },
-  ];
+  useEffect(() => {
+    if (swiper) {
+      swiper.on("slideChange", function () {
+        const index = swiper.activeIndex % items.length;
+        setProduct(items[index].id);
+      });
+    }
+  }, [swiper]);
+
+  useEffect(() => {
+    if (swiper) {
+      swiper.slideTo(
+        items.findIndex((item) => item.id === product),
+        1600,
+        false
+      );
+    }
+  }, [product]);
+
   return (
-    <section>
+    <section id="carousel">
       <h2>LINE UP</h2>
       <Swiper
         spaceBetween={24}
         slidesPerView={1.4}
         centeredSlides={true}
-        loop={true}
-        onSwiper={(swiper) =>
-          swiper.on("slideChange", function () {
-            const index =
-              (this.activeIndex - 1) % items.length
-                ? ((this.activeIndex - 1) % items.length) - 1
-                : items.length - 1;
-            setProduct(items[index].id);
-            console.log(items[index].name);
-          })
-        }
+        onSwiper={setSwiper}
       >
         {items.map((item, i) => (
           <SwiperSlide key={i} className={styles.slide}>

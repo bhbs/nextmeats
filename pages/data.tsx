@@ -36,6 +36,24 @@ const products: Products = {
   },
 };
 
+const items: Data = [
+  {
+    id: "chicken",
+    name: "NEXTチキン",
+    img: "/img/accelarator/merit02.jpg",
+  },
+  {
+    id: "karubi",
+    name: "NEXTカルビ",
+    img: "/img/accelarator/merit02.jpg",
+  },
+  {
+    id: "harami",
+    name: "NEXTハラミ",
+    img: "/img/accelarator/merit02.jpg",
+  },
+];
+
 const Index = (): React.ReactElement => {
   const [product, setProduct] = useState<Product>("chicken");
   return (
@@ -53,9 +71,9 @@ const Index = (): React.ReactElement => {
         <Stars />
         <Fv />
         <Statement />
-        <Carousel setProduct={setProduct} />
+        <Carousel items={items} product={product} setProduct={setProduct} />
         <Data productData={products[product]} />
-        <Footer />
+        <Footer items={items} product={product} setProduct={setProduct} />
       </Layout>
     </div>
   );
