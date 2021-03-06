@@ -8,10 +8,10 @@ import Stars from "../components/datapage/stars";
 import Statement from "../components/datapage/statement";
 import Layout from "../components/layout";
 
-export type Item = "karubi" | "harami" | "chicken";
+export type Product = "karubi" | "harami" | "chicken";
 
 const Index = (): React.ReactElement => {
-  const [item, setItem] = useState<Item>("chicken");
+  const [product, setProduct] = useState<Product>("chicken");
   return (
     <div style={{ background: "black", color: "white" }}>
       <Layout languageCode="jp">
@@ -21,8 +21,8 @@ const Index = (): React.ReactElement => {
         <Stars />
         <Fv />
         <Statement />
-        <Carousel setItem={setItem} />
-        <Data name={item} />
+        <Carousel setProduct={setProduct} />
+        <Data product={product} />
         <Footer />
       </Layout>
     </div>

@@ -1,11 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Item } from "../../pages/data";
+import { Product } from "../../pages/data";
 import styles from "./carousel.module.scss";
 
 type Props = {
-  setItem: (value: React.SetStateAction<Item>) => void;
+  setProduct: (value: React.SetStateAction<Product>) => void;
 };
 
 type Data = {
@@ -14,7 +14,7 @@ type Data = {
   img: string;
 }[];
 
-const Component = ({ setItem }: Props): React.ReactElement => {
+const Component = ({ setProduct }: Props): React.ReactElement => {
   const items: Data = [
     {
       id: "chicken",
@@ -46,7 +46,7 @@ const Component = ({ setItem }: Props): React.ReactElement => {
               (this.activeIndex - 1) % items.length
                 ? ((this.activeIndex - 1) % items.length) - 1
                 : items.length - 1;
-            setItem(items[index].id);
+            setProduct(items[index].id);
             console.log(items[index].name);
           })
         }
