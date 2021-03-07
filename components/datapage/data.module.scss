@@ -205,8 +205,29 @@
     width: 200px;
     height: 200px;
     text-align: center;
-    border: solid 2px white;
-    border-radius: 50%;
     margin: 40px auto;
+    position: relative;
+
+    p:nth-child(2) {
+      position: absolute;
+      top: -16px;
+      left: 0;
+      right: 0;
+      font-size: 80px;
+      margin: 0;
+
+      span {
+        font-size: 36px;
+      }
+    }
+    p:nth-child(3) {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      margin: 0;
+      font-size: 24px;
+      font-style: italic;
+    }
   }
 }
