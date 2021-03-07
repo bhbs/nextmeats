@@ -17,7 +17,7 @@ type Props = {
 const items = [
   {
     subject: "CHGE",
-    img: "/img/accelarator/icon/poc.png",
+    img: co2Animation,
     rubi: "音室ガス",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 0,
@@ -26,7 +26,7 @@ const items = [
   },
   {
     subject: "ENERGY",
-    img: "/img/accelarator/icon/poc.png",
+    img: co2Animation,
     rubi: "エネルギー消費量",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 0,
@@ -35,7 +35,7 @@ const items = [
   },
   {
     subject: "LAND",
-    img: "/img/accelarator/icon/poc.png",
+    img: co2Animation,
     rubi: "土地の使用量",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 0,
@@ -44,7 +44,7 @@ const items = [
   },
   {
     subject: "WATER",
-    img: "/img/accelarator/icon/poc.png",
+    img: co2Animation,
     rubi: "水資源",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 0,
@@ -78,7 +78,7 @@ const Component = ({ productData }: Props): React.ReactElement => {
             <div className={styles.boxInner}>
               <Lottie
                 options={{
-                  animationData: co2Animation,
+                  animationData: item.img,
                 }}
                 width={80}
               />
@@ -119,7 +119,12 @@ const Modal = ({
             <SwiperSlide key={i}>
               <div className={styles.modalHeader}>
                 <div>
-                  <img src={item.img} />
+                  <Lottie
+                    options={{
+                      animationData: item.img,
+                    }}
+                    width={80}
+                  />
                 </div>
                 <div>
                   <h3>{item.subject}</h3>
