@@ -1,4 +1,5 @@
 import React from "react";
+import DownArrow from "./part/downArrow";
 import styles from "./statement.module.scss";
 
 const Component = (): React.ReactElement => {
@@ -23,7 +24,7 @@ const Component = (): React.ReactElement => {
         <div className={styles.bd}></div>
         <div className={styles.bd}></div>
       </div>
-      <div className={styles.arrow}>(↓)</div>
+      <DownArrow />
     </section>
   );
 };

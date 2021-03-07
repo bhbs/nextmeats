@@ -7,6 +7,7 @@ import { ProductData } from "../../pages/data";
 import style from "./data.module.scss";
 import co2Animation from "./lottie/icon_co2.json";
 import Lottie from "lottie-react-web";
+import DownArrow from "./part/downArrow";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -71,6 +72,7 @@ const Component = ({ productData }: Props): React.ReactElement => {
         大豆を1kg生産した際にかかる環境負荷と、
         {productData.category}1kgを生産した際にかかる環境負荷を比べました。
       </p>
+      <DownArrow />
       <div>
         {items.map((item, i) => (
           <div key={i} className={styles.box} onClick={() => setModal(i)}>
