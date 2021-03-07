@@ -6,7 +6,12 @@ const Component = (): React.ReactElement => {
     <section className={styles.fv}>
       <img
         src="./img/datapage/fv/logo.png"
-        style={{ display: "block", padding: "32px", boxSizing: "border-box" }}
+        style={{
+          display: "block",
+          padding: "32px",
+          boxSizing: "border-box",
+          transform: "translateY(100px)",
+        }}
       />
       <div className={styles.counters}>
         <Counter opacity={0.1} />
@@ -17,10 +22,14 @@ const Component = (): React.ReactElement => {
         <Counter opacity={0.2} />
         <Counter opacity={0.2} />
         <Counter opacity={0.2} />
-        <Counter opacity={0.4} />
-        <Counter opacity={0.4} />
-        <Counter opacity={0.4} />
-        <Counter opacity={0.4} />
+        <Counter opacity={0.3} />
+        <Counter opacity={0.3} />
+        <Counter opacity={0.3} />
+        <Counter opacity={0.3} />
+        <Counter opacity={0.8} />
+        <Counter opacity={0.8} />
+        <Counter opacity={0.8} />
+        <Counter opacity={0.8} />
         <Counter opacity={1} target={99} />
         <Counter opacity={1} target={77} />
         <Counter opacity={1} target={99} />
@@ -45,7 +54,10 @@ const Counter = ({ opacity, target }: CounterProps): React.ReactElement => {
   });
   return (
     <>
-      <div className={styles.counter} style={{ opacity }}>
+      <div
+        className={styles.counter}
+        style={{ opacity, color: count == target && "#009BBF" }}
+      >
         {("00" + count).slice(-2)}%
       </div>
     </>

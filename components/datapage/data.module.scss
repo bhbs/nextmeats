@@ -93,7 +93,7 @@
     background: linear-gradient(
       135deg,
       transparent 10px,
-      rgba($nxm-color, 0.6) 10px
+      rgba($nxm-color, 0.5) 10px
     );
     margin-left: auto;
 
@@ -157,10 +157,9 @@
   top: 120px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 20px;
   box-sizing: border-box;
   z-index: 1000;
-  background: $nxm-color;
+  background: linear-gradient(#009bbf, $nxm-color);
 
   .close {
     position: absolute;

@@ -1,15 +1,14 @@
+import Lottie from "lottie-react-web";
 import React, { useEffect, useState } from "react";
-import SwiperCore, { A11y, Navigation, Pagination, Scrollbar } from "swiper";
+import SwiperCore, { A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import styles from "./data.module.scss";
 import { ProductData } from "../../pages/data";
-import style from "./data.module.scss";
+import { default as style, default as styles } from "./data.module.scss";
 import co2Animation from "./lottie/icon_co2.json";
-import Lottie from "lottie-react-web";
 import DownArrow from "./part/downArrow";
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([A11y]);
 
 type Props = {
   productData: ProductData;
@@ -114,9 +113,7 @@ const Modal = ({
           slidesPerView={1}
           initialSlide={itemIndex}
           loop={true}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
+          style={{ padding: "20px" }}
         >
           {items.map((item, i) => (
             <SwiperSlide key={i}>
@@ -136,12 +133,16 @@ const Modal = ({
                 </p>
               </div>
               <div>
-                <p>{productData.name}</p>
-                <p>{item.after}</p>
+                <p>
+                  {productData.name}
+                  <span>約 {item.after} L</span>
+                </p>
               </div>
               <div>
-                <p>従来{productData.category}</p>
-                <p>{item.before}</p>
+                <p>
+                  従来{productData.category}
+                  <span>約 {item.before} L</span>
+                </p>
               </div>
             </SwiperSlide>
           ))}
