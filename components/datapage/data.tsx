@@ -7,6 +7,8 @@ import { ProductData } from "../../pages/data";
 import { default as style, default as styles } from "./data.module.scss";
 import co2Animation from "./lottie/icon_co2.json";
 import DownArrow from "./part/downArrow";
+import WaterDropMeter from "./part/waterDropMeter";
+import CircleMeter from "./part/circleMeter";
 
 SwiperCore.use([A11y]);
 
@@ -20,7 +22,7 @@ const items = [
     img: co2Animation,
     rubi: "音室ガス",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
-    percentage: 0,
+    percentage: 80,
     before: 0,
     after: 0,
   },
@@ -29,7 +31,7 @@ const items = [
     img: co2Animation,
     rubi: "エネルギー消費量",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
-    percentage: 0,
+    percentage: 40,
     before: 0,
     after: 0,
   },
@@ -38,7 +40,7 @@ const items = [
     img: co2Animation,
     rubi: "土地の使用量",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
-    percentage: 0,
+    percentage: 60,
     before: 0,
     after: 0,
   },
@@ -47,7 +49,7 @@ const items = [
     img: co2Animation,
     rubi: "水資源",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
-    percentage: 0,
+    percentage: 90,
     before: 0,
     after: 0,
   },
@@ -133,20 +135,25 @@ const Modal = ({
               </div>
               <div className={styles.modalTitle}>環境負荷削減率</div>
               <div className={styles.modalLess}>
+                <CircleMeter rate={item.percentage / 100} />
                 <p>
-                  {item.percentage}%<span>less!</span>
+                  {item.percentage}
+                  <span>%</span>
                 </p>
+                <p>less!</p>
               </div>
               <div>
                 <p>
                   {productData.name}
                   <span>約 {item.after} L</span>
                 </p>
+                <WaterDropMeter rate={item.percentage / 100} />
               </div>
               <div>
                 <p>
                   従来{productData.category}
                   <span>約 {item.before} L</span>
+                  <WaterDropMeter rate={1} />
                 </p>
               </div>
             </SwiperSlide>
