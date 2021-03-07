@@ -203,13 +203,11 @@
 .sns {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   a {
     display: block;
-    background: white;
-    width: 40px;
-    height: 40px;
-    margin: 8px 16px;
+    margin: 10px;
   }
 }
 
