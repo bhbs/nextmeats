@@ -5,12 +5,10 @@ const Component = (): React.ReactElement => {
   return (
     <section className={styles.fv}>
       <img
-        src="./img/datapage/fv/logo.png"
+        src="./img/datapage/fv/cyber_chicken.gif"
         style={{
           display: "block",
-          padding: "32px",
           boxSizing: "border-box",
-          transform: "translateY(100px)",
         }}
       />
       <div className={styles.counters}>

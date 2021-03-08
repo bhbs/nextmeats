@@ -65,7 +65,7 @@ const Index = (): React.ReactElement => {
   return (
     <div
       style={{
-        background: "linear-gradient(rgb(0, 16, 48), black)",
+        background: "black",
         color: "white",
         paddingTop: "58px",
       }}
