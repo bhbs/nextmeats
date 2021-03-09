@@ -86,6 +86,16 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
           </section>
         )}
 
+        {languageCode === "tw" && (
+          <section>
+            <Image
+              src={`/img/index/tw_yakinikulike.jpg`}
+              width={4500}
+              height={2531}
+            />
+          </section>
+        )}
+
         <section>
           <h2>
             <span>
