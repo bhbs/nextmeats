@@ -158,18 +158,18 @@ const Modal = ({
                 <p>less!</p>
               </div>
               <div>
-                <p>
-                  {productData.name}
-                  <span>約 {item.after} L</span>
+                <p className={styles.valueName}>{productData.name}</p>
+                <p className={styles.value}>
+                  約 <span>{item.after}</span> L
                 </p>
                 <Meter item={item.subject} rate={item.percentage / 100} />
               </div>
               <div>
-                <p>
-                  従来{productData.category}
-                  <span>約 {item.before} L</span>
-                  <Meter item={item.subject} rate={1} />
+                <p className={styles.valueName}>従来{productData.category}</p>
+                <p className={styles.value}>
+                  約 <span>{item.before}</span> L
                 </p>
+                <Meter item={item.subject} rate={1} />
               </div>
             </SwiperSlide>
           ))}
