@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { getIcon } from "./meterIcons";
 import { Item } from "../data";
 
-const dropNumber = 18;
-
 type Props = {
   item: Item;
   rate: number;
@@ -12,8 +10,11 @@ type Props = {
 const Component = ({ item, rate }: Props): React.ReactElement => {
   const [number, setNumber] = useState(0);
 
+  const iconNumber = getIcon(item).number;
+  const icon = getIcon(item).icon;
+
   useEffect(() => {
-    const n = Math.floor(rate * dropNumber);
+    const n = Math.floor(rate * iconNumber);
 
     if (n > number) {
       setTimeout(() => {
@@ -24,17 +25,16 @@ const Component = ({ item, rate }: Props): React.ReactElement => {
 
   return (
     <div>
-      {Array.from({ length: dropNumber }).map((_, i) => {
+      {Array.from({ length: iconNumber }).map((_, i) => {
         return (
           <div
             key={i}
             style={{
               display: "inline-block",
-              marginRight: "5px",
               opacity: i > number ? ".4" : "1",
             }}
           >
-            {getIcon(item)}
+            {icon}
           </div>
         );
       })}
