@@ -12,22 +12,22 @@ const Component = (): React.ReactElement => {
         }}
       />
       <div className={styles.counters}>
-        <Counter opacity={0.1} />
-        <Counter opacity={0.1} />
-        <Counter opacity={0.1} />
-        <Counter opacity={0.1} />
-        <Counter opacity={0.2} />
-        <Counter opacity={0.2} />
-        <Counter opacity={0.2} />
-        <Counter opacity={0.2} />
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />
-        <Counter opacity={0.8} />
-        <Counter opacity={0.8} />
-        <Counter opacity={0.8} />
-        <Counter opacity={0.8} />
+        <Counter opacity={0.5} />
+        <Counter opacity={0.5} />
+        <Counter opacity={0.5} />
+        <Counter opacity={0.5} />
+        <Counter opacity={0.7} />
+        <Counter opacity={0.7} />
+        <Counter opacity={0.7} />
+        <Counter opacity={0.7} />
+        <Counter opacity={0.9} />
+        <Counter opacity={0.9} />
+        <Counter opacity={0.9} />
+        <Counter opacity={0.9} />
         <Counter opacity={1} target={99} />
         <Counter opacity={1} target={77} />
         <Counter opacity={1} target={99} />
@@ -48,7 +48,7 @@ const Counter = ({ opacity, target }: CounterProps): React.ReactElement => {
     if (count == target) return;
     setTimeout(() => {
       setCount(count > 98 ? Math.floor(Math.random() * 99) : count + 1);
-    }, Math.floor(Math.random() * 77));
+    }, Math.floor(Math.random() * 500));
   });
   return (
     <>
