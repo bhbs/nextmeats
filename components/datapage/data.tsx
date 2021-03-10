@@ -6,6 +6,9 @@ import "swiper/swiper-bundle.css";
 import { ProductData } from "../../pages/data";
 import styles from "./data.module.scss";
 import co2Animation from "./lottie/icon_co2.json";
+import energyAnimation from "./lottie/icon_energy.json";
+import landAnimation from "./lottie/icon_land.json";
+import waterAnimation from "./lottie/icon_water.json";
 import CircleMeter from "./part/circleMeter";
 import DownArrow from "./part/downArrow";
 import Meter from "./part/meter";
@@ -40,7 +43,7 @@ const items: Items = [
   },
   {
     subject: "ENERGY",
-    img: co2Animation,
+    img: energyAnimation,
     rubi: "エネルギー消費量",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 40,
@@ -49,7 +52,7 @@ const items: Items = [
   },
   {
     subject: "LAND",
-    img: co2Animation,
+    img: landAnimation,
     rubi: "土地の使用量",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 60,
@@ -58,7 +61,7 @@ const items: Items = [
   },
   {
     subject: "WATER",
-    img: co2Animation,
+    img: waterAnimation,
     rubi: "水資源",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 90,
