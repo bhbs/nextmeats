@@ -1,1 +1,22 @@
+.focusVertical {
+  width: 1px;
+  height: 12px;
+  margin: auto;
+  background: white;
+}
+.focusHorizontal {
+  width: 12px;
+  height: 1px;
+  background: white;
+}
 
+.meterWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circleMeter {
+  position: "relative";
+  width: 200px;
+  height: 200px;
+}

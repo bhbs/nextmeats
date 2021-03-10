@@ -177,10 +177,19 @@
   .modalHeader {
     display: flex;
 
-    div:nth-child(2) {
-      border-left: solid 2px white;
-      margin-left: 12px;
-      padding-left: 12px;
+    div {
+      position: relative;
+      &:nth-child(2) {
+        margin-left: 8px;
+        &::after {
+          content: "";
+          position: absolute;
+          left: -14px;
+          top: 2px;
+          bottom: 20px;
+          border-left: solid 1px white;
+        }
+      }
     }
 
     h3 {
@@ -198,36 +207,53 @@
     background: rgba(255, 255, 255, 0.4);
     text-align: center;
     font-size: 18px;
-    margin-top: 12px;
   }
 
   .modalLess {
-    width: 200px;
-    height: 200px;
     text-align: center;
-    margin: 40px auto;
+    margin: 4px auto;
     position: relative;
 
     p:nth-child(2) {
       position: absolute;
-      top: -16px;
+      top: 12px;
       left: 0;
       right: 0;
-      font-size: 80px;
+      font-size: 72px;
       margin: 0;
 
       span {
-        font-size: 36px;
+        font-size: 28px;
       }
     }
     p:nth-child(3) {
       position: absolute;
-      top: 100px;
+      top: 116px;
       left: 0;
       right: 0;
       margin: 0;
       font-size: 24px;
       font-style: italic;
     }
+  }
+}
+
+.valueName {
+  font-size: 18px;
+  line-height: 30px;
+  margin: 0;
+  text-align: left;
+  float: left;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1;
+  text-align: right;
+  margin: 0;
+  span {
+    font-size: 30px;
+    font-weight: bold;
   }
 }

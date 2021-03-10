@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styles from "./circleMeter.module.scss";
 
 const dropNumber = 50;
 
@@ -20,66 +21,47 @@ const Component = ({ rate }: Props): React.ReactElement => {
   }, [number]);
 
   return (
-    <div style={{ position: "relative" }}>
-      {Array.from({ length: number }).map((_, i) => {
-        return (
-          <div
-            key={i}
-            style={{
-              position: "absolute",
-              top: "78px",
-              right: "0",
-              left: "0",
-              margin: "auto",
-              transform: `
+    <div>
+      <div className={styles.focusVertical}></div>
+      <div className={styles.meterWrapper}>
+        <div className={styles.focusHorizontal}></div>
+        <div className={styles.circleMeter}>
+          {Array.from({ length: dropNumber }).map((_, i) => {
+            return (
+              <div
+                key={i}
+                style={{
+                  opacity: i > number ? ".2" : "1",
+                  position: "absolute",
+                  top: "108px",
+                  right: "0",
+                  left: "0",
+                  margin: "auto",
+                  borderRadius: "1.5px",
+                  width: "3px",
+                  height: "10px",
+                  background: "white",
+                  transform: `
                 translate(
                   ${
-                    100 *
+                    90 *
                     Math.cos(Math.PI * 2 * (i / dropNumber) + Math.PI * -0.5)
                   }px,
                   ${
-                    100 *
+                    90 *
                     Math.sin(Math.PI * 2 * (i / dropNumber) + Math.PI * -0.5)
                   }px
                 )
                 rotate(${360 * (i / dropNumber)}deg)
               `,
-            }}
-          >
-            |
-          </div>
-        );
-      })}
-      {Array.from({ length: dropNumber }).map((_, i) => {
-        return (
-          <div
-            key={i}
-            style={{
-              opacity: ".2",
-              position: "absolute",
-              top: "78px",
-              right: "0",
-              left: "0",
-              margin: "auto",
-              transform: `
-                translate(
-                  ${
-                    100 *
-                    Math.cos(Math.PI * 2 * (i / dropNumber) + Math.PI * -0.5)
-                  }px,
-                  ${
-                    100 *
-                    Math.sin(Math.PI * 2 * (i / dropNumber) + Math.PI * -0.5)
-                  }px
-                )
-                rotate(${360 * (i / dropNumber)}deg)
-              `,
-            }}
-          >
-            |
-          </div>
-        );
-      })}
+                }}
+              ></div>
+            );
+          })}
+        </div>
+        <div className={styles.focusHorizontal}></div>
+      </div>
+      <div className={styles.focusVertical}></div>
     </div>
   );
 };
