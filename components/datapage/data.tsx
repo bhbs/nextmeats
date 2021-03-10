@@ -4,11 +4,11 @@ import SwiperCore, { A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { ProductData } from "../../pages/data";
-import { default as style, default as styles } from "./data.module.scss";
+import styles from "./data.module.scss";
 import co2Animation from "./lottie/icon_co2.json";
-import DownArrow from "./part/downArrow";
-import WaterDropMeter from "./part/waterDropMeter";
 import CircleMeter from "./part/circleMeter";
+import DownArrow from "./part/downArrow";
+import Meter from "./part/meter";
 
 SwiperCore.use([A11y]);
 
@@ -16,11 +16,23 @@ type Props = {
   productData: ProductData;
 };
 
-const items = [
+export type Item = "WATER" | "LAND" | "CHGE" | "ENERGY";
+
+type Items = {
+  subject: Item;
+  img: Record<string, unknown>;
+  rubi: string;
+  text: string;
+  percentage: number;
+  before: number;
+  after: number;
+}[];
+
+const items: Items = [
   {
     subject: "CHGE",
     img: co2Animation,
-    rubi: "音室ガス",
+    rubi: "温室ガス",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 80,
     before: 0,
@@ -65,7 +77,7 @@ const Component = ({ productData }: Props): React.ReactElement => {
   }, [productData.name]);
 
   return (
-    <section className={animation && style.renderAnimation}>
+    <section className={animation && styles.renderAnimation}>
       <h2>
         {productData.name}vs.従来{productData.category}
       </h2>
@@ -147,13 +159,13 @@ const Modal = ({
                   {productData.name}
                   <span>約 {item.after} L</span>
                 </p>
-                <WaterDropMeter rate={item.percentage / 100} />
+                <Meter item={item.subject} rate={item.percentage / 100} />
               </div>
               <div>
                 <p>
                   従来{productData.category}
                   <span>約 {item.before} L</span>
-                  <WaterDropMeter rate={1} />
+                  <Meter item={item.subject} rate={1} />
                 </p>
               </div>
             </SwiperSlide>
