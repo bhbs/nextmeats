@@ -5,12 +5,12 @@
   margin: auto;
   position: relative;
 
-  svg:nth-child(1) {
+  .quotes:nth-child(1) {
     position: absolute;
     top: -8px;
     left: 36px;
   }
-  svg:nth-child(2) {
+  .quotes:nth-child(2) {
     position: absolute;
     bottom: -8px;
     right: 36px;
