@@ -8,7 +8,7 @@ import Header from "./header";
 type Props = {
   children: React.ReactNode;
   languageCode: LanguageCode;
-  hideFooter?: false;
+  hideFooter?: true;
 };
 
 const Layout = ({
