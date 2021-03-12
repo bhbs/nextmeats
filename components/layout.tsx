@@ -8,9 +8,14 @@ import Header from "./header";
 type Props = {
   children: React.ReactNode;
   languageCode: LanguageCode;
+  hideFooter?: false;
 };
 
-const Layout = ({ children, languageCode }: Props): React.ReactElement => {
+const Layout = ({
+  children,
+  languageCode,
+  hideFooter,
+}: Props): React.ReactElement => {
   const router = useRouter();
   const gaId = gtag.getGaId(router.locale);
   return (
@@ -81,7 +86,7 @@ const Layout = ({ children, languageCode }: Props): React.ReactElement => {
       </Head>
       <Header languageCode={languageCode} path={router.route} />
       {children}
-      <footer>© 2021 Next Meats Co., Ltd.</footer>
+      {!hideFooter && <footer>© 2021 Next Meats Co., Ltd.</footer>}
     </>
   );
 };

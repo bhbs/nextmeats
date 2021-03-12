@@ -66,7 +66,7 @@ const Index = (): React.ReactElement => {
         paddingTop: "58px",
       }}
     >
-      <Layout languageCode="jp">
+      <Layout languageCode="jp" hideFooter={true}>
         <Head>
           <meta name="viewport" content="width=375px" />
         </Head>
