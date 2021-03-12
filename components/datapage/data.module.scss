@@ -172,16 +172,17 @@
     text-align: right;
     padding: 0 8px;
     height: 18px;
-    @include stripe(135deg, $nxm-color);
+    @include stripe(135deg, #009bbf);
   }
 
   .modalHeader {
     display: flex;
+    align-items: center;
 
     div {
       position: relative;
       &:nth-child(2) {
-        margin-left: 8px;
+        margin-left: 20px;
         &::after {
           content: "";
           position: absolute;
@@ -195,7 +196,7 @@
 
     h3 {
       margin: 0;
-      font-size: 43px;
+      font-size: 36px;
       line-height: 1;
     }
 
@@ -209,38 +210,14 @@
     text-align: center;
     font-size: 18px;
   }
+}
 
-  .modalLess {
-    text-align: center;
-    margin: 4px auto;
-    position: relative;
-
-    p:nth-child(2) {
-      position: absolute;
-      top: 12px;
-      left: 0;
-      right: 0;
-      font-size: 72px;
-      margin: 0;
-
-      span {
-        font-size: 28px;
-      }
-    }
-    p:nth-child(3) {
-      position: absolute;
-      top: 116px;
-      left: 0;
-      right: 0;
-      margin: 0;
-      font-size: 24px;
-      font-style: italic;
-    }
-  }
+.valueWrapper {
+  padding-top: 12px;
 }
 
 .valueName {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
   margin: 0;
   text-align: left;

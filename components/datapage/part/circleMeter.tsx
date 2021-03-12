@@ -13,7 +13,7 @@ const Component = ({ rate }: Props): React.ReactElement => {
   useEffect(() => {
     const n = Math.floor(rate * dropNumber);
 
-    if (n > number) {
+    if (dropNumber - n > number) {
       setTimeout(() => {
         setNumber(number + 1);
       }, 10);
@@ -21,7 +21,7 @@ const Component = ({ rate }: Props): React.ReactElement => {
   }, [number]);
 
   return (
-    <div>
+    <div className={styles.circleMeterWrapper}>
       <div className={styles.focusVertical}></div>
       <div className={styles.meterWrapper}>
         <div className={styles.focusHorizontal}></div>
@@ -31,7 +31,7 @@ const Component = ({ rate }: Props): React.ReactElement => {
               <div
                 key={i}
                 style={{
-                  opacity: i > number ? ".2" : "1",
+                  opacity: i > dropNumber - number ? ".2" : "1",
                   position: "absolute",
                   top: "108px",
                   right: "0",
@@ -62,6 +62,11 @@ const Component = ({ rate }: Props): React.ReactElement => {
         <div className={styles.focusHorizontal}></div>
       </div>
       <div className={styles.focusVertical}></div>
+      <p>
+        {number * (100 / dropNumber) - 1}
+        <span>%</span>
+      </p>
+      <p>less!</p>
     </div>
   );
 };
