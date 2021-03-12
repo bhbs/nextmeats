@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { Product } from "../../pages/data";
 import styles from "./footer.module.scss";
@@ -147,6 +147,7 @@ const Component = ({
           未来につながる。
         </p>
       </div>
+      <Dish product={product} />
     </section>
   );
 };
@@ -190,6 +191,35 @@ const getPrevItem = (items, product) => {
   const availablePrevIndex = (prevIndex + items.length) % items.length;
 
   return items[availablePrevIndex];
+};
+
+const Dish = ({ product }: { product: Product }) => {
+  const [displayed, setDisplayed] = useState(false);
+
+  useEffect(() => {
+    const dish = document.querySelector("#dish");
+    new IntersectionObserver(
+      (entries) => {
+        setDisplayed(entries[0].isIntersecting);
+      },
+      {
+        rootMargin: "0px",
+      }
+    ).observe(dish);
+  }, []);
+
+  return (
+    <div
+      className={displayed ? styles.dish : ""}
+      id="dish"
+      style={{
+        transform: displayed ? "translateY(0%)" : "translateY(80%)",
+        transition: "3s",
+      }}
+    >
+      <img src={`/img/datapage/footer/dish_${product}.png`} alt="" />
+    </div>
+  );
 };
 
 export default Component;
