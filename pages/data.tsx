@@ -58,12 +58,12 @@ const products: Products = {
     category: "牛肉",
     data: {
       WATER: {
-        text: "お風呂\n90杯分削減！\n*200L浴槽",
+        text: "お風呂90杯分削減！\n*200L浴槽",
         before: "20600",
         after: "2500",
       },
       LAND: {
-        text: "テニスコート\n約２枚分節約！",
+        text: "テニスコート\n約2枚分節約！",
         before: "326",
         after: "7.5",
       },
@@ -84,12 +84,12 @@ const products: Products = {
     category: "牛肉",
     data: {
       WATER: {
-        text: "お風呂\n90杯分削減！\n*200L浴槽",
+        text: "お風呂90杯分削減！\n*200L浴槽",
         before: "20600",
         after: "2500",
       },
       LAND: {
-        text: "テニスコート\n約２枚分節約！",
+        text: "テニスコート\n約2枚分節約！",
         before: "326",
         after: "7.5",
       },

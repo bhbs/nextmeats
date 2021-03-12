@@ -25,8 +25,6 @@ type Items = {
   subject: Item;
   img: Record<string, unknown>;
   rubi: string;
-  text: string;
-  percentage: number;
   unit: string;
 }[];
 
@@ -35,32 +33,24 @@ const items: Items = [
     subject: "CHGE",
     img: co2Animation,
     rubi: "温室ガス",
-    text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
-    percentage: 80,
     unit: "kg",
   },
   {
     subject: "ENERGY",
     img: energyAnimation,
     rubi: "エネルギー消費量",
-    text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
-    percentage: 40,
     unit: "MJ",
   },
   {
     subject: "LAND",
     img: landAnimation,
     rubi: "土地の使用量",
-    text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
-    percentage: 60,
     unit: "平米",
   },
   {
     subject: "WATER",
     img: waterAnimation,
     rubi: "水資源",
-    text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
-    percentage: 90,
     unit: "L",
   },
 ];
@@ -80,7 +70,7 @@ const Component = ({ productData }: Props): React.ReactElement => {
         {productData.name}vs.従来{productData.category}
       </h2>
       <p style={{ display: "block", padding: "0 46px" }}>
-        大豆を1kg生産した際にかかる環境負荷と、
+        大豆1kgを生産した際にかかる環境負荷と、
         {productData.category}1kgを生産した際にかかる環境負荷を比べました。
       </p>
       <DownArrow />
@@ -129,49 +119,48 @@ const Modal = ({
           loop={true}
           style={{ padding: "20px" }}
         >
-          {items.map((item, i) => (
-            <SwiperSlide key={i}>
-              <div className={styles.modalHeader}>
-                <div>
-                  <Lottie
-                    options={{
-                      animationData: item.img,
-                    }}
-                    width={80}
-                  />
+          {items.map((item, i) => {
+            const before = productData.data[item.subject].before;
+            const after = productData.data[item.subject].after;
+            const rate = parseFloat(after) / parseFloat(before);
+            console.log(parseFloat(before), parseFloat(after), rate);
+            return (
+              <SwiperSlide key={i}>
+                <div className={styles.modalHeader}>
+                  <div>
+                    <Lottie
+                      options={{
+                        animationData: item.img,
+                      }}
+                      width={80}
+                    />
+                  </div>
+                  <div>
+                    <h3>{item.subject}</h3>
+                    <p>{item.rubi}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3>{item.subject}</h3>
-                  <p>{item.rubi}</p>
+                <div className={styles.modalTitle}>環境負荷削減率</div>
+                <CircleMeter rate={rate} />
+                <div className={styles.valueWrapper}>
+                  <p className={styles.valueName}>大豆1kg生産</p>
+                  <p className={styles.value}>
+                    約 <span>{after}</span> {item.unit}
+                  </p>
+                  <Meter item={item.subject} rate={rate} />
                 </div>
-              </div>
-              <div className={styles.modalTitle}>環境負荷削減率</div>
-              <div className={styles.modalLess}>
-                <CircleMeter rate={item.percentage / 100} />
-                <p>
-                  {item.percentage}
-                  <span>%</span>
-                </p>
-                <p>less!</p>
-              </div>
-              <div>
-                <p className={styles.valueName}>{productData.name}</p>
-                <p className={styles.value}>
-                  約 <span>{productData.data[item.subject].after}</span>{" "}
-                  {item.unit}
-                </p>
-                <Meter item={item.subject} rate={item.percentage / 100} />
-              </div>
-              <div>
-                <p className={styles.valueName}>従来{productData.category}</p>
-                <p className={styles.value}>
-                  約 <span>{productData.data[item.subject].before}</span>{" "}
-                  {item.unit}
-                </p>
-                <Meter item={item.subject} rate={1} />
-              </div>
-            </SwiperSlide>
-          ))}
+                <div className={styles.valueWrapper}>
+                  <p className={styles.valueName}>
+                    従来{productData.category}1kg生産
+                  </p>
+                  <p className={styles.value}>
+                    約 <span>{before}</span> {item.unit}
+                  </p>
+                  <Meter item={item.subject} rate={1} />
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
         <div onClick={() => setModal(null)} className={styles.close}>
           CLOSE X
