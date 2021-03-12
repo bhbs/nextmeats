@@ -11,7 +11,6 @@ import Layout from "../components/layout";
 export type Product = "karubi" | "harami" | "chicken";
 export type ProductData = {
   name: string;
-  img: string;
   category: string;
 };
 export type Products = {
@@ -21,17 +20,14 @@ export type Products = {
 const products: Products = {
   chicken: {
     name: "NEXTチキン",
-    img: "/img/accelarator/merit02.jpg",
     category: "チキン",
   },
   karubi: {
     name: "NEXTカルビ",
-    img: "/img/accelarator/merit02.jpg",
     category: "牛肉",
   },
   harami: {
     name: "NEXTハラミ",
-    img: "/img/accelarator/merit02.jpg",
     category: "牛肉",
   },
 };
@@ -46,17 +42,17 @@ const items: Data = [
   {
     id: "chicken",
     name: "NEXTチキン",
-    img: "/img/accelarator/merit02.jpg",
+    img: "/img/datapage/carousel/chicken.png",
   },
   {
     id: "karubi",
     name: "NEXTカルビ",
-    img: "/img/accelarator/merit02.jpg",
+    img: "/img/datapage/carousel/karubi.png",
   },
   {
     id: "harami",
     name: "NEXTハラミ",
-    img: "/img/accelarator/merit02.jpg",
+    img: "/img/datapage/carousel/harami.png",
   },
 ];
 
