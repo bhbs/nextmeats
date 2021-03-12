@@ -1,6 +1,6 @@
 import Lottie from "lottie-react-web";
 import React, { useEffect, useState } from "react";
-import SwiperCore, { A11y } from "swiper";
+import SwiperCore, { A11y, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { ProductData } from "../../pages/data";
@@ -12,8 +12,9 @@ import waterAnimation from "./lottie/icon_water.json";
 import CircleMeter from "./part/circleMeter";
 import DownArrow from "./part/downArrow";
 import Meter from "./part/meter";
+import Head from "next/head";
 
-SwiperCore.use([A11y]);
+SwiperCore.use([Navigation, Pagination, A11y]);
 
 type Props = {
   productData: ProductData;
@@ -66,6 +67,9 @@ const Component = ({ productData }: Props): React.ReactElement => {
 
   return (
     <section className={`${animation && styles.renderAnimation}`}>
+      <Head>
+        <link rel="stylesheet" href="/css/swiper.css" />
+      </Head>
       <h2>
         {productData.name}vs.従来{productData.category}
       </h2>
@@ -161,6 +165,14 @@ const Modal = ({
           initialSlide={itemIndex}
           loop={true}
           style={{ padding: "20px" }}
+          navigation={{
+            nextEl: `.${styles.swiperButtonNext}`,
+            prevEl: `.${styles.swiperButtonPrev}`,
+          }}
+          pagination={{
+            el: `.${styles.swiperPagination}`,
+            clickable: false,
+          }}
         >
           {items.map((item, i) => {
             const before = productData.data[item.subject].before;
@@ -207,6 +219,49 @@ const Modal = ({
         </Swiper>
         <div onClick={() => setModal(null)} className={styles.close}>
           CLOSE X
+        </div>
+        <div className={styles.swiperPagination}></div>
+        <div className={styles.swiperButtonNext}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="5"
+            height="20"
+            viewBox="0 0 5 20"
+          >
+            <g transform="translate(0 20) rotate(-90)">
+              <path
+                d="M10,4.8V3.842L0,0V.954Z"
+                transform="translate(0 0)"
+                fill="#fff"
+              />
+              <path
+                d="M0,4.8V3.842L10,0V.954Z"
+                transform="translate(10 0)"
+                fill="#fff"
+              />
+            </g>
+          </svg>
+        </div>
+        <div className={styles.swiperButtonPrev}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="5"
+            height="20"
+            viewBox="0 0 5 20"
+          >
+            <g transform="translate(5) rotate(90)">
+              <path
+                d="M10,4.8V3.842L0,0V.954Z"
+                transform="translate(0 0)"
+                fill="#fff"
+              />
+              <path
+                d="M0,4.8V3.842L10,0V.954Z"
+                transform="translate(10 0)"
+                fill="#fff"
+              />
+            </g>
+          </svg>
         </div>
       </div>
     </>
