@@ -12,23 +12,98 @@ export type Product = "karubi" | "harami" | "chicken";
 export type ProductData = {
   name: string;
   category: string;
+  data: {
+    [key in Item]: {
+      text: string;
+      before: string;
+      after: string;
+    };
+  };
 };
 export type Products = {
   [key in Product]: ProductData;
 };
 
+export type Item = "WATER" | "LAND" | "CHGE" | "ENERGY";
+
 const products: Products = {
   chicken: {
     name: "NEXTチキン",
     category: "チキン",
+    data: {
+      WATER: {
+        text: "ペットボトル\n4000本分削減！\n*500ml",
+        before: "4500",
+        after: "2500",
+      },
+      LAND: {
+        text: "ワンルーム分節約！",
+        before: "12.2",
+        after: "7.5",
+      },
+      CHGE: {
+        text: "サッカーボール\n530個分削減！",
+        before: "5.7",
+        after: "0.44",
+      },
+      ENERGY: {
+        text: "スマホ充電\n60時間分節約！",
+        before: "6.75",
+        after: "4.18",
+      },
+    },
   },
   karubi: {
     name: "NEXTカルビ",
     category: "牛肉",
+    data: {
+      WATER: {
+        text: "お風呂\n90杯分削減！\n*200L浴槽",
+        before: "20600",
+        after: "2500",
+      },
+      LAND: {
+        text: "テニスコート\n約２枚分節約！",
+        before: "326",
+        after: "7.5",
+      },
+      CHGE: {
+        text: "サッカーボール\n4950個分削減！",
+        before: "49.9",
+        after: "0.44",
+      },
+      ENERGY: {
+        text: "パソコン充電\n60時間分節約！",
+        before: "22",
+        after: "4.18",
+      },
+    },
   },
   harami: {
     name: "NEXTハラミ",
     category: "牛肉",
+    data: {
+      WATER: {
+        text: "お風呂\n90杯分削減！\n*200L浴槽",
+        before: "20600",
+        after: "2500",
+      },
+      LAND: {
+        text: "テニスコート\n約２枚分節約！",
+        before: "326",
+        after: "7.5",
+      },
+      CHGE: {
+        text: "サッカーボール\n4950個分削減！",
+        before: "49.9",
+        after: "0.44",
+      },
+      ENERGY: {
+        text: "パソコン充電\n60時間分節約！",
+        before: "22",
+        after: "4.18",
+      },
+    },
   },
 };
 

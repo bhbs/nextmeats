@@ -27,8 +27,7 @@ type Items = {
   rubi: string;
   text: string;
   percentage: number;
-  before: number;
-  after: number;
+  unit: string;
 }[];
 
 const items: Items = [
@@ -38,8 +37,7 @@ const items: Items = [
     rubi: "温室ガス",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 80,
-    before: 0,
-    after: 0,
+    unit: "kg",
   },
   {
     subject: "ENERGY",
@@ -47,8 +45,7 @@ const items: Items = [
     rubi: "エネルギー消費量",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 40,
-    before: 0,
-    after: 0,
+    unit: "MJ",
   },
   {
     subject: "LAND",
@@ -56,8 +53,7 @@ const items: Items = [
     rubi: "土地の使用量",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 60,
-    before: 0,
-    after: 0,
+    unit: "平米",
   },
   {
     subject: "WATER",
@@ -65,8 +61,7 @@ const items: Items = [
     rubi: "水資源",
     text: "キャッチコピーキャッチコピーキャッチコピーキャッチコピー",
     percentage: 90,
-    before: 0,
-    after: 0,
+    unit: "L",
   },
 ];
 
@@ -101,7 +96,9 @@ const Component = ({ productData }: Props): React.ReactElement => {
               />
               <h3>{item.subject}</h3>
               <p className={styles.rubi}>{item.rubi}</p>
-              <p className={styles.text}>{item.text}</p>
+              <p className={styles.text}>
+                {productData.data[item.subject].text}
+              </p>
             </div>
           </div>
         ))}
@@ -160,14 +157,16 @@ const Modal = ({
               <div>
                 <p className={styles.valueName}>{productData.name}</p>
                 <p className={styles.value}>
-                  約 <span>{item.after}</span> L
+                  約 <span>{productData.data[item.subject].after}</span>{" "}
+                  {item.unit}
                 </p>
                 <Meter item={item.subject} rate={item.percentage / 100} />
               </div>
               <div>
                 <p className={styles.valueName}>従来{productData.category}</p>
                 <p className={styles.value}>
-                  約 <span>{item.before}</span> L
+                  約 <span>{productData.data[item.subject].before}</span>{" "}
+                  {item.unit}
                 </p>
                 <Meter item={item.subject} rate={1} />
               </div>
