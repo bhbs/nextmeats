@@ -14,10 +14,7 @@ const Component = (): React.ReactElement => {
           インパクト。
         </h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eius
-          facilis earum laudantium repudiandae explicabo neque reprehenderit
-          voluptas a sint cumque, enim porro voluptatem quae, obcaecati amet
-          nobis expedita aliquam?
+          私たちが普段当たり前に食べているお肉。しかし、畜産業は二酸化炭素、水、森林伐採などの側面で環境に及ぼす影響が大きいのが現状です。代替肉は、環境負荷を減らす「食」からのアプローチ！その実態とは？食肉1KG生産にかかる環境負荷VS代替肉の原材料である大豆1KGを生産する際の環境負荷をまとめてみました。
         </p>
         <div className={styles.bd}></div>
         <div className={styles.bd}></div>
