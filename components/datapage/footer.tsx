@@ -22,7 +22,7 @@ const Component = ({
   const prevItem = getPrevItem(items, product);
 
   return (
-    <section>
+    <section className={styles.footer}>
       <div className={styles.cardWrapper}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -148,6 +148,19 @@ const Component = ({
         </p>
       </div>
       <Dish product={product} />
+      <div
+        style={{
+          textAlign: "center",
+          fontStyle: "italic",
+          padding: "24px",
+          background: "black",
+          marginTop: "-80px",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
+        © 2021 Next Meats Co., Ltd.
+      </div>
     </section>
   );
 };
@@ -209,15 +222,14 @@ const Dish = ({ product }: { product: Product }) => {
   }, []);
 
   return (
-    <div
-      className={displayed ? styles.dish : ""}
-      id="dish"
-      style={{
-        transform: displayed ? "translateY(0%)" : "translateY(80%)",
-        transition: "3s",
-      }}
-    >
-      <img src={`/img/datapage/footer/dish_${product}.png`} alt="" />
+    <div style={{ overflow: "hidden", marginTop: "-75px" }} id="dish">
+      <img
+        src={`/img/datapage/footer/dish_${product}.png`}
+        style={{
+          transform: displayed ? "translateY(0%)" : "translateY(60%)",
+          transition: "4s",
+        }}
+      />
     </div>
   );
 };
