@@ -46,6 +46,12 @@
   width: 54%;
   margin-top: 48px;
 
+  .pointer {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+  }
+
   &::after {
     content: "Read More →";
     color: $nxm-color;
@@ -129,6 +135,10 @@
         border-right: none;
         border-left: solid 1px white;
       }
+    }
+    .pointer {
+      left: auto;
+      right: 100%;
     }
   }
 }

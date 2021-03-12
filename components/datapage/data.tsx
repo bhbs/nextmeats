@@ -90,6 +90,7 @@ const Component = ({ productData }: Props): React.ReactElement => {
                 {productData.data[item.subject].text}
               </p>
             </div>
+            {i % 2 ? pointerIconLeft : pointerIconRight}
           </div>
         ))}
         <div className={styles.cardWrapper}>
@@ -229,6 +230,79 @@ const linkIcon = (
       <path
         d="M202.481,1240.376h-2.545a.637.637,0,0,0,0,1.273h2.106l-6.109,6.115a.636.636,0,1,0,.9.885l6.288-6.275v2.457a.636.636,0,0,0,1.272,0v-2.546A1.909,1.909,0,0,0,202.481,1240.376Z"
         fill="#fff"
+      />
+    </g>
+  </svg>
+);
+
+const pointerIconRight = (
+  <svg
+    className={styles.pointer}
+    xmlns="http://www.w3.org/2000/svg"
+    width="66.143"
+    height="51.16"
+    viewBox="0 0 66.143 51.16"
+  >
+    <g transform="translate(-193.045 -650.446)">
+      <path
+        d="M193.045,650.946h15.643l44.58,44.58"
+        fill="none"
+        stroke="#fff"
+        strokeMiterlimit="10"
+        strokeWidth="1"
+      />
+      <circle
+        cx="2"
+        cy="2"
+        r="2"
+        transform="translate(251.188 693.606)"
+        fill="#fff"
+      />
+      <circle
+        cx="5.5"
+        cy="5.5"
+        r="5.5"
+        transform="translate(247.688 690.106)"
+        fill="none"
+        stroke="#fff"
+        strokeMiterlimit="10"
+        strokeWidth="1"
+      />
+    </g>
+  </svg>
+);
+const pointerIconLeft = (
+  <svg
+    className={styles.pointer}
+    xmlns="http://www.w3.org/2000/svg"
+    width="66.143"
+    height="51.16"
+    viewBox="0 0 66.143 51.16"
+  >
+    <g transform="translate(-117.153 -911.071)">
+      <path
+        d="M183.3,911.571H167.653l-44.58,44.58"
+        fill="none"
+        stroke="#fff"
+        strokeMiterlimit="10"
+        strokeWidth="1"
+      />
+      <circle
+        cx="2"
+        cy="2"
+        r="2"
+        transform="translate(121.153 954.231)"
+        fill="#fff"
+      />
+      <circle
+        cx="5.5"
+        cy="5.5"
+        r="5.5"
+        transform="translate(117.653 950.731)"
+        fill="none"
+        stroke="#fff"
+        strokeMiterlimit="10"
+        strokeWidth="1"
       />
     </g>
   </svg>
