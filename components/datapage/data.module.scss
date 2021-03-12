@@ -32,6 +32,10 @@
   }
 }
 
+.dataArea {
+  background-image: url("/img/datapage/data/bg.png");
+}
+
 .box {
   position: relative;
   background: linear-gradient(
@@ -233,5 +237,98 @@
   span {
     font-size: 30px;
     font-weight: bold;
+  }
+}
+
+.cardWrapper {
+  width: 360px;
+  margin: auto;
+  position: relative;
+
+  .quotes:nth-child(1) {
+    position: absolute;
+    top: -8px;
+    left: 36px;
+  }
+  .quotes:nth-child(2) {
+    position: absolute;
+    bottom: -8px;
+    right: 36px;
+  }
+}
+
+.card {
+  position: relative;
+  margin: 48px 24px;
+  padding: 0 16px;
+  overflow: hidden;
+
+  background: linear-gradient(
+      45deg,
+      transparent 10px,
+      white 10px,
+      white 11px,
+      transparent 11px
+    ),
+    linear-gradient(
+      225deg,
+      transparent 10px,
+      white 10px,
+      white 11px,
+      transparent 11px
+    );
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100% - 14px);
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    border-left: solid 1px white;
+  }
+  &::after {
+    bottom: 0;
+    right: 0;
+    border-right: solid 1px white;
+  }
+
+  div {
+    padding: 16px 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      width: calc(100% - 52px);
+      height: 100%;
+    }
+    &::before {
+      top: 0;
+      right: 14px;
+      border-top: solid 1px white;
+    }
+    &::after {
+      bottom: 0;
+      left: 14px;
+      border-bottom: solid 1px white;
+    }
+    h3 {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.2);
+      line-height: 1;
+      padding: 8px 0;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 0 32px;
+      margin: 12px 0;
+    }
   }
 }
