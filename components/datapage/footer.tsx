@@ -227,7 +227,7 @@ const Dish = ({ product }: { product: Product }) => {
         src={`/img/datapage/footer/dish_${product}.png`}
         style={{
           transform: displayed ? "translateY(0%)" : "translateY(60%)",
-          transition: "4s",
+          transition: "2s",
         }}
       />
     </div>
