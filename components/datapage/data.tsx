@@ -1,6 +1,7 @@
 import Lottie from "lottie-react-web";
+import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import SwiperCore, { A11y, Navigation, Pagination } from "swiper";
+import SwiperCore, { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { ProductData } from "../../pages/data";
@@ -12,9 +13,8 @@ import waterAnimation from "./lottie/icon_water.json";
 import CircleMeter from "./part/circleMeter";
 import DownArrow from "./part/downArrow";
 import Meter from "./part/meter";
-import Head from "next/head";
 
-SwiperCore.use([Navigation, Pagination, A11y]);
+SwiperCore.use([Navigation, Pagination]);
 
 type Props = {
   productData: ProductData;
