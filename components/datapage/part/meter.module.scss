@@ -1,0 +1,12 @@
+.meter {
+  animation: off 0.1s forwards;
+}
+
+@keyframes off {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}

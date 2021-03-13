@@ -1,24 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styles from "./circleMeter.module.scss";
 
-const dropNumber = 50;
+const meterNumber = 50;
 
 type Props = {
   rate: number;
 };
 
 const Component = ({ rate }: Props): React.ReactElement => {
-  const [number, setNumber] = useState(0);
-
-  useEffect(() => {
-    const n = Math.floor(rate * dropNumber);
-
-    if (dropNumber - n > number) {
-      setTimeout(() => {
-        setNumber(number + 1);
-      }, 10);
-    }
-  }, [number]);
+  const n = Math.floor(rate * meterNumber);
 
   return (
     <div className={styles.circleMeterWrapper}>
@@ -26,33 +16,26 @@ const Component = ({ rate }: Props): React.ReactElement => {
       <div className={styles.meterWrapper}>
         <div className={styles.focusHorizontal}></div>
         <div className={styles.circleMeter}>
-          {Array.from({ length: dropNumber }).map((_, i) => {
+          {Array.from({ length: meterNumber }).map((_, i) => {
             return (
               <div
                 key={`circleMeter_${i}`}
+                className={styles.meter}
                 style={{
-                  opacity: i > dropNumber - number ? ".2" : "1",
-                  position: "absolute",
-                  top: "108px",
-                  right: "0",
-                  left: "0",
-                  margin: "auto",
-                  borderRadius: "1.5px",
-                  width: "3px",
-                  height: "10px",
-                  background: "white",
+                  animationPlayState: i > n ? "running" : "paused",
+                  animationDelay: `${(meterNumber - i) / 50}s`,
                   transform: `
                 translate(
                   ${
                     90 *
-                    Math.cos(Math.PI * 2 * (i / dropNumber) + Math.PI * -0.5)
+                    Math.cos(Math.PI * 2 * (i / meterNumber) + Math.PI * -0.5)
                   }px,
                   ${
                     90 *
-                    Math.sin(Math.PI * 2 * (i / dropNumber) + Math.PI * -0.5)
+                    Math.sin(Math.PI * 2 * (i / meterNumber) + Math.PI * -0.5)
                   }px
                 )
-                rotate(${360 * (i / dropNumber)}deg)
+                rotate(${360 * (i / meterNumber)}deg)
               `,
                 }}
               ></div>
@@ -62,12 +45,28 @@ const Component = ({ rate }: Props): React.ReactElement => {
         <div className={styles.focusHorizontal}></div>
       </div>
       <div className={styles.focusVertical}></div>
-      <p>
-        {number * (100 / dropNumber) - 1}
-        <span>%</span>
-      </p>
+      <Number n={n} />
       <p>less!</p>
     </div>
+  );
+};
+
+const Number = ({ n }: { n: number }): React.ReactElement => {
+  const [number, setNumber] = useState(0);
+
+  useEffect(() => {
+    if (meterNumber - n > number) {
+      setTimeout(() => {
+        setNumber(number + 1);
+      }, 10);
+    }
+  }, [number]);
+
+  return (
+    <p>
+      {number * (100 / meterNumber) - 1}
+      <span>%</span>
+    </p>
   );
 };
 
