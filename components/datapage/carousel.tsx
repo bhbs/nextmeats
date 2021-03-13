@@ -51,7 +51,7 @@ const Component = ({
         onSwiper={setSwiper}
       >
         {items.map((item, i) => (
-          <SwiperSlide key={i} className={styles.slide}>
+          <SwiperSlide key={`carousel_${i}`} className={styles.slide}>
             {({ isActive }) => (
               <div className={`${isActive && styles.active} ${styles.slide}`}>
                 <div className={styles.slideTitle}>

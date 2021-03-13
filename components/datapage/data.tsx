@@ -80,7 +80,11 @@ const Component = ({ productData }: Props): React.ReactElement => {
       <DownArrow />
       <div className={styles.dataArea}>
         {items.map((item, i) => (
-          <div key={i} className={styles.box} onClick={() => setModal(i)}>
+          <div
+            key={`data_${i}`}
+            className={styles.box}
+            onClick={() => setModal(i)}
+          >
             <div className={styles.boxInner}>
               <Lottie
                 options={{
@@ -180,7 +184,7 @@ const Modal = ({
             const rate = parseFloat(after) / parseFloat(before);
             console.log(parseFloat(before), parseFloat(after), rate);
             return (
-              <SwiperSlide key={i}>
+              <SwiperSlide key={`modal_${i}`}>
                 <div className={styles.modalHeader}>
                   <div>
                     <Lottie
