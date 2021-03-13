@@ -1,11 +1,24 @@
 import React, { useEffect, useState } from "react";
 import styles from "./fv.module.scss";
 
+const mainFv = "/img/datapage/fv/cyber_chicken_2.gif";
+const lightFv = "/img/datapage/fv/cyber_chicken_light.gif";
+
 const Component = (): React.ReactElement => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const image = new Image();
+    image.src = mainFv;
+    image.onload = () => {
+      setLoaded(true);
+    };
+  }, []);
+
   return (
     <section className={styles.fv}>
       <img
-        src="./img/datapage/fv/cyber_chicken.gif"
+        src={loaded ? mainFv : lightFv}
         style={{
           display: "block",
           boxSizing: "border-box",
