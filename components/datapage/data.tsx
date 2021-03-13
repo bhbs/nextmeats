@@ -74,8 +74,8 @@ const Component = ({ productData }: Props): React.ReactElement => {
         {productData.name}vs.従来{productData.category}
       </h2>
       <p style={{ display: "block", padding: "0 46px" }}>
-        大豆1kgを生産した際にかかる環境負荷と、
-        {productData.category}1kgを生産した際にかかる環境負荷を比べました。
+        大豆 1kg を生産した際にかかる環境負荷と、
+        {productData.category} 1kg を生産した際にかかる環境負荷を比べました。
       </p>
       <DownArrow />
       <div className={styles.dataArea}>
@@ -203,21 +203,21 @@ const Modal = ({
                 <div className={styles.modalTitle}>環境負荷削減率</div>
                 <CircleMeter rate={rate} />
                 <div className={styles.valueWrapper}>
-                  <p className={styles.valueName}>大豆1kg生産</p>
-                  <p className={styles.value}>
+                  <div className={styles.valueName}>大豆 1kg 生産</div>
+                  <div className={styles.value}>
                     約 <span>{after}</span> {item.unit}
-                  </p>
-                  <Meter item={item.subject} rate={rate} />
+                  </div>
                 </div>
+                <Meter item={item.subject} rate={rate} />
                 <div className={styles.valueWrapper}>
-                  <p className={styles.valueName}>
-                    従来{productData.category}1kg生産
-                  </p>
-                  <p className={styles.value}>
+                  <div className={styles.valueName}>
+                    従来{productData.category} 1kg 生産
+                  </div>
+                  <div className={styles.value}>
                     約 <span>{before}</span> {item.unit}
-                  </p>
-                  <Meter item={item.subject} rate={1} />
+                  </div>
                 </div>
+                <Meter item={item.subject} rate={1} />
               </SwiperSlide>
             );
           })}

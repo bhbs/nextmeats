@@ -22,11 +22,17 @@ const Component = (): React.ReactElement => {
         style={{
           display: "block",
           boxSizing: "border-box",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <Image src={loaded ? mainFv : lightFv} width={375} height={375} />
       </div>
       <div className={styles.counters}>
+        <Counter opacity={0.2} />
+        <Counter opacity={0.2} />
+        <Counter opacity={0.2} />
+        <Counter opacity={0.2} />
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />
@@ -63,7 +69,7 @@ const Counter = ({ opacity, target }: CounterProps): React.ReactElement => {
     if (count == target) return;
     setTimeout(() => {
       setCount(count > 98 ? Math.floor(Math.random() * 99) : count + 1);
-    }, Math.random() * 250);
+    }, count * Math.random() * 10);
   });
   return (
     <>

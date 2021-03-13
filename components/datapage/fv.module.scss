@@ -8,8 +8,8 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin-bottom: -72px;
-  transform: translateY(-72px);
+  margin-bottom: -100px;
+  transform: translateY(-100px);
 
   &::before {
     content: "";
@@ -27,4 +27,5 @@
   font-size: 42px;
   line-height: 1;
   color: $nxm-color;
+  @include fvNumberFont;
 }
