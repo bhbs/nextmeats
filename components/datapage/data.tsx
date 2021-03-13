@@ -162,6 +162,7 @@ const Modal = ({
 }: ModalProps): React.ReactElement => {
   return typeof itemIndex == "number" ? (
     <>
+      <div className={styles.modalWrapper} onClick={() => setModal(null)}></div>
       <div className={styles.modal}>
         <Swiper
           spaceBetween={50}
