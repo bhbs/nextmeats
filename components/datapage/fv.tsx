@@ -27,14 +27,14 @@ const Component = (): React.ReactElement => {
         <Image src={loaded ? mainFv : lightFv} width={375} height={375} />
       </div>
       <div className={styles.counters}>
-        <Counter opacity={0.2} />
-        <Counter opacity={0.2} />
-        <Counter opacity={0.2} />
-        <Counter opacity={0.2} />
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />
+        <Counter opacity={0.5} />
+        <Counter opacity={0.5} />
+        <Counter opacity={0.5} />
+        <Counter opacity={0.5} />
         <Counter opacity={0.7} />
         <Counter opacity={0.7} />
         <Counter opacity={0.7} />
