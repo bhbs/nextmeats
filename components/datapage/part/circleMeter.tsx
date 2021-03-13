@@ -29,7 +29,7 @@ const Component = ({ rate }: Props): React.ReactElement => {
           {Array.from({ length: dropNumber }).map((_, i) => {
             return (
               <div
-                key={i}
+                key={`circleMeter_${i}`}
                 style={{
                   opacity: i > dropNumber - number ? ".2" : "1",
                   position: "absolute",

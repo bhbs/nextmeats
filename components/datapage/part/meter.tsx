@@ -28,7 +28,7 @@ const Component = ({ item, rate }: Props): React.ReactElement => {
       {Array.from({ length: iconNumber }).map((_, i) => {
         return (
           <div
-            key={i}
+            key={`meter_${i}`}
             style={{
               display: "inline-block",
               opacity: i > number ? ".4" : "1",
