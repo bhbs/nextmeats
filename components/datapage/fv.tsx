@@ -7,6 +7,14 @@ const lightFv = "/img/datapage/fv/cyber_chicken_light.gif";
 
 const Component = (): React.ReactElement => {
   const [loaded, setLoaded] = useState(false);
+  const [displayed, setDisplayed] = useState(true);
+
+  useEffect(() => {
+    const fv = document.querySelector("#fv");
+    new IntersectionObserver((entries) => {
+      setDisplayed(entries[0].isIntersecting);
+    }).observe(fv);
+  }, []);
 
   useEffect(() => {
     const image = document.createElement("img");
@@ -17,43 +25,47 @@ const Component = (): React.ReactElement => {
   }, []);
 
   return (
-    <section className={styles.fv}>
-      <div
-        style={{
-          display: "block",
-          boxSizing: "border-box",
-          position: "relative",
-          zIndex: 1,
-        }}
-      >
-        <Image src={loaded ? mainFv : lightFv} width={375} height={375} />
-      </div>
-      <div className={styles.counters}>
-        <Counter opacity={0.2} />
-        <Counter opacity={0.2} />
-        <Counter opacity={0.2} />
-        <Counter opacity={0.2} />
-        <Counter opacity={0.3} />
-        <Counter opacity={0.3} />
-        <Counter opacity={0.3} />
-        <Counter opacity={0.3} />
-        <Counter opacity={0.5} />
-        <Counter opacity={0.5} />
-        <Counter opacity={0.5} />
-        <Counter opacity={0.5} />
-        <Counter opacity={0.7} />
-        <Counter opacity={0.7} />
-        <Counter opacity={0.7} />
-        <Counter opacity={0.7} />
-        <Counter opacity={0.9} />
-        <Counter opacity={0.9} />
-        <Counter opacity={0.9} />
-        <Counter opacity={0.9} />
-        <Counter opacity={1} target={93} />
-        <Counter opacity={1} target={39} />
-        <Counter opacity={1} target={39} />
-        <Counter opacity={1} target={45} />
-      </div>
+    <section className={styles.fv} id="fv">
+      {displayed && (
+        <div
+          style={{
+            display: "block",
+            boxSizing: "border-box",
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          <Image src={loaded ? mainFv : lightFv} width={375} height={375} />
+        </div>
+      )}
+      {displayed && (
+        <div className={styles.counters}>
+          <Counter opacity={0.2} />
+          <Counter opacity={0.2} />
+          <Counter opacity={0.2} />
+          <Counter opacity={0.2} />
+          <Counter opacity={0.3} />
+          <Counter opacity={0.3} />
+          <Counter opacity={0.3} />
+          <Counter opacity={0.3} />
+          <Counter opacity={0.5} />
+          <Counter opacity={0.5} />
+          <Counter opacity={0.5} />
+          <Counter opacity={0.5} />
+          <Counter opacity={0.7} />
+          <Counter opacity={0.7} />
+          <Counter opacity={0.7} />
+          <Counter opacity={0.7} />
+          <Counter opacity={0.9} />
+          <Counter opacity={0.9} />
+          <Counter opacity={0.9} />
+          <Counter opacity={0.9} />
+          <Counter opacity={1} target={93} />
+          <Counter opacity={1} target={39} />
+          <Counter opacity={1} target={39} />
+          <Counter opacity={1} target={45} />
+        </div>
+      )}
     </section>
   );
 };
