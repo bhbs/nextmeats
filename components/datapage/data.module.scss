@@ -206,7 +206,12 @@
   transform: translateX(-50%);
   box-sizing: border-box;
   z-index: 2;
-  background: linear-gradient(#009bbf, $nxm-color);
+  background: linear-gradient(
+    135deg,
+    transparent 12px,
+    #009bbf 12px,
+    $nxm-color
+  );
 
   .close {
     position: absolute;
