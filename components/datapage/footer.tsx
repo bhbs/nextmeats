@@ -150,14 +150,9 @@ const Dish = ({ product }: { product: Product }) => {
 
   useEffect(() => {
     const dish = document.querySelector("#dish");
-    new IntersectionObserver(
-      (entries) => {
-        setDisplayed(entries[0].isIntersecting);
-      },
-      {
-        rootMargin: "0px",
-      }
-    ).observe(dish);
+    new IntersectionObserver((entries) => {
+      setDisplayed(entries[0].isIntersecting);
+    }).observe(dish);
   }, []);
 
   return (
