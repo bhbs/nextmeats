@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
@@ -56,7 +57,12 @@ const Component = ({
                 <div className={styles.slideTitle}>
                   <h3>{item.name}</h3>
                 </div>
-                <img src={item.img} alt="" />
+                <Image
+                  src={item.img}
+                  alt={item.name}
+                  width={260}
+                  height={260}
+                />
               </div>
             )}
           </SwiperSlide>
