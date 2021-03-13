@@ -27,14 +27,14 @@ const Component = (): React.ReactElement => {
         <Image src={loaded ? mainFv : lightFv} width={375} height={375} />
       </div>
       <div className={styles.counters}>
+        <Counter opacity={0.2} />
+        <Counter opacity={0.2} />
+        <Counter opacity={0.2} />
+        <Counter opacity={0.2} />
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />
-        <Counter opacity={0.5} />
-        <Counter opacity={0.5} />
-        <Counter opacity={0.5} />
-        <Counter opacity={0.5} />
         <Counter opacity={0.7} />
         <Counter opacity={0.7} />
         <Counter opacity={0.7} />
@@ -43,10 +43,10 @@ const Component = (): React.ReactElement => {
         <Counter opacity={0.9} />
         <Counter opacity={0.9} />
         <Counter opacity={0.9} />
-        <Counter opacity={1} target={99} />
-        <Counter opacity={1} target={77} />
-        <Counter opacity={1} target={99} />
-        <Counter opacity={1} target={22} />
+        <Counter opacity={1} target={93} />
+        <Counter opacity={1} target={39} />
+        <Counter opacity={1} target={39} />
+        <Counter opacity={1} target={45} />
       </div>
     </section>
   );
@@ -63,7 +63,7 @@ const Counter = ({ opacity, target }: CounterProps): React.ReactElement => {
     if (count == target) return;
     setTimeout(() => {
       setCount(count > 98 ? Math.floor(Math.random() * 99) : count + 1);
-    }, Math.floor(Math.random() * 500));
+    }, Math.random() * 250);
   });
   return (
     <>
