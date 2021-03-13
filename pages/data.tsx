@@ -147,7 +147,7 @@ const Index = (): React.ReactElement => {
           <meta name="viewport" content="width=375px" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@700&family=Lato:wght@700&display=swap"
             rel="stylesheet"
           ></link>
         </Head>
