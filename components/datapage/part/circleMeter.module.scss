@@ -60,6 +60,7 @@
   height: 10px;
   background: white;
   opacity: 1;
+  backface-visibility: hidden;
   animation: off 0.1s forwards;
 }
 
