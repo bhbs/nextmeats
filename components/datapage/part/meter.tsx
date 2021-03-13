@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { getIcon } from "./meterIcons";
+import React from "react";
 import { Item } from "../data";
+import styles from "./meter.module.scss";
+import { getIcon } from "./meterIcons";
 
 type Props = {
   item: Item;
@@ -8,20 +9,8 @@ type Props = {
 };
 
 const Component = ({ item, rate }: Props): React.ReactElement => {
-  const [number, setNumber] = useState(0);
-
   const iconNumber = getIcon(item).number;
   const icon = getIcon(item).icon;
-
-  useEffect(() => {
-    const n = Math.floor(rate * iconNumber);
-
-    if (n > number) {
-      setTimeout(() => {
-        setNumber(number + 1);
-      }, 20);
-    }
-  }, [number]);
 
   return (
     <div>
@@ -29,9 +18,12 @@ const Component = ({ item, rate }: Props): React.ReactElement => {
         return (
           <div
             key={`meter_${i}`}
+            className={styles.meter}
             style={{
               display: "inline-block",
-              opacity: i > number ? ".4" : "1",
+              animationPlayState:
+                i > Math.floor(rate * iconNumber) ? "running" : "paused",
+              animationDelay: `${(iconNumber - i) / 10}s`,
             }}
           >
             {icon}
