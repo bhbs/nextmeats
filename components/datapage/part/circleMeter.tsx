@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Component = ({ rate }: Props): React.ReactElement => {
-  const n = Math.floor(rate * meterNumber);
+  const n = rate * meterNumber;
 
   return (
     <div className={styles.circleMeterWrapper}>
@@ -22,8 +22,9 @@ const Component = ({ rate }: Props): React.ReactElement => {
                 key={`circleMeter_${i}`}
                 className={styles.meter}
                 style={{
-                  animationPlayState: i > n ? "running" : "paused",
-                  animationDelay: `${(meterNumber - i) / 50}s`,
+                  animationPlayState:
+                    i > meterNumber - n ? "paused" : "running",
+                  animationDelay: `${i / 50}s`,
                   transform: `
                 translate(
                   ${
@@ -45,26 +46,27 @@ const Component = ({ rate }: Props): React.ReactElement => {
         <div className={styles.focusHorizontal}></div>
       </div>
       <div className={styles.focusVertical}></div>
-      <Number n={n} />
+      <Number rate={rate} />
       <p>less!</p>
     </div>
   );
 };
 
-const Number = ({ n }: { n: number }): React.ReactElement => {
-  const [number, setNumber] = useState(0);
+const Number = ({ rate }: Props): React.ReactElement => {
+  const [number, setNumber] = useState(20);
+  const displayRate = Math.floor((1 - rate) * 100);
 
   useEffect(() => {
-    if (meterNumber - n > number) {
+    if (number > 1) {
       setTimeout(() => {
-        setNumber(number + 1);
-      }, 10);
+        setNumber(number - 1);
+      }, 50);
     }
   }, [number]);
 
   return (
     <p>
-      {number * (100 / meterNumber) - 1}
+      {("00" + Math.floor(displayRate / number)).slice(-2)}
       <span>%</span>
     </p>
   );
