@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { Product } from "../../pages/data";
@@ -160,14 +161,25 @@ const Dish = ({ product }: { product: Product }) => {
   }, []);
 
   return (
-    <div style={{ overflow: "hidden", marginTop: "-75px" }} id="dish">
-      <img
-        src={`/img/datapage/footer/dish_${product}.png`}
+    <div
+      style={{
+        overflow: "hidden",
+        marginTop: "-75px",
+      }}
+      id="dish"
+    >
+      <div
         style={{
           transform: displayed ? "translateY(0%)" : "translateY(60%)",
           transition: "2s",
         }}
-      />
+      >
+        <Image
+          src={`/img/datapage/footer/dish_${product}.png`}
+          width={375}
+          height={375}
+        />
+      </div>
     </div>
   );
 };

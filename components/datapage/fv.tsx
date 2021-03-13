@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "./fv.module.scss";
 
@@ -8,7 +9,7 @@ const Component = (): React.ReactElement => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const image = new Image();
+    const image = document.createElement("img");
     image.src = mainFv;
     image.onload = () => {
       setLoaded(true);
@@ -17,13 +18,14 @@ const Component = (): React.ReactElement => {
 
   return (
     <section className={styles.fv}>
-      <img
-        src={loaded ? mainFv : lightFv}
+      <div
         style={{
           display: "block",
           boxSizing: "border-box",
         }}
-      />
+      >
+        <Image src={loaded ? mainFv : lightFv} width={375} height={375} />
+      </div>
       <div className={styles.counters}>
         <Counter opacity={0.3} />
         <Counter opacity={0.3} />

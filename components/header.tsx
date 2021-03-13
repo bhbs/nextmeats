@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { LanguageCode } from "../lib/language";
 
@@ -15,12 +16,11 @@ const Header = ({ languageCode, path }: Props): React.ReactElement => (
         <li className="luxbar-header">
           <Link href="/">
             <a className="luxbar-brand">
-              <img
+              <Image
                 src="/img/header/logo.png"
                 alt="next meats logo"
-                style={{
-                  width: "180px",
-                }}
+                width={180}
+                height={24.91}
               />
             </a>
           </Link>
