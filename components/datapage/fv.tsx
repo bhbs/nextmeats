@@ -64,20 +64,29 @@ type CounterProps = {
 };
 
 const Counter = ({ opacity, target }: CounterProps): React.ReactElement => {
-  const [count, setCount] = useState(Math.floor(Math.random() * 99));
+  const [displayCount, setCount] = useState("00");
+  const [fixed, setFixed] = useState(false);
+
   useEffect(() => {
-    if (count == target) return;
-    setTimeout(() => {
-      setCount(count > 98 ? Math.floor(Math.random() * 99) : count + 1);
-    }, count * Math.random() * 10);
-  });
+    let count = Math.floor(Math.random() * 100);
+    const timer = setInterval(() => {
+      count++;
+      if (count > 99) count = 0;
+      if (count == target) {
+        clearInterval(timer);
+        setFixed(true);
+      }
+      setCount(("00" + count).slice(-2));
+    }, Math.random() * 100 + 100);
+  }, []);
+
   return (
     <>
       <div
         className={styles.counter}
-        style={{ opacity, color: count == target && "#009BBF" }}
+        style={{ opacity, color: fixed && "#009BBF" }}
       >
-        {("00" + count).slice(-2)}%
+        {displayCount}%
       </div>
     </>
   );
