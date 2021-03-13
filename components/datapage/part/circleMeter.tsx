@@ -24,7 +24,7 @@ const Component = ({ rate }: Props): React.ReactElement => {
                 style={{
                   animationPlayState:
                     i > meterNumber - n ? "paused" : "running",
-                  animationDelay: `${i / 50}s`,
+                  animationDelay: `${i / 50 + 0.3}s`,
                   transform: `
                 translate(
                   ${
@@ -53,20 +53,21 @@ const Component = ({ rate }: Props): React.ReactElement => {
 };
 
 const Number = ({ rate }: Props): React.ReactElement => {
-  const [number, setNumber] = useState(20);
+  const [number, setNumber] = useState("00");
   const displayRate = Math.floor((1 - rate) * 100);
 
   useEffect(() => {
-    if (number > 1) {
-      setTimeout(() => {
-        setNumber(number - 1);
-      }, 50);
-    }
-  }, [number]);
+    let count = 30;
+    const timer = setInterval(() => {
+      count--;
+      if (count === 1) clearInterval(timer);
+      setNumber(("00" + Math.floor(displayRate / count)).slice(-2));
+    }, 30);
+  }, []);
 
   return (
     <p>
-      {("00" + Math.floor(displayRate / number)).slice(-2)}
+      {number}
       <span>%</span>
     </p>
   );

@@ -183,7 +183,6 @@ const Modal = ({
             const before = productData.data[item.subject].before;
             const after = productData.data[item.subject].after;
             const rate = parseFloat(after) / parseFloat(before);
-            console.log(parseFloat(before), parseFloat(after), rate);
             return (
               <SwiperSlide key={`modal_${i}`}>
                 <div className={styles.modalHeader}>
