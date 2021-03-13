@@ -1,5 +1,6 @@
 .meter {
   animation: off 0.1s forwards;
+  backface-visibility: hidden;
 }
 
 @keyframes off {
