@@ -200,7 +200,7 @@ const Modal = ({
                   </div>
                 </div>
                 <div className={styles.modalTitle}>環境負荷削減率</div>
-                <CircleMeter rate={rate} />
+                <CircleMeter rate={rate} animation={i === itemIndex} />
                 <div className={styles.valueWrapper}>
                   <div className={styles.valueName}>大豆 1kg 生産</div>
                   <div className={styles.value}>

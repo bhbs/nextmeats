@@ -5,9 +5,10 @@ const meterNumber = 50;
 
 type Props = {
   rate: number;
+  animation: boolean;
 };
 
-const Component = ({ rate }: Props): React.ReactElement => {
+const Component = ({ rate, animation }: Props): React.ReactElement => {
   const n = rate * meterNumber;
 
   return (
@@ -46,17 +47,21 @@ const Component = ({ rate }: Props): React.ReactElement => {
         <div className={styles.focusHorizontal}></div>
       </div>
       <div className={styles.focusVertical}></div>
-      <Number rate={rate} />
+      <Number rate={rate} animation={animation} />
       <p>less!</p>
     </div>
   );
 };
 
-const Number = ({ rate }: Props): React.ReactElement => {
+const Number = ({ rate, animation }: Props): React.ReactElement => {
   const [number, setNumber] = useState("00");
   const displayRate = Math.floor((1 - rate) * 100);
 
   useEffect(() => {
+    if (!animation) {
+      setNumber(("00" + Math.floor(displayRate)).slice(-2));
+      return;
+    }
     let count = 30;
     const timer = setInterval(() => {
       count--;
