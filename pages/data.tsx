@@ -136,7 +136,6 @@ const Index = (): React.ReactElement => {
   return (
     <div
       style={{
-        background: "black",
         color: "white",
         paddingTop: "58px",
         fontFamily: '"Noto Sans JP", sans-serif',
