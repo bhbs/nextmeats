@@ -132,13 +132,19 @@ const Component = ({ productData }: Props): React.ReactElement => {
             <div>
               <h3>引用元</h3>
               <p>
-                <a>水資源 {linkIcon}</a>
+                <a href="https://www.env.go.jp/water/virtual_water/kyouzai.html">
+                  水資源 {linkIcon}
+                </a>
               </p>
               <p>
-                <a>温室ガス、土地の使用面積 {linkIcon}</a>
+                <a href="https://ourworldindata.org/environmental-impacts-of-food">
+                  温室ガス、土地の使用面積 {linkIcon}
+                </a>
               </p>
               <p>
-                <a>エネルギー消費量 {linkIcon}</a>
+                <a href="https://www.naro.affrc.go.jp/org/nkk/soshiki/soshiki07-shigen/01shigen/pdf/sekkeitohyouka/huzoku-2.pdf">
+                  エネルギー消費量 {linkIcon}
+                </a>
               </p>
             </div>
           </div>
