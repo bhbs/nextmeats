@@ -137,6 +137,8 @@ const Index = (): React.ReactElement => {
     <div
       style={{
         color: "white",
+        margin: "auto",
+        maxWidth: "375px",
         paddingTop: "58px",
         fontFamily: '"Noto Sans JP", sans-serif',
       }}
