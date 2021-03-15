@@ -138,7 +138,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
 
             <div style={{ height: "48px" }}></div>
 
-            <Link href={"https://shop.nextmeats.jp/products/nextchicken"}>
+            <Link href={"https://shop.nextmeats.jp/products/chicken"}>
               <a>
                 <Image
                   src={`/img/index/chicken_1920x1080-${languageCode}.jpg`}
@@ -208,7 +208,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
 
             <div style={{ height: "48px" }}></div>
 
-            <Link href="https://shop.nextmeats.jp/products/euglenayakiniku">
+            <Link href="https://shop.nextmeats.jp/products/yakiniku-euglena">
               <a>
                 <Image
                   src="/img/index/euglena.jpg"
