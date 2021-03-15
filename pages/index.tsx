@@ -138,6 +138,20 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
 
             <div style={{ height: "48px" }}></div>
 
+            <Link href={"https://shop.nextmeats.jp/products/nextchicken"}>
+              <a>
+                <Image
+                  src={`/img/index/chicken_1920x1080-${languageCode}.jpg`}
+                  alt={text.pr08}
+                  width={800}
+                  height={450}
+                  layout="responsive"
+                />
+              </a>
+            </Link>
+
+            <div style={{ height: "48px" }}></div>
+
             <Link href={"https://www.makuake.com/project/nextmeats2/"}>
               <a>
                 <Image
@@ -405,6 +419,11 @@ function getText(locale) {
       jp: "NEXT ハンバーグ 1.0",
       en: "NEXT HAMBURGER STEAK 1.0",
       tw: "NEXT 日式漢堡排 1.0",
+    }[locale],
+    pr08: {
+      jp: "NEXT チキン 1.0",
+      en: "NEXT CHICKEN 1.0",
+      tw: "NEXT 炸雞 1.0",
     }[locale],
   };
 }
