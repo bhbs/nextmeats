@@ -1,13 +1,18 @@
 import React from "react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { LanguageCode } from "../lib/language";
 
-const TopNews = (): React.ReactElement => {
+const TopNews = ({
+  languageCode,
+}: {
+  languageCode: LanguageCode;
+}): React.ReactElement => {
   const [newsList, setNews] = useState([]);
 
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbwwvPU8LEqSwCOyKXqtSFvrQlU-C2Zap7NpkR0ZR1dgGVFXOq_b/exec?index=true"
+      `https://script.google.com/macros/s/AKfycbwwvPU8LEqSwCOyKXqtSFvrQlU-C2Zap7NpkR0ZR1dgGVFXOq_b/exec?index=true&languageCode=${languageCode}`
     )
       .then((response) => response.json())
       .then((news) => setNews(news));

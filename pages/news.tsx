@@ -18,7 +18,7 @@ const News = ({ languageCode }: Props): React.ReactElement => {
 
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbwwvPU8LEqSwCOyKXqtSFvrQlU-C2Zap7NpkR0ZR1dgGVFXOq_b/exec"
+      `https://script.google.com/macros/s/AKfycbwwvPU8LEqSwCOyKXqtSFvrQlU-C2Zap7NpkR0ZR1dgGVFXOq_b/exec?languageCode=${languageCode}`
     )
       .then((response) => response.json())
       .then((news) =>
@@ -86,26 +86,28 @@ const News = ({ languageCode }: Props): React.ReactElement => {
       </Head>
       <div className="page">
         <h2 style={{ textAlign: "center" }}>NEWS</h2>
-        <div
-          style={{
-            textAlign: "center",
-          }}
-        >
-          <input
-            type="text"
-            placeholder="タイトルで検索する"
-            onChange={textSearch}
+        {languageCode === "jp" && (
+          <div
             style={{
-              marginRight: "1em",
+              textAlign: "center",
             }}
-          />
-          <select onChange={categorySearch}>
-            <option>{defaultCategory}</option>
-            <option>メディア情報</option>
-            <option>お知らせ</option>
-            <option>プレスリリース</option>
-          </select>
-        </div>
+          >
+            <input
+              type="text"
+              placeholder="タイトルで検索する"
+              onChange={textSearch}
+              style={{
+                marginRight: "1em",
+              }}
+            />
+            <select onChange={categorySearch}>
+              <option>{defaultCategory}</option>
+              <option>メディア情報</option>
+              <option>お知らせ</option>
+              <option>プレスリリース</option>
+            </select>
+          </div>
+        )}
         <div className="newsList">
           {newsList.original ? (
             newsList.filtered.map((x) => (
@@ -132,9 +134,13 @@ function getText(locale) {
   return {
     title: {
       jp: "Next Meats Co., Ltd.",
+      en: "Next Meats Co., Ltd.",
+      tw: "Next Meats Co., Ltd.",
     }[locale],
     description: {
       jp: "NEWS",
+      en: "NEWS",
+      tw: "NEWS",
     }[locale],
   };
 }

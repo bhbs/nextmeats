@@ -33,13 +33,11 @@ const Header = ({ languageCode, path }: Props): React.ReactElement => (
             <span></span>{" "}
           </label>
         </li>
-        {languageCode === "jp" && (
-          <li className="luxbar-item">
-            <Link href="/news">
-              <a>NEWS</a>
-            </Link>
-          </li>
-        )}
+        <li className="luxbar-item">
+          <Link href="/news">
+            <a>NEWS</a>
+          </Link>
+        </li>
         <li className="luxbar-item">
           <Link href="/message">
             <a>MESSAGE</a>
