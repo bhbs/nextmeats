@@ -45,39 +45,6 @@ const TopNews = ({
             <a>一覧を見る...</a>
           </Link>
         </p>
-
-        <div
-          style={{
-            margin: "auto",
-            padding: "16px",
-            textAlign: "center",
-          }}
-        >
-          <p>{"＼　FOLLLOW US　／"}</p>
-          <p>
-            <a
-              href="https://www.facebook.com/NextMeats"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src="/img/topNews/facebook.png" alt="facebook" />
-            </a>
-            <a
-              href="https://twitter.com/MeatsNext"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src="/img/topNews/twitter.png" alt="twitter" />
-            </a>
-            <a
-              href="https://www.instagram.com/nextmeatsjapan/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src="/img/topNews/instagram.png" alt="instagram" />
-            </a>
-          </p>
-        </div>
       </div>
     </section>
   );

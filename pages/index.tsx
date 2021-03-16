@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Company from "../components/company";
 import Layout from "../components/layout";
+import SnsLink from "../components/snsLink";
 import TopNews from "../components/topNews";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 
@@ -65,6 +66,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
         }}
       >
         <TopNews languageCode={languageCode} />
+        <SnsLink languageCode={languageCode} />
 
         {languageCode === "tw" && (
           <section>
