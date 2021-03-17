@@ -52,6 +52,13 @@ const Header = ({ languageCode, path }: Props): React.ReactElement => (
             <a>COMPANY</a>
           </Link>
         </li>
+        {languageCode === "jp" && (
+          <li className="luxbar-item">
+            <Link href="https://nextmeats.jp">
+              <a>MEDIA</a>
+            </Link>
+          </li>
+        )}
         <li className="luxbar-item dropdown">
           <a>LANGUAGE</a>
           <ul>
