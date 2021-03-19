@@ -62,16 +62,27 @@ const Header = ({ languageCode, path }: Props): React.ReactElement => (
         <li className="luxbar-item dropdown">
           <a>LANGUAGE</a>
           <ul>
-            <li className="luxbar-item">
-              <Link
-                href={path}
-                locale={{ jp: "ja", en: "en-US", tw: "zh" }[languageCode]}
-              >
-                <a>
-                  {{ jp: "日本語", en: "English", tw: "中文" }[languageCode]}
-                </a>
-              </Link>
-            </li>
+            {languageCode !== "jp" && (
+              <li className="luxbar-item">
+                <Link href={path} locale="ja">
+                  <a>日本語</a>
+                </Link>
+              </li>
+            )}
+            {languageCode !== "en" && (
+              <li className="luxbar-item">
+                <Link href={path} locale="en-US">
+                  <a>English</a>
+                </Link>
+              </li>
+            )}
+            {languageCode !== "tw" && (
+              <li className="luxbar-item">
+                <Link href={path} locale="zh">
+                  <a>中文</a>
+                </Link>
+              </li>
+            )}
           </ul>
         </li>
       </ul>
