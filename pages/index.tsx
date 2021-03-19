@@ -137,7 +137,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
             <Link href={"https://www.makuake.com/project/nextmeats2/"}>
               <a>
                 <Image
-                  src={`/img/index/hamburger-steak_1920x1080-${languageCode}.jpg`}
+                  src={`/img/index/hamburgersteak_1920x1080-${languageCode}.jpg`}
                   alt={text.pr07}
                   width={800}
                   height={450}
@@ -151,7 +151,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
             <Link href="/burger">
               <a>
                 <Image
-                  src={`/img/index/${languageCode}_1920x1080-burger.jpg`}
+                  src={`/img/index/burger_1920x1080-${languageCode}.jpg`}
                   alt={text.pr03}
                   width={800}
                   height={450}
@@ -179,10 +179,10 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
             <Link href="/yakiniku">
               <a>
                 <Image
-                  src="/img/index/yakiniku.jpg"
+                  src={`/img/index/yakiniku_1920x1080-${languageCode}.jpg`}
                   alt={text.pr02}
                   width={800}
-                  height={321}
+                  height={450}
                   layout="responsive"
                 />
               </a>
@@ -240,12 +240,25 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
               {text.pr05}
             </p>
             <p style={{ marginTop: "60px" }}>{text.pr06}</p>
-            <Image
-              src="/img/index/sdgs.png"
-              alt="sdgs"
-              width={441}
-              height={141}
-            />
+            <p>
+              <Image
+                src="/img/index/sdgs/E_SDG_logo_UN_emblem_horizontal_trans_WEB.png"
+                alt="sdgs"
+                width={320}
+                height={50}
+              />
+            </p>
+            <p>
+              {["02", "09", "13", "15", "17"].map((number, i) => (
+                <Image
+                  key={"sdgs_" + i}
+                  src={`/img/index/sdgs/E-WEB-Goal-${number}.png`}
+                  alt="sdgs"
+                  width={75}
+                  height={75}
+                />
+              ))}
+            </p>
           </div>
         </section>
 
