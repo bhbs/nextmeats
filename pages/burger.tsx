@@ -24,7 +24,7 @@ const Burger = ({ languageCode }: Props): React.ReactElement => {
       <div className="page">
         <h1>{text.title}</h1>
         <Image
-          src={`/img/index/${languageCode}_1920x1080-burger.jpg`}
+          src={`/img/index/burger_1920x1080-${languageCode}.jpg`}
           alt={text.pr03}
           width={800}
           height={450}
