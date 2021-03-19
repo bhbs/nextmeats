@@ -1,5 +1,6 @@
 import { GetStaticProps, GetStaticPropsResult } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 import Layout from "../components/layout";
 import ShopLink from "../components/shopLink";
@@ -23,13 +24,17 @@ const Yakiniku = ({ languageCode }: Props): React.ReactElement => {
       </Head>
       <div className="page">
         <h1>{text.title}</h1>
-        <img src="/img/yakiniku/yakiniku.jpg" alt={text.title} />
+        <Image
+          src={`/img/index/yakiniku_1920x1080-${languageCode}.jpg`}
+          alt={text.title}
+          width={1920}
+          height={1080}
+        />
         <p>
           <a href="https://shop.nextmeats.jp" target="_blank" rel="noreferrer">
             {text.subject}
           </a>
         </p>
-        <img src="/img/yakiniku/yahoo_no1.jpg" alt="YAHOO No.1" />
         <p>{text.statement}</p>
         <ShopLink text={text} />
         <p>
@@ -40,9 +45,6 @@ const Yakiniku = ({ languageCode }: Props): React.ReactElement => {
           <b>{text.pr03}</b>
         </p>
         <p>{text.pr04}</p>
-        <img src="/img/yakiniku/hikaku-karubi.jpg" alt="NEXT KARUBI" />
-        <img src="/img/yakiniku/hikaku-harami.jpg" alt="NEXT HARAMI" />
-        <p>{text.pr05}</p>
         <p>
           <b>{text.pr06}</b>
         </p>
@@ -63,7 +65,7 @@ const Yakiniku = ({ languageCode }: Props): React.ReactElement => {
             height: 0,
             paddingBottom: "56.25%",
             overflow: "hidden",
-            margin: "120px auto 50px",
+            margin: "50px auto",
           }}
         >
           <iframe
@@ -84,8 +86,17 @@ const Yakiniku = ({ languageCode }: Props): React.ReactElement => {
         <p>
           <b>{text.pr13}</b>
         </p>
-        <a href="https://shop.nextmeats.jp/pages/recipe-002">{text.pr14}</a>
-        <img src="/img/yakiniku/recipe.jpg" alt="recipe" />
+        <p>
+          <a href="https://shop.nextmeats.jp/pages/recipe-002">{text.pr14}</a>
+        </p>
+        <p>
+          <Image
+            src="/img/yakiniku/recipe.jpg"
+            alt="recipe"
+            width={256}
+            height={192}
+          />
+        </p>
       </div>
     </Layout>
   );
@@ -148,12 +159,6 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
         "The products in our NEXT Yakiniku series have less than half the fat content and twice the protein of regular yakiniku products. Boasting superior nutritional value, they are the perfect choice for health-conscious individuals and athletes who need more protein.",
       tw:
         "NEXT MEATS燒肉系列相較於一般燒肉，只有不到一半的脂肪含量，且蛋白質含量約為二倍。營養價值無可挑剔，是注重健康飲食生活者，或需要攝取大量蛋白質的運動選手等族群都適合食用的商品。",
-    }[languageCode],
-    pr05: {
-      jp: "100g当たりの栄養価比較",
-      en:
-        "A comparison of the nutritional value in 100g of the respective products",
-      tw: "每100g的營養價值比較",
     }[languageCode],
     pr06: {
       jp: "＜ 食べ方 ＞",
