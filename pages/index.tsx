@@ -134,7 +134,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
 
             <div style={{ height: "48px" }}></div>
 
-            <Link href={"https://www.makuake.com/project/nextmeats2/"}>
+            <Link href="/hamburgersteak">
               <a>
                 <Image
                   src={`/img/index/hamburgersteak_1920x1080-${languageCode}.jpg`}
