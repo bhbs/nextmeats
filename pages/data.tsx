@@ -146,6 +146,11 @@ const Index = (): React.ReactElement => {
       <Layout languageCode="jp" hideFooter={true}>
         <Head>
           <meta name="viewport" content="width=375px" />
+          <title>NEXT MEATS DATAPAGE</title>
+          <meta
+            name="description"
+            content="データが裏付ける、ネクストミーツのインパクト。"
+          />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@700&family=Lato:wght@700&display=swap"
