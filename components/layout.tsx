@@ -4,6 +4,7 @@ import React from "react";
 import * as gtag from "../lib/gtag";
 import { LanguageCode } from "../lib/language";
 import Header from "./header";
+import SnsLink from "./snsLink";
 
 type Props = {
   children: React.ReactNode;
@@ -86,7 +87,12 @@ const Layout = ({
       </Head>
       <Header languageCode={languageCode} path={router.route} />
       {children}
-      {!hideFooter && <footer>© 2021 Next Meats Co., Ltd.</footer>}
+      {!hideFooter && (
+        <footer>
+          <SnsLink languageCode={languageCode} color="black" />
+          <span>© 2021 Next Meats Co., Ltd.</span>
+        </footer>
+      )}
     </>
   );
 };

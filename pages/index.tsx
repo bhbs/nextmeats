@@ -66,7 +66,15 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
         }}
       >
         <TopNews languageCode={languageCode} />
-        <SnsLink languageCode={languageCode} />
+        <section
+          style={{
+            margin: "auto",
+            textAlign: "center",
+          }}
+        >
+          <div>{"＼　FOLLLOW US　／"}</div>
+          <SnsLink languageCode={languageCode} color="black" />
+        </section>
 
         {languageCode === "tw" && (
           <section>
