@@ -1,10 +1,10 @@
 import React from "react";
-import { Item } from "../data";
+import { ItemName } from "../data";
 import styles from "./meter.module.scss";
 import { getIcon } from "./meterIcons";
 
 type Props = {
-  item: Item;
+  item: ItemName;
   rate: number;
 };
 

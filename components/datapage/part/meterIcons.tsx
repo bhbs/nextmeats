@@ -1,8 +1,8 @@
 import React from "react";
-import { Item } from "../data";
+import { ItemName } from "../data";
 
 export const getIcon = (
-  item: Item
+  item: ItemName
 ): { number: number; icon: React.ReactElement } =>
   ({
     CHGE: {

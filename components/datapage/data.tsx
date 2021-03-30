@@ -1,4 +1,4 @@
-import Lottie from "lottie-react-web";
+import Lottie from "./part/lottie";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
@@ -6,10 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { ProductData } from "../../pages/data";
 import styles from "./data.module.scss";
-import co2Animation from "./lottie/icon_co2.json";
-import energyAnimation from "./lottie/icon_energy.json";
-import landAnimation from "./lottie/icon_land.json";
-import waterAnimation from "./lottie/icon_water.json";
 import CircleMeter from "./part/circleMeter";
 import DownArrow from "./part/downArrow";
 import Meter from "./part/meter";
@@ -20,37 +16,39 @@ type Props = {
   productData: ProductData;
 };
 
-export type Item = "WATER" | "LAND" | "CHGE" | "ENERGY";
+export type ItemName = "WATER" | "LAND" | "CHGE" | "ENERGY";
 
-type Items = {
-  subject: Item;
-  img: Record<string, unknown>;
+export type Item = {
+  name: ItemName;
+  path: string;
   rubi: string;
   unit: string;
-}[];
+};
+
+type Items = Item[];
 
 const items: Items = [
   {
-    subject: "CHGE",
-    img: co2Animation,
+    name: "CHGE",
+    path: "/img/datapage/lottie/icon_co2.json",
     rubi: "温室ガス",
     unit: "kg",
   },
   {
-    subject: "ENERGY",
-    img: energyAnimation,
+    name: "ENERGY",
+    path: "/img/datapage/lottie/icon_energy.json",
     rubi: "エネルギー消費量",
     unit: "MJ",
   },
   {
-    subject: "LAND",
-    img: landAnimation,
+    name: "LAND",
+    path: "/img/datapage/lottie/icon_land.json",
     rubi: "土地の使用量",
     unit: "平米",
   },
   {
-    subject: "WATER",
-    img: waterAnimation,
+    name: "WATER",
+    path: "/img/datapage/lottie/icon_water.json",
     rubi: "水資源",
     unit: "L",
   },
@@ -86,17 +84,10 @@ const Component = ({ productData }: Props): React.ReactElement => {
             onClick={() => setModal(i)}
           >
             <div className={styles.boxInner}>
-              <Lottie
-                options={{
-                  animationData: item.img,
-                }}
-                width={80}
-              />
-              <h3>{item.subject}</h3>
+              <Lottie item={item} />
+              <h3>{item.name}</h3>
               <p className={styles.rubi}>{item.rubi}</p>
-              <p className={styles.text}>
-                {productData.data[item.subject].text}
-              </p>
+              <p className={styles.text}>{productData.data[item.name].text}</p>
             </div>
             {i % 2 ? pointerIconLeft : pointerIconRight}
           </div>
@@ -198,22 +189,17 @@ const Modal = ({
           }}
         >
           {items.map((item, i) => {
-            const before = productData.data[item.subject].before;
-            const after = productData.data[item.subject].after;
+            const before = productData.data[item.name].before;
+            const after = productData.data[item.name].after;
             const rate = parseFloat(after) / parseFloat(before);
             return (
               <SwiperSlide key={`modal_${i}`}>
                 <div className={styles.modalHeader}>
                   <div>
-                    <Lottie
-                      options={{
-                        animationData: item.img,
-                      }}
-                      width={80}
-                    />
+                    <Lottie item={item} />
                   </div>
                   <div>
-                    <h3>{item.subject}</h3>
+                    <h3>{item.name}</h3>
                     <p>{item.rubi}</p>
                   </div>
                 </div>
@@ -225,7 +211,7 @@ const Modal = ({
                     約 <span>{after}</span> {item.unit}
                   </div>
                 </div>
-                <Meter item={item.subject} rate={rate} />
+                <Meter item={item.name} rate={rate} />
                 <div className={styles.valueWrapper}>
                   <div className={styles.valueName}>
                     従来{productData.category} 1kg 生産
@@ -234,7 +220,7 @@ const Modal = ({
                     約 <span>{before}</span> {item.unit}
                   </div>
                 </div>
-                <Meter item={item.subject} rate={1} />
+                <Meter item={item.name} rate={1} />
               </SwiperSlide>
             );
           })}
