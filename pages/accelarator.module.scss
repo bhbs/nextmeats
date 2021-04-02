@@ -226,8 +226,9 @@ $nxm-color: rgb(0, 155, 191);
   padding-bottom: 80px;
 
   a {
+    min-width: 240px;
     display: inline-block;
-    background: $nxm-color;
+    background: gray;
     text-align: center;
     padding: 16px 40px;
     border-radius: 20px;

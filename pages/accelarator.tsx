@@ -53,6 +53,11 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             <h2>{text.statement_h}</h2>
             <div>{text.statement}</div>
           </section>
+          <section className={styles.contact}>
+            <div>
+              <a>{text.contact}</a>
+            </div>
+          </section>
           <section className={styles.purpose}>
             <h2>{text.purpose_h}</h2>
             <div>
@@ -196,6 +201,12 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
                 </div>
               ))}
             </div>
+          </section>
+          <section className={styles.contact}>
+            <div>
+              <a>{text.contact}</a>
+            </div>
+            <p style={{ fontSize: "0.8em" }}>{text.contact_explanation}</p>
           </section>
         </div>
       </div>
@@ -830,6 +841,16 @@ const getText = (locale: LanguageCode) => {
         "Started his career as CPA and provided IPO consulting, M&A and Audit. Launched innovation focused subsidiary in Deloitte Japan in 2010 as a co-founder and expanded to over 160 members with 4 presences in the world. Promoted whole company businesses as a COO. Business leader with 13 years of experience in business planning, cross-border alliance and innovation strategy consulting. Moved to US in 2015 and created a lot of Japanese MNCs new businesses with local startups. Presented as the main and special speaker in large scale global tech conferences such as Automotive World 2019, Wearable Expo 2017-2019 and AI Conference 2017.",
       tw:
         "Started his career as CPA and provided IPO consulting, M&A and Audit. Launched innovation focused subsidiary in Deloitte Japan in 2010 as a co-founder and expanded to over 160 members with 4 presences in the world. Promoted whole company businesses as a COO. Business leader with 13 years of experience in business planning, cross-border alliance and innovation strategy consulting. Moved to US in 2015 and created a lot of Japanese MNCs new businesses with local startups. Presented as the main and special speaker in large scale global tech conferences such as Automotive World 2019, Wearable Expo 2017-2019 and AI Conference 2017.",
+    }[locale],
+    contact: {
+      jp: <>受付終了</>,
+      en: <>Application Closed</>,
+      tw: <>Application Closed</>,
+    }[locale],
+    contact_explanation: {
+      jp: "",
+      en: "",
+      tw: "",
     }[locale],
   };
 };
