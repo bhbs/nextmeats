@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import CountUp from "react-countup";
 import styles from "./circleMeter.module.scss";
 
 const meterNumber = 50;
@@ -53,26 +54,11 @@ const Component = ({ rate, animation }: Props): React.ReactElement => {
   );
 };
 
-const Number = ({ rate, animation }: Props): React.ReactElement => {
-  const [number, setNumber] = useState("00");
+const Number = ({ rate }: Props): React.ReactElement => {
   const displayRate = Math.floor((1 - rate) * 100);
-
-  useEffect(() => {
-    if (!animation) {
-      setNumber(("00" + Math.floor(displayRate)).slice(-2));
-      return;
-    }
-    let count = 30;
-    const timer = setInterval(() => {
-      count--;
-      if (count === 1) clearInterval(timer);
-      setNumber(("00" + Math.floor(displayRate / count)).slice(-2));
-    }, 30);
-  }, []);
-
   return (
     <p>
-      {number}
+      <CountUp end={displayRate} duration={4} />
       <span>%</span>
     </p>
   );
