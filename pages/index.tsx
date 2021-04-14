@@ -87,26 +87,30 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
         )}
 
         <section>
-          <h2>
-            <span>
-              {
-                {
-                  jp: "応募受付中！ 3月末まで",
-                  en: "Open for entries! ~ March 31st",
-                  tw: "Open for entries! ~ March 31st",
-                }[languageCode]
-              }
-            </span>
-          </h2>
-          <Link href="/accelarator">
-            <a>
-              <Image
-                src={`/img/accelarator/header_${languageCode}_pc.jpg`}
-                width={1920}
-                height={960}
-              />
-            </a>
-          </Link>
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              height: 0,
+              paddingBottom: "56.25%",
+              overflow: "hidden",
+              margin: "64px auto 50px",
+            }}
+          >
+            <iframe
+              src="https://www.youtube.com/embed/gz6q4cp-L_Y"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "absolute",
+                top: 0,
+                left: 0,
+              }}
+            ></iframe>
+          </div>
         </section>
 
         <section>
@@ -210,31 +214,6 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
               </a>
             </Link>
 
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                height: 0,
-                paddingBottom: "56.25%",
-                overflow: "hidden",
-                margin: "64px auto 50px",
-              }}
-            >
-              <iframe
-                src="https://www.youtube.com/embed/videoseries?list=PLumUcr0KxJ-Mc4sW0CF2TxPBhnSspbNrS"
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                }}
-              ></iframe>
-            </div>
-
             <p style={{ marginTop: "60px" }}>
               <b>{text.pr04}</b>
             </p>
@@ -267,6 +246,20 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
                 />
               ))}
             </p>
+
+            <div style={{ height: "48px" }}></div>
+
+            <Link href="/accelarator">
+              <a>
+                <Image
+                  src={`/img/index/accelarator-${languageCode}.jpg`}
+                  alt="Accelarator program"
+                  width={800}
+                  height={450}
+                  layout="responsive"
+                />
+              </a>
+            </Link>
           </div>
         </section>
 
