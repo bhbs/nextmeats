@@ -65,6 +65,18 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
           marginTop: "0",
         }}
       >
+        {languageCode === "en" && (
+          <section>
+            <a href="https://www.futurefoodtechprotein.com/">
+              <Image
+                src={`/img/index/futurefoodtech.png`}
+                width={1024}
+                height={512}
+              />
+            </a>
+          </section>
+        )}
+
         <TopNews languageCode={languageCode} />
         <section
           style={{
