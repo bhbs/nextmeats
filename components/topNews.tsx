@@ -42,7 +42,13 @@ const TopNews = ({
 
         <p className="readMore">
           <Link href="/news">
-            <a>一覧を見る...</a>
+            <a>
+              {
+                { jp: "一覧を見る...", en: "read mode...", tw: "read more..." }[
+                  languageCode
+                ]
+              }
+            </a>
           </Link>
         </p>
       </div>
