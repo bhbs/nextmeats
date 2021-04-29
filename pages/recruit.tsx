@@ -102,13 +102,13 @@ const getText = (languageCode: LanguageCode) => {
       },
       {
         job: {
-          jp: "行銷專員",
+          jp: "マーケティング部門",
           en: "Marketing Positions",
-          tw: "Marketing Positions",
+          tw: "行銷專員",
         }[languageCode],
         description: {
           jp:
-            "フードテックブランドとして世界に通用する会社を作ります。\nメディア運営（SNS、PRなども含む）をお任せできる方を募集しています。",
+            "フードテックブランドとして世界に通用する会社を作ります。マーケティング戦略・戦術の策定および実行、webマーケティング、webメディア、広報・PRなど幅広くお任せできる方を募集しています。（経験者優遇）",
           en:
             "We are looking for creative, goal-oriented individuals with proven experience of Social Media Managing who we can rely on to grow our presence on all social platforms.",
           tw:
