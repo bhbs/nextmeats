@@ -110,7 +110,13 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
             }}
           >
             <iframe
-              src="https://www.youtube.com/embed/gz6q4cp-L_Y"
+              src={
+                {
+                  jp: "https://www.youtube.com/embed/gz6q4cp-L_Y",
+                  en: "https://www.youtube.com/embed/ld3FXjFLohA",
+                  tw: "https://www.youtube.com/embed/ypkd2yYBJaQ",
+                }[languageCode]
+              }
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
