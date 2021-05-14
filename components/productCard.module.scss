@@ -1,0 +1,40 @@
+@mixin sp {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.4s;
+
+    .caption {
+      position: absolute;
+      right: 50%;
+      bottom: 50%;
+      transform: translate(50%, 50%);
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: black;
+
+      @include sp {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &:hover .mask {
+    opacity: 1;
+  }
+}

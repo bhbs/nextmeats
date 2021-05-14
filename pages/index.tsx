@@ -1,10 +1,10 @@
 import { GetStaticProps, GetStaticPropsResult } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Company from "../components/company";
 import Layout from "../components/layout";
+import ProductCard from "../components/productCard";
 import SnsLink from "../components/snsLink";
 import TopNews from "../components/topNews";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
@@ -150,87 +150,27 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
 
             <div style={{ height: "48px" }}></div>
 
-            <Link href={"https://shop.nextmeats.jp/products/chicken"}>
-              <a>
-                <Image
-                  src={`/img/index/chicken_1920x1080-${languageCode}.jpg`}
-                  alt={text.pr08}
-                  width={800}
-                  height={450}
-                  layout="responsive"
-                />
-              </a>
-            </Link>
+            <ProductCard {...text.chicken} />
 
             <div style={{ height: "48px" }}></div>
 
-            <Link href="/hamburgersteak">
-              <a>
-                <Image
-                  src={`/img/index/hamburgersteak_1920x1080-${languageCode}.jpg`}
-                  alt={text.pr07}
-                  width={800}
-                  height={450}
-                  layout="responsive"
-                />
-              </a>
-            </Link>
+            <ProductCard {...text.burger} />
 
             <div style={{ height: "48px" }}></div>
 
-            <Link href="/burger">
-              <a>
-                <Image
-                  src={`/img/index/burger_1920x1080-${languageCode}.jpg`}
-                  alt={text.pr03}
-                  width={800}
-                  height={450}
-                  layout="responsive"
-                />
-              </a>
-            </Link>
+            <ProductCard {...text.gyudon} />
 
             <div style={{ height: "48px" }}></div>
 
-            <Link href="https://shop.nextmeats.jp/products/gyudon">
-              <a>
-                <Image
-                  src={`/img/index/${languageCode}_1920x1080-gyudon.jpg`}
-                  alt={text.pr01}
-                  width={800}
-                  height={450}
-                  layout="responsive"
-                />
-              </a>
-            </Link>
+            <ProductCard {...text.yakiniku} />
 
             <div style={{ height: "48px" }}></div>
 
-            <Link href="/yakiniku">
-              <a>
-                <Image
-                  src={`/img/index/yakiniku_1920x1080-${languageCode}.jpg`}
-                  alt={text.pr02}
-                  width={800}
-                  height={450}
-                  layout="responsive"
-                />
-              </a>
-            </Link>
+            <ProductCard {...text.euglena} />
 
             <div style={{ height: "48px" }}></div>
 
-            <Link href="https://shop.nextmeats.jp/products/yakiniku-euglena">
-              <a>
-                <Image
-                  src="/img/index/euglena.jpg"
-                  alt={text.pr02}
-                  width={800}
-                  height={450}
-                  layout="responsive"
-                />
-              </a>
-            </Link>
+            <ProductCard {...text.hamburgersteak} />
 
             <p style={{ marginTop: "60px" }}>
               <b>{text.pr04}</b>
@@ -267,17 +207,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
 
             <div style={{ height: "48px" }}></div>
 
-            <Link href="/accelarator">
-              <a>
-                <Image
-                  src={`/img/index/accelarator-${languageCode}.jpg`}
-                  alt="Accelarator program"
-                  width={800}
-                  height={450}
-                  layout="responsive"
-                />
-              </a>
-            </Link>
+            <ProductCard {...text.accelarator} />
           </div>
         </section>
 
@@ -429,15 +359,145 @@ function getText(locale) {
       ),
       tw: "NEXT MEATS依據SDGs的理念，為地球永續的可能性盡一份心力。",
     }[locale],
-    pr07: {
-      jp: "NEXT ハンバーグ 1.0",
-      en: "NEXT HAMBURGER STEAK 1.0",
-      tw: "NEXT 日式漢堡排 1.0",
+    chicken: {
+      jp: {
+        src: "/img/index/chicken_1920x1080-jp.jpg",
+        alt: "NEXT チキン 1.0",
+        href: "https://shop.nextmeats.jp/products/chicken",
+        caption: "ショップで見る",
+      },
+      en: {
+        src: "/img/index/chicken_1920x1080-en.jpg",
+        alt: "NEXT CHICKEN 1.0",
+        href: "",
+        caption: "comming soon...",
+      },
+      tw: {
+        src: "/img/index/chicken_1920x1080-tw.jpg",
+        alt: "NEXT 炸雞 1.0",
+        href: "",
+        caption: "comming soon...",
+      },
     }[locale],
-    pr08: {
-      jp: "NEXT チキン 1.0",
-      en: "NEXT CHICKEN 1.0",
-      tw: "NEXT 炸雞 1.0",
+    burger: {
+      jp: {
+        src: "/img/index/burger_1920x1080-jp.jpg",
+        alt: "NEXTバーガー2.0",
+        href: "https://shop.nextmeats.jp/products/burger",
+        caption: "ショップで見る",
+      },
+      en: {
+        src: "/img/index/burger_1920x1080-en.jpg",
+        alt: "NEXT Burger 2.0",
+        href: "",
+        caption: "comming soon...",
+      },
+      tw: {
+        src: "/img/index/burger_1920x1080-tw.jpg",
+        alt: "NEXT 漢堡 2.0",
+        href: "",
+        caption: "comming soon...",
+      },
+    }[locale],
+    gyudon: {
+      jp: {
+        src: "/img/index/jp_1920x1080-gyudon.jpg",
+        alt: "NEXT牛丼1.2",
+        href: "https://shop.nextmeats.jp/products/gyudon",
+        caption: "ショップで見る",
+      },
+      en: {
+        src: "/img/index/en_1920x1080-gyudon.jpg",
+        alt: "NEXT Gyudon 1.2",
+        href: "",
+        caption: "comming soon...",
+      },
+      tw: {
+        src: "/img/index/tw_1920x1080-gyudon.jpg",
+        alt: "NEXT牛丼1.2",
+        href: "",
+        caption: "comming soon...",
+      },
+    }[locale],
+    yakiniku: {
+      jp: {
+        src: "/img/index/yakiniku_1920x1080-jp.jpg",
+        alt: "NEXT焼肉 カルビ1.1",
+        href: "https://shop.nextmeats.jp/products/yakiniku-karubi",
+        caption: "ショップで見る",
+      },
+      en: {
+        src: "/img/index/yakiniku_1920x1080-en.jpg",
+        alt: "NEXT Yakiniku Skirt Steak 1.1",
+        href: "",
+        caption: "comming soon...",
+      },
+      tw: {
+        src: "/img/index/yakiniku_1920x1080-tw.jpg",
+        alt: "NEXT 牛五花 1.1",
+        href: "",
+        caption: "comming soon...",
+      },
+    }[locale],
+    euglena: {
+      jp: {
+        src: "/img/index/euglena.jpg",
+        alt: "NEXTユーグレナ焼肉EX",
+        href: "https://shop.nextmeats.jp/products/yakiniku-euglena",
+        caption: "ショップで見る",
+      },
+      en: {
+        src: "/img/index/euglena.jpg",
+        alt: "NEXT Euglena Yakiniku EX",
+        href: "",
+        caption: "comming soon...",
+      },
+      tw: {
+        src: "/img/index/euglena.jpg",
+        alt: "NEXT Euglena Yakiniku EX",
+        href: "",
+        caption: "comming soon...",
+      },
+    }[locale],
+    hamburgersteak: {
+      jp: {
+        src: "/img/index/hamburgersteak_1920x1080-jp.jpg",
+        alt: "NEXT ハンバーグ 1.0",
+        href: "/hamburgersteak",
+        caption: "詳細を見る",
+      },
+      en: {
+        src: "/img/index/hamburgersteak_1920x1080-en.jpg",
+        alt: "NEXT HAMBURGER STEAK 1.0",
+        href: "",
+        caption: "comming soon...",
+      },
+      tw: {
+        src: "/img/index/hamburgersteak_1920x1080-tw.jpg",
+        alt: "NEXT 日式漢堡排 1.0",
+        href: "",
+        caption: "comming soon...",
+      },
+    }[locale],
+    accelarator: {
+      jp: {
+        src: "/img/index/accelarator-jp.jpg",
+        alt: "Accelarator program",
+        href: "/accelarator",
+        caption: "詳細を見る",
+      },
+      en: {
+        src: "/img/index/accelarator-en.jpg",
+        alt: "Accelarator program",
+        href: "/accelarator",
+        caption: "view page",
+      },
+      tw: {
+        src: "/img/index/accelarator-tw.jpg",
+        alt: "Accelarator program",
+        href: "/accelarator",
+        caption: "view page",
+      },
     }[locale],
   };
 }
