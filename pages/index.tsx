@@ -199,8 +199,8 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
                   key={"sdgs_" + i}
                   src={`/img/index/sdgs/E-WEB-Goal-${number}.png`}
                   alt="sdgs"
-                  width={75}
-                  height={75}
+                  width={60}
+                  height={60}
                 />
               ))}
             </p>
