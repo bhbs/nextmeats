@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { LanguageCode } from "../lib/language";
+import { pagesPath } from "../lib/$path";
 
 const TopNews = ({
   languageCode,
@@ -41,7 +42,7 @@ const TopNews = ({
         )}
 
         <p className="readMore">
-          <Link href="/news">
+          <Link href={pagesPath.news.$url()}>
             <a>
               {
                 { jp: "一覧を見る...", en: "read mode...", tw: "read more..." }[

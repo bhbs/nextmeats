@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
+import { staticPath } from "../lib/$path";
 import * as gtag from "../lib/gtag";
 import { LanguageCode } from "../lib/language";
 import Header from "./header";
@@ -53,9 +54,13 @@ const Layout = ({
         <meta name="twitter:site" content="@MeatsNext" />
         <meta name="twitter:creator" content="@MeatsNext" />
 
-        <link rel="shortcut icon" href="/img/favicon-32x32.png" />
-        <link rel="apple-touch-icon" href="/img/favicon-64x64.png" />
-        <link rel="icon" type="image/png" href="/img/favicon-64x64.png" />
+        <link rel="shortcut icon" href={staticPath.img.favicon_32x32_png} />
+        <link rel="apple-touch-icon" href={staticPath.img.favicon_64x64_png} />
+        <link
+          rel="icon"
+          type="image/png"
+          href={staticPath.img.favicon_32x32_png}
+        />
         <link
           rel="stylesheet"
           href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css"

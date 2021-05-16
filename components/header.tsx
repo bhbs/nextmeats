@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { LanguageCode } from "../lib/language";
+import { pagesPath } from "../lib/$path";
 
 type Props = {
   languageCode: LanguageCode;
@@ -14,7 +15,7 @@ const Header = ({ languageCode, path }: Props): React.ReactElement => (
     <div className="luxbar-menu luxbar-menu-right luxbar-menu-dark">
       <ul className="luxbar-navigation">
         <li className="luxbar-header">
-          <Link href="/">
+          <Link href={pagesPath.$url()}>
             <a className="luxbar-brand">
               <Image
                 src="/img/header/logo.png"
@@ -33,12 +34,12 @@ const Header = ({ languageCode, path }: Props): React.ReactElement => (
           </label>
         </li>
         <li className="luxbar-item">
-          <Link href="/news">
+          <Link href={pagesPath.news.$url()}>
             <a>NEWS</a>
           </Link>
         </li>
         <li className="luxbar-item">
-          <Link href="/message">
+          <Link href={pagesPath.message.$url()}>
             <a>MESSAGE</a>
           </Link>
         </li>
@@ -48,13 +49,13 @@ const Header = ({ languageCode, path }: Props): React.ReactElement => (
           </Link>
         </li>
         <li className="luxbar-item">
-          <Link href="/company">
+          <Link href={pagesPath.company.$url()}>
             <a>COMPANY</a>
           </Link>
         </li>
         {languageCode === "jp" && (
           <li className="luxbar-item">
-            <Link href="https://nextmeats.jp">
+            <Link href="https://media.nextmeats.jp">
               <a>MEDIA</a>
             </Link>
           </li>

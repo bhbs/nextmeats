@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "run-p dev:*",
     "dev:next": "next dev",
-    "dev:path": "pathpida --watch",
-    "build": "pathpida && next build",
+    "dev:path": "pathpida --enableStatic --watch",
+    "build": "pathpida --enableStatic && next build",
     "start": "next start",
     "lint": "eslint .",
     "prepare": "husky install"

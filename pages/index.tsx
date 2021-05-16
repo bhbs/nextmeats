@@ -1,12 +1,14 @@
 import { GetStaticProps, GetStaticPropsResult } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Company from "../components/company";
 import Layout from "../components/layout";
 import ProductCard from "../components/productCard";
 import SnsLink from "../components/snsLink";
 import TopNews from "../components/topNews";
+import { pagesPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 
 type Props = {
@@ -254,7 +256,9 @@ function getText(locale) {
             「代替肉」の研究開発を行なっています。
           </p>
           <p>
-            <a href="message">ネクストミーツの理念について</a>
+            <Link href={pagesPath.message.$url()}>
+              <a>ネクストミーツの理念について</a>
+            </Link>
           </p>
         </>
       ),
@@ -274,7 +278,9 @@ function getText(locale) {
               so good.
             </p>
             <p>
-              <a href="message">The Philosophy of NEXT MEATS</a>
+              <Link href={pagesPath.message.$url()}>
+                <a>The Philosophy of NEXT MEATS</a>
+              </Link>
             </p>
           </div>
         </>
@@ -299,7 +305,9 @@ function getText(locale) {
             希望帶給地球更美好的未來。
           </p>
           <p>
-            <a href="message">NEXT MEATS的理念</a>
+            <Link href={pagesPath.message.$url()}>
+              <a>NEXT MEATS的理念</a>
+            </Link>
           </p>
         </>
       ),
@@ -329,9 +337,11 @@ function getText(locale) {
       jp: (
         <>
           ネクストミーツ株式会社では、出来るだけ多くの方に現状を知ってもらうため、代替肉専門メディア
-          <a href="https://nextmeats.jp/" target="_blank" rel="noreferrer">
-            「NEXT MEATS」
-          </a>
+          <Link href={pagesPath.$url()}>
+            <a target="_blank" rel="noreferrer">
+              「NEXT MEATS MEDIA」
+            </a>
+          </Link>
           を運営しています。
           <br />
           また、代替肉におけるオープンイノベーションをテーマにした
@@ -463,7 +473,7 @@ function getText(locale) {
       jp: {
         src: "/img/index/hamburgersteak_1920x1080-jp.jpg",
         alt: "NEXT ハンバーグ 1.0",
-        href: "/hamburgersteak",
+        href: pagesPath.hamburgersteak.$url(),
         caption: "詳細を見る",
       },
       en: {
@@ -483,19 +493,19 @@ function getText(locale) {
       jp: {
         src: "/img/index/accelarator-jp.jpg",
         alt: "Accelarator program",
-        href: "/accelarator",
+        href: pagesPath.accelarator.$url(),
         caption: "詳細を見る",
       },
       en: {
         src: "/img/index/accelarator-en.jpg",
         alt: "Accelarator program",
-        href: "/accelarator",
+        href: pagesPath.accelarator.$url(),
         caption: "view page",
       },
       tw: {
         src: "/img/index/accelarator-tw.jpg",
         alt: "Accelarator program",
-        href: "/accelarator",
+        href: pagesPath.accelarator.$url(),
         caption: "view page",
       },
     }[locale],

@@ -308,7 +308,7 @@ function getText(languageCode: string) {
     }[languageCode],
     makuake: (
       <>
-        <Link href={`https://www.makuake.com/project/nextmeats2/`}>
+        <Link href="https://www.makuake.com/project/nextmeats2/">
           <Image
             src="/img/hamburgersteak/makuake.jpg"
             width={1200}

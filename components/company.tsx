@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { pagesPath } from "../lib/$path";
 import { LanguageCode } from "../lib/language";
 
 type Props = {
@@ -61,7 +62,7 @@ const Company = ({ languageCode }: Props): React.ReactElement => {
         </tbody>
       </table>
       <p id="sns">
-        <Link href="/recruit">
+        <Link href={pagesPath.recruit.$url()}>
           <a>{text.recruit}</a>
         </Link>
       </p>

@@ -9,6 +9,7 @@ import styles from "./data.module.scss";
 import CircleMeter from "./part/circleMeter";
 import DownArrow from "./part/downArrow";
 import Meter from "./part/meter";
+import { staticPath } from "../../lib/$path";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -66,7 +67,7 @@ const Component = ({ productData }: Props): React.ReactElement => {
   return (
     <section className={`${animation && styles.renderAnimation}`}>
       <Head>
-        <link rel="stylesheet" href="/css/swiper.css" />
+        <link rel="stylesheet" href={staticPath.css.swiper_css} />
       </Head>
       <h2>
         {productData.name}vs.従来{productData.category}
