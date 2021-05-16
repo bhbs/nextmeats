@@ -60,8 +60,6 @@ const Layout = ({
           rel="stylesheet"
           href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css"
         />
-        <script src="https://www.googletagmanager.com/gtag/js?id=UA-170779191-1"></script>
-        <script src="/js/ga.js"></script>
 
         {/* Google Analytics */}
         {gaId && (
