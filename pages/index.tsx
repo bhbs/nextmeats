@@ -358,7 +358,7 @@ function getText(locale) {
       jp: (
         <>
           ネクストミーツ株式会社では、出来るだけ多くの方に現状を知ってもらうため、代替肉専門メディア
-          <Link href={pagesPath.$url()}>
+          <Link href="https://media.nextmeats.jp">
             <a target="_blank" rel="noreferrer">
               「NEXT MEATS MEDIA」
             </a>
