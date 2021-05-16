@@ -8,7 +8,7 @@ import Layout from "../components/layout";
 import ProductCard from "../components/productCard";
 import SnsLink from "../components/snsLink";
 import TopNews from "../components/topNews";
-import { pagesPath } from "../lib/$path";
+import { pagesPath, staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 
 type Props = {
@@ -44,7 +44,13 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
       >
         {deviceType === "pc" && (
           <Image
-            src={`/img/index/${languageCode}_web-top-pc-1920x945.jpg`}
+            src={
+              {
+                jp: staticPath.img.index.jp_web_top_pc_1920x945_jpg,
+                en: staticPath.img.index.en_web_top_pc_1920x945_jpg,
+                tw: staticPath.img.index.tw_web_top_pc_1920x945_jpg,
+              }[languageCode]
+            }
             alt={text.title}
             width={1920}
             height={945}
@@ -53,7 +59,13 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
         )}
         {deviceType === "mobile" && (
           <Image
-            src={`/img/index/${languageCode}_web-top-mobile-720x580-gyudon.jpg`}
+            src={
+              {
+                jp: staticPath.img.index.jp_web_top_mobile_720x580_gyudon_jpg,
+                en: staticPath.img.index.en_web_top_mobile_720x580_gyudon_jpg,
+                tw: staticPath.img.index.tw_web_top_mobile_720x580_gyudon_jpg,
+              }[languageCode]
+            }
             alt={text.title}
             width={720}
             height={580}
@@ -71,7 +83,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
           <section>
             <a href="https://www.futurefoodtechprotein.com/">
               <Image
-                src={`/img/index/futurefoodtech.png`}
+                src={staticPath.img.index.futurefoodtech_png}
                 width={1024}
                 height={512}
               />
@@ -93,7 +105,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
         {languageCode === "tw" && (
           <section>
             <Image
-              src={`/img/index/tw_yakinikulike.jpg`}
+              src={staticPath.img.index.tw_yakinikulike_jpg}
               width={4500}
               height={2531}
             />
@@ -189,17 +201,26 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
             <p style={{ marginTop: "60px" }}>{text.pr06}</p>
             <p>
               <Image
-                src="/img/index/sdgs/E_SDG_logo_UN_emblem_horizontal_trans_WEB.png"
+                src={
+                  staticPath.img.index.sdgs
+                    .E_SDG_logo_UN_emblem_horizontal_trans_WEB_png
+                }
                 alt="sdgs"
                 width={320}
                 height={50}
               />
             </p>
             <p>
-              {["02", "09", "13", "15", "17"].map((number, i) => (
+              {[
+                staticPath.img.index.sdgs.E_WEB_Goal_02_png,
+                staticPath.img.index.sdgs.E_WEB_Goal_09_png,
+                staticPath.img.index.sdgs.E_WEB_Goal_13_png,
+                staticPath.img.index.sdgs.E_WEB_Goal_15_png,
+                staticPath.img.index.sdgs.E_WEB_Goal_17_png,
+              ].map((number, i) => (
                 <Image
                   key={"sdgs_" + i}
-                  src={`/img/index/sdgs/E-WEB-Goal-${number}.png`}
+                  src={number}
                   alt="sdgs"
                   width={60}
                   height={60}

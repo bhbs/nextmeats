@@ -2,6 +2,7 @@ import { GetStaticProps, GetStaticPropsResult } from "next";
 import Head from "next/head";
 import React from "react";
 import Layout from "../components/layout";
+import { staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 
 type Props = {
@@ -37,7 +38,7 @@ const Message = ({ languageCode }: Props): React.ReactElement => {
         <p>{text.state06}</p>
         <br />
         <p>
-          <img src="/img/message/kou.jpg" />
+          <img src={staticPath.img.message.kou_jpg} />
         </p>
       </div>
     </Layout>

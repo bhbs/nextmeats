@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Layout from "../components/layout";
+import { staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 
 type Props = {
@@ -25,7 +26,13 @@ const Hamburgersteak = ({ languageCode }: Props): React.ReactElement => {
       <div className="page">
         <h1>{text.title}</h1>
         <Image
-          src={`/img/index/hamburgersteak_1920x1080-${languageCode}.jpg`}
+          src={
+            {
+              jp: staticPath.img.index.hamburgersteak_1920x1080_jp_jpg,
+              en: staticPath.img.index.hamburgersteak_1920x1080_en_jpg,
+              tw: staticPath.img.index.hamburgersteak_1920x1080_tw_jpg,
+            }[languageCode]
+          }
           alt={text.title}
           width={800}
           height={450}
@@ -97,7 +104,7 @@ function getText(languageCode: string) {
       <>
         <h4>1. とろ〜りヴィーガンチーズハンバーグ</h4>
         <Image
-          src="/img/hamburgersteak/recipe1.jpg"
+          src={staticPath.img.hamburgersteak.recipe1_jpg}
           width={1280}
           height={800}
         ></Image>
@@ -151,7 +158,7 @@ function getText(languageCode: string) {
       <>
         <h4>2. さっぱり和風おろし梅ハンバーグ</h4>
         <Image
-          src="/img/hamburgersteak/recipe2.jpg"
+          src={staticPath.img.hamburgersteak.recipe2_jpg}
           width={1280}
           height={800}
         ></Image>
@@ -216,7 +223,7 @@ function getText(languageCode: string) {
       <>
         <h4>3. ロコモコ風ハンバーグ</h4>
         <Image
-          src="/img/hamburgersteak/recipe3.jpg"
+          src={staticPath.img.hamburgersteak.recipe3_jpg}
           width={1280}
           height={800}
         ></Image>
@@ -310,7 +317,7 @@ function getText(languageCode: string) {
       <>
         <Link href="https://www.makuake.com/project/nextmeats2/">
           <Image
-            src="/img/hamburgersteak/makuake.jpg"
+            src={staticPath.img.hamburgersteak.makuake_jpg}
             width={1200}
             height={630}
           ></Image>

@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 import Layout from "../components/layout";
+import { staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 
 type Props = {
@@ -24,7 +25,13 @@ const Burger = ({ languageCode }: Props): React.ReactElement => {
       <div className="page">
         <h1>{text.title}</h1>
         <Image
-          src={`/img/index/burger_1920x1080-${languageCode}.jpg`}
+          src={
+            {
+              jp: staticPath.img.index.burger_1920x1080_jp_jpg,
+              en: staticPath.img.index.burger_1920x1080_en_jpg,
+              tw: staticPath.img.index.burger_1920x1080_tw_jpg,
+            }[languageCode]
+          }
           alt={text.pr03}
           width={800}
           height={450}

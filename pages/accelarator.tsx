@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
+import { staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 import styles from "./accelarator.module.scss";
 
@@ -26,14 +27,26 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
         <meta
           key="og:image"
           property="og:image"
-          content={`https://nextmeats.co.jp/img/accelarator/header_${languageCode}_pc.jpg`}
+          content={
+            {
+              jp: staticPath.img.accelarator.header_jp_pc_jpg,
+              en: staticPath.img.accelarator.header_en_pc_jpg,
+              tw: staticPath.img.accelarator.header_tw_pc_jpg,
+            }[languageCode]
+          }
         />
       </Head>
       <div className={styles.back}>
         <div className={styles.fv}>
           {deviceType == "pc" && (
             <Image
-              src={`/img/accelarator/header_${languageCode}_pc.jpg`}
+              src={
+                {
+                  jp: staticPath.img.accelarator.header_jp_pc_jpg,
+                  en: staticPath.img.accelarator.header_en_pc_jpg,
+                  tw: staticPath.img.accelarator.header_tw_pc_jpg,
+                }[languageCode]
+              }
               alt=""
               width={1920}
               height={960}
@@ -41,7 +54,13 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
           )}
           {deviceType == "mobile" && (
             <Image
-              src={`/img/accelarator/header_${languageCode}_mobile.jpg`}
+              src={
+                {
+                  jp: staticPath.img.accelarator.header_jp_mobile_jpg,
+                  en: staticPath.img.accelarator.header_en_mobile_jpg,
+                  tw: staticPath.img.accelarator.header_tw_mobile_jpg,
+                }[languageCode]
+              }
               alt=""
               width={900}
               height={1200}
@@ -62,9 +81,9 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             <h2>{text.purpose_h}</h2>
             <div>
               {[
-                "/img/accelarator/169_hands.jpg",
-                "/img/accelarator/169_light.jpg",
-                "/img/accelarator/169_earth.jpg",
+                staticPath.img.accelarator.$169_hands_jpg,
+                staticPath.img.accelarator.$169_light_jpg,
+                staticPath.img.accelarator.$169_earth_jpg,
               ].map((imgUrl, i) => (
                 <div key={`purpose_${i + 1}`}>
                   <Image src={imgUrl} alt="" width={640} height={360} />
@@ -78,10 +97,10 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             <h2>{text.target_h}</h2>
 
             {[
-              ["/img/accelarator/food.jpg", "Food Tech"],
-              ["/img/accelarator/bio.jpg", "Bio Tech"],
-              ["/img/accelarator/agri.jpg", "Agri Tech"],
-              ["/img/accelarator/hardware.jpg", "Hard Ware"],
+              [staticPath.img.accelarator.food_jpg, "Food Tech"],
+              [staticPath.img.accelarator.bio_jpg, "Bio Tech"],
+              [staticPath.img.accelarator.agri_jpg, "Agri Tech"],
+              [staticPath.img.accelarator.hardware_jpg, "Hard Ware"],
             ].map((data, i) => (
               <div
                 key={`target_${i}`}
@@ -103,11 +122,11 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             <h2>{text.schedule_h}</h2>
             <div className={styles.grid}>
               {[
-                "/img/accelarator/icon/slacklogo.png",
-                "/img/accelarator/icon/gform.png",
-                "/img/accelarator/icon/zoomlogo.png",
-                "/img/accelarator/icon/poc.png",
-                "/img/accelarator/icon/marketing.png",
+                staticPath.img.accelarator.icon.slacklogo_png,
+                staticPath.img.accelarator.icon.gform_png,
+                staticPath.img.accelarator.icon.zoomlogo_png,
+                staticPath.img.accelarator.icon.poc_png,
+                staticPath.img.accelarator.icon.marketing_png,
               ].map((imgUrl, i) => (
                 <>
                   <div className={styles.item}>
@@ -135,9 +154,9 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             <h2>{text.merit_h}</h2>
             <div>
               {[
-                "/img/accelarator/merit01.png",
-                "/img/accelarator/merit02.jpg",
-                "/img/accelarator/merit03.jpg",
+                staticPath.img.accelarator.merit01_png,
+                staticPath.img.accelarator.merit02_jpg,
+                staticPath.img.accelarator.merit03_jpg,
               ].map((imgUrl, i) => (
                 <div key={`merit_1_${i}`}>
                   <Image src={imgUrl} alt="" width={220} height={220} />
@@ -148,9 +167,9 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             </div>
             <div>
               {[
-                "/img/accelarator/merit04.jpg",
-                "/img/accelarator/merit05.jpg",
-                "/img/accelarator/merit06.jpg",
+                staticPath.img.accelarator.merit04_jpg,
+                staticPath.img.accelarator.merit05_jpg,
+                staticPath.img.accelarator.merit06_jpg,
               ].map((imgUrl, i) => (
                 <div key={`merit_2_${i}`}>
                   <Image src={imgUrl} alt="" width={220} height={220} />
@@ -164,8 +183,8 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             <h2>{text.judge_h_1}</h2>
             <div>
               {[
-                "/img/accelarator/judge1.jpg",
-                "/img/accelarator/judge2.jpg",
+                staticPath.img.accelarator.judge1_jpg,
+                staticPath.img.accelarator.judge2_jpg,
               ].map((imgUrl, i) => (
                 <div key={`judge_1_${i}`}>
                   <Image src={imgUrl} alt="" width={220} height={220} />
@@ -179,8 +198,8 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             <h2>{text.judge_h_2}</h2>
             <div>
               {[
-                "/img/accelarator/judge5.jpg",
-                "/img/accelarator/judge3.jpg",
+                staticPath.img.accelarator.judge5_jpg,
+                staticPath.img.accelarator.judge3_jpg,
               ].map((imgUrl, i) => (
                 <div key={`judge_${i}`}>
                   <Image src={imgUrl} alt="" width={220} height={220} />
@@ -191,8 +210,8 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
             </div>
             <div>
               {[
-                "/img/accelarator/judge4.jpg",
-                "/img/accelarator/judge6.jpg",
+                staticPath.img.accelarator.judge4_jpg,
+                staticPath.img.accelarator.judge6_jpg,
               ].map((imgUrl, i) => (
                 <div key={`judge_${i}`}>
                   <Image src={imgUrl} alt="" width={220} height={220} />
