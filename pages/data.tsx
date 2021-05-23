@@ -7,6 +7,7 @@ import Fv from "../components/datapage/fv";
 import Stars from "../components/datapage/stars";
 import Statement from "../components/datapage/statement";
 import Layout from "../components/layout";
+import styles from "./data.module.scss";
 
 export type Product = "karubi" | "harami" | "chicken";
 export type ProductData = {
@@ -134,15 +135,7 @@ const items: Data = [
 const Index = (): React.ReactElement => {
   const [product, setProduct] = useState<Product>("chicken");
   return (
-    <div
-      style={{
-        color: "white",
-        margin: "auto",
-        maxWidth: "375px",
-        paddingTop: "58px",
-        fontFamily: '"Noto Sans JP", sans-serif',
-      }}
-    >
+    <div className={styles.container}>
       <Layout languageCode="jp" hideFooter={true}>
         <Head>
           <meta name="viewport" content="width=375px" />
