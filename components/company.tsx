@@ -15,6 +15,17 @@ const Company = ({ languageCode }: Props): React.ReactElement => {
       <h2>
         <span>COMPANY</span>
       </h2>
+
+      {languageCode === "jp" && (
+        <p
+          style={{
+            display: "table",
+            margin: "60px auto",
+          }}
+        >
+          ネクストミーツ株式会社は、サスティナビリティをテーマにした日本の代替肉開発メーカーです。
+        </p>
+      )}
       <table>
         <tbody>
           <tr>
@@ -43,6 +54,10 @@ const Company = ({ languageCode }: Props): React.ReactElement => {
             <td>{text.location_h}</td>
             <td>{text.location}</td>
           </tr>
+          <tr>
+            <td>{text.lab_h}</td>
+            <td>{text.lab}</td>
+          </tr>
           {text.time_h && (
             <tr>
               <td>{text.time_h}</td>
@@ -56,9 +71,13 @@ const Company = ({ languageCode }: Props): React.ReactElement => {
           {text.business_h && (
             <tr>
               <td>{text.business_h}</td>
-              <td style={{ lineHeight: 3 }}>{text.business}</td>
+              <td>{text.business}</td>
             </tr>
           )}
+          <tr>
+            <td>{text.holdings_h}</td>
+            <td>{text.holdings}</td>
+          </tr>
         </tbody>
       </table>
       <p id="sns">
@@ -130,6 +149,18 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
       tw:
         "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
     }[languageCode],
+    lab_h: {
+      jp: "R&Dセンター",
+      en: "R&D Center",
+      tw: "R&D Center",
+    }[languageCode],
+    lab: {
+      jp: "〒940-2127 新潟県長岡市新産4-1-10\nNARIC 2F",
+      en:
+        "NARIC 2ND FLOOR, 4-1-10 SHINSAN, NAGAOKA-SHI, NIGATA 940-2127, JAPAN",
+      tw:
+        "NARIC 2ND FLOOR, 4-1-10 SHINSAN, NAGAOKA-SHI, NIGATA 940-2127, JAPAN",
+    }[languageCode],
     time_h: {
       jp: "営業時間",
       en: "",
@@ -160,6 +191,16 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
         "代替肉の開発\n代替肉を使用した商品の企画・製造\n通販事業・関連メディア運営",
       en: "",
       tw: "",
+    }[languageCode],
+    holdings_h: {
+      jp: "関連会社",
+      en: "Related company",
+      tw: "Related company",
+    }[languageCode],
+    holdings: {
+      jp: "Next Meats Holdings, Inc.\nOTCBB 証券コード: NXMH",
+      en: "Next Meats Holdings, Inc.\nOTCBB: NXMH",
+      tw: "Next Meats Holdings, Inc.\nOTCBB: NXMH",
     }[languageCode],
     recruit: {
       jp: "求人情報",
