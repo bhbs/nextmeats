@@ -90,6 +90,8 @@ const Counter = ({ opacity, target }: CounterProps): React.ReactElement => {
       }
       setCount(("00" + count).slice(-2));
     }, Math.random() * 100 + 100);
+
+    return () => clearInterval(timer);
   }, []);
 
   return (
