@@ -199,7 +199,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
               {text.pr05}
             </p>
             <p style={{ marginTop: "60px" }}>{text.pr06}</p>
-            <p>
+            <div>
               <Image
                 src={
                   staticPath.img.index.sdgs
@@ -209,8 +209,8 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
                 width={320}
                 height={50}
               />
-            </p>
-            <p>
+            </div>
+            <div>
               {[
                 staticPath.img.index.sdgs.E_WEB_Goal_02_png,
                 staticPath.img.index.sdgs.E_WEB_Goal_09_png,
@@ -226,7 +226,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
                   height={60}
                 />
               ))}
-            </p>
+            </div>
 
             <div style={{ height: "48px" }}></div>
 
