@@ -113,7 +113,7 @@ const News = ({ languageCode }: Props): React.ReactElement => {
         <div className="newsList">
           {newsList.original ? (
             newsList.filtered.map((x: News) => (
-              <div key={x[2]}>
+              <div key={JSON.stringify(x)}>
                 <a href={x[3]}>
                   <span className="date">
                     {new Date(x[0]).toLocaleDateString()}
