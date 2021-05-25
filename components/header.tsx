@@ -45,7 +45,7 @@ const Header = ({ languageCode, path }: Props): React.ReactElement => (
         </li>
         <li className="luxbar-item">
           <Link href="https://shop.nextmeats.jp">
-            <a target="_blank">STORE</a>
+            <a target="_blank">SHOP</a>
           </Link>
         </li>
         <li className="luxbar-item">
