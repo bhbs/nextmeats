@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import { staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
-import styles from "./accelarator.module.scss";
+import styles from "../styles/accelarator.module.scss";
 
 type Props = {
   languageCode: LanguageCode;

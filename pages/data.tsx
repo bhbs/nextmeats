@@ -7,7 +7,7 @@ import Fv from "../components/datapage/fv";
 import Stars from "../components/datapage/stars";
 import Statement from "../components/datapage/statement";
 import Layout from "../components/layout";
-import styles from "./data.module.scss";
+import styles from "../styles/data.module.scss";
 
 export type Product = "karubi" | "harami" | "chicken";
 export type ProductData = {
