@@ -32,14 +32,12 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
 const getText = (languageCode: LanguageCode): { [key: string]: string } => {
   return {
     title: {
-      jp:
-        "会社概要 NEXT MEATS | 代替肉開発スタートアップ【ネクストミーツ株式会社】人工肉・代替肉・植物肉",
+      jp: "会社概要 NEXT MEATS | 代替肉開発スタートアップ【ネクストミーツ株式会社】人工肉・代替肉・植物肉",
       en: "COMPANY | Next Meats Co., Ltd. WEBSITE",
       tw: "COMPANY | Next Meats Co., Ltd. WEBSITE",
     }[languageCode],
     description: {
-      jp:
-        "会社概要 フェイクミートで次世代の未来をつくる代替肉開発スタートアップ【ネクストミーツ株式会社】 人工肉・代替肉・植物肉",
+      jp: "会社概要 フェイクミートで次世代の未来をつくる代替肉開発スタートアップ【ネクストミーツ株式会社】 人工肉・代替肉・植物肉",
       en: "COMPANY | Next Meats Co., Ltd. WEBSITE",
       tw: "COMPANY | Next Meats Co., Ltd. WEBSITE",
     }[languageCode],

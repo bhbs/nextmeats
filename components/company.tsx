@@ -144,10 +144,8 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
     }[languageCode],
     location: {
       jp: "〒160-0022 新宿区 新宿一丁目 34-16 \n清水ビル2F",
-      en:
-        "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
-      tw:
-        "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
+      en: "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
+      tw: "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
     }[languageCode],
     lab_h: {
       jp: "R&Dセンター",
@@ -156,10 +154,8 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
     }[languageCode],
     lab: {
       jp: "〒940-2127 新潟県長岡市新産4-1-10\nNARIC 2F",
-      en:
-        "NARIC 2ND FLOOR, 4-1-10 SHINSAN, NAGAOKA-SHI, NIGATA 940-2127, JAPAN",
-      tw:
-        "NARIC 2ND FLOOR, 4-1-10 SHINSAN, NAGAOKA-SHI, NIGATA 940-2127, JAPAN",
+      en: "NARIC 2ND FLOOR, 4-1-10 SHINSAN, NAGAOKA-SHI, NIGATA 940-2127, JAPAN",
+      tw: "NARIC 2ND FLOOR, 4-1-10 SHINSAN, NAGAOKA-SHI, NIGATA 940-2127, JAPAN",
     }[languageCode],
     time_h: {
       jp: "営業時間",
@@ -187,8 +183,7 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
       tw: "",
     }[languageCode],
     business: {
-      jp:
-        "代替肉の開発\n代替肉を使用した商品の企画・製造\n通販事業・関連メディア運営",
+      jp: "代替肉の開発\n代替肉を使用した商品の企画・製造\n通販事業・関連メディア運営",
       en: "",
       tw: "",
     }[languageCode],

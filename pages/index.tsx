@@ -22,7 +22,8 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
   const text = getText(languageCode);
 
   useEffect(() => {
-    const mobiles = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    const mobiles =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
     mobiles.test(navigator.userAgent) ? setDevice("mobile") : setDevice("pc");
   }, []);
 
@@ -243,14 +244,12 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
 function getText(locale) {
   return {
     title: {
-      jp:
-        "NEXT MEATS | 代替肉開発スタートアップ【ネクストミーツ株式会社】人工肉・代替肉・植物肉",
+      jp: "NEXT MEATS | 代替肉開発スタートアップ【ネクストミーツ株式会社】人工肉・代替肉・植物肉",
       en: "Next Meats Co., Ltd. WEBSITE",
       tw: "Next Meats Co., Ltd. WEBSITE",
     }[locale],
     description: {
-      jp:
-        "フェイクミートで次世代の未来をつくる代替肉開発スタートアップ【ネクストミーツ株式会社】 人工肉・代替肉・植物肉",
+      jp: "フェイクミートで次世代の未来をつくる代替肉開発スタートアップ【ネクストミーツ株式会社】 人工肉・代替肉・植物肉",
       en: "Next Meats Co., Ltd. WEBSITE",
       tw: "Next Meats Co., Ltd. WEBSITE",
     }[locale],
@@ -340,8 +339,7 @@ function getText(locale) {
     }[locale],
     pr02: {
       jp: "世界初となる焼肉用フェイクミート\n『カルビ1.1』＆『ハラミ1.1』",
-      en:
-        'The world’s very first meat substitute developed for yakiniku NEXT Yakiniku\n"Short Rib 1.1" & "Skirt 1.1"',
+      en: 'The world’s very first meat substitute developed for yakiniku NEXT Yakiniku\n"Short Rib 1.1" & "Skirt 1.1"',
       tw: "全球首創的燒肉替代肉 NEXT燒肉\n「牛五花1.1」＆「牛橫隔膜1.1」",
     }[locale],
     pr03: {
