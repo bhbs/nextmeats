@@ -5,6 +5,7 @@
 }
 
 .card {
+  width: 100%;
   position: relative;
   overflow: hidden;
 
@@ -24,13 +25,9 @@
       bottom: 50%;
       transform: translate(50%, 50%);
       text-align: center;
-      font-size: 32px;
+      font-size: 20px;
       font-weight: bold;
       color: black;
-
-      @include sp {
-        font-size: 20px;
-      }
     }
   }
 

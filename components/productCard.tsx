@@ -23,9 +23,10 @@ const ProductCard = ({
           <Image
             src={src}
             alt={alt}
-            width={800}
-            height={450}
+            width={1920}
+            height={1080}
             layout="responsive"
+            sizes="375px"
           />
           <div className={styles.mask}>
             <div className={styles.caption}>{caption}</div>
@@ -35,7 +36,13 @@ const ProductCard = ({
     </Link>
   ) : (
     <div className={styles.card}>
-      <Image src={src} alt={alt} width={800} height={450} layout="responsive" />
+      <Image
+        src={src}
+        alt={alt}
+        width={1920}
+        height={1080}
+        layout="responsive"
+      />
       <div className={styles.mask}>
         <div className={styles.caption}>{caption}</div>
       </div>

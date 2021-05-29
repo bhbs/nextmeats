@@ -10,6 +10,7 @@ import SnsLink from "../components/snsLink";
 import TopNews from "../components/topNews";
 import { pagesPath, staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
+import styles from "../styles/index.module.scss";
 
 type Props = {
   languageCode: LanguageCode;
@@ -162,29 +163,26 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
               <span>PRODUCTS</span>
             </h2>
 
-            <div style={{ height: "48px" }}></div>
-
-            <ProductCard {...text.chicken} />
-
-            <div style={{ height: "48px" }}></div>
-
-            <ProductCard {...text.burger} />
-
-            <div style={{ height: "48px" }}></div>
-
-            <ProductCard {...text.gyudon} />
-
-            <div style={{ height: "48px" }}></div>
-
-            <ProductCard {...text.yakiniku} />
-
-            <div style={{ height: "48px" }}></div>
-
-            <ProductCard {...text.euglena} />
-
-            <div style={{ height: "48px" }}></div>
-
-            <ProductCard {...text.hamburgersteak} />
+            <div className={styles.productCards}>
+              <div className={styles.productCard}>
+                <ProductCard {...text.chicken} />
+              </div>
+              <div className={styles.productCard}>
+                <ProductCard {...text.burger} />
+              </div>
+              <div className={styles.productCard}>
+                <ProductCard {...text.gyudon} />
+              </div>
+              <div className={styles.productCard}>
+                <ProductCard {...text.yakiniku} />
+              </div>
+              <div className={styles.productCard}>
+                <ProductCard {...text.euglena} />
+              </div>
+              <div className={styles.productCard}>
+                <ProductCard {...text.hamburgersteak} />
+              </div>
+            </div>
 
             <p style={{ marginTop: "60px" }}>
               <b>{text.pr04}</b>
@@ -228,9 +226,11 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
               ))}
             </div>
 
-            <div style={{ height: "48px" }}></div>
-
-            <ProductCard {...text.accelarator} />
+            <div className={styles.productCards} style={{ marginTop: "40px" }}>
+              <div className={styles.productCard}>
+                <ProductCard {...text.accelarator} />
+              </div>
+            </div>
           </div>
         </section>
 

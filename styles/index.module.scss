@@ -1,0 +1,11 @@
+.productCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .productCard {
+    width: 100%;
+    max-width: 375px;
+    margin: 8px;
+  }
+}
