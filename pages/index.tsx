@@ -160,10 +160,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
 
         <section>
           <div style={{ textAlign: "center" }}>
-            <h2>
-              <span>PRODUCTS</span>
-            </h2>
-
+            <h2>PRODUCTS</h2>
             <div className={styles.productCards}>
               <div className={styles.productCard}>
                 <ProductCard {...text.chicken} />
@@ -256,10 +253,7 @@ function getText(locale) {
     message: {
       jp: (
         <>
-          <h2>
-            <span>Message</span>
-          </h2>
-          <h3>代替肉で地球の未来をつくる</h3>
+          <h2>代替肉で地球の未来をつくる</h2>
           <p>
             地球環境の悪化と人口爆発による
             <br className="responsive" />
@@ -307,10 +301,7 @@ function getText(locale) {
       ),
       tw: (
         <>
-          <h2>
-            <span>Message</span>
-          </h2>
-          <h3>以替代肉開創地球的未來</h3>
+          <h2>以替代肉開創地球的未來</h2>
           <p>
             對於地球環境惡化與人口增加導致的
             <br className="responsive" />
