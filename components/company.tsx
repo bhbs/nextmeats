@@ -148,9 +148,9 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
       tw: "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
     }[languageCode],
     lab_h: {
-      jp: "R&Dセンター",
-      en: "R&D Center",
-      tw: "R&D Center",
+      jp: "NEXT Lab（研究室）",
+      en: "NEXT Lab",
+      tw: "NEXT Lab",
     }[languageCode],
     lab: {
       jp: "〒940-2127 新潟県長岡市新産4-1-10\nNARIC 2F",
