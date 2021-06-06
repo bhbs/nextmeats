@@ -80,6 +80,11 @@ export const staticPath = {
       makuake_top_jpg: '/img/burger/makuake-top.jpg',
       tw_1920x1080_burger_jpg: '/img/burger/tw_1920x1080-burger.jpg'
     },
+    company: {
+      r_01_jpg: '/img/company/r-01.jpg',
+      r_02_jpg: '/img/company/r-02.jpg',
+      r_03_jpg: '/img/company/r-03.jpg'
+    },
     datapage: {
       carousel: {
         chicken_png: '/img/datapage/carousel/chicken.png',
