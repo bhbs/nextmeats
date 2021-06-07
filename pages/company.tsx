@@ -2,7 +2,7 @@ import { GetStaticProps, GetStaticPropsResult } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import { pagesPath, staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
@@ -14,6 +14,23 @@ type Props = {
 
 const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
   const text = getText(languageCode);
+
+  const [nowAt, setNowAt] = useState("");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log(entry.target.id);
+          setNowAt(entry.target.id);
+        }
+      });
+    });
+
+    document.querySelectorAll("main > section").forEach((element) => {
+      observer.observe(element);
+    });
+  }, []);
 
   return (
     <Layout languageCode={languageCode}>
@@ -28,43 +45,43 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
       <div className={styles.layout}>
         <aside>
           <ul>
-            <li>
+            <li className={nowAt === "message" ? styles.nowAt : ""}>
               <Link href={pagesPath.company.$url({ hash: "message" })}>
                 <a>ネクストミーツの理念</a>
               </Link>
             </li>
-            <li>
+            <li className={nowAt === "production-system" ? styles.nowAt : ""}>
               <Link
                 href={pagesPath.company.$url({ hash: "production-system" })}
               >
                 <a>ネクストミーツの生産体制</a>
               </Link>
             </li>
-            <li>
+            <li className={nowAt === "domestic-expansion" ? styles.nowAt : ""}>
               <Link
                 href={pagesPath.company.$url({ hash: "#domestic-expansion" })}
               >
                 <a>ネクストミーツの国内展開</a>
               </Link>
             </li>
-            <li>
+            <li className={nowAt === "overseas-expansion" ? styles.nowAt : ""}>
               <Link
                 href={pagesPath.company.$url({ hash: "#overseas-expansion" })}
               >
                 <a>ネクストミーツの海外展開</a>
               </Link>
             </li>
-            <li>
+            <li className={nowAt === "tvcm" ? styles.nowAt : ""}>
               <Link href={pagesPath.company.$url({ hash: "#tvcm" })}>
                 <a>ネクストミーツのテレビCM</a>
               </Link>
             </li>
-            <li>
+            <li className={nowAt === "lab" ? styles.nowAt : ""}>
               <Link href={pagesPath.company.$url({ hash: "#lab" })}>
                 <a>ネクストミーツの研究開発</a>
               </Link>
             </li>
-            <li>
+            <li className={nowAt === "collaboration" ? styles.nowAt : ""}>
               <Link href={pagesPath.company.$url({ hash: "#collaboration" })}>
                 <a>ネクストミーツのコラボレーション</a>
               </Link>

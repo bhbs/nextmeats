@@ -1,3 +1,5 @@
+$nxm-color: rgb(0, 155, 191);
+
 @mixin sp {
   @media (max-width: 800px) {
     @content;
@@ -19,6 +21,18 @@
     ul {
       position: sticky;
       top: 120px;
+      list-style: none;
+
+      li {
+        padding: 0 1em;
+        a {
+          color: #444;
+        }
+      }
+    }
+
+    .nowAt {
+      background: linear-gradient(90deg, $nxm-color, transparent 50%);
     }
   }
   main {
