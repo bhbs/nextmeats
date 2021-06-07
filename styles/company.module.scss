@@ -1,12 +1,22 @@
+@mixin sp {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
 .layout {
   display: flex;
   margin: auto;
   justify-content: center;
   margin-top: 80px;
+  padding: 24px;
   aside {
     white-space: nowrap;
     padding: 48px 64px 0 0;
-    ol {
+    @include sp {
+      display: none;
+    }
+    ul {
       position: sticky;
       top: 120px;
     }
@@ -21,4 +31,43 @@
 
 .flex {
   display: flex;
+}
+
+.researcherCard {
+  display: flex;
+  padding: 24px 0;
+
+  @include sp {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgWrapper {
+    max-width: 240px;
+
+    img {
+      clip-path: polygon(
+        0% 9%,
+        12% 0%,
+        88% 0%,
+        100% 9%,
+        100% 91%,
+        88% 100%,
+        12% 100%,
+        0% 91%
+      );
+    }
+  }
+
+  .profile {
+    line-height: 2;
+    padding: 24px;
+
+    h3 {
+      span {
+        font-weight: normal;
+        font-size: 0.9em;
+      }
+    }
+  }
 }

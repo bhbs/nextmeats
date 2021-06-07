@@ -27,7 +27,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
       </Head>
       <div className={styles.layout}>
         <aside>
-          <ol>
+          <ul>
             <li>
               <Link href={pagesPath.company.$url({ hash: "message" })}>
                 <a>ネクストミーツの理念</a>
@@ -69,7 +69,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                 <a>ネクストミーツのコラボレーション</a>
               </Link>
             </li>
-          </ol>
+          </ul>
         </aside>
         <main>
           <h1>About Us</h1>
@@ -207,17 +207,18 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
               <span>ネクストミーツの</span>研究開発
             </h2>
             <h3>優秀な研究者が世界から集結しています。</h3>
-            <div className={styles.flex}>
-              <div style={{ maxWidth: "240px" }}>
+            <div className={styles.researcherCard}>
+              <div className={styles.imgWrapper}>
                 <Image
                   src={staticPath.img.company.r_01_jpg}
                   width={1020}
                   height={1275}
                 />
               </div>
-              <div>
-                <h4>Alexis Guionet</h4>
-                <p>France</p>
+              <div className={styles.profile}>
+                <h3>
+                  Alexis Guionet <span>- from France</span>
+                </h3>
                 <p>Ph.D. in Biology</p>
                 <p>
                   微生物と農業食品を専門とする生物物理学者。
@@ -226,17 +227,18 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                 </p>
               </div>
             </div>
-            <div className={styles.flex}>
-              <div style={{ maxWidth: "240px" }}>
+            <div className={styles.researcherCard}>
+              <div className={styles.imgWrapper}>
                 <Image
                   src={staticPath.img.company.r_02_jpg}
                   width={1020}
                   height={1275}
                 />
               </div>
-              <div>
-                <h4>Yu Lu</h4>
-                <p>China</p>
+              <div className={styles.profile}>
+                <h3>
+                  Yu Lu <span>- from China</span>
+                </h3>
                 <p>Ph.D. in Life Science</p>
                 <p>
                   環境問題に関心を持ち、炭素と窒素に関する植物の栄養応答の分子メカニズムの解明する研究に従事。
@@ -244,17 +246,18 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                 </p>
               </div>
             </div>
-            <div className={styles.flex}>
-              <div style={{ maxWidth: "240px" }}>
+            <div className={styles.researcherCard}>
+              <div className={styles.imgWrapper}>
                 <Image
                   src={staticPath.img.company.r_03_jpg}
                   width={1020}
                   height={1275}
                 />
               </div>
-              <div>
-                <h4>Iaroslav Patuk</h4>
-                <p>Russia</p>
+              <div className={styles.profile}>
+                <h3>
+                  Iaroslav Patuk <span>- from Russia</span>
+                </h3>
                 <p>Ph.D. in Agricultual Engineering</p>
                 <p>
                   専門は機械工学。新型装置の開発に着手。
