@@ -59,6 +59,11 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                   <a>ネクストミーツの生産体制</a>
                 </Link>
               </li>
+              <li className={nowAt === "lab" ? styles.nowAt : ""}>
+                <Link href={pagesPath.company.$url({ hash: "#lab" })}>
+                  <a>ネクストミーツの研究開発</a>
+                </Link>
+              </li>
               <li
                 className={nowAt === "domestic-expansion" ? styles.nowAt : ""}
               >
@@ -80,11 +85,6 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
               <li className={nowAt === "tvcm" ? styles.nowAt : ""}>
                 <Link href={pagesPath.company.$url({ hash: "#tvcm" })}>
                   <a>ネクストミーツのテレビCM</a>
-                </Link>
-              </li>
-              <li className={nowAt === "lab" ? styles.nowAt : ""}>
-                <Link href={pagesPath.company.$url({ hash: "#lab" })}>
-                  <a>ネクストミーツの研究開発</a>
                 </Link>
               </li>
               <li className={nowAt === "collaboration" ? styles.nowAt : ""}>
@@ -137,6 +137,78 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                 width={640}
                 height={360}
               />
+            </section>
+            <section id="lab">
+              <h2>
+                <span>ネクストミーツの</span>研究開発
+              </h2>
+              <h3>優秀な研究者が世界から集結しています。</h3>
+              <div className={styles.researcherCard}>
+                <div className={styles.imgWrapper}>
+                  <Image
+                    src={staticPath.img.company.r_01_jpg}
+                    width={1020}
+                    height={1275}
+                  />
+                </div>
+                <div className={styles.profile}>
+                  <h3>
+                    Alexis Guionet <span>- from France</span>
+                  </h3>
+                  <p>Ph.D. in Biology</p>
+                  <p>
+                    微生物と農業食品を専門とする生物物理学者。
+                    植物性製品のメイラード反応の改善に注力している。
+                    微生物由来のタンパク質で代替肉を作る研究開発を行う。
+                  </p>
+                </div>
+              </div>
+              <div className={styles.researcherCard}>
+                <div className={styles.imgWrapper}>
+                  <Image
+                    src={staticPath.img.company.r_02_jpg}
+                    width={1020}
+                    height={1275}
+                  />
+                </div>
+                <div className={styles.profile}>
+                  <h3>
+                    Yu Lu <span>- from China</span>
+                  </h3>
+                  <p>Ph.D. in Life Science</p>
+                  <p>
+                    環境問題に関心を持ち、炭素と窒素に関する植物の栄養応答の分子メカニズムの解明する研究に従事。
+                    epigenetics
+                    を取り入れ、持続可能な機能性原料の研究開発を行う。
+                  </p>
+                </div>
+              </div>
+              <div className={styles.researcherCard}>
+                <div className={styles.imgWrapper}>
+                  <Image
+                    src={staticPath.img.company.r_03_jpg}
+                    width={1020}
+                    height={1275}
+                  />
+                </div>
+                <div className={styles.profile}>
+                  <h3>
+                    Iaroslav Patuk <span>- from Russia</span>
+                  </h3>
+                  <p>Ph.D. in Agricultual Engineering</p>
+                  <p>
+                    専門は機械工学。新型装置の開発に着手。
+                    筋肉組織を再現するべく、植物性タンパク質を段階的に熱し圧力で組織化させる研究開発を行う。{" "}
+                  </p>
+                </div>
+              </div>
+              <div style={{ marginTop: "24px" }}>
+                <Image
+                  src={staticPath.img.company.naric_jpg}
+                  width={480}
+                  height={270}
+                />
+              </div>
             </section>
             <section id="domestic-expansion">
               <h2>
@@ -255,71 +327,6 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                       left: 0,
                     }}
                   ></iframe>
-                </div>
-              </div>
-            </section>
-            <section id="lab">
-              <h2>
-                <span>ネクストミーツの</span>研究開発
-              </h2>
-              <h3>優秀な研究者が世界から集結しています。</h3>
-              <div className={styles.researcherCard}>
-                <div className={styles.imgWrapper}>
-                  <Image
-                    src={staticPath.img.company.r_01_jpg}
-                    width={1020}
-                    height={1275}
-                  />
-                </div>
-                <div className={styles.profile}>
-                  <h3>
-                    Alexis Guionet <span>- from France</span>
-                  </h3>
-                  <p>Ph.D. in Biology</p>
-                  <p>
-                    微生物と農業食品を専門とする生物物理学者。
-                    植物性製品のメイラード反応の改善に注力している。
-                    微生物由来のタンパク質で代替肉を作る研究開発を行う。
-                  </p>
-                </div>
-              </div>
-              <div className={styles.researcherCard}>
-                <div className={styles.imgWrapper}>
-                  <Image
-                    src={staticPath.img.company.r_02_jpg}
-                    width={1020}
-                    height={1275}
-                  />
-                </div>
-                <div className={styles.profile}>
-                  <h3>
-                    Yu Lu <span>- from China</span>
-                  </h3>
-                  <p>Ph.D. in Life Science</p>
-                  <p>
-                    環境問題に関心を持ち、炭素と窒素に関する植物の栄養応答の分子メカニズムの解明する研究に従事。
-                    epigenetics
-                    を取り入れ、持続可能な機能性原料の研究開発を行う。
-                  </p>
-                </div>
-              </div>
-              <div className={styles.researcherCard}>
-                <div className={styles.imgWrapper}>
-                  <Image
-                    src={staticPath.img.company.r_03_jpg}
-                    width={1020}
-                    height={1275}
-                  />
-                </div>
-                <div className={styles.profile}>
-                  <h3>
-                    Iaroslav Patuk <span>- from Russia</span>
-                  </h3>
-                  <p>Ph.D. in Agricultual Engineering</p>
-                  <p>
-                    専門は機械工学。新型装置の開発に着手。
-                    筋肉組織を再現するべく、植物性タンパク質を段階的に熱し圧力で組織化させる研究開発を行う。{" "}
-                  </p>
                 </div>
               </div>
             </section>

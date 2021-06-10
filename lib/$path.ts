@@ -83,6 +83,7 @@ export const staticPath = {
     company: {
       c_jpg: '/img/company/c.jpg',
       factory_jpg: '/img/company/factory.jpg',
+      naric_jpg: '/img/company/naric.jpg',
       r_01_jpg: '/img/company/r-01.jpg',
       r_02_jpg: '/img/company/r-02.jpg',
       r_03_jpg: '/img/company/r-03.jpg',
