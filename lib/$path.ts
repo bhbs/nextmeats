@@ -81,9 +81,13 @@ export const staticPath = {
       tw_1920x1080_burger_jpg: '/img/burger/tw_1920x1080-burger.jpg'
     },
     company: {
+      c_jpg: '/img/company/c.jpg',
+      factory_jpg: '/img/company/factory.jpg',
       r_01_jpg: '/img/company/r-01.jpg',
       r_02_jpg: '/img/company/r-02.jpg',
-      r_03_jpg: '/img/company/r-03.jpg'
+      r_03_jpg: '/img/company/r-03.jpg',
+      supermarket_jpg: '/img/company/supermarket.jpg',
+      world_png: '/img/company/world.png'
     },
     datapage: {
       carousel: {

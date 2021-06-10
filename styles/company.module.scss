@@ -1,9 +1,45 @@
-$nxm-color: rgb(0, 155, 191);
+$nxm-color: rgb(62, 148, 198);
 
 @mixin sp {
   @media (max-width: 800px) {
     @content;
   }
+}
+
+@mixin stripe($deg, $color: white) {
+  background: linear-gradient(
+    $deg,
+    transparent 14px,
+    $color 14px,
+    $color 17px,
+    transparent 17px,
+    transparent 20px,
+    $color 20px,
+    $color 23px,
+    transparent 23px,
+    transparent 26px,
+    $color 26px,
+    $color 29px,
+    transparent 29px,
+    transparent 32px,
+    $color 32px,
+    $color 35px,
+    transparent 35px,
+    transparent 38px,
+    $color 38px,
+    $color 41px,
+    transparent 41px,
+    transparent 44px,
+    $color 44px,
+    $color 47px,
+    transparent 47px,
+    transparent 50px,
+    $color 50px,
+    $color 53px,
+    transparent 53px,
+    transparent 56px,
+    $color 56px
+  );
 }
 
 .layout {
@@ -32,19 +68,33 @@ $nxm-color: rgb(0, 155, 191);
     }
 
     .nowAt {
-      background: linear-gradient(90deg, $nxm-color, transparent 50%);
+      position: relative;
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 90%;
+        content: "";
+        height: 4px;
+        width: 100%;
+        @include stripe(225deg, $nxm-color);
+      }
     }
   }
   main {
     max-width: 800px;
+    line-height: 2;
   }
   section {
-    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
+  div {
+    margin: 0 24px;
+  }
 }
 
 .researcherCard {
@@ -74,7 +124,6 @@ $nxm-color: rgb(0, 155, 191);
   }
 
   .profile {
-    line-height: 2;
     padding: 24px;
 
     h3 {

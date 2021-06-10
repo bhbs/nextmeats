@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 import { pagesPath, staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 import styles from "../styles/company.module.scss";
+import Company from "../components/company";
 
 type Props = {
   languageCode: LanguageCode;
@@ -97,17 +98,24 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             <h3>- 地球を終わらせない -</h3>
             <p>
               過剰な畜産による
-              <span style={{ fontSize: "1.4em" }}> 地球温暖化 </span>を
-              <span style={{ fontSize: "1.4em" }}> 代替肉 </span>
+              <span style={{ fontSize: "1.2em" }}> 地球温暖化 </span>を
+              <span style={{ fontSize: "1.2em" }}> 代替肉 </span>
               によって解決したい。
             </p>
             <p>
               大切な誰かのために、一人一人が今できることは、
-              <span style={{ fontSize: "1.4em" }}> ある。 </span>
+              <span style={{ fontSize: "1.2em" }}> ある。 </span>
             </p>
-            <Link href={pagesPath.message.$url()}>
-              <a>→ 理念について詳しく見る</a>
-            </Link>
+            <Image
+              src={staticPath.img.company.c_jpg}
+              width={640}
+              height={360}
+            />
+            <p>
+              <Link href={pagesPath.message.$url()}>
+                <a>→ 理念について詳しく見る</a>
+              </Link>
+            </p>
           </section>
           <section id="production-system">
             <h2>
@@ -117,6 +125,11 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             <p>
               大豆やエンドウなどの植物性タンパク質を組み合わせ、熱と圧力で成形することにより、独自の食感と味わいを表現し、無添加で生産しています。また、HACCP、ISO認証、ハラル認証を取得した食品工場での生産を行なっており、品質管理を徹底しています。
             </p>
+            <Image
+              src={staticPath.img.company.factory_jpg}
+              width={640}
+              height={360}
+            />
           </section>
           <section id="domestic-expansion">
             <h2>
@@ -128,6 +141,11 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             <p>
               → <a href="https://shop.nextmeats.jp">公式ECはこちらから</a>
             </p>
+            <Image
+              src={staticPath.img.company.supermarket_jpg}
+              width={640}
+              height={360}
+            />
             <div className={styles.flex}>
               <div>
                 <h4>スーパーマーケット</h4>
@@ -135,10 +153,10 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                   <li>イトーヨーカドー</li>
                   <li>原信</li>
                   <li>ライフ</li>
-                  <li>ニッシンワールドデリカッセン</li>
                   <li>ザ ガーデン</li>
                   <li>カスミ</li>
                   <li>杏林堂</li>
+                  <li>ニッシンワールドデリカッセン</li>
                 </ul>
               </div>
               <div>
@@ -156,9 +174,15 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
               <span>ネクストミーツの</span>海外展開
             </h2>
             <h3>国外への展開も進んでいます。</h3>
+            <Image
+              src={staticPath.img.company.world_png}
+              width={640}
+              height={360}
+            />
+            <h4>世界の代替肉ブランドへ</h4>
             <div className={styles.flex}>
               <div>
-                <h4>世界の代替肉ブランドへ</h4>
+                <p>リリース済み</p>
                 <ul>
                   <li>台湾</li>
                   <li>シンガポール</li>
@@ -167,11 +191,16 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                 </ul>
               </div>
               <div>
-                <h4>準備中</h4>
+                <p>準備中</p>
                 <ul>
                   <li>アメリカ</li>
                   <li>中国</li>
                   <li>インド</li>
+                </ul>
+              </div>
+              <div>
+                <p>準備中</p>
+                <ul>
                   <li>フランス</li>
                   <li>イタリア</li>
                   <li>スペイン</li>
@@ -186,7 +215,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             </h2>
             <h3>2021年4月より、キー局（４局）でのテレビCMを開始しました。</h3>
             <p>日本の代替肉ブランドとして初の試みとなります。</p>
-            <div style={{ maxWidth: "500px" }}>
+            <div style={{ maxWidth: "640px" }}>
               <div
                 style={{
                   position: "relative",
@@ -291,15 +320,48 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             <p>オープンイノベーションで価値を創出します。</p>
             <h4>株式会社ユーグレナ</h4>
             <p>機能性食品の共同開発を行っています。</p>
+            <h4>長岡技術科学大学</h4>
+            <p>共同研究契約を締結し、タンパク質の研究を行っています。</p>
             <h4>シェフ 鳥羽周作</h4>
             <p>
               ミシュラン1つ星「sio」のオーナーシェフである鳥羽周作氏と商品を共同製作しました。
             </p>
-            <h4>長岡技術科学大学</h4>
-            <p>共同研究契約を締結し、タンパク質の研究を行っています。</p>
+            <div style={{ maxWidth: "640px" }}>
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: 0,
+                  paddingBottom: "56.25%",
+                  overflow: "hidden",
+                  margin: "64px auto 50px",
+                }}
+              >
+                <iframe
+                  src={
+                    {
+                      jp: "https://www.youtube.com/embed/9EwNL_44U5s",
+                      en: "https://www.youtube.com/embed/ld3FXjFLohA",
+                      tw: "https://www.youtube.com/embed/ypkd2yYBJaQ",
+                    }[languageCode]
+                  }
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                  }}
+                ></iframe>
+              </div>
+            </div>
           </section>
         </main>
       </div>
+      <Company languageCode={languageCode} />
     </Layout>
   );
 };

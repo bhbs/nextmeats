@@ -12,7 +12,7 @@ const Company = ({ languageCode }: Props): React.ReactElement => {
 
   return (
     <section id="company">
-      <h2>
+      <h2 style={{ textAlign: "center" }}>
         <span>COMPANY</span>
       </h2>
 
