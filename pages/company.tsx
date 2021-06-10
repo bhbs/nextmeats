@@ -95,7 +95,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             <h2>
               <span>ネクストミーツの</span>理念
             </h2>
-            <h3>- 地球を終わらせない -</h3>
+            <h3>- 地球を終わらせない</h3>
             <p>
               過剰な畜産による
               <span style={{ fontSize: "1.2em" }}> 地球温暖化 </span>を
@@ -122,9 +122,11 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
               <span>ネクストミーツの</span>生産体制
             </h2>
             <h3>安心安全の食品づくりを徹底しています。</h3>
-            <p>
-              大豆やエンドウなどの植物性タンパク質を組み合わせ、熱と圧力で成形することにより、独自の食感と味わいを表現し、無添加で生産しています。また、HACCP、ISO認証、ハラル認証を取得した食品工場での生産を行なっており、品質管理を徹底しています。
-            </p>
+            <div style={{ margin: "2em 0" }}>
+              <p>
+                大豆やエンドウなどの植物性タンパク質を組み合わせ、熱と圧力で成形することにより、独自の食感と味わいを表現し、無添加で生産しています。また、HACCP、ISO認証、ハラル認証を取得した食品工場での生産を行なっており、品質管理を徹底しています。
+              </p>
+            </div>
             <Image
               src={staticPath.img.company.factory_jpg}
               width={640}
@@ -361,7 +363,9 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
           </section>
         </main>
       </div>
-      <Company languageCode={languageCode} />
+      <div style={{ margin: "20px" }}>
+        <Company languageCode={languageCode} />
+      </div>
     </Layout>
   );
 };
