@@ -1,13 +1,13 @@
 import { GetStaticProps, GetStaticPropsResult } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Company from "../components/company";
 import Layout from "../components/layout";
 import { pagesPath, staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 import styles from "../styles/company.module.scss";
-import Company from "../components/company";
 
 type Props = {
   languageCode: LanguageCode;
@@ -335,45 +335,47 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                 <span>ネクストミーツの</span>コラボレーション
               </h2>
               <h3>多くの企業・大学・専門家とのコラボ</h3>
-              <p>オープンイノベーションで価値を創出します。</p>
-              <h4>株式会社ユーグレナ</h4>
-              <p>機能性食品の共同開発を行っています。</p>
-              <h4>長岡技術科学大学</h4>
-              <p>共同研究契約を締結し、タンパク質の研究を行っています。</p>
-              <h4>シェフ 鳥羽周作</h4>
-              <p>
-                ミシュラン1つ星「sio」のオーナーシェフである鳥羽周作氏と商品を共同製作しました。
-              </p>
-              <div style={{ maxWidth: "640px" }}>
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    height: 0,
-                    paddingBottom: "56.25%",
-                    overflow: "hidden",
-                    margin: "64px auto 50px",
-                  }}
-                >
-                  <iframe
-                    src={
-                      {
-                        jp: "https://www.youtube.com/embed/9EwNL_44U5s",
-                        en: "https://www.youtube.com/embed/ld3FXjFLohA",
-                        tw: "https://www.youtube.com/embed/ypkd2yYBJaQ",
-                      }[languageCode]
-                    }
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
+              <div style={{ margin: "2em 0" }}>
+                <p>オープンイノベーションで価値を創出します。</p>
+                <h4>株式会社ユーグレナ</h4>
+                <p>機能性食品の共同開発を行っています。</p>
+                <h4>長岡技術科学大学</h4>
+                <p>共同研究契約を締結し、タンパク質の研究を行っています。</p>
+                <h4>シェフ 鳥羽周作</h4>
+                <p>
+                  ミシュラン1つ星「sio」のオーナーシェフである鳥羽周作氏と商品を共同製作しました。
+                </p>
+                <div style={{ maxWidth: "640px" }}>
+                  <div
                     style={{
+                      position: "relative",
                       width: "100%",
-                      height: "100%",
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
+                      height: 0,
+                      paddingBottom: "56.25%",
+                      overflow: "hidden",
+                      margin: "64px auto 50px",
                     }}
-                  ></iframe>
+                  >
+                    <iframe
+                      src={
+                        {
+                          jp: "https://www.youtube.com/embed/9EwNL_44U5s",
+                          en: "https://www.youtube.com/embed/ld3FXjFLohA",
+                          tw: "https://www.youtube.com/embed/ypkd2yYBJaQ",
+                        }[languageCode]
+                      }
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                      }}
+                    ></iframe>
+                  </div>
                 </div>
               </div>
             </section>
