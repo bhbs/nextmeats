@@ -111,14 +111,22 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                 大切な誰かのために、一人一人が今できることは、
                 <span style={{ fontSize: "1.2em" }}> ある。 </span>
               </p>
+              <p>
+                <Link href={pagesPath.message.$url()}>
+                  <a>→ 理念について詳しく見る</a>
+                </Link>
+              </p>
               <Image
                 src={staticPath.img.company.c_jpg}
                 width={640}
                 height={360}
               />
+              <p style={{ fontSize: ".8em" }}>左：代表取締役社長 佐々木英之</p>
+              <p style={{ fontSize: ".8em" }}>右：取締役会長 白井良</p>
+              <h3>共同創業者の想い</h3>
               <p>
-                <Link href={pagesPath.message.$url()}>
-                  <a>→ 理念について詳しく見る</a>
+                <Link href="https://forbesjapan.com/articles/detail/40499">
+                  <a>→ Forbes インタビュー記事はこちら</a>
                 </Link>
               </p>
             </section>
