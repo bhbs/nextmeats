@@ -4,6 +4,10 @@
   }
 }
 
+html {
+  scroll-padding-top: 60px;
+}
+
 html,
 body {
   scroll-behavior: smooth;
@@ -60,24 +64,6 @@ img {
   height: auto;
 }
 
-section {
-  clear: both;
-  padding-top: 80px;
-  @include sp {
-    padding-top: 24px;
-  }
-
-  h2 {
-    width: 100%;
-    margin: 0 auto 40px;
-    text-align: center;
-    letter-spacing: 2px;
-    @include sp {
-      margin: 0 auto;
-    }
-  }
-}
-
 .page {
   width: 100%;
   max-width: 800px;
@@ -94,6 +80,24 @@ section {
 
   * {
     white-space: pre-wrap;
+  }
+
+  section {
+    clear: both;
+    padding-top: 80px;
+    @include sp {
+      padding-top: 24px;
+    }
+
+    h2 {
+      width: 100%;
+      margin: 0 auto 40px;
+      text-align: center;
+      letter-spacing: 2px;
+      @include sp {
+        margin: 0 auto;
+      }
+    }
   }
 }
 

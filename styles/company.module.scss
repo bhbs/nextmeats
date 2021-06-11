@@ -1,0 +1,136 @@
+$nxm-color: rgb(62, 148, 198);
+
+@mixin sp {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin stripe($deg, $color: white) {
+  background: linear-gradient(
+    $deg,
+    transparent 14px,
+    $color 14px,
+    $color 17px,
+    transparent 17px,
+    transparent 20px,
+    $color 20px,
+    $color 23px,
+    transparent 23px,
+    transparent 26px,
+    $color 26px,
+    $color 29px,
+    transparent 29px,
+    transparent 32px,
+    $color 32px,
+    $color 35px,
+    transparent 35px,
+    transparent 38px,
+    $color 38px,
+    $color 41px,
+    transparent 41px,
+    transparent 44px,
+    $color 44px,
+    $color 47px,
+    transparent 47px,
+    transparent 50px,
+    $color 50px,
+    $color 53px,
+    transparent 53px,
+    transparent 56px,
+    $color 56px
+  );
+}
+
+.layout {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 80px;
+  padding: 24px;
+  aside {
+    white-space: nowrap;
+    padding: 48px 64px 0 0;
+    @include sp {
+      display: none;
+    }
+    ul {
+      position: sticky;
+      top: 120px;
+      list-style: none;
+
+      li {
+        padding: 0 1em;
+        a {
+          color: #444;
+        }
+      }
+    }
+
+    .nowAt {
+      position: relative;
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 90%;
+        content: "";
+        height: 4px;
+        width: 100%;
+        @include stripe(225deg, $nxm-color);
+      }
+    }
+  }
+  main {
+    max-width: 800px;
+    line-height: 2;
+  }
+  section {
+    padding-bottom: 92px;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  div {
+    margin: 0 24px;
+  }
+}
+
+.researcherCard {
+  display: flex;
+  padding: 24px 0;
+
+  @include sp {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgWrapper {
+    max-width: 240px;
+
+    img {
+      clip-path: polygon(
+        0% 9%,
+        12% 0%,
+        88% 0%,
+        100% 9%,
+        100% 91%,
+        88% 100%,
+        12% 100%,
+        0% 91%
+      );
+    }
+  }
+
+  .profile {
+    padding: 24px;
+
+    h3 {
+      span {
+        font-weight: normal;
+        font-size: 0.9em;
+      }
+    }
+  }
+}

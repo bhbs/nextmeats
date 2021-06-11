@@ -48,19 +48,19 @@ const Message = ({ languageCode }: Props): React.ReactElement => {
 const getText = (languageCode: LanguageCode) => {
   return {
     title: {
-      jp: "ネクストミーツの理念 ー",
-      en: "The Philosophy of NEXT MEATS -",
-      tw: "NEXT MEATS的理念 ー",
+      jp: "ネクストミーツの理念",
+      en: "The Philosophy of NEXT MEATS",
+      tw: "NEXT MEATS的理念",
     }[languageCode],
     description: {
-      jp: "地球を終わらせない",
-      en: "The Next Move from Meat",
-      tw: "顛覆美味 地球永續優植選擇",
+      jp: "- 地球を終わらせない",
+      en: "- The Next Move from Meat",
+      tw: "- 顛覆美味 地球永續優植選擇",
     }[languageCode],
     subject: {
-      jp: "地球を終わらせない",
-      en: "The Next Move from Meat",
-      tw: "顛覆美味 地球永續優植選擇",
+      jp: "- 地球を終わらせない",
+      en: "- The Next Move from Meat",
+      tw: "- 顛覆美味 地球永續優植選擇",
     }[languageCode],
     state01: {
       jp: "子供達の未来のために我々ができることは？",
