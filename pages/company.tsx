@@ -335,8 +335,8 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                 <span>ネクストミーツの</span>コラボレーション
               </h2>
               <h3>多くの企業・大学・専門家とのコラボ</h3>
+              <p>オープンイノベーションで価値を創出します。</p>
               <div style={{ margin: "2em 0" }}>
-                <p>オープンイノベーションで価値を創出します。</p>
                 <h4>株式会社ユーグレナ</h4>
                 <p>機能性食品の共同開発を行っています。</p>
                 <h4>長岡技術科学大学</h4>
