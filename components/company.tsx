@@ -41,6 +41,10 @@ const Company = ({ languageCode }: Props): React.ReactElement => {
             <td>{text.ceo}</td>
           </tr>
           <tr>
+            <td>{text.founder_h}</td>
+            <td>{text.founder}</td>
+          </tr>
+          <tr>
             <td>{text.director_h}</td>
             <td>{text.director}</td>
           </tr>
@@ -120,6 +124,16 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
       jp: "佐々木 英之",
       en: "Hideyuki Sasaki",
       tw: "Hideyuki Sasaki",
+    }[languageCode],
+    founder_h: {
+      jp: "取締役会長",
+      en: "Founder",
+      tw: "Founder",
+    }[languageCode],
+    founder: {
+      jp: "白井良",
+      en: "Ryo Shirai",
+      tw: "Ryo Shirai",
     }[languageCode],
     director_h: {
       jp: "取締役",

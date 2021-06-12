@@ -216,6 +216,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
                   width={480}
                   height={270}
                 />
+                <p>NEXT Lab（研究所）</p>
               </div>
             </section>
             <section id="domestic-expansion">
