@@ -370,23 +370,23 @@ const getText = (
     }[languageCode],
     forbes: {
       jp: "→ Forbes インタビュー記事はこちら",
-      en: "- Read the Forbes interview",
-      tw: "- Read the Forbes interview",
+      en: "- Read the Forbes interview (Only in Japanese)",
+      tw: "- Read the Forbes interview (Only in Japanese)",
     }[languageCode],
     production_h: {
       jp: "ネクストミーツの生産体制",
-      en: "Next Meats's Production system",
-      tw: "Next Meats's Production system",
+      en: "Next Meats's Production System",
+      tw: "Next Meats's Production System",
     }[languageCode],
     production: {
       jp: "安心安全の食品づくりを徹底しています。",
-      en: "We offer fresh, reliable, and safe food.",
-      tw: "We offer fresh, reliable, and safe food.",
+      en: "We only want to offer our best.",
+      tw: "We only want to offer our best.",
     }[languageCode],
     production_text: {
       jp: "大豆やエンドウなどの植物性タンパク質を組み合わせ、熱と圧力で成形することにより、独自の食感と味わいを表現し、無添加で生産しています。また、HACCP、ISO認証、ハラル認証を取得した食品工場での生産を行なっており、品質管理を徹底しています。",
-      en: "Unique texture and taste are achieved by molding vegetable proteins such as soybeans and peas with heat and pressure. We produce our products in food factories that have obtained HACCP, ISO, and Halal certifications. ",
-      tw: "Unique texture and taste are achieved by molding vegetable proteins such as soybeans and peas with heat and pressure. We produce our products in food factories that have obtained HACCP, ISO, and Halal certifications. ",
+      en: "Our products are carefully produced using Non-GMO soy and pea proteins in factories that meet HACCP, ISO, and Halal certification standards. Our products do not use any artificial additives either.",
+      tw: "Our products are carefully produced using Non-GMO soy and pea proteins in factories that meet HACCP, ISO, and Halal certification standards. Our products do not use any artificial additives either.",
     }[languageCode],
     lab_h: {
       jp: "ネクストミーツの研究開発",
@@ -420,13 +420,13 @@ const getText = (
     }[languageCode],
     japan_h: {
       jp: "ネクストミーツの国内展開",
-      en: "Next Meats's Distribution in Japan",
-      tw: "Next Meats's Distribution in Japan",
+      en: "Next Meats's Available stores in Japan",
+      tw: "Next Meats's Available stores in Japan",
     }[languageCode],
     japan: {
       jp: "スーパー、外食チェーン等、代替肉ブランドとして幅広く流通しています。",
-      en: "It is widely distributed as an alternative meat brand.",
-      tw: "It is widely distributed as an alternative meat brand.",
+      en: "You can find Next Meats products in the following stores:",
+      tw: "You can find Next Meats products in the following stores:",
     }[languageCode],
     ec: {
       jp: "→ 公式WEBショップはこちらから",
@@ -434,7 +434,7 @@ const getText = (
       tw: "Click here for the official web store.",
     }[languageCode],
     supermarket_h: {
-      jp: "",
+      jp: "スーパーマーケット",
       en: "Supermarket",
       tw: "Supermarket",
     }[languageCode],
@@ -516,13 +516,13 @@ const getText = (
     }[languageCode],
     oversea_h: {
       jp: "ネクストミーツの海外展開",
-      en: "Next Meats's Global development",
-      tw: "Next Meats's Global development",
+      en: "Next Meats's Global Expansion Map",
+      tw: "Next Meats's Global Expansion Map",
     }[languageCode],
     oversea: {
       jp: "国外への展開も進んでいます",
-      en: "We are also expanding our business outside Japan.",
-      tw: "We are also expanding our business outside Japan.",
+      en: "We are expanding our business at NEXT Speed to bring you delicious meat alternatives and save the Earth!",
+      tw: "We are expanding our business at NEXT Speed to bring you delicious meat alternatives and save the Earth!",
     }[languageCode],
     oversea_text: {
       jp: "世界の代替肉ブランドへ",
@@ -572,7 +572,7 @@ const getText = (
             </ul>
           </div>
           <div>
-            <p>Before launch</p>
+            <p>Preparing</p>
             <ul>
               <li>United States</li>
               <li>China</li>
@@ -580,7 +580,7 @@ const getText = (
             </ul>
           </div>
           <div>
-            <p>Before launch</p>
+            <p>Preparing</p>
             <ul>
               <li>France</li>
               <li>Italy</li>
@@ -602,7 +602,7 @@ const getText = (
             </ul>
           </div>
           <div>
-            <p>Before launch</p>
+            <p>Preparing</p>
             <ul>
               <li>United States</li>
               <li>China</li>
@@ -610,7 +610,7 @@ const getText = (
             </ul>
           </div>
           <div>
-            <p>Before launch</p>
+            <p>Preparing</p>
             <ul>
               <li>France</li>
               <li>Italy</li>
@@ -623,13 +623,13 @@ const getText = (
     }[languageCode],
     tvcm_h: {
       jp: "ネクストミーツのテレビCM",
-      en: "Next Meats's TVCM",
-      tw: "Next Meats's TVCM",
+      en: "Next Meats's Television Commercial",
+      tw: "Next Meats's Television Commercial",
     }[languageCode],
     tvcm: {
       jp: "2021年4月より、キー局（４局）でのテレビCMを開始しました。",
-      en: "TV commercials have been launched in April 2021.",
-      tw: "TV commercials have been launched in April 2021.",
+      en: "Our television commercial that was released in April was the first ever commercial from an alternative protein company in Japan.",
+      tw: "Our television commercial that was released in April was the first ever commercial from an alternative protein company in Japan.",
     }[languageCode],
     firsttry: {
       jp: "日本の代替肉ブランドとして初の試みとなります。",
