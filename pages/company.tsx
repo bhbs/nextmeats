@@ -190,7 +190,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             <h2>{text.japan_h}</h2>
             <h3>{text.japan}</h3>
             <p>
-              → <a href="https://shop.nextmeats.jp">{text.ec}</a>
+              <a href="https://shop.nextmeats.jp">{text.ec}</a>
             </p>
             <Image
               src={staticPath.img.company.supermarket_jpg}
@@ -638,8 +638,8 @@ const getText = (
     }[languageCode],
     collaboration_h: {
       jp: "ネクストミーツのコラボレーション",
-      en: "Next Meats's Collaboration",
-      tw: "Next Meats's Collaboration",
+      en: "Next Meats's Collaborative partners",
+      tw: "Next Meats's Collaborative partners",
     }[languageCode],
     collaboration: {
       jp: "多くの企業・大学・専門家とのコラボ",
@@ -648,8 +648,8 @@ const getText = (
     }[languageCode],
     openinnovation: {
       jp: "オープンイノベーションで価値を創出します。",
-      en: "",
-      tw: "",
+      en: "We are constantly working with different companies, universities, and experts to better our products, ourselves, and the world. Some of them include:",
+      tw: "We are constantly working with different companies, universities, and experts to better our products, ourselves, and the world. Some of them include:",
     }[languageCode],
     euglena_h: {
       jp: "株式会社ユーグレナ",
@@ -658,8 +658,8 @@ const getText = (
     }[languageCode],
     euglena: {
       jp: "機能性食品の共同開発を行っています。",
-      en: "We are co-developing functional foods.",
-      tw: "We are co-developing functional foods.",
+      en: "We are co-developing super functional foods by bringing our technologies together.",
+      tw: "We are co-developing super functional foods by bringing our technologies together.",
     }[languageCode],
     nagaoka_h: {
       jp: "長岡技術科学大学",
@@ -678,8 +678,8 @@ const getText = (
     }[languageCode],
     sio: {
       jp: "ミシュラン1つ星「sio」のオーナーシェフである鳥羽周作氏と商品を共同製作しました。",
-      en: 'We co-produced the product with Shusaku Toba, owner-chef of Michelin starred "sio".',
-      tw: 'We co-produced the product with Shusaku Toba, owner-chef of Michelin starred "sio".',
+      en: "We came together with Michelin-star chef Shusaku Toba, to share a recipe that everybody can try at home.",
+      tw: "We came together with Michelin-star chef Shusaku Toba, to share a recipe that everybody can try at home.",
     }[languageCode],
   };
 };
