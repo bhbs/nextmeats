@@ -21,6 +21,7 @@ const Footer = ({ languageCode, path }: Props): React.ReactElement => {
           <Link href={path} locale="ja">
             <a
               style={{
+                color: "#444",
                 fontWeight: hostname === "nextmeats.co.jp" ? "bold" : "normal",
               }}
             >
@@ -31,6 +32,7 @@ const Footer = ({ languageCode, path }: Props): React.ReactElement => {
           <Link href={path} locale="en-US">
             <a
               style={{
+                color: "#444",
                 fontWeight: hostname === "nextmeats.us" ? "bold" : "normal",
               }}
             >
@@ -41,6 +43,7 @@ const Footer = ({ languageCode, path }: Props): React.ReactElement => {
           <Link href={path} locale="zh-TW">
             <a
               style={{
+                color: "#444",
                 fontWeight: hostname === "nextmeats.tw" ? "bold" : "normal",
               }}
             >
@@ -55,7 +58,10 @@ const Footer = ({ languageCode, path }: Props): React.ReactElement => {
             locale={false}
           >
             <a
-              style={{ fontWeight: languageCode === "jp" ? "bold" : "normal" }}
+              style={{
+                color: "#444",
+                fontWeight: languageCode === "jp" ? "bold" : "normal",
+              }}
             >
               日本語
             </a>
@@ -66,7 +72,10 @@ const Footer = ({ languageCode, path }: Props): React.ReactElement => {
             locale={false}
           >
             <a
-              style={{ fontWeight: languageCode === "en" ? "bold" : "normal" }}
+              style={{
+                color: "#444",
+                fontWeight: languageCode === "en" ? "bold" : "normal",
+              }}
             >
               English
             </a>
@@ -77,7 +86,10 @@ const Footer = ({ languageCode, path }: Props): React.ReactElement => {
             locale={false}
           >
             <a
-              style={{ fontWeight: languageCode === "zh" ? "bold" : "normal" }}
+              style={{
+                color: "#444",
+                fontWeight: languageCode === "zh" ? "bold" : "normal",
+              }}
             >
               中文
             </a>
