@@ -50,7 +50,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
               {
                 jp: staticPath.img.index.jp_web_top_pc_1920x945_jpg,
                 en: staticPath.img.index.en_web_top_pc_1920x945_jpg,
-                tw: staticPath.img.index.tw_web_top_pc_1920x945_jpg,
+                zh: staticPath.img.index.tw_web_top_pc_1920x945_jpg,
               }[languageCode]
             }
             alt={text.title}
@@ -65,7 +65,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
               {
                 jp: staticPath.img.index.jp_web_top_mobile_720x580_gyudon_jpg,
                 en: staticPath.img.index.en_web_top_mobile_720x580_gyudon_jpg,
-                tw: staticPath.img.index.tw_web_top_mobile_720x580_gyudon_jpg,
+                zh: staticPath.img.index.tw_web_top_mobile_720x580_gyudon_jpg,
               }[languageCode]
             }
             alt={text.title}
@@ -104,7 +104,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
           <SnsLink languageCode={languageCode} color="black" />
         </section>
 
-        {languageCode === "tw" && (
+        {languageCode === "zh" && (
           <section>
             <Image
               src={staticPath.img.index.tw_yakinikulike_jpg}
@@ -130,7 +130,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
                 {
                   jp: "https://www.youtube.com/embed/gz6q4cp-L_Y",
                   en: "https://www.youtube.com/embed/ld3FXjFLohA",
-                  tw: "https://www.youtube.com/embed/ypkd2yYBJaQ",
+                  zh: "https://www.youtube.com/embed/ypkd2yYBJaQ",
                 }[languageCode]
               }
               frameBorder="0"
@@ -243,12 +243,12 @@ function getText(locale) {
     title: {
       jp: "NEXT MEATS | 代替肉開発スタートアップ【ネクストミーツ株式会社】人工肉・代替肉・植物肉",
       en: "Next Meats Co., Ltd. WEBSITE",
-      tw: "Next Meats Co., Ltd. WEBSITE",
+      zh: "Next Meats Co., Ltd. WEBSITE",
     }[locale],
     description: {
       jp: "フェイクミートで次世代の未来をつくる代替肉開発スタートアップ【ネクストミーツ株式会社】 人工肉・代替肉・植物肉",
       en: "Next Meats Co., Ltd. WEBSITE",
-      tw: "Next Meats Co., Ltd. WEBSITE",
+      zh: "Next Meats Co., Ltd. WEBSITE",
     }[locale],
     message: {
       jp: (
@@ -299,7 +299,7 @@ function getText(locale) {
           </div>
         </>
       ),
-      tw: (
+      zh: (
         <>
           <h2>以替代肉開創地球的未來</h2>
           <p>
@@ -326,22 +326,22 @@ function getText(locale) {
     pr01: {
       jp: "ビックリする旨さ！\n『NEXT牛丼1.2』",
       en: 'A flavor that will surprise you!\n"NEXT Gyudon 1.2"',
-      tw: "令人驚嘆的美味！「NEXT牛肉蓋飯1.2」",
+      zh: "令人驚嘆的美味！「NEXT牛肉蓋飯1.2」",
     }[locale],
     pr02: {
       jp: "世界初となる焼肉用フェイクミート\n『カルビ1.1』＆『ハラミ1.1』",
       en: 'The world’s very first meat substitute developed for yakiniku NEXT Yakiniku\n"Short Rib 1.1" & "Skirt 1.1"',
-      tw: "全球首創的燒肉替代肉 NEXT燒肉\n「牛五花1.1」＆「牛橫隔膜1.1」",
+      zh: "全球首創的燒肉替代肉 NEXT燒肉\n「牛五花1.1」＆「牛橫隔膜1.1」",
     }[locale],
     pr03: {
       jp: "本気で美味しい代替肉\n『NEXTバーガー2.0』",
       en: 'An absolutely delicious meat substitute\n "NEXT Burger 2.0"',
-      tw: "精心打造的美味替代肉「NEXT漢堡2.0」",
+      zh: "精心打造的美味替代肉「NEXT漢堡2.0」",
     }[locale],
     pr04: {
       jp: "代替肉専門メディア、コンソーシアムを運営",
       en: "",
-      tw: "",
+      zh: "",
     }[locale],
     pr05: {
       jp: (
@@ -366,7 +366,7 @@ function getText(locale) {
         </>
       ),
       en: "",
-      tw: "",
+      zh: "",
     }[locale],
     pr06: {
       jp: "",
@@ -377,7 +377,7 @@ function getText(locale) {
           by playing our part in achieving the SDGs.
         </>
       ),
-      tw: "NEXT MEATS依據SDGs的理念，為地球永續的可能性盡一份心力。",
+      zh: "NEXT MEATS依據SDGs的理念，為地球永續的可能性盡一份心力。",
     }[locale],
     chicken: {
       jp: {
@@ -392,7 +392,7 @@ function getText(locale) {
         href: "",
         caption: "comming soon...",
       },
-      tw: {
+      zh: {
         src: "/img/index/chicken_1920x1080-tw.jpg",
         alt: "NEXT 炸雞 1.0",
         href: "",
@@ -412,7 +412,7 @@ function getText(locale) {
         href: "",
         caption: "comming soon...",
       },
-      tw: {
+      zh: {
         src: "/img/index/burger_1920x1080-tw.jpg",
         alt: "NEXT 漢堡 2.0",
         href: "",
@@ -432,7 +432,7 @@ function getText(locale) {
         href: "",
         caption: "comming soon...",
       },
-      tw: {
+      zh: {
         src: "/img/index/tw_1920x1080-gyudon.jpg",
         alt: "NEXT牛丼1.2",
         href: "",
@@ -452,7 +452,7 @@ function getText(locale) {
         href: "",
         caption: "comming soon...",
       },
-      tw: {
+      zh: {
         src: "/img/index/yakiniku_1920x1080-tw.jpg",
         alt: "NEXT 牛五花 1.1",
         href: "",
@@ -472,7 +472,7 @@ function getText(locale) {
         href: "",
         caption: "comming soon...",
       },
-      tw: {
+      zh: {
         src: "/img/index/euglena.jpg",
         alt: "NEXT Euglena Yakiniku EX",
         href: "",
@@ -492,7 +492,7 @@ function getText(locale) {
         href: "",
         caption: "comming soon...",
       },
-      tw: {
+      zh: {
         src: "/img/index/hamburgersteak_1920x1080-tw.jpg",
         alt: "NEXT 日式漢堡排 1.0",
         href: "",
@@ -512,7 +512,7 @@ function getText(locale) {
         href: pagesPath.accelarator.$url(),
         caption: "view page",
       },
-      tw: {
+      zh: {
         src: "/img/index/accelarator-tw.jpg",
         alt: "Accelarator program",
         href: pagesPath.accelarator.$url(),

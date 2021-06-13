@@ -30,7 +30,7 @@ const Hamburgersteak = ({ languageCode }: Props): React.ReactElement => {
             {
               jp: staticPath.img.index.hamburgersteak_1920x1080_jp_jpg,
               en: staticPath.img.index.hamburgersteak_1920x1080_en_jpg,
-              tw: staticPath.img.index.hamburgersteak_1920x1080_tw_jpg,
+              zh: staticPath.img.index.hamburgersteak_1920x1080_tw_jpg,
             }[languageCode]
           }
           alt={text.title}
@@ -65,37 +65,37 @@ function getText(languageCode: string) {
     title: {
       jp: "NEXTハンバーグ1.0",
       en: "NEXT Hamburger steak 1.0",
-      tw: "NEXT 日式漢堡排 1.0",
+      zh: "NEXT 日式漢堡排 1.0",
     }[languageCode],
     description: {
       jp: "NEXTハンバーグ1.0【ネクストミーツ株式会社】人工肉・代替肉・植物肉・フェイクミート",
       en: "NEXT Hamburger steak 1.0",
-      tw: "NEXT 日式漢堡排 1.0",
+      zh: "NEXT 日式漢堡排 1.0",
     }[languageCode],
     subject: {
       jp: "100%植物性なのにコクうま、地球を救う新国民食",
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
     statement: {
       jp: "これまでの代替肉ハンバーグとは異なり、卵・乳成分も不使用で100％植物性となっています。また、地球だけでなく体もよろこぶ商品にすべく、なるべく添加物を使わないとの想いから、今回なんとか添加物を使用せずに満足のいく美味しい味にすることができました。そして今回のハンバーグ用にこだわって開発した、無添加の特製デミグラスソース（植物性）との相性も抜群で、美味しく召し上がれます。",
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
     pr01_h: {
       jp: "調理方法",
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
     pr01: {
       jp: "ハンバーグは冷凍の状態で届きます。冷凍庫で１年間保存することができます。凍ったまま焼くことも可能ですが中まで火が通りづらいため、1時間ほど自然解凍するのがおすすめです。自然解凍後フライパンに油を多めに敷いて（大さじ1杯ほど）、少し焦げ目がつくくらいまで焼きます。中火で片面約4分ずつが目安です。中まで火が通っているのを確認できたら、付属のデミグラスソースをハンバーグに掛けて片面約10秒ずつ加熱したら完成です。",
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
     recipe_h: {
       jp: "アレンジレシピ",
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
     recipe01: (
       <>
@@ -302,12 +302,12 @@ function getText(languageCode: string) {
     pr02_h: {
       jp: "仕様",
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
     pr02: {
       jp: "1パッケージに4個入っているハンバーグセット【冷凍】\n＜内容＞\n・「NEXTハンバーグ1.0」100g×4個\n・特製デミグラスソース（植物性） 4個\n\n原材料：オニオンソテー、大豆（遺伝子組み換えでない）、パン粉、ひよこ豆パウダー、食用植物油脂、小麦粉、エンドウ豆たん白、馬鈴薯澱粉、塩、乾燥椎茸、酵母エキス、米紅麹、香辛料（ブラックペッパー、ホワイトペッパー、ナツメグ、オールスパイス）\n\n※ハンバーグ、ソースともに動物性の原料は一切使用しておりません。パームオイルや、牛骨炭を用いた白砂糖も使用しておらず、工場の生産ラインでも動物性の原料を扱っておりません。",
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
     makuake: (
       <>
@@ -337,7 +337,7 @@ function getText(languageCode: string) {
         </>
       ),
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
   };
 }

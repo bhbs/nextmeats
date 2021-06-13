@@ -5,22 +5,22 @@ module.exports = {
     GOOGLE_ANALYTICS_ID_TW_FOR_BROWSER: process.env.GOOGLE_ANALYTICS_ID_TW,
   },
   i18n: {
-    locales: ['ja', 'en-US', 'zh'],
-    defaultLocale: 'ja',
+    locales: ["ja", "en", "en-US", "zh", "zh-TW"],
+    defaultLocale: "ja",
     localeDetection: false,
     domains: [
       {
-        domain: 'nextmeats.co.jp',
-        defaultLocale: 'ja',
+        domain: "nextmeats.co.jp",
+        defaultLocale: "ja",
       },
       {
-        domain: 'nextmeats.us',
-        defaultLocale: 'en-US',
+        domain: "nextmeats.us",
+        defaultLocale: "en-US",
       },
       {
-        domain: 'nextmeats.tw',
-        defaultLocale: 'zh',
+        domain: "nextmeats.tw",
+        defaultLocale: "zh-TW",
       },
-    ]
+    ],
   },
-}
+};

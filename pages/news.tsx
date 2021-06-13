@@ -137,12 +137,12 @@ function getText(locale: LanguageCode) {
     title: {
       jp: "Next Meats Co., Ltd.",
       en: "Next Meats Co., Ltd.",
-      tw: "Next Meats Co., Ltd.",
+      zh: "Next Meats Co., Ltd.",
     }[locale],
     description: {
       jp: "NEWS",
       en: "NEWS",
-      tw: "NEWS",
+      zh: "NEWS",
     }[locale],
   };
 }

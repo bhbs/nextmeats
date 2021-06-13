@@ -98,52 +98,52 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
     name_h: {
       jp: "会社名",
       en: "Company Name",
-      tw: "Company Name",
+      zh: "Company Name",
     }[languageCode],
     name: {
       jp: "ネクストミーツ株式会社",
       en: "Next Meats Co., Ltd.",
-      tw: "Next Meats Co., Ltd.",
+      zh: "Next Meats Co., Ltd.",
     }[languageCode],
     establishment_h: {
       jp: "設立",
       en: "Establishment",
-      tw: "Establishment",
+      zh: "Establishment",
     }[languageCode],
     establishment: {
       jp: "2020年6月",
       en: "June, 2020",
-      tw: "June, 2020",
+      zh: "June, 2020",
     }[languageCode],
     ceo_h: {
       jp: "代表取締役",
       en: "CEO",
-      tw: "CEO",
+      zh: "CEO",
     }[languageCode],
     ceo: {
       jp: "佐々木 英之",
       en: "Hideyuki Sasaki",
-      tw: "Hideyuki Sasaki",
+      zh: "Hideyuki Sasaki",
     }[languageCode],
     founder_h: {
       jp: "取締役会長",
       en: "Founder",
-      tw: "Founder",
+      zh: "Founder",
     }[languageCode],
     founder: {
       jp: "白井良",
       en: "Ryo Shirai",
-      tw: "Ryo Shirai",
+      zh: "Ryo Shirai",
     }[languageCode],
     director_h: {
       jp: "取締役",
       en: "Director",
-      tw: "Director",
+      zh: "Director",
     }[languageCode],
     director: {
       jp: "石塚 孝一",
       en: "Koichi Ishizuka",
-      tw: "Koichi Ishizuka",
+      zh: "Koichi Ishizuka",
     }[languageCode],
     lawyer_h: {
       jp: "顧問弁護士",
@@ -154,67 +154,67 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
     location_h: {
       jp: "本社所在地",
       en: "Head Office Address",
-      tw: "Head Office Address",
+      zh: "Head Office Address",
     }[languageCode],
     location: {
       jp: "〒160-0022 新宿区 新宿一丁目 34-16 \n清水ビル2F",
       en: "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
-      tw: "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
+      zh: "SHIMIZU BUILDING 2ND FLOOR, 34-16 SHINJUKU 1 Chome, SHINJUKU-KU, TOKYO 160-0022, JAPAN",
     }[languageCode],
     lab_h: {
       jp: "NEXT Lab（研究室）",
       en: "NEXT Lab",
-      tw: "NEXT Lab",
+      zh: "NEXT Lab",
     }[languageCode],
     lab: {
       jp: "〒940-2127 新潟県長岡市新産4-1-10\nNARIC 2F",
       en: "NARIC 2ND FLOOR, 4-1-10 SHINSAN, NAGAOKA-SHI, NIGATA 940-2127, JAPAN",
-      tw: "NARIC 2ND FLOOR, 4-1-10 SHINSAN, NAGAOKA-SHI, NIGATA 940-2127, JAPAN",
+      zh: "NARIC 2ND FLOOR, 4-1-10 SHINSAN, NAGAOKA-SHI, NIGATA 940-2127, JAPAN",
     }[languageCode],
     time_h: {
       jp: "営業時間",
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
     time: {
       jp: "10:00〜19:00（土日祝定休）",
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
     contact_h: {
       jp: "連絡先",
       en: "E-MAIL",
-      tw: "E-MAIL",
+      zh: "E-MAIL",
     }[languageCode],
     contact: {
       jp: "info(at)nextmeats.co.jp",
       en: "info(at)nextmeats.co.jp",
-      tw: "info(at)nextmeats.co.jp",
+      zh: "info(at)nextmeats.co.jp",
     }[languageCode],
     business_h: {
       jp: "事業内容",
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
     business: {
       jp: "代替肉の開発\n代替肉を使用した商品の企画・製造\n通販事業・関連メディア運営",
       en: "",
-      tw: "",
+      zh: "",
     }[languageCode],
     holdings_h: {
       jp: "関連会社",
       en: "Related company",
-      tw: "Related company",
+      zh: "Related company",
     }[languageCode],
     holdings: {
       jp: "Next Meats Holdings, Inc.\nOTCBB 証券コード: NXMH",
       en: "Next Meats Holdings, Inc.\nOTCBB: NXMH",
-      tw: "Next Meats Holdings, Inc.\nOTCBB: NXMH",
+      zh: "Next Meats Holdings, Inc.\nOTCBB: NXMH",
     }[languageCode],
     recruit: {
       jp: "求人情報",
       en: "RECRUITMENT INFORMATION",
-      tw: "徵才資訊",
+      zh: "徵才資訊",
     }[languageCode],
   };
 };

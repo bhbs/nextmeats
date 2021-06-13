@@ -4,8 +4,8 @@ import React from "react";
 import { staticPath } from "../lib/$path";
 import * as gtag from "../lib/gtag";
 import { LanguageCode } from "../lib/language";
+import Footer from "./footer";
 import Header from "./header";
-import SnsLink from "./snsLink";
 
 type Props = {
   children: React.ReactNode;
@@ -43,7 +43,7 @@ const Layout = ({
             content="https://nextmeats.co.jp/img/index/en_web-ogp-1200x630-gyudon.jpg"
           />
         )}
-        {languageCode === "tw" && (
+        {languageCode === "zh" && (
           <meta
             key="og:image"
             property="og:image"
@@ -88,13 +88,10 @@ const Layout = ({
           </>
         )}
       </Head>
-      <Header languageCode={languageCode} path={router.route} />
+      <Header languageCode={languageCode} />
       {children}
       {!hideFooter && (
-        <footer>
-          <SnsLink languageCode={languageCode} color="black" />
-          <span>© 2021 Next Meats Co., Ltd.</span>
-        </footer>
+        <Footer languageCode={languageCode} path={router.route} />
       )}
     </>
   );

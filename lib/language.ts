@@ -1,6 +1,6 @@
-export type Locale = "ja" | "en-US" | "zh";
+export type Locale = "ja" | "en" | "en-US" | "zh" | "zh-TW";
 
-export type LanguageCode = "jp" | "en" | "tw";
+export type LanguageCode = "jp" | "en" | "zh";
 
 type Locale2LanguageCode = {
   [key in Locale]: LanguageCode;
@@ -9,8 +9,10 @@ type Locale2LanguageCode = {
 export const getLanguageCode = (locale: Locale): LanguageCode => {
   const locale2LanguageCode: Locale2LanguageCode = {
     ja: "jp",
+    en: "en",
     "en-US": "en",
-    zh: "tw",
+    zh: "zh",
+    "zh-TW": "zh",
   };
 
   return locale2LanguageCode[locale];

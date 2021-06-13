@@ -45,7 +45,7 @@ const TopNews = ({
           <Link href={pagesPath.news.$url()}>
             <a>
               {
-                { jp: "一覧を見る...", en: "read mode...", tw: "read more..." }[
+                { jp: "一覧を見る...", en: "read mode...", zh: "read more..." }[
                   languageCode
                 ]
               }

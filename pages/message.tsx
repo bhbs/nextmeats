@@ -50,22 +50,22 @@ const getText = (languageCode: LanguageCode) => {
     title: {
       jp: "ネクストミーツの理念",
       en: "The Philosophy of NEXT MEATS",
-      tw: "NEXT MEATS的理念",
+      zh: "NEXT MEATS的理念",
     }[languageCode],
     description: {
       jp: "- 地球を終わらせない",
       en: "- The Next Move from Meat",
-      tw: "- 顛覆美味 地球永續優植選擇",
+      zh: "- 顛覆美味 地球永續優植選擇",
     }[languageCode],
     subject: {
       jp: "- 地球を終わらせない",
       en: "- The Next Move from Meat",
-      tw: "- 顛覆美味 地球永續優植選擇",
+      zh: "- 顛覆美味 地球永續優植選擇",
     }[languageCode],
     state01: {
       jp: "子供達の未来のために我々ができることは？",
       en: "Can we talk about this crazy weather we’re having?",
-      tw: "為了孩子們的未來，我們能做什麼？",
+      zh: "為了孩子們的未來，我們能做什麼？",
     }[languageCode],
     state02: {
       jp: (
@@ -96,7 +96,7 @@ const getText = (languageCode: LanguageCode) => {
           exactly?
         </>
       ),
-      tw: (
+      zh: (
         <>
           溫室效應導致全球暖化，衝擊生態環境，各地洪水、乾旱、颶風、熱浪等災情不斷。人類經濟活動排放的溫室氣體中，畜養肉品約占了總排放量的15%（
           <a href="http://www.fao.org/news/story/en/item/197623/icode/">
@@ -109,7 +109,7 @@ const getText = (languageCode: LanguageCode) => {
     state03: {
       jp: "社会問題解決型フードテックベンチャー NEXT MEATS",
       en: "Bloom Where You Are Planted",
-      tw: "NEXT MEATSー致力解決社會問題的食品科技新創公司",
+      zh: "NEXT MEATSー致力解決社會問題的食品科技新創公司",
     }[languageCode],
     state04: {
       jp: (
@@ -131,7 +131,7 @@ const getText = (languageCode: LanguageCode) => {
           wellbeing, without compromising on taste or quality.
         </>
       ),
-      tw: (
+      zh: (
         <>
           我們認真思考地球環境的未來，成立了NEXT
           MEATS株式會社。身為食品科技新創企業，我們顛覆刻板印象，研發創新美味的優質植物肉品，提供人們嶄新的生活型態和消費選擇，讓地球永續美麗。
@@ -141,7 +141,7 @@ const getText = (languageCode: LanguageCode) => {
     state05: {
       jp: "未来に希望の光を",
       en: "Looking To The Future…",
-      tw: "為未來點燃希望之光",
+      zh: "為未來點燃希望之光",
     }[languageCode],
     state06: {
       jp: (
@@ -166,7 +166,7 @@ const getText = (languageCode: LanguageCode) => {
           plant-based the next move from meat.
         </>
       ),
-      tw: (
+      zh: (
         <>
           不論在任何時代人類總有面臨巨大的課題，NEXT
           MEATS對未來永遠抱持樂觀的態度，真摯面對挑戰，付諸行動來戰勝目前我們所處的「危機時代」。我們用最新的科技持續研發對地球友善的創新替代肉品，承諾孩子們未來永保燦爛笑容。

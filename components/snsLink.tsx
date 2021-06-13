@@ -16,7 +16,7 @@ const SnsLink = ({
           {
             jp: "https://www.facebook.com/NextMeats",
             en: "https://www.facebook.com/NEXT-MEATS-106450371376253",
-            tw: "https://www.facebook.com/nextmeats.taiwan",
+            zh: "https://www.facebook.com/nextmeats.taiwan",
           }[languageCode]
         }
         target="_blank"
@@ -29,7 +29,7 @@ const SnsLink = ({
           {
             jp: "https://twitter.com/MeatsNext",
             en: "https://twitter.com/nextmeats",
-            tw: "https://twitter.com/nextmeats",
+            zh: "https://twitter.com/nextmeats",
           }[languageCode]
         }
         target="_blank"
@@ -42,7 +42,7 @@ const SnsLink = ({
           {
             jp: "https://instagram.com/nextmeatsjapan/",
             en: "https://instagram.com/next_meats",
-            tw: "https://instagram.com/nextmeats_tw",
+            zh: "https://instagram.com/nextmeats_tw",
           }[languageCode]
         }
         target="_blank"
@@ -55,7 +55,7 @@ const SnsLink = ({
           {
             jp: "https://www.youtube.com/channel/UCckDSZupzEhmcphT5hcy-Aw",
             en: "https://www.youtube.com/channel/UCckDSZupzEhmcphT5hcy-Aw",
-            tw: "https://www.youtube.com/channel/UCckDSZupzEhmcphT5hcy-Aw",
+            zh: "https://www.youtube.com/channel/UCckDSZupzEhmcphT5hcy-Aw",
           }[languageCode]
         }
         target="_blank"
