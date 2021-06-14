@@ -54,7 +54,7 @@ const Footer = ({ languageCode, path }: Props): React.ReactElement => {
         <p>
           Language:{" "}
           <Link
-            href={languageCode === "jp" ? path : `/jp/${path}`}
+            href={languageCode === "jp" ? path : `/jp${path}`}
             locale={false}
           >
             <a
@@ -68,7 +68,7 @@ const Footer = ({ languageCode, path }: Props): React.ReactElement => {
           </Link>{" "}
           /{" "}
           <Link
-            href={languageCode === "en" ? path : `/en/${path}`}
+            href={languageCode === "en" ? path : `/en${path}`}
             locale={false}
           >
             <a
@@ -82,7 +82,7 @@ const Footer = ({ languageCode, path }: Props): React.ReactElement => {
           </Link>{" "}
           /{" "}
           <Link
-            href={languageCode === "zh" ? path : `/zh/${path}`}
+            href={languageCode === "zh" ? path : `/zh${path}`}
             locale={false}
           >
             <a
