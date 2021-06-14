@@ -400,18 +400,18 @@ const getText = (
     }[languageCode],
     guionet: {
       jp: "微生物と農業食品を専門とする生物物理学者。 植物性製品のメイラード反応の改善に注力している。 微生物由来のタンパク質で代替肉を作る研究開発を行う。",
-      en: "He is a biophysicist specializing in microbiology and agri-food. His work focuses on improving Maillard reactions in plant-based products. He is conducting research to create meat substitutes with microbial-derived proteins.",
-      zh: "Biophysicist specializing in microbiology and agri-food. His work focuses on improving Maillard reactions in plant-based products. He is conducting research to create meat substitutes with microbial-derived proteins.",
+      en: "Guionet is a biophysicist specializing in microbiology and agri-food. His work focuses on improving Maillard reactions in plant-based products. He is conducting research to create meat substitute from plant material and mircrobial cultures.",
+      zh: "Guionet is a Biophysicist specializing in microbiology and agri-food. His work focuses on improving Maillard reactions in plant-based products. He is conducting research to create meat substitute from plant material and mircrobial cultures.",
     }[languageCode],
     lu: {
       jp: "環境問題に関心を持ち、炭素と窒素に関する植物の栄養応答の分子メカニズムの解明する研究に従事。 epigenetics を取り入れ、持続可能な機能性原料の研究開発を行う。",
-      en: "He is interested in environmental issues and has been engaged in research to elucidate the molecular mechanisms of plant nutrient responses to carbon and nitrogen. He uses epigenetics to study sustainable functional raw materials.",
-      zh: "He is interested in environmental issues and has been engaged in research to elucidate the molecular mechanisms of plant nutrient responses to carbon and nitrogen. He uses epigenetics to study sustainable functional raw materials.",
+      en: "Yu has always been interested in environmental issues. Yu currently focuses on epigenetics and researches the molecular basis of protein storage in soybean and other plants. Using advanced technologies, he aims to cultivate high-quality plant resources to be used in our products.",
+      zh: "Yu has always been interested in environmental issues. Yu currently focuses on epigenetics and researches the molecular basis of protein storage in soybean and other plants. Using advanced technologies, he aims to cultivate high-quality plant resources to be used in our products.",
     }[languageCode],
     patuk: {
       jp: "専門は機械工学。新型装置の開発に着手。 筋肉組織を再現するべく、植物性タンパク質を段階的に熱し圧力で組織化させる研究開発を行う。",
-      en: "His specialty is mechanical engineering. Started development of a new device. In order to recreate muscle tissue, he has been conducting research on organizing vegetable proteins by heating and pressurizing them in stages.",
-      zh: "His specialty is mechanical engineering. Started development of a new device. In order to recreate muscle tissue, he has been conducting research on organizing vegetable proteins by heating and pressurizing them in stages.",
+      en: "Iaroslav has been working to develop original patented machinery and also conducts research on the various texturizing methods of vegetable proteins by extrusion processing.",
+      zh: "Iaroslav has been working to develop original patented machinery and also conducts research on the various texturizing methods of vegetable proteins by extrusion processing.",
     }[languageCode],
     lab_photo: {
       jp: "NEXT Lab（研究所）",
