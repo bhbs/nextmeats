@@ -54,7 +54,7 @@ const Footer = ({ languageCode, path }: Props): React.ReactElement => {
         <p>
           Language:{" "}
           <Link
-            href={languageCode === "jp" ? path : `/ja/${path}`}
+            href={languageCode === "jp" ? path : `/jp/${path}`}
             locale={false}
           >
             <a
