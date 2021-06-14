@@ -325,8 +325,8 @@ const getText = (
     }[languageCode],
     message_h: {
       jp: "ネクストミーツの理念",
-      en: "Next Meats's Philosophy",
-      zh: "Next Meats's Philosophy",
+      en: "Philosophy",
+      zh: "Philosophy",
     }[languageCode],
     message: {
       jp: "- 地球を終わらせない",
@@ -375,8 +375,8 @@ const getText = (
     }[languageCode],
     production_h: {
       jp: "ネクストミーツの生産体制",
-      en: "Next Meats's Production System",
-      zh: "Next Meats's Production System",
+      en: "Production System",
+      zh: "Production System",
     }[languageCode],
     production: {
       jp: "安心安全の食品づくりを徹底しています。",
@@ -390,8 +390,8 @@ const getText = (
     }[languageCode],
     lab_h: {
       jp: "ネクストミーツの研究開発",
-      en: "Next Meats's R&D",
-      zh: "Next Meats's R&D",
+      en: "Research and Development Team",
+      zh: "Research and Development Team",
     }[languageCode],
     lab: {
       jp: "優秀な研究者が世界から集結しています。",
@@ -420,8 +420,8 @@ const getText = (
     }[languageCode],
     japan_h: {
       jp: "ネクストミーツの国内展開",
-      en: "Next Meats's Available stores in Japan",
-      zh: "Next Meats's Available stores in Japan",
+      en: "Available stores in Japan",
+      zh: "Available stores in Japan",
     }[languageCode],
     japan: {
       jp: "スーパー、外食チェーン等、代替肉ブランドとして幅広く流通しています。",
@@ -516,8 +516,8 @@ const getText = (
     }[languageCode],
     oversea_h: {
       jp: "ネクストミーツの海外展開",
-      en: "Next Meats's Global Expansion Map",
-      zh: "Next Meats's Global Expansion Map",
+      en: "Global Expansion Map",
+      zh: "Global Expansion Map",
     }[languageCode],
     oversea: {
       jp: "国外への展開も進んでいます",
@@ -623,8 +623,8 @@ const getText = (
     }[languageCode],
     tvcm_h: {
       jp: "ネクストミーツのテレビCM",
-      en: "Next Meats's Television Commercial",
-      zh: "Next Meats's Television Commercial",
+      en: "Television Commercial",
+      zh: "Television Commercial",
     }[languageCode],
     tvcm: {
       jp: "2021年4月より、キー局（４局）でのテレビCMを開始しました。",
@@ -638,8 +638,8 @@ const getText = (
     }[languageCode],
     collaboration_h: {
       jp: "ネクストミーツのコラボレーション",
-      en: "Next Meats's Collaborative partners",
-      zh: "Next Meats's Collaborative partners",
+      en: "Collaborative partners",
+      zh: "Collaborative partners",
     }[languageCode],
     collaboration: {
       jp: "多くの企業・大学・専門家とのコラボ",
