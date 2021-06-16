@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "./productCard.module.scss";
 
-type Props = {
+export type ProductCardProps = {
   src: string;
   alt: string;
   href: string;
@@ -15,7 +15,7 @@ const ProductCard = ({
   alt,
   href,
   caption,
-}: Props): React.ReactElement => {
+}: ProductCardProps): React.ReactElement => {
   return href ? (
     <Link href={href}>
       <a>

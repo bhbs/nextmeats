@@ -5,7 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Company from "../components/company";
 import Layout from "../components/layout";
-import ProductCard from "../components/productCard";
+import ProductCard, { ProductCardProps } from "../components/productCard";
 import SnsLink from "../components/snsLink";
 import TopNews from "../components/topNews";
 import { pagesPath, staticPath } from "../lib/$path";
@@ -16,15 +16,38 @@ type Props = {
   languageCode: LanguageCode;
 };
 
+type TLD = "jp" | "us" | "tw";
+
+type Text = {
+  title: string;
+  description: string;
+  message: string;
+  pr01: string;
+  pr02: string;
+  pr03: string;
+  pr04: string;
+  pr05: string;
+  pr06: string;
+  chicken: (TLD: TLD) => ProductCardProps;
+  burger: (TLD: TLD) => ProductCardProps;
+  gyudon: (TLD: TLD) => ProductCardProps;
+  yakiniku: (TLD: TLD) => ProductCardProps;
+  euglena: (TLD: TLD) => ProductCardProps;
+  hamburgersteak: (TLD: TLD) => ProductCardProps;
+  accelarator: ProductCardProps;
+};
+
 const Index = ({ languageCode }: Props): React.ReactElement => {
   const [deviceType, setDevice] = useState("");
+  const [TLD, setTLD] = useState<TLD>("jp");
 
-  const text = getText(languageCode);
+  const text: Text = getText(languageCode);
 
   useEffect(() => {
     const mobiles =
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
     mobiles.test(navigator.userAgent) ? setDevice("mobile") : setDevice("pc");
+    setTLD(/[^.]*$/.exec(location.host)[0] as TLD);
   }, []);
 
   return (
@@ -163,22 +186,22 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
             <h2>PRODUCTS</h2>
             <div className={styles.productCards}>
               <div className={styles.productCard}>
-                <ProductCard {...text.chicken} />
+                <ProductCard {...text.chicken(TLD)} />
               </div>
               <div className={styles.productCard}>
-                <ProductCard {...text.burger} />
+                <ProductCard {...text.burger(TLD)} />
               </div>
               <div className={styles.productCard}>
-                <ProductCard {...text.gyudon} />
+                <ProductCard {...text.gyudon(TLD)} />
               </div>
               <div className={styles.productCard}>
-                <ProductCard {...text.yakiniku} />
+                <ProductCard {...text.yakiniku(TLD)} />
               </div>
               <div className={styles.productCard}>
-                <ProductCard {...text.euglena} />
+                <ProductCard {...text.euglena(TLD)} />
               </div>
               <div className={styles.productCard}>
-                <ProductCard {...text.hamburgersteak} />
+                <ProductCard {...text.hamburgersteak(TLD)} />
               </div>
             </div>
 
@@ -238,18 +261,18 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
   );
 };
 
-function getText(locale) {
+function getText(languageCode) {
   return {
     title: {
       jp: "NEXT MEATS | 代替肉開発スタートアップ【ネクストミーツ株式会社】人工肉・代替肉・植物肉",
       en: "Next Meats Co., Ltd. WEBSITE",
       zh: "Next Meats Co., Ltd. WEBSITE",
-    }[locale],
+    }[languageCode],
     description: {
       jp: "フェイクミートで次世代の未来をつくる代替肉開発スタートアップ【ネクストミーツ株式会社】 人工肉・代替肉・植物肉",
       en: "Next Meats Co., Ltd. WEBSITE",
       zh: "Next Meats Co., Ltd. WEBSITE",
-    }[locale],
+    }[languageCode],
     message: {
       jp: (
         <>
@@ -322,27 +345,27 @@ function getText(locale) {
           </p>
         </>
       ),
-    }[locale],
+    }[languageCode],
     pr01: {
       jp: "ビックリする旨さ！\n『NEXT牛丼1.2』",
       en: 'A flavor that will surprise you!\n"NEXT Gyudon 1.2"',
       zh: "令人驚嘆的美味！「NEXT牛肉蓋飯1.2」",
-    }[locale],
+    }[languageCode],
     pr02: {
       jp: "世界初となる焼肉用フェイクミート\n『カルビ1.1』＆『ハラミ1.1』",
       en: 'The world’s very first meat substitute developed for yakiniku NEXT Yakiniku\n"Short Rib 1.1" & "Skirt 1.1"',
       zh: "全球首創的燒肉替代肉 NEXT燒肉\n「牛五花1.1」＆「牛橫隔膜1.1」",
-    }[locale],
+    }[languageCode],
     pr03: {
       jp: "本気で美味しい代替肉\n『NEXTバーガー2.0』",
       en: 'An absolutely delicious meat substitute\n "NEXT Burger 2.0"',
       zh: "精心打造的美味替代肉「NEXT漢堡2.0」",
-    }[locale],
+    }[languageCode],
     pr04: {
       jp: "代替肉専門メディア、コンソーシアムを運営",
       en: "",
       zh: "",
-    }[locale],
+    }[languageCode],
     pr05: {
       jp: (
         <>
@@ -367,7 +390,7 @@ function getText(locale) {
       ),
       en: "",
       zh: "",
-    }[locale],
+    }[languageCode],
     pr06: {
       jp: "",
       en: (
@@ -378,127 +401,145 @@ function getText(locale) {
         </>
       ),
       zh: "NEXT MEATS依據SDGs的理念，為地球永續的可能性盡一份心力。",
-    }[locale],
+    }[languageCode],
     chicken: {
-      jp: {
+      jp: (TLD: TLD) => ({
         src: "/img/index/chicken_1920x1080-jp.jpg",
         alt: "NEXT チキン 1.0",
-        href: "https://shop.nextmeats.jp/products/chicken",
-        caption: "ショップで見る",
-      },
-      en: {
+        href: TLD === "jp" ? "https://shop.nextmeats.jp/products/chicken" : "",
+        caption: TLD === "jp" ? "ショップで見る" : "準備中",
+      }),
+      en: (TLD: TLD) => ({
         src: "/img/index/chicken_1920x1080-en.jpg",
         alt: "NEXT CHICKEN 1.0",
-        href: "",
-        caption: "comming soon...",
-      },
-      zh: {
+        href: TLD === "jp" ? "https://shop.nextmeats.jp/products/chicken" : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+      zh: (TLD: TLD) => ({
         src: "/img/index/chicken_1920x1080-tw.jpg",
         alt: "NEXT 炸雞 1.0",
-        href: "",
-        caption: "comming soon...",
-      },
-    }[locale],
+        href: TLD === "jp" ? "https://shop.nextmeats.jp/products/chicken" : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+    }[languageCode],
     burger: {
-      jp: {
+      jp: (TLD: TLD) => ({
         src: "/img/index/burger_1920x1080-jp.jpg",
         alt: "NEXTバーガー2.0",
-        href: "https://shop.nextmeats.jp/products/burger",
-        caption: "ショップで見る",
-      },
-      en: {
+        href: TLD === "jp" ? "https://shop.nextmeats.jp/products/burger" : "",
+        caption: TLD === "jp" ? "ショップで見る" : "準備中",
+      }),
+      en: (TLD: TLD) => ({
         src: "/img/index/burger_1920x1080-en.jpg",
         alt: "NEXT Burger 2.0",
-        href: "",
-        caption: "comming soon...",
-      },
-      zh: {
+        href: TLD === "jp" ? "https://shop.nextmeats.jp/products/burger" : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+      zh: (TLD: TLD) => ({
         src: "/img/index/burger_1920x1080-tw.jpg",
         alt: "NEXT 漢堡 2.0",
-        href: "",
-        caption: "comming soon...",
-      },
-    }[locale],
+        href: TLD === "jp" ? "https://shop.nextmeats.jp/products/burger" : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+    }[languageCode],
     gyudon: {
-      jp: {
+      jp: (TLD: TLD) => ({
         src: "/img/index/jp_1920x1080-gyudon.jpg",
         alt: "NEXT牛丼1.2",
-        href: "https://shop.nextmeats.jp/products/gyudon",
-        caption: "ショップで見る",
-      },
-      en: {
+        href: TLD === "jp" ? "https://shop.nextmeats.jp/products/gyudon" : "",
+        caption: TLD === "jp" ? "ショップで見る" : "準備中",
+      }),
+      en: (TLD: TLD) => ({
         src: "/img/index/en_1920x1080-gyudon.jpg",
         alt: "NEXT Gyudon 1.2",
-        href: "",
-        caption: "comming soon...",
-      },
-      zh: {
+        href: TLD === "jp" ? "https://shop.nextmeats.jp/products/gyudon" : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+      zh: (TLD: TLD) => ({
         src: "/img/index/tw_1920x1080-gyudon.jpg",
         alt: "NEXT牛丼1.2",
-        href: "",
-        caption: "comming soon...",
-      },
-    }[locale],
+        href: TLD === "jp" ? "https://shop.nextmeats.jp/products/gyudon" : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+    }[languageCode],
     yakiniku: {
-      jp: {
+      jp: (TLD: TLD) => ({
         src: "/img/index/yakiniku_1920x1080-jp.jpg",
         alt: "NEXT焼肉 カルビ1.1",
-        href: "https://shop.nextmeats.jp/products/yakiniku-karubi",
-        caption: "ショップで見る",
-      },
-      en: {
+        href:
+          TLD === "jp"
+            ? "https://shop.nextmeats.jp/products/yakiniku-karubi"
+            : "",
+        caption: TLD === "jp" ? "ショップで見る" : "準備中",
+      }),
+      en: (TLD: TLD) => ({
         src: "/img/index/yakiniku_1920x1080-en.jpg",
         alt: "NEXT Yakiniku Skirt Steak 1.1",
-        href: "",
-        caption: "comming soon...",
-      },
-      zh: {
+        href:
+          TLD === "jp"
+            ? "https://shop.nextmeats.jp/products/yakiniku-karubi"
+            : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+      zh: (TLD: TLD) => ({
         src: "/img/index/yakiniku_1920x1080-tw.jpg",
         alt: "NEXT 牛五花 1.1",
-        href: "",
-        caption: "comming soon...",
-      },
-    }[locale],
+        href:
+          TLD === "jp"
+            ? "https://shop.nextmeats.jp/products/yakiniku-karubi"
+            : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+    }[languageCode],
     euglena: {
-      jp: {
+      jp: (TLD: TLD) => ({
         src: "/img/index/euglena.jpg",
         alt: "NEXTユーグレナ焼肉EX",
-        href: "https://shop.nextmeats.jp/products/yakiniku-euglena",
-        caption: "ショップで見る",
-      },
-      en: {
+        href:
+          TLD === "jp"
+            ? "https://shop.nextmeats.jp/products/yakiniku-euglena"
+            : "",
+        caption: TLD === "jp" ? "ショップで見る" : "準備中",
+      }),
+      en: (TLD: TLD) => ({
         src: "/img/index/euglena.jpg",
         alt: "NEXT Euglena Yakiniku EX",
-        href: "",
-        caption: "comming soon...",
-      },
-      zh: {
+        href:
+          TLD === "jp"
+            ? "https://shop.nextmeats.jp/products/yakiniku-euglena"
+            : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+      zh: (TLD: TLD) => ({
         src: "/img/index/euglena.jpg",
         alt: "NEXT Euglena Yakiniku EX",
-        href: "",
-        caption: "comming soon...",
-      },
-    }[locale],
+        href:
+          TLD === "jp"
+            ? "https://shop.nextmeats.jp/products/yakiniku-euglena"
+            : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+    }[languageCode],
     hamburgersteak: {
-      jp: {
+      jp: (TLD: TLD) => ({
         src: "/img/index/hamburgersteak_1920x1080-jp.jpg",
         alt: "NEXT ハンバーグ 1.0",
-        href: pagesPath.hamburgersteak.$url(),
+        href: TLD === "jp" ? pagesPath.hamburgersteak.$url() : "",
         caption: "詳細を見る",
-      },
-      en: {
+      }),
+      en: (TLD: TLD) => ({
         src: "/img/index/hamburgersteak_1920x1080-en.jpg",
         alt: "NEXT HAMBURGER STEAK 1.0",
-        href: "",
-        caption: "comming soon...",
-      },
-      zh: {
+        href: TLD === "jp" ? pagesPath.hamburgersteak.$url() : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+      zh: (TLD: TLD) => ({
         src: "/img/index/hamburgersteak_1920x1080-tw.jpg",
         alt: "NEXT 日式漢堡排 1.0",
-        href: "",
-        caption: "comming soon...",
-      },
-    }[locale],
+        href: TLD === "jp" ? pagesPath.hamburgersteak.$url() : "",
+        caption: TLD === "jp" ? "view shop" : "comming soon...",
+      }),
+    }[languageCode],
     accelarator: {
       jp: {
         src: "/img/index/accelarator-jp.jpg",
@@ -518,7 +559,7 @@ function getText(locale) {
         href: pagesPath.accelarator.$url(),
         caption: "view page",
       },
-    }[locale],
+    }[languageCode],
   };
 }
 
@@ -526,8 +567,9 @@ export const getStaticProps: GetStaticProps = async ({
   locale,
 }: {
   locale: Locale;
-}): Promise<GetStaticPropsResult<{ languageCode: LanguageCode }>> => {
+}): Promise<GetStaticPropsResult<Props>> => {
   const languageCode: LanguageCode = getLanguageCode(locale);
+
   return { props: { languageCode } };
 };
 
