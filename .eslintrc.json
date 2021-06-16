@@ -11,6 +11,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended"
   ],

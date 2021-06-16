@@ -1,8 +1,7 @@
-import React from "react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { LanguageCode } from "../lib/language";
+import React, { useEffect, useState } from "react";
 import { pagesPath } from "../lib/$path";
+import { LanguageCode } from "../lib/language";
 
 const TopNews = ({
   languageCode,
