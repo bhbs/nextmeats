@@ -10,6 +10,9 @@ import SnsLink from "../components/snsLink";
 import TopNews from "../components/topNews";
 import { pagesPath, staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
+import topImageEN from "../public/img/index/en_web-top-pc-1920x945.jpg";
+import topImageJP from "../public/img/index/jp_web-top-pc-1920x945.jpg";
+import topImageTW from "../public/img/index/tw_web-top-pc-1920x945.jpg";
 import styles from "../styles/index.module.scss";
 
 type Props = {
@@ -21,13 +24,13 @@ type TLD = "jp" | "us" | "tw";
 type Text = {
   title: string;
   description: string;
-  message: string;
+  message: JSX.Element;
   pr01: string;
   pr02: string;
   pr03: string;
   pr04: string;
-  pr05: string;
-  pr06: string;
+  pr05: JSX.Element;
+  pr06: JSX.Element;
   chicken: (TLD: TLD) => ProductCardProps;
   burger: (TLD: TLD) => ProductCardProps;
   gyudon: (TLD: TLD) => ProductCardProps;
@@ -71,15 +74,16 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
           <Image
             src={
               {
-                jp: staticPath.img.index.jp_web_top_pc_1920x945_jpg,
-                en: staticPath.img.index.en_web_top_pc_1920x945_jpg,
-                zh: staticPath.img.index.tw_web_top_pc_1920x945_jpg,
+                jp: topImageJP,
+                en: topImageEN,
+                zh: topImageTW,
               }[languageCode]
             }
             alt={text.title}
             width={1920}
             height={945}
             layout="responsive"
+            placeholder="blur"
           />
         )}
         {deviceType === "mobile" && (
@@ -261,7 +265,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
   );
 };
 
-function getText(languageCode) {
+function getText(languageCode: LanguageCode) {
   return {
     title: {
       jp: "NEXT MEATS | 代替肉開発スタートアップ【ネクストミーツ株式会社】人工肉・代替肉・植物肉",
@@ -388,11 +392,11 @@ function getText(languageCode) {
           を運営し、有識者（生命科学・食品工学・遺伝子工学）のネットワークから生まれるアイデア、テクノロジーを駆使して次世代の肉を日々進化させていきます。
         </>
       ),
-      en: "",
-      zh: "",
+      en: <></>,
+      zh: <></>,
     }[languageCode],
     pr06: {
-      jp: "",
+      jp: <></>,
       en: (
         <>
           Next Meats Co., Ltd is committed to <br className="responsive" />
@@ -400,7 +404,7 @@ function getText(languageCode) {
           by playing our part in achieving the SDGs.
         </>
       ),
-      zh: "NEXT MEATS依據SDGs的理念，為地球永續的可能性盡一份心力。",
+      zh: <>NEXT MEATS依據SDGs的理念，為地球永續的可能性盡一份心力。</>,
     }[languageCode],
     chicken: {
       jp: (TLD: TLD) => ({
@@ -524,19 +528,19 @@ function getText(languageCode) {
       jp: (TLD: TLD) => ({
         src: "/img/index/hamburgersteak_1920x1080-jp.jpg",
         alt: "NEXT ハンバーグ 1.0",
-        href: TLD === "jp" ? pagesPath.hamburgersteak.$url() : "",
-        caption: "詳細を見る",
+        href: TLD === "jp" ? pagesPath.hamburgersteak.$url().pathname : "",
+        caption: TLD === "jp" ? "詳細を見る" : "準備中",
       }),
       en: (TLD: TLD) => ({
         src: "/img/index/hamburgersteak_1920x1080-en.jpg",
         alt: "NEXT HAMBURGER STEAK 1.0",
-        href: TLD === "jp" ? pagesPath.hamburgersteak.$url() : "",
+        href: TLD === "jp" ? pagesPath.hamburgersteak.$url().pathname : "",
         caption: TLD === "jp" ? "view shop" : "comming soon...",
       }),
       zh: (TLD: TLD) => ({
         src: "/img/index/hamburgersteak_1920x1080-tw.jpg",
         alt: "NEXT 日式漢堡排 1.0",
-        href: TLD === "jp" ? pagesPath.hamburgersteak.$url() : "",
+        href: TLD === "jp" ? pagesPath.hamburgersteak.$url().pathname : "",
         caption: TLD === "jp" ? "view shop" : "comming soon...",
       }),
     }[languageCode],
@@ -544,19 +548,19 @@ function getText(languageCode) {
       jp: {
         src: "/img/index/accelarator-jp.jpg",
         alt: "Accelarator program",
-        href: pagesPath.accelarator.$url(),
+        href: pagesPath.accelarator.$url().pathname,
         caption: "詳細を見る",
       },
       en: {
         src: "/img/index/accelarator-en.jpg",
         alt: "Accelarator program",
-        href: pagesPath.accelarator.$url(),
+        href: pagesPath.accelarator.$url().pathname,
         caption: "view page",
       },
       zh: {
         src: "/img/index/accelarator-tw.jpg",
         alt: "Accelarator program",
-        href: pagesPath.accelarator.$url(),
+        href: pagesPath.accelarator.$url().pathname,
         caption: "view page",
       },
     }[languageCode],

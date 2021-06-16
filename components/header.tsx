@@ -1,8 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import { LanguageCode } from "../lib/language";
 import { pagesPath } from "../lib/$path";
+import { LanguageCode } from "../lib/language";
+import logo from "../public/img/header/logo.png";
 
 type Props = {
   languageCode: LanguageCode;
@@ -17,10 +18,11 @@ const Header = ({ languageCode }: Props): React.ReactElement => (
           <Link href={pagesPath.$url()}>
             <a className="luxbar-brand">
               <Image
-                src="/img/header/logo.png"
+                src={logo}
                 alt="next meats logo"
                 width={180}
                 height={24.91}
+                placeholder="blur"
               />
             </a>
           </Link>
