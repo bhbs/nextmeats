@@ -10,9 +10,14 @@ import SnsLink from "../components/snsLink";
 import TopNews from "../components/topNews";
 import { pagesPath, staticPath } from "../lib/$path";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
+import gyudonEN from "../public/img/index/en_web-top-mobile-720x580-gyudon.jpg";
 import topImageEN from "../public/img/index/en_web-top-pc-1920x945.jpg";
+import fft from "../public/img/index/futurefoodtech.png";
+import gyudonJP from "../public/img/index/jp_web-top-mobile-720x580-gyudon.jpg";
 import topImageJP from "../public/img/index/jp_web-top-pc-1920x945.jpg";
-import topImageTW from "../public/img/index/tw_web-top-pc-1920x945.jpg";
+import gyudonZH from "../public/img/index/tw_web-top-mobile-720x580-gyudon.jpg";
+import topImageZH from "../public/img/index/tw_web-top-pc-1920x945.jpg";
+import yakinikuLikeTW from "../public/img/index/tw_yakinikulike.jpg";
 import styles from "../styles/index.module.scss";
 
 type Props = {
@@ -76,7 +81,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
               {
                 jp: topImageJP,
                 en: topImageEN,
-                zh: topImageTW,
+                zh: topImageZH,
               }[languageCode]
             }
             alt={text.title}
@@ -90,15 +95,16 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
           <Image
             src={
               {
-                jp: staticPath.img.index.jp_web_top_mobile_720x580_gyudon_jpg,
-                en: staticPath.img.index.en_web_top_mobile_720x580_gyudon_jpg,
-                zh: staticPath.img.index.tw_web_top_mobile_720x580_gyudon_jpg,
+                jp: gyudonJP,
+                en: gyudonEN,
+                zh: gyudonZH,
               }[languageCode]
             }
             alt={text.title}
             width={720}
             height={580}
             layout="responsive"
+            placeholder="blur"
           />
         )}
       </div>
@@ -111,11 +117,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
         {languageCode === "en" && (
           <section>
             <a href="https://www.futurefoodtechprotein.com/">
-              <Image
-                src={staticPath.img.index.futurefoodtech_png}
-                width={1024}
-                height={512}
-              />
+              <Image src={fft} width={1024} height={512} placeholder="blur" />
             </a>
           </section>
         )}
@@ -134,9 +136,10 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
         {languageCode === "zh" && (
           <section>
             <Image
-              src={staticPath.img.index.tw_yakinikulike_jpg}
+              src={yakinikuLikeTW}
               width={4500}
               height={2531}
+              placeholder="blur"
             />
           </section>
         )}
