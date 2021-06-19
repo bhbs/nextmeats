@@ -69,7 +69,7 @@ const Component = ({ productData }: Props): React.ReactElement => {
       <Head>
         <link rel="stylesheet" href={staticPath.css.swiper_css} />
       </Head>
-      <h2>
+      <h2 style={{ textAlign: "center" }}>
         {productData.name}vs.従来{productData.category}
       </h2>
       <p style={{ display: "block", padding: "0 46px" }}>

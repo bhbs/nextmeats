@@ -39,7 +39,7 @@ const Component = ({
 
   return (
     <section id="carousel">
-      <h2>LINE UP</h2>
+      <h2 style={{ textAlign: "center" }}>LINE UP</h2>
       <Swiper
         spaceBetween={24}
         slidesPerView={1.4}

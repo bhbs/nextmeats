@@ -2,6 +2,9 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { Data, Product } from "../../pages/data";
+import chicken from "../../public/img/datapage/footer/dish_chicken.png";
+import harami from "../../public/img/datapage/footer/dish_harami.png";
+import karubi from "../../public/img/datapage/footer/dish_karubi.png";
 import SnsLink from "../snsLink";
 import styles from "./footer.module.scss";
 
@@ -92,7 +95,7 @@ const Dish = ({ product }: { product: Product }) => {
     <div
       style={{
         overflow: "hidden",
-        marginTop: "-75px",
+        marginTop: "-64px",
       }}
       id="dish"
     >
@@ -103,7 +106,7 @@ const Dish = ({ product }: { product: Product }) => {
         }}
       >
         <Image
-          src={`/img/datapage/footer/dish_${product}.png`}
+          src={{ karubi, harami, chicken }[product]}
           width={375}
           height={375}
         />
