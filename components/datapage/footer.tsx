@@ -1,16 +1,12 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import { Product } from "../../pages/data";
+import { Data, Product } from "../../pages/data";
 import SnsLink from "../snsLink";
 import styles from "./footer.module.scss";
 
 type Props = {
-  items: {
-    id: Product;
-    name: string;
-    img: string;
-  }[];
+  items: Data;
   product: Product;
   setProduct: (value: React.SetStateAction<Product>) => void;
 };

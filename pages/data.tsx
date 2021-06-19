@@ -7,6 +7,9 @@ import Fv from "../components/datapage/fv";
 import Stars from "../components/datapage/stars";
 import Statement from "../components/datapage/statement";
 import Layout from "../components/layout";
+import chickenImage from "../public/img/datapage/carousel/chicken.png";
+import haramiImage from "../public/img/datapage/carousel/harami.png";
+import karubiImage from "../public/img/datapage/carousel/karubi.png";
 import styles from "../styles/data.module.scss";
 
 export type Product = "karubi" | "harami" | "chicken";
@@ -108,27 +111,27 @@ const products: Products = {
   },
 };
 
-type Data = {
+export type Data = {
   id: Product;
   name: string;
-  img: string;
+  img: StaticImageData;
 }[];
 
 const items: Data = [
   {
     id: "chicken",
     name: "NEXTチキン",
-    img: "/img/datapage/carousel/chicken.png",
+    img: chickenImage,
   },
   {
     id: "karubi",
     name: "NEXTカルビ",
-    img: "/img/datapage/carousel/karubi.png",
+    img: karubiImage,
   },
   {
     id: "harami",
     name: "NEXTハラミ",
-    img: "/img/datapage/carousel/harami.png",
+    img: haramiImage,
   },
 ];
 

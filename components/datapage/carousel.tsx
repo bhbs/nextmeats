@@ -2,15 +2,11 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Product } from "../../pages/data";
+import { Data, Product } from "../../pages/data";
 import styles from "./carousel.module.scss";
 
 type Props = {
-  items: {
-    id: Product;
-    name: string;
-    img: string;
-  }[];
+  items: Data;
   product: Product;
   setProduct: (value: React.SetStateAction<Product>) => void;
 };
