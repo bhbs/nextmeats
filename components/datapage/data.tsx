@@ -178,7 +178,6 @@ const Modal = ({
           spaceBetween={50}
           slidesPerView={1}
           initialSlide={itemIndex}
-          loop={true}
           style={{ padding: "20px" }}
           navigation={{
             nextEl: `.${styles.swiperButtonNext}`,
