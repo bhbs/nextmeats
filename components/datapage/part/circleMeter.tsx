@@ -62,12 +62,12 @@ const Number = ({ rate, animation }: Props): React.ReactElement => {
       setNumber(("00" + Math.floor(displayRate)).slice(-2));
       return;
     }
-    let count = 30;
+    let count = 1;
     const timer = setInterval(() => {
-      count--;
-      if (count === 1) clearInterval(timer);
-      setNumber(("00" + Math.floor(displayRate / count)).slice(-2));
-    }, 30);
+      count++;
+      if (count === 8) clearInterval(timer);
+      setNumber(("00" + Math.floor((displayRate * count) / 8)).slice(-2));
+    }, 100);
   }, []);
 
   return (
