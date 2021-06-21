@@ -193,6 +193,9 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
             <h2>PRODUCTS</h2>
             <div className={styles.productCards}>
               <div className={styles.productCard}>
+                <ProductCard {...text.yakiniku(TLD)} />
+              </div>
+              <div className={styles.productCard}>
                 <ProductCard {...text.chicken(TLD)} />
               </div>
               <div className={styles.productCard}>
@@ -200,9 +203,6 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
               </div>
               <div className={styles.productCard}>
                 <ProductCard {...text.gyudon(TLD)} />
-              </div>
-              <div className={styles.productCard}>
-                <ProductCard {...text.yakiniku(TLD)} />
               </div>
               <div className={styles.productCard}>
                 <ProductCard {...text.euglena(TLD)} />
@@ -476,8 +476,10 @@ function getText(languageCode: LanguageCode) {
         href:
           TLD === "jp"
             ? "https://shop.nextmeats.jp/products/yakiniku-karubi"
+            : TLD === "us"
+            ? "https://shop.nextmeats.us"
             : "",
-        caption: TLD === "jp" ? "ショップで見る" : "準備中",
+        caption: TLD === "jp" || TLD === "us" ? "ショップで見る" : "準備中",
       }),
       en: (TLD: TLD) => ({
         src: "/img/index/yakiniku_1920x1080-en.jpg",
@@ -485,8 +487,10 @@ function getText(languageCode: LanguageCode) {
         href:
           TLD === "jp"
             ? "https://shop.nextmeats.jp/products/yakiniku-karubi"
+            : TLD === "us"
+            ? "https://shop.nextmeats.us"
             : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" || TLD === "us" ? "view shop" : "comming soon...",
       }),
       zh: (TLD: TLD) => ({
         src: "/img/index/yakiniku_1920x1080-tw.jpg",
@@ -494,8 +498,10 @@ function getText(languageCode: LanguageCode) {
         href:
           TLD === "jp"
             ? "https://shop.nextmeats.jp/products/yakiniku-karubi"
+            : TLD === "us"
+            ? "https://shop.nextmeats.us"
             : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" || TLD === "us" ? "view shop" : "comming soon...",
       }),
     }[languageCode],
     euglena: {
