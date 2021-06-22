@@ -400,8 +400,8 @@ const getText = (
     }[languageCode],
     guionet: {
       jp: "微生物と農業食品を専門とする生物物理学者。 植物性製品のメイラード反応の改善に注力している。 微生物由来のタンパク質で代替肉を作る研究開発を行う。",
-      en: "Guionet is a biophysicist specializing in microbiology and agri-food. His work focuses on improving Maillard reactions in plant-based products. He is conducting research to create meat substitute from plant material and mircrobial cultures.",
-      zh: "Guionet is a Biophysicist specializing in microbiology and agri-food. His work focuses on improving Maillard reactions in plant-based products. He is conducting research to create meat substitute from plant material and mircrobial cultures.",
+      en: "Guionet is a biophysicist specializing in microbiology and agri-food. His work focuses on improving Maillard reactions in plant-based products. He is conducting research to create meat substitute from plant material and microbial cultures.",
+      zh: "Guionet is a Biophysicist specializing in microbiology and agri-food. His work focuses on improving Maillard reactions in plant-based products. He is conducting research to create meat substitute from plant material and microbial cultures.",
     }[languageCode],
     lu: {
       jp: "環境問題に関心を持ち、炭素と窒素に関する植物の栄養応答の分子メカニズムの解明する研究に従事。 epigenetics を取り入れ、持続可能な機能性原料の研究開発を行う。",
