@@ -30,7 +30,7 @@ const News = ({ languageCode }: Props): React.ReactElement => {
           option: {},
         })
       );
-  }, []);
+  }, [languageCode]);
 
   const textSearch = (e) => {
     const text = e.target.value;

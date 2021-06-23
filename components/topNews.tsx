@@ -16,7 +16,7 @@ const TopNews = ({
     )
       .then((response) => response.json())
       .then((news) => setNews(news));
-  }, []);
+  }, [languageCode]);
 
   return (
     <section>

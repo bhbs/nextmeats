@@ -19,7 +19,7 @@ const MyApp = ({ Component, pageProps }: AppProps): React.ReactElement => {
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, [router.events]);
+  }, [router.events, gaId]);
 
   return <Component {...pageProps} />;
 };

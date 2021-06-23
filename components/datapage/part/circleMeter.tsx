@@ -68,7 +68,7 @@ const Number = ({ rate, animation }: Props): React.ReactElement => {
       if (count === 8) clearInterval(timer);
       setNumber(("00" + Math.floor((displayRate * count) / 8)).slice(-2));
     }, 100);
-  }, []);
+  }, [animation, displayRate]);
 
   return (
     <p>

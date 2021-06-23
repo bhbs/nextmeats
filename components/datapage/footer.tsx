@@ -107,6 +107,7 @@ const Dish = ({ product }: { product: Product }) => {
       >
         <Image
           src={{ karubi, harami, chicken }[product]}
+          alt=""
           width={375}
           height={375}
         />

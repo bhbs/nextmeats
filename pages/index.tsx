@@ -117,7 +117,13 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
         {languageCode === "en" && (
           <section>
             <a href="https://www.futurefoodtechprotein.com/">
-              <Image src={fft} width={1024} height={512} placeholder="blur" />
+              <Image
+                src={fft}
+                width={1024}
+                height={512}
+                placeholder="blur"
+                alt="futurefoodtech"
+              />
             </a>
           </section>
         )}
@@ -137,6 +143,7 @@ const Index = ({ languageCode }: Props): React.ReactElement => {
           <section>
             <Image
               src={yakinikuLikeTW}
+              alt=""
               width={4500}
               height={2531}
               placeholder="blur"

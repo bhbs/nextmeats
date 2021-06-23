@@ -14,7 +14,7 @@ const Component = ({ item }: Props): React.ReactElement => {
       container: animationContainer.current,
       path: item.path,
     });
-  }, []);
+  }, [item.path]);
 
   return (
     <>

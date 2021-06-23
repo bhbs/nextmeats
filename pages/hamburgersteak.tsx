@@ -102,6 +102,7 @@ function getText(languageCode: string) {
         <h4>1. とろ〜りヴィーガンチーズハンバーグ</h4>
         <Image
           src={staticPath.img.hamburgersteak.recipe1_jpg}
+          alt="とろ〜りヴィーガンチーズハンバーグ"
           width={1280}
           height={800}
         ></Image>
@@ -156,6 +157,7 @@ function getText(languageCode: string) {
         <h4>2. さっぱり和風おろし梅ハンバーグ</h4>
         <Image
           src={staticPath.img.hamburgersteak.recipe2_jpg}
+          alt="さっぱり和風おろし梅ハンバーグ"
           width={1280}
           height={800}
         ></Image>
@@ -221,6 +223,7 @@ function getText(languageCode: string) {
         <h4>3. ロコモコ風ハンバーグ</h4>
         <Image
           src={staticPath.img.hamburgersteak.recipe3_jpg}
+          alt="ロコモコ風ハンバーグ"
           width={1280}
           height={800}
         ></Image>
@@ -312,11 +315,14 @@ function getText(languageCode: string) {
     makuake: (
       <>
         <Link href="https://www.makuake.com/project/nextmeats2/">
-          <Image
-            src={staticPath.img.hamburgersteak.makuake_jpg}
-            width={1200}
-            height={630}
-          ></Image>
+          <a>
+            <Image
+              src={staticPath.img.hamburgersteak.makuake_jpg}
+              alt=""
+              width={1200}
+              height={630}
+            ></Image>
+          </a>
         </Link>
         <p>
           おかげさまで『NEXTハンバーグ

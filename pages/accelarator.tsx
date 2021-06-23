@@ -131,7 +131,7 @@ const Accerlarator = ({ languageCode }: Props): React.ReactElement => {
               ].map((imgUrl, i) => (
                 <>
                   <div className={styles.item}>
-                    <Image src={imgUrl} width={72} height={72} />
+                    <Image src={imgUrl} alt="" width={72} height={72} />
                   </div>
                   <div className={styles.item}>
                     <p>{text[`schedule_${i + 1}`]}</p>

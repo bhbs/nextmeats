@@ -35,7 +35,12 @@ const Component = (): React.ReactElement => {
             zIndex: 1,
           }}
         >
-          <Image src={loaded ? mainFv : lightFv} width={375} height={375} />
+          <Image
+            src={loaded ? mainFv : lightFv}
+            alt=""
+            width={375}
+            height={375}
+          />
         </div>
       )}
       {displayed && (
@@ -92,7 +97,7 @@ const Counter = ({ opacity, target }: CounterProps): React.ReactElement => {
     }, Math.random() * 100 + 100);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [target]);
 
   return (
     <>

@@ -102,6 +102,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             </p>
             <Image
               src={staticPath.img.company.c_jpg}
+              alt={text.founders as string}
               width={640}
               height={360}
             />
@@ -122,6 +123,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             </div>
             <Image
               src={staticPath.img.company.factory_jpg}
+              alt={text.production as string}
               width={640}
               height={360}
             />
@@ -133,6 +135,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
               <div className={styles.imgWrapper}>
                 <Image
                   src={staticPath.img.company.r_01_jpg}
+                  alt={text.lab as string}
                   width={1020}
                   height={1275}
                 />
@@ -149,6 +152,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
               <div className={styles.imgWrapper}>
                 <Image
                   src={staticPath.img.company.r_02_jpg}
+                  alt={text.guionet as string}
                   width={1020}
                   height={1275}
                 />
@@ -165,6 +169,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
               <div className={styles.imgWrapper}>
                 <Image
                   src={staticPath.img.company.r_03_jpg}
+                  alt={text.lu as string}
                   width={1020}
                   height={1275}
                 />
@@ -180,6 +185,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             <div style={{ marginTop: "24px" }}>
               <Image
                 src={staticPath.img.company.naric_jpg}
+                alt={text.patuk as string}
                 width={480}
                 height={270}
               />
@@ -194,6 +200,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             </p>
             <Image
               src={staticPath.img.company.supermarket_jpg}
+              alt={text.japan as string}
               width={640}
               height={360}
             />
@@ -207,6 +214,7 @@ const CompanyPage = ({ languageCode }: Props): React.ReactElement => {
             <h3>{text.oversea}</h3>
             <Image
               src={staticPath.img.company.world_png}
+              alt={text.oversea as string}
               width={640}
               height={360}
             />

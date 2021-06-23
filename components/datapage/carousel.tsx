@@ -25,7 +25,7 @@ const Component = ({
         setProduct(items[index].id);
       });
     }
-  }, [swiper]);
+  }, [swiper, items, setProduct]);
 
   useEffect(() => {
     if (swiper) {
@@ -35,7 +35,7 @@ const Component = ({
         false
       );
     }
-  }, [product]);
+  }, [product, items, swiper]);
 
   return (
     <section id="carousel">
