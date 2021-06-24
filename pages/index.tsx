@@ -427,13 +427,13 @@ function getText(languageCode: LanguageCode) {
         src: "/img/index/chicken_1920x1080-en.jpg",
         alt: "NEXT CHICKEN 1.0",
         href: TLD === "jp" ? "https://shop.nextmeats.jp/products/chicken" : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" ? "view shop" : "coming soon...",
       }),
       zh: (TLD: TLD) => ({
         src: "/img/index/chicken_1920x1080-tw.jpg",
         alt: "NEXT 炸雞 1.0",
         href: TLD === "jp" ? "https://shop.nextmeats.jp/products/chicken" : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" ? "view shop" : "coming soon...",
       }),
     }[languageCode],
     burger: {
@@ -447,13 +447,13 @@ function getText(languageCode: LanguageCode) {
         src: "/img/index/burger_1920x1080-en.jpg",
         alt: "NEXT Burger 2.0",
         href: TLD === "jp" ? "https://shop.nextmeats.jp/products/burger" : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" ? "view shop" : "coming soon...",
       }),
       zh: (TLD: TLD) => ({
         src: "/img/index/burger_1920x1080-tw.jpg",
         alt: "NEXT 漢堡 2.0",
         href: TLD === "jp" ? "https://shop.nextmeats.jp/products/burger" : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" ? "view shop" : "coming soon...",
       }),
     }[languageCode],
     gyudon: {
@@ -467,13 +467,13 @@ function getText(languageCode: LanguageCode) {
         src: "/img/index/en_1920x1080-gyudon.jpg",
         alt: "NEXT Gyudon 1.2",
         href: TLD === "jp" ? "https://shop.nextmeats.jp/products/gyudon" : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" ? "view shop" : "coming soon...",
       }),
       zh: (TLD: TLD) => ({
         src: "/img/index/tw_1920x1080-gyudon.jpg",
         alt: "NEXT牛丼1.2",
         href: TLD === "jp" ? "https://shop.nextmeats.jp/products/gyudon" : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" ? "view shop" : "coming soon...",
       }),
     }[languageCode],
     yakiniku: {
@@ -497,7 +497,7 @@ function getText(languageCode: LanguageCode) {
             : TLD === "us"
             ? "https://shop.nextmeats.us"
             : "",
-        caption: TLD === "jp" || TLD === "us" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" || TLD === "us" ? "view shop" : "coming soon...",
       }),
       zh: (TLD: TLD) => ({
         src: "/img/index/yakiniku_1920x1080-tw.jpg",
@@ -508,7 +508,7 @@ function getText(languageCode: LanguageCode) {
             : TLD === "us"
             ? "https://shop.nextmeats.us"
             : "",
-        caption: TLD === "jp" || TLD === "us" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" || TLD === "us" ? "view shop" : "coming soon...",
       }),
     }[languageCode],
     euglena: {
@@ -528,7 +528,7 @@ function getText(languageCode: LanguageCode) {
           TLD === "jp"
             ? "https://shop.nextmeats.jp/products/yakiniku-euglena"
             : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" ? "view shop" : "coming soon...",
       }),
       zh: (TLD: TLD) => ({
         src: "/img/index/euglena.jpg",
@@ -537,7 +537,7 @@ function getText(languageCode: LanguageCode) {
           TLD === "jp"
             ? "https://shop.nextmeats.jp/products/yakiniku-euglena"
             : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" ? "view shop" : "coming soon...",
       }),
     }[languageCode],
     hamburgersteak: {
@@ -551,13 +551,13 @@ function getText(languageCode: LanguageCode) {
         src: "/img/index/hamburgersteak_1920x1080-en.jpg",
         alt: "NEXT HAMBURGER STEAK 1.0",
         href: TLD === "jp" ? pagesPath.hamburgersteak.$url().pathname : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" ? "view shop" : "coming soon...",
       }),
       zh: (TLD: TLD) => ({
         src: "/img/index/hamburgersteak_1920x1080-tw.jpg",
         alt: "NEXT 日式漢堡排 1.0",
         href: TLD === "jp" ? pagesPath.hamburgersteak.$url().pathname : "",
-        caption: TLD === "jp" ? "view shop" : "comming soon...",
+        caption: TLD === "jp" ? "view shop" : "coming soon...",
       }),
     }[languageCode],
     accelarator: {
