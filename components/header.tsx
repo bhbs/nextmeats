@@ -45,13 +45,13 @@ const Header = ({ languageCode }: Props): React.ReactElement => {
           </li>
           <li className="luxbar-item">
             <Link href={pagesPath.news.$url()}>
-              <a>NEWS</a>
+              <a>{languageCode === "jp" ? "ニュース" : "NEWS"}</a>
             </Link>
           </li>
           {TLD === "jp" && (
             <li className="luxbar-item">
               <Link href="https://shop.nextmeats.jp">
-                <a target="_blank">SHOP</a>
+                <a target="_blank">ショップ</a>
               </Link>
             </li>
           )}
@@ -65,23 +65,23 @@ const Header = ({ languageCode }: Props): React.ReactElement => {
           {languageCode === "jp" && (
             <li className="luxbar-item">
               <Link href="https://media.nextmeats.jp">
-                <a>MEDIA</a>
+                <a>メディア</a>
               </Link>
             </li>
           )}
           <li className="luxbar-item">
             <Link href={pagesPath.message.$url()}>
-              <a>MESSAGE</a>
+              <a>{languageCode === "jp" ? "理念" : "MESSAGE"}</a>
             </Link>
           </li>
           <li className="luxbar-item">
             <Link href={pagesPath.company.$url()}>
-              <a>COMPANY</a>
+              <a>{languageCode === "jp" ? "会社概要" : "COMPANY"}</a>
             </Link>
           </li>
           <li className="luxbar-item">
             <Link href={pagesPath.contact.$url()}>
-              <a>CONTACT</a>
+              <a>{languageCode === "jp" ? "お問い合わせ" : "CONTACT"}</a>
             </Link>
           </li>
         </ul>

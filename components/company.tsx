@@ -68,10 +68,6 @@ const Company = ({ languageCode }: Props): React.ReactElement => {
               <td>{text.time}</td>
             </tr>
           )}
-          <tr>
-            <td>{text.contact_h}</td>
-            <td>{text.contact}</td>
-          </tr>
           {text.business_h && (
             <tr>
               <td>{text.business_h}</td>
@@ -185,11 +181,6 @@ const getText = (languageCode: LanguageCode): { [key: string]: string } => {
       jp: "連絡先",
       en: "E-MAIL",
       zh: "E-MAIL",
-    }[languageCode],
-    contact: {
-      jp: "info(at)nextmeats.co.jp",
-      en: "info(at)nextmeats.co.jp",
-      zh: "info(at)nextmeats.co.jp",
     }[languageCode],
     business_h: {
       jp: "事業内容",
