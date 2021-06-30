@@ -79,6 +79,11 @@ const Header = ({ languageCode }: Props): React.ReactElement => {
               <a>COMPANY</a>
             </Link>
           </li>
+          <li className="luxbar-item">
+            <Link href={pagesPath.contact.$url()}>
+              <a>CONTACT</a>
+            </Link>
+          </li>
         </ul>
       </div>
     </header>
