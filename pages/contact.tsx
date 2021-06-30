@@ -29,7 +29,9 @@ const Contact = ({ languageCode }: Props): React.ReactElement => {
   const handleSubmit = (e) => {
     e.preventDefault();
     executeRecaptcha("contact").then(async (token) => {
-      setMessage({ jp: "送信中…", en: "send", zh: "send" }[languageCode]);
+      setMessage(
+        { jp: "送信中…", en: "sending...", zh: "sending..." }[languageCode]
+      );
       const response = await fetch("/api/contact", {
         method: "POST",
         body: JSON.stringify({

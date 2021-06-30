@@ -69,13 +69,13 @@ const sendText = async (info: Info): Promise<SentMessageInfo> => {
     to: process.env.MAIL_TO,
     subject: info.title,
     text: `
-    - 差出人 -
+- 差出人 -
 
-    ${info.mail}
+${info.mail}
 
-    - 本文 -
+- 本文 -
 
-    ${info.message}
+${info.message}
     `,
   });
 };
