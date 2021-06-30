@@ -67,9 +67,11 @@ const sendText = async (info: Info): Promise<SentMessageInfo> => {
   return await transporter.sendMail({
     from: `"メールフォーム"<${process.env.MAIL_FROM}>`,
     to: process.env.MAIL_TO,
-    subject: info.title,
+    subject: `${info.title} さんからのお問い合わせ`,
     text: `
 - 差出人 -
+
+${info.title}
 
 ${info.mail}
 

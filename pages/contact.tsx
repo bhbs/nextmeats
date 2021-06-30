@@ -7,6 +7,7 @@ import {
 import Layout from "../components/layout";
 import { getLanguageCode, LanguageCode, Locale } from "../lib/language";
 import styles from "../styles/contact.module.scss";
+import Head from "next/head";
 
 type Props = {
   languageCode: LanguageCode;
@@ -15,6 +16,9 @@ type Props = {
 const SecureContact = ({ languageCode }: Props): React.ReactElement => {
   return (
     <Layout languageCode={languageCode}>
+      <Head>
+        <title>CONTACT | Next Meats Co., Ltd.</title>
+      </Head>
       <GoogleReCaptchaProvider reCaptchaKey="6Lea7DUaAAAAAIXSUT4AWLG6tdZOpnd5YqWeM-Pk">
         <Contact languageCode={languageCode} />
       </GoogleReCaptchaProvider>
