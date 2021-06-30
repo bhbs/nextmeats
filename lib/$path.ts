@@ -7,6 +7,9 @@ export const pagesPath = {
   company: {
     $url: (url?: { hash?: string }) => ({ pathname: '/company' as const, hash: url?.hash })
   },
+  contact: {
+    $url: (url?: { hash?: string }) => ({ pathname: '/contact' as const, hash: url?.hash })
+  },
   data: {
     $url: (url?: { hash?: string }) => ({ pathname: '/data' as const, hash: url?.hash })
   },

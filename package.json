@@ -14,14 +14,17 @@
   "dependencies": {
     "lottie-web": "^5.7.11",
     "next": "^11.0.0",
+    "nodemailer": "^6.6.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-google-recaptcha-v3": "^1.9.4",
     "react-scroll": "^1.8.2",
     "sass": "^1.35.1",
     "swiper": "^6.7.0"
   },
   "devDependencies": {
     "@types/node": "^15.12.3",
+    "@types/nodemailer": "^6.4.2",
     "@types/react": "^17.0.11",
     "@types/react-scroll": "^1.8.2",
     "@types/swiper": "^5.4.2",
