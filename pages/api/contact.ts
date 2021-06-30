@@ -17,7 +17,7 @@ type Info = {
   languageCode?: LanguageCode;
 };
 
-export async function verifyAndSendMail(
+export default async function verifyAndSendMail(
   req: NextApiRequest,
   res: NextApiResponse
 ): Promise<void> {
@@ -25,11 +25,13 @@ export async function verifyAndSendMail(
   if (info.token) {
     const verification = await siteVerify(info.token);
     verification.success && (await sendText(info));
-    res.status(200).json({
-      jp: "メールが送信されました。",
-      en: "An email has been sent.",
-      zh: "An email has been sent.",
-    })[info.languageCode];
+    res.status(200).json(
+      {
+        jp: "メールが送信されました。",
+        en: "An email has been sent.",
+        zh: "An email has been sent.",
+      }[info.languageCode]
+    );
   } else {
     res.status(200).json(
       {
