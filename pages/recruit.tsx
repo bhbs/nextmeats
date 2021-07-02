@@ -179,7 +179,7 @@ const getText = (languageCode: LanguageCode) => {
     contact: {
       jp: "お問い合わせ窓口\n担当：今西\nrecruit(at)nextmeats.co.jp",
       en: "For all inquiries, please contact\nSaaya Matsukubo\nmatsukubo(at)nextmeats.co.jp",
-      zh: "如有興趣或有任何疑問，歡迎來信詢問！\n松久保紗采\nmatsukubo(at)nextmeats.co.jp",
+      zh: "如有興趣或有任何疑問，歡迎來信詢問！\nChihsuan Lin\nchihsuan.lin(at)nextmeats.co.jp",
     }[languageCode],
   };
 };
