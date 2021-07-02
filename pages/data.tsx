@@ -148,10 +148,12 @@ const Index = (): React.ReactElement => {
             content="データが裏付ける、ネクストミーツのインパクト。"
           />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
+          {/* eslint-disable @next/next/no-page-custom-font */}
           <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@700&family=Lato:wght@700&display=swap"
             rel="stylesheet"
           ></link>
+          {/* eslint-enable @next/next/no-page-custom-font */}
         </Head>
         <Stars />
         <Fv />
