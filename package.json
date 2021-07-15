@@ -12,34 +12,34 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "lottie-web": "^5.7.11",
-    "next": "^11.0.0",
-    "nodemailer": "^6.6.2",
+    "lottie-web": "^5.7.12",
+    "next": "^11.0.1",
+    "nodemailer": "^6.6.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-google-recaptcha-v3": "^1.9.4",
+    "react-google-recaptcha-v3": "^1.9.5",
     "react-scroll": "^1.8.2",
-    "sass": "^1.35.1",
-    "swiper": "^6.7.0"
+    "sass": "^1.35.2",
+    "swiper": "^6.7.5"
   },
   "devDependencies": {
-    "@types/node": "^15.12.3",
-    "@types/nodemailer": "^6.4.2",
-    "@types/react": "^17.0.11",
-    "@types/react-scroll": "^1.8.2",
-    "@types/swiper": "^5.4.2",
-    "@typescript-eslint/eslint-plugin": "^4.27.0",
-    "@typescript-eslint/parser": "^4.27.0",
-    "eslint": "^7.28.0",
-    "eslint-config-next": "^11.0.0",
+    "@types/node": "^16.3.2",
+    "@types/nodemailer": "^6.4.4",
+    "@types/react": "^17.0.14",
+    "@types/react-scroll": "^1.8.3",
+    "@types/swiper": "^5.4.3",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "eslint": "^7.30.0",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
-    "husky": "^6.0.0",
+    "husky": "^7.0.1",
     "npm-run-all": "^4.1.5",
     "pathpida": "^0.15.2",
-    "prettier": "2.3.1",
-    "typescript": "^4.3.4"
+    "prettier": "2.3.2",
+    "typescript": "^4.3.5"
   }
 }
